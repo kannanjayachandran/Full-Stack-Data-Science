@@ -1,6 +1,6 @@
 # Data Science - Machine Learning
 
-## This repository contains the Codes, Jupyter Notebooks, etc. of the Data science - Machine learning course.
+## This repository contains the Codes, Jupyter Notebooks, etc. of the Data science - Machine learning course
 
 ## Table of Contents
 
