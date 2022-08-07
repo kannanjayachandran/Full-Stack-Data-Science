@@ -4,4 +4,4 @@
 
 ## Table of Contents
 
-- 1. [Module 1](#Data_Science---Machine_Learning\Module1)
+- 1. [Module 1](https://github.com/kannanjayachandran/Data_Science---Machine_Learning/tree/main/Module1)
