@@ -7,5 +7,4 @@
 - Introduction to Programming.
 - Python refresher.
 - OOP in Python.
-- Lambda functions, Decorators.
-- Functional Programming in Python (Introduction).
+- Introduction to Advanced Python.
