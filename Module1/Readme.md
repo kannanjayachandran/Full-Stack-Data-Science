@@ -7,4 +7,4 @@
 - Introduction to Programming.
 - Python refresher.
 - OOP in Python.
-- Introduction to Advanced Python.
+- Basic DSA
