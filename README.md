@@ -5,3 +5,5 @@
 ## Table of Contents
 
  1. [Module 1](https://github.com/kannanjayachandran/Data_Science---Machine_Learning/tree/main/Module1)
+
+ 2. [Module 2](https://github.com/kannanjayachandran/Data_Science---Machine_Learning/tree/main/Module2)
