@@ -4,7 +4,7 @@
 
 ---
 
-This repository contains the code samples, Jupyter notebooks, datasets, and other resources for the Full-Stack Data Science program. Minor projects would be added to this repository as I progress through the course and Major projects would be added to their own repositories. The course would be divided into Modules. There won't be any notes other than the Jupyter notebooks.
+This repository contains the code samples, Jupyter notebooks, datasets, and other resources for the Full-Stack Data Science program. Minor projects would be added to this repository as I progress through the course and Major projects would be added to their own repositories. The course would be divided into Modules. As of now there won't be any notes other than the Jupyter notebooks, I may add some notes in the future.
 
 ## Topics Covered in the program
 

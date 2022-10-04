@@ -2,6 +2,8 @@
 
 ## Contents
 
+### DSA and Problem solving
+
 - Time and Space Complexity
 - Arrays ~ Lists ~ Matrices
 - Bit manipulation
@@ -13,5 +15,3 @@
 - Linked Lists
 - Stacks - Queues
 - Trees
-
-_Only notebooks containing code are uploaded_
