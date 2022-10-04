@@ -4,7 +4,6 @@
 
 **The following are the topics covered in this module:**
 
-- Introduction to Programming.
-- Python refresher.
-- OOP in Python.
-- Basic DSA
+- Basics of Programming.
+- Python refresher and OOP basics.
+- Basic DSA and Problem solving

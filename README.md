@@ -11,7 +11,7 @@ This repository contains the code samples, Jupyter notebooks, datasets, and othe
 ---
 
 1. Basics of Programming
-2. Introduction to Python Programming
+2. Python Programming refresher.
 3. Basics of DSA and Problem solving
 4. Introduction to Data Science
 5. Introduction to Machine Learning
