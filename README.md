@@ -23,20 +23,20 @@ This repository contains the code samples, Jupyter notebooks, datasets, and othe
 11. Linear Algebra
 12. Statistics
 13. Probability
-14. Calculus and other essential for Data Science and Machine Learning
+14. Calculus and other essential Mathematics for Data Science and Machine Learning
 15. Advanced Data Visualization
-16. Database ~ SQL ~ NoSQL ~ Cloud Databases
+16. Databases ~ SQL ~ NoSQL ~ Cloud Databases
 17. Intermediate DSA and Problem Solving
 18. Machine Learning Algorithms and Techniques
 19. Python libraries and tools for Machine Learning
 20. Advanced Machine Learning Algorithms and Techniques
 21. Deep Learning
 22. Neural networks
-23. Advanced Mathematics for Machine Learning
-24. Computer Vision
-25. Natural Language Processing
+23. Advanced Mathematics for Machine Learning, Deep Learning and Neural Networks
+24. Computer Vision Introduction
+25. Natural Language Processing Introduction
 26. Big data ~ Big data tools ~ distributed Computing
-27. Case Studies
+27. Business Case Studies
 28. Data Science and Machine Learning Projects
 29. Data Science and Machine Learning Capstone and portfolio Project
 30. Advanced DSA and Problem Solving
