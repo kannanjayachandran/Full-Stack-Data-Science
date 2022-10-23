@@ -58,3 +58,31 @@ This repository contains the code samples, Jupyter notebooks, datasets, and othe
 ---
 
 **Here I am listing the books, courses and other materials that I am using to learn the topics covered in the program.**
+
+---
+
+### Modules Completed
+
+[x] Module 1
+
+[] Module 2
+
+[] Module 3
+
+[] Module 4
+
+[] Module 5
+
+[] Module 6
+
+[] Module 7
+
+[] Module 8
+
+[] Module 9
+
+[] Module 10
+
+[] Module 11
+
+[] Module 12
