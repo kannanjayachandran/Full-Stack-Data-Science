@@ -27,7 +27,7 @@
 13. Probability
 14. Calculus and other essential Mathematics for Data Science and Machine Learning
 15. Advanced Data Visualization
-16. Databases ~ SQL ~ NoSQL ~ Cloud Databases
+16. Databases ~ SQL ~ NoSQL ~ NewSQL ~ Cloud Databases
 17. Intermediate DSA and Problem Solving
 18. Machine Learning Algorithms and Techniques
 19. Python libraries and tools for Machine Learning
@@ -40,14 +40,15 @@
 26. Big data ~ Big data tools ~ distributed Computing
 27. Business Case Studies
 28. Data Science and Machine Learning Projects
-29. Data Science and Machine Learning Capstone and portfolio Project
+29. Web scraping and Web APIs
 30. Advanced DSA and Problem Solving
 31. Data Engineering and Data Pipelines basics
 32. Essential DevOps Tools and Cloud Services
 33. MlOps Basics
 34. MlOps Tools and Services
+35. Data Science and Machine Learning Capstone and portfolio Project
 
-- **The entire program would be divided into 4 phases, which inturn would be divided into 12 modules. Each module would have upto 3 topics**
+**Note: This is a rough outline of the course. The course would be updated as I progress through the course. These topics would be covered as modules.**
   
 ## Modules
 
@@ -62,6 +63,12 @@
 ---
 
 **Here I am listing the books, courses and other materials that I am using to learn the topics covered in the program.**
+
+### Books
+
+1. [Hands-On Machine Learning](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1098125975/ref=sr_1_1?crid=3CDP8TML7C51S&keywords=Machine+learning&qid=1668994456&s=books&sprefix=machine+lear%2Cstripbooks-intl-ship%2C966&sr=1-1) by Aurélien Géron
+
+- ps. More books would be added as I progress through the course.
 
 ---
 
@@ -104,3 +111,5 @@
 - [x] Introduction to Data Science
 
 - [x] Introduction to Machine Learning
+
+---
