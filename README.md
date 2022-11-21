@@ -43,8 +43,9 @@
 29. Data Science and Machine Learning Capstone and portfolio Project
 30. Advanced DSA and Problem Solving
 31. Data Engineering and Data Pipelines basics
-32. MLOps Basics
-33. DevOps Tools and Cloud Services
+32. Essential DevOps Tools and Cloud Services
+33. MlOps Basics
+34. MlOps Tools and Services
 
 - **The entire program would be divided into 4 phases, which inturn would be divided into 12 modules. Each module would have upto 3 topics**
   
@@ -91,3 +92,15 @@
 - [] Module 12
 
 ---
+
+### Topics Covered
+
+- [x] Basics of Programming
+
+- [x] Python Programming refresher.
+
+- [x] Basics of DSA and Problem solving
+
+- [x] Introduction to Data Science
+
+- [x] Introduction to Machine Learning
