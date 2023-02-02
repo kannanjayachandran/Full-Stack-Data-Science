@@ -1,6 +1,8 @@
-# Module 1
+<div align="center">
 
-## 1.1. Introduction programming using Python
+# Module 1 ~ Introduction to programming using Python
+
+</div>
 
 **The following are the topics covered in this module:**
 
