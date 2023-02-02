@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1> Full-Stack Data Science </h1>
+## Full Stack Data Science
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
 ![GitHub language count](https://img.shields.io/github/languages/count/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
@@ -13,7 +13,7 @@ This repository contains the code samples, Jupyter notebooks, datasets, and othe
 
 In this I would be learning Mathematics, Programming, Machine learning, Data engineering, DevOps, MlOps, etc. _Detailed list of the topics covered in the program is given below._ I would be using languages like Python, R, and SQL. (Python would be the primary language). As the topics in the program are vast, it is impossible to give any time frame for the completion of the program. I would be updating this repository as I progress through the course
 
-## Topics Covered in the program
+### Topics Covered in the program
 
 ---
 |sl.no|Topics|
@@ -56,7 +56,7 @@ In this I would be learning Mathematics, Programming, Machine learning, Data eng
 
 **Note: This is a rough outline of the course. The course would be updated as I progress through the course. These topics would be covered as modules. These topics may change⚠️**
   
-## Modules
+### Modules
 
 ---
 
@@ -66,12 +66,6 @@ In this I would be learning Mathematics, Programming, Machine learning, Data eng
 
  ---
 
-### The Resources I am using is available at [Resources](/Resources.md)
-
-### Progression of the course is available at [Progression](/Progression.md)
-
-### This project is licensed under the terms of the [MIT license](/LICENSE)
-
-### Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md) and if you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md)
+>The Resources I am using is available at [Resources](/Resources.md). Progression of the course is available at [Progression](/Progression.md). This project is licensed under the terms of the [MIT license](/LICENSE). Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md) and if you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md).
 
 ### If you like this repository, give it a ⭐️
