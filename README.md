@@ -13,8 +13,6 @@
 
 ### In this I would be learning Mathematics, Programming, Machine learning, Data engineering, DevOps, MlOps, etc. _Detailed list of the topics covered in the program is given below._ I would be using languages like Python, R, and SQL. (Python would be the primary language). As the topics in the program are vast, it is impossible to give any time frame for the completion of the program. I would be updating this repository as I progress through the course
 
-Minor projects would be added to this repository as I progress through the course and Major projects would be added to separate repositories. The course would be divided into Modules. As of now there won't be any notes other than the Jupyter notebooks. In this Full stack program I would be learning Data Science, Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing, and other related topics. I would be using languages like Python, R, and SQL. (Python would be the primary language). This course would cover Python libraries like NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn, TensorFlow, Keras, PyTorch, NLTK, and others. For data visualization, sofwares like Tableau and power BI would also be covered. For Data Engineering, big data tools like Hadoop, spark, BigQuery, and others would be covered along with some data pipeline tools like Appache Airflow. Ulitmately devOps tools like necessary cloud services, Docker, Kubernetes, and others would be covered later
-
 ## Topics Covered in the program
 
 ---
