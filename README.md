@@ -56,13 +56,15 @@ In this I would be learning Mathematics for Data science, Programming, Machine l
 
 **Note: This is a rough outline of the course. The course would be updated as I progress through the course. These topics would be covered as modules. These topics may change⚠️**
   
-### Modules
+### Topics Covered In Sequence
 
 ---
-
- 1. [Module 1](https://github.com/kannanjayachandran/Data_Science---Machine_Learning/tree/main/Module1)
-
- 2. [Module 2](https://github.com/kannanjayachandran/Data_Science---Machine_Learning/tree/main/Module2)
+|Sl. No:|Name|Link|Content|
+|------|----|----|-------|
+|1. |Cheat sheets|[Cheatsheet](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/0_CheatSheets)| Cheat sheets on different topics|
+|2. |Module 1|[Module 1](https://github.com/kannanjayachandran/Data_Science---Machine_Learning/tree/main/Module1)| Introduction to programming with python, basics of DSA|
+|3. |Module 2|[Module 2](https://github.com/kannanjayachandran/Data_Science---Machine_Learning/tree/main/Module2)| DSA (Complexities, Arrays)  Problem solving using Python|
+|4. |Advanced python|[Advaced python](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/1_Advanced%20Python)| Advanced python topics-: Functional programming in python, Adv. OOPS, Exception handling, Generators and Decorators, etc.|
 
  ---
 
