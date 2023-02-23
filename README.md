@@ -9,9 +9,9 @@
 
 </div>
 
-This repository contains the code samples, Jupyter notebooks, datasets, and other resources for the Full-Stack Data Science program. This is simply a documentation of my learning journey. I would be updating this repository as I progress through and learn new things. Minor projects would be added in this repository itself within the modules or a `Project` folder. Major projects would be added to separate repositories. The course would be divided into Modules
+This repository contains the code samples, Jupyter notebooks, datasets, and other resources for the Full-Stack Data Science program. This is simply a documentation of my learning journey. I would be updating this repository as I progress through and learn new things. Minor projects would be added in this repository itself within the modules or inside a `Project` folder. Major projects would be added to separate repositories. 
 
-In this I would be learning Mathematics, Programming, Machine learning, Data engineering, DevOps, MlOps, etc. _Detailed list of the topics covered in the program is given below._ I would be using languages like Python, R, and SQL. (Python would be the primary language). As the topics in the program are vast, it is impossible to give any time frame for the completion of the program. I would be updating this repository as I progress through the course
+In this I would be learning Mathematics for Data science, Programming, Machine learning, Data engineering, DevOps, MlOps, etc. _Detailed list of the topics I would be learning is given below._ I would be using languages like Python, R, and SQL. (Python would be the primary language). As the topics in the program are vast, it is impossible to give any time frame for the completion of the program. I would be updating this repository as I progress through the course
 
 ### Topics Covered in the program
 
