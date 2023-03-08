@@ -70,4 +70,4 @@ In this I would be learning Mathematics for Data science, Programming, Machine l
 
 >The Resources I am using is available at [Resources](/Resources.md). Progression of the course is available at [Progression](/Progression.md). This project is licensed under the terms of the [MIT license](/LICENSE). Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md) and if you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md).
 
-### If you like this repository, give it a ⭐️
+### If you like this repository, give it a ⭐️ and Fork it
