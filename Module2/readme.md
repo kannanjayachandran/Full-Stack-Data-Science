@@ -1,8 +1,6 @@
 # Module 2
 
-## Contents
-
-### DSA and Problem solving
+## Intermediate DSA
 
 - Time and Space Complexity
 - Arrays ~ Lists ~ Matrices
