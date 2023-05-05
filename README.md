@@ -9,52 +9,42 @@
 
 </div>
 
-This repository contains the code samples, Jupyter notebooks, datasets, and other resources for the Full-Stack Data Science program. This is simply a documentation of my learning journey. I would be updating this repository as I progress through and learn new things. Minor projects would be added in this repository itself within the modules or inside a `Project` folder. Major projects would be added to separate repositories. 
+This repository contains the code samples, Jupyter notebooks, datasets, and notes I prepare for the Full-Stack Data Science program. This is simply a documentation of my learning journey. I would be updating this repository as I progress through and learn new things. Minor projects would be added in this repository itself within the modules or inside a `Project` folder. Major projects would be added to separate repositories. I am referring more than one course and multiple books, articles and documents.
 
-I would be learning Mathematics for Data science, Programming, Machine learning, Data engineering, DevOps, MlOps, etc. _Detailed list of the topics I would be learning is given below._ I would be using languages like Python, R, and SQL. (Python would be the primary language). As the topics in the program are vast, it is impossible to give any time frame for the completion of the program. I would be updating this repository as I progress through the course
-
-### Topics Covered in the program
+### Topics 
 
 ---
 |sl.no|Topics|
 |:---:|:---|
-|1|Basics of Programming|
-|2|Python Programming refresher.|
-|3|Basics of DSA and Problem solving|
-|4|Introduction to Data Science|
-|5|Introduction to Machine Learning|
-|6|Python tools for Data Science and Machine Learning|
-|7|Numpy|
-|8|Pandas|
-|9|Matplotlib|
-|10|Seaborn|
-|11|Linear Algebra|
-|12|Statistics|
-|13|Probability|
-|14|Calculus and other essential Mathematics for Data Science and Machine Learning|
-|15|Advanced Data Visualization|
-|16|Databases ~ SQL ~ NoSQL ~ NewSQL ~ Cloud Databases|
-|17|Intermediate DSA and Problem Solving|
-|18|Machine Learning Algorithms and Techniques|
-|19|Python libraries and tools for Machine Learning|
-|20|Advanced Machine Learning Algorithms and Techniques|
-|21|Deep Learning|
-|22|Neural networks|
-|23|Advanced Mathematics for Machine Learning, Deep Learning and Neural Networks|
-|24|Computer Vision Introduction|
-|25|Natural Language Processing Introduction|
-|26|Big data ~ Big data tools ~ distributed Computing|
-|27|Business Case Studies|
-|28|Data Science and Machine Learning Projects|
-|29|Web scraping and Web APIs|
-|30|Advanced DSA and Problem Solving|
-|31|Data Engineering and Data Pipelines basics|
-|32|Essential DevOps Tools and Cloud Services|
-|33|MlOps Basics|
-|34|MlOps Tools and Services|
-|35|Data Science and Machine Learning Capstone and portfolio Project|
+|1|Basics of Programming (Python)|
+|2|Basics of DSA and Problem solving|
+|3|Introduction to Data Science and Machine learning|
+|4|Basic Python libraries(Numpy, pandas, matplotlib)|
+|5|Linear Algebra|
+|6|Statistics|
+|7|Probability|
+|8|Calculus|
+|9|Databases ~ SQL ~ NoSQL ~ NewSQL ~ Cloud Databases|
+|10|Intermediate DSA and Problem Solving|
+|11|Advanced Statistics|
+|12|Machine Learning Algorithms and Techniques|
+|13|Advanced Machine Learning Algorithms and Techniques|
+|14|Deep Learning|
+|15|Neural networks|
+|16|Advanced Mathematics for Machine Learning, Deep Learning and Neural Networks|
+|17|Computer Vision Introduction|
+|18|Natural Language Processing Introduction|
+|19|Big data ~ Big data tools ~ distributed Computing|
+|20|Business Case Studies|
+|21|Data Science and Machine Learning Projects|
+|22|Advanced DSA and Problem Solving|
+|23|Data Engineering and Data Pipelines basics|
+|24|Essential DevOps Tools and Cloud Services|
+|25|MlOps Basics|
+|26|MlOps Tools and Services|
+|27|Data Science and Machine Learning Capstone and portfolio Project|
 
-**Note: This is a rough outline of the course. The course would be updated as I progress through the course. These topics would be covered as modules. These topics may change⚠️**
+**Note**: This is a rough outline of the course. The course would be updated as I progress through the course. These topics would be covered as modules. These topics may change⚠️
   
 ### Topics Covered In Sequence
 
