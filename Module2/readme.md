@@ -5,7 +5,7 @@
 - Time and Space Complexity
 - Arrays ~ Lists ~ Matrices
 - Bit manipulation
-- DSA Mathemtics
+- DSA Mathematics
 - Hashing ~ Maps/Dictionary
 - Searching and Sorting
 - Strings ~ String Manipulation
