@@ -1,6 +1,6 @@
 <div align="center">
 
-## Full Stack Data Science
+# Full Stack Data Science
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
 ![GitHub language count](https://img.shields.io/github/languages/count/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
@@ -13,7 +13,6 @@ This repository contains the code samples, Jupyter notebooks, datasets, and note
 
 ### Topics 
 
----
 |sl.no|Topics|
 |:---:|:---|
 |1|Basics of Programming (Python)|
