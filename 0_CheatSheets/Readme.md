@@ -8,4 +8,7 @@
 
 | Sl.No.   | Topic | Link |
 | --- |  ---  | ---  |
-| 1  | Mathematics | [Link](./math) |
+| 1  | Mathematics | [Link][def] |
+
+
+[def]: ./Mathematics_CheatSheet.ipynb
