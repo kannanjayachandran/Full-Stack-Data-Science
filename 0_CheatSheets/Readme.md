@@ -5,3 +5,7 @@
 </div>
 
 ### This Folder contains all the cheat sheets I have prepared for various topics. They are presented in the form of jupyter notebooks
+
+| Sl.No.   | Topic | Link |
+| --- |  ---  | ---  |
+| 1  | Mathematics | [Link](./math) |
