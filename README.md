@@ -2,14 +2,13 @@
 
 # Full Stack Data Science
 
-![GitHub repo size](https://img.shields.io/github/repo-size/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
-![GitHub language count](https://img.shields.io/github/languages/count/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
-![GitHub watchers](https://img.shields.io/github/watchers/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
-![GitHub stars](https://img.shields.io/github/stars/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
+![GitHub watchers](https://img.shields.io/github/watchers/kannanjayachandran/Data_Science---Machine_Learning?style=flat) ![GitHub stars](https://img.shields.io/github/stars/kannanjayachandran/Data_Science---Machine_Learning?style=flat)
 
 </div>
 
-This repository contains the code samples, Jupyter notebooks, datasets, and notes I prepare for the Full-Stack Data Science program. This is simply a documentation of my learning journey. I would be updating this repository as I progress through and learn new things. Minor projects would be added in this repository itself within the modules or inside a `Project` folder. Major projects would be added to separate repositories. I am referring more than one course and multiple books, articles and documents.
+
+
+This repository contains the code samples, Jupyter notebooks, datasets, and notes I prepare for the Full-Stack Data Science program. This is simply a documentation of my learning journey. I would be updating this repository as I learn new things. Minor projects would be added in this repository itself within the modules or inside a `Project` folder. Major projects would be added to separate repositories. I am referring more than one course and multiple books, articles and documents.
 
 ### Topics 
 
