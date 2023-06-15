@@ -48,7 +48,7 @@ This repository contains the code samples, Jupyter notebooks, datasets, and note
 |Sl. No:|Name|Content|
 |------|----|-------|
 |1. |[Cheat sheets](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/CheatSheets)| Cheat sheets on different topics|
-|2. |[Introduction to programming using python](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/mainModule1%20~%20Introduction%20to%20Programming%20using%20Python)| Introduction to programming with python, basics of DSA|
+|2. |[Introduction to programming using python](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/Module1%20~%20Introduction%20to%20Programming%20using%20Python)| Introduction to programming with python, basics of DSA|
 |3. |[DSA Basics](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/Module2%20~%20DSA-Basics)| DSA (Complexities, Arrays)  Problem solving using Python|
 |4. |[Mathematics for Data science](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/Module3%20~%20Mathematics%20for%20Data%20science)| Linear Algebra, Statistics, Probability, Calculus|
 
