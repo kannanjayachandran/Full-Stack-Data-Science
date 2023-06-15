@@ -1,6 +1,6 @@
 # Module 2
 
-## Intermediate DSA
+## Basic Data structures and Algorithms
 
 - Time and Space Complexity
 - Arrays ~ Lists ~ Matrices

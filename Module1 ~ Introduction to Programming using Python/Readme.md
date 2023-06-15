@@ -1,6 +1,6 @@
 <div align="center">
 
-# Module 1 ~ Introduction to programming using Python and DSA
+# Module 1 ~ Introduction to programming using Python
 
 </div>
 
