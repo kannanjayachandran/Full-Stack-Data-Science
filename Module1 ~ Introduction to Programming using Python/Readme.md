@@ -4,9 +4,15 @@
 
 </div>
 
+In this section we are looking at the basics of python language and programming.
+
+## Topics 
 
 - Python Programming Basics
-  - Loops and conditionals using Patterns
-  - Built-in data structures
+  - Language fundamentals
+  - Loops and conditionals 
   - Functions
+  - Built-in data structures
   - OOPS and file handling
+
+- Some basics programming questions
