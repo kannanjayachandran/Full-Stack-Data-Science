@@ -1,8 +1,7 @@
-# Module 2
+# Data Structures and Algorithms - I
 
-## Basic Data structures and Algorithms
+## Overview
 
-- DSA Mathematics
 - Time and Space Complexity
 - Arrays ~ Lists ~ Matrices
 - Bit manipulation
@@ -12,4 +11,5 @@
 - Linked Lists
 - Hashing ~ Maps/Dictionary
 - Stacks - Queues
-- Trees
+- Trees ~ Tries
+- Graphs

@@ -1,4 +1,6 @@
-# Module 3 ~ Mathematics for Data science
+# Mathematics-I
+
+Introduction and basics of :-
 
 1. Linear Algebra
 2. Calculus

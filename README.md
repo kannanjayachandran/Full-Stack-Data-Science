@@ -10,17 +10,19 @@
 
 This repository contains the code samples, Jupyter notebooks, datasets, and notes I prepare for the Full-Stack Data Science program. This is simply a documentation of my learning journey. I would be updating this repository as I learn new things. _Minor projects_ would be added in this repository itself within the modules or inside a Project folder. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
 
+---
+
 <div align="center">
 
 ## Contents
 
-| sl.no | Topics                                  |                                   Link                                    |
-| :---: | :-------------------------------------- | :-----------------------------------------------------------------------: |
-|   1   | Programming in Python                   | [Link](./Module1%20~%20Introduction%20to%20Programming%20using%20Python/) |
-|   2   | Data structures and Algorithms - I      |                    [Link](./Module2%20~%20DSA-Basics/)                    |
-|   3   | Data Science and Machine learning - I   |
-|   4   | Python for Data science                 |
-|   5   | Mathematics-I                           |
+| sl.no | Topics                                  |                               Link                                |
+| :---: | :-------------------------------------- | :---------------------------------------------------------------: |
+|   1   | Programming in Python                   | [Link](./01.%20Introduction%20to%20Programming%20using%20Python/) |
+|   2   | Data structures and Algorithms - I      |                      [Link](./02.%20DSA-I/)                       |
+|   3   | Data Science and Machine learning - I   |                      [Link](./03.%20DSML-I/)                      |
+|   4   | Python for Data science                 |                [Link](./04.%20Python%20for%20DS/)                 |
+|   5   | Mathematics-I                           |                  [Link](./05.%20Mathematics-I/)                   |
 |   6   | Databases                               |
 |   7   | Data structures and Algorithms - II     |
 |   8   | Mathematics - II                        |
@@ -43,8 +45,6 @@ This repository contains the code samples, Jupyter notebooks, datasets, and note
 ---
 
 **Note**: This is a rough outline of the course. The course would be updated as I progress through the course.
-
----
 
 > The Resources I am using is available [here](/Resources.md). This project is licensed under the terms of the [MIT license](/LICENSE). Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md) and if you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md).
 
