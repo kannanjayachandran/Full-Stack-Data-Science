@@ -12,10 +12,10 @@ This repository contains the code samples, Jupyter notebooks, datasets, and note
 
 <div align="center">
 
-| sl.no | Topics                                                       |                                                   Link                                                   |
-| :---: | :----------------------------------------------------------- | :------------------------------------------------------------------------------------------------------: |
-|   1   | Basics of Programming (Python)                               |                [Link](./Module1%20~%20Introduction%20to%20Programming%20using%20Python/)                 |
-|   2   | DSA and Problem solving - Basics                             | [Link](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/Module2%20~%20DSA-Basics) |
+| sl.no | Topics                                                       |                                   Link                                    |
+| :---: | :----------------------------------------------------------- | :-----------------------------------------------------------------------: |
+|   1   | Basics of Programming (Python)                               | [Link](./Module1%20~%20Introduction%20to%20Programming%20using%20Python/) |
+|   2   | DSA and Problem solving - Basics                             |               [Link](./Module2%20~%20DSA-Basics/readme.md)                |
 |   3   | Data Science and Machine; learning Preliminary concepts      |
 |   4   | Python libraries(Numpy, pandas, Matplotlib, scikit-learn)    |
 |   5   | Linear Algebra                                               |
