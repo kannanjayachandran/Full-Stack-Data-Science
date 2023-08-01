@@ -11,5 +11,3 @@
 - Linked Lists
 - Hashing ~ Maps/Dictionary
 - Stacks - Queues
-- Trees ~ Tries
-- Graphs
