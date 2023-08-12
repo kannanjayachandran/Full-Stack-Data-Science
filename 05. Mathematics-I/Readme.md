@@ -1,6 +1,6 @@
-# Mathematics-I
+# Mathematics - I
 
-Introduction and basics of :-
+This section contains foundational mathematics concepts that are required for AI-ML and general programming.
 
 1. Linear Algebra
 2. Calculus
