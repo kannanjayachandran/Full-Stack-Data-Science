@@ -8,7 +8,7 @@
 
 **Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from all sort of data.
 
-This repository contains the code samples, Jupyter notebooks, datasets, and notes I prepare for the Full-Stack Data Science program. This is simply a documentation of my learning journey. I would be updating this repository as I learn new things. _Minor projects_ would be added in this repository itself within the modules or inside a Project folder. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
+> I am an undergraduate computer science engineering student specializing in _Artificial Intelligence_ and _Machine learning_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes** I prepare while learning **`Full-Stack Data Science`**. I would be updating this repository as I learn new topics. _Minor projects_ would be added in this repository itself within the modules or inside a Project folder. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
 
 ---
 
@@ -44,8 +44,14 @@ This repository contains the code samples, Jupyter notebooks, datasets, and note
 
 ---
 
-**Note**: This is a rough outline of the course. The course would be updated as I progress through the course.
+**Note**: This is a rough outline of the course, more topics might be added in the future.
 
-> The Resources I am using is available [here](/Resources.md). This project is licensed under the terms of the [MIT license](/LICENSE). Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md) and if you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md).
+> Resources [available here](/Resources.md).
+
+- This project is licensed under the terms of the [MIT license](/LICENSE).
+
+- Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md).
+
+- If you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md).
 
 ### If you like this repository, give it a ⭐️
