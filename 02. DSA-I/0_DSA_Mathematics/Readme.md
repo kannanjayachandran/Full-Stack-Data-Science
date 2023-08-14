@@ -2,4 +2,5 @@
 
 - Prime Numbers
 - Square Root
+- Factors
 - GCD and LCM
