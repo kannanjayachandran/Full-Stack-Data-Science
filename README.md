@@ -6,13 +6,13 @@
 
 </div>
 
-**Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from all sort of data.
 
-> I am an undergraduate computer science engineering student specializing in _Artificial Intelligence_ and _Machine learning_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes** I prepare while learning **`Full-Stack Data Science`**. I would be updating this repository as I learn new topics. _Minor projects_ would be added in this repository itself within the modules or inside a Project folder. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
+
+#### **Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from all sort of data.
+
+> #### I am an undergraduate computer science engineering student specializing in _Artificial Intelligence_ and _Machine learning_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes** I prepare while learning **`Full-Stack Data Science`**. I would be updating this repository as I learn new topics. _Minor projects_ would be added in this repository itself within the modules or inside a Project folder. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
 
 ---
-
-<div align="center">
 
 ## Contents
 
@@ -39,8 +39,6 @@
 |  19   | Advanced Machine learning - III         |
 |  20   | Case Studies - III                      |
 |  21   | Cheat Sheets                            |
-
-</div>
 
 ---
 
