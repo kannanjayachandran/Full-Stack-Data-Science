@@ -39,3 +39,7 @@
 3. Return the two diagonals of a square matrix
 4. Find the sum of two matrices
 5. Find the product of two matrices
+6. Find the boundary elements of a matrix
+7. Traverse a matrix in a spiral form
+8. Minimum cost to choose 3 Christmas trees
+9. Find the anti-diagonals of a matrix
