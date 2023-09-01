@@ -4,10 +4,7 @@
     <strong style="font-size: 18px;">Problem Count: 50</strong>
 </div>
 
-
-
 ## Problem set - I
-
 
 1. Find whether a number is odd or even
 2. Non-duplicate - I { Find the only unique element. All others are present twice }

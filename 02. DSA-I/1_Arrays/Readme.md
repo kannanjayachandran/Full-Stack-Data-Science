@@ -1,4 +1,10 @@
-# Topics covered
+# Array Questions
+
+<div align="centre" style="background-color: #007ec6; color: white; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;">
+    <strong style="font-size: 18px;">Problem Count: 36</strong>
+</div>
+
+## Topics covered
 
 - Introduction to Arrays and Python List
 - Array traversal techniques {linear, reverse, indexed, two-pointer, and diagonal traversal}
@@ -9,9 +15,7 @@
 - Sub-array, Subsequence and Subset
 - Matrix or 2D Array
 
-## Questions
-
-### Set 1
+## Problem set - I
 
 1. Find the minimum and maximum element in an array
 2. Reverse an array
@@ -29,7 +33,7 @@
 14. Find whether the inverse of the array is mirror inverse or not
 15. Find all non-min-max elements in an array
 
-### Set 2
+## Problem set - II
 
 1. Find all sub-array of an array
 2. Find leaders in an array
@@ -44,7 +48,7 @@
 11. Tournament winner
 12. Product array except self
 
-## Set 3
+## Problem set - III
 
 1. Find the sum of each row in a matrix
 2. Find the sum of each column in a matrix
