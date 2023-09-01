@@ -44,7 +44,7 @@
 
 **Note**: This is a rough outline of the course, more topics might be added in the future.
 
-> Resources [available here](/Resources.md).
+[Resources available here](/Resources.md).
 
 - This project is licensed under the terms of the [MIT license](/LICENSE).
 
