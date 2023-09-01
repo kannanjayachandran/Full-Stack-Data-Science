@@ -40,6 +40,9 @@
 7. Count good pairs
 8. Count the number of leaders in the array
 9. Two sum problem
+10. Non-constructible change
+11. Tournament winner
+12. Product array except self
 
 ## Set 3
 
