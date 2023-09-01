@@ -1,6 +1,6 @@
 # Bit Manipulation Questions
 
-<div style="background-color: #007ec6; color: white; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;">
+<div align="centre" style="background-color: #007ec6; color: white; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;">
     <strong style="font-size: 18px;">Problem Count: 50</strong>
 </div>
 
