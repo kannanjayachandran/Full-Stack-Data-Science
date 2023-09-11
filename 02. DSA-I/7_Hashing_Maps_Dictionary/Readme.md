@@ -2,4 +2,4 @@
 
 ## Questions
 
-1.
+1. Contains duplicate
