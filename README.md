@@ -42,14 +42,25 @@
 
 ---
 
-**Note**: This is a rough outline of the course, more topics might be added in the future.
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/warning.svg">
+>   <img alt="Warning" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/warning.svg">
+> </picture><br>
+>
+> _This is a rough outline of the course, more topics might be added in the future._
+
 
 [Resources available here](/Resources.md).
 
-- This project is licensed under the terms of the [MIT license](/LICENSE).
-
-- Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md).
-
-- If you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md).
-
-### If you like this repository, give it a ⭐️
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/note.svg">
+>   <img alt="Note" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/note.svg">
+> </picture><br>
+>
+> This project is licensed under the terms of the [MIT license](/LICENSE).
+>
+> Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md).
+>
+> If you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md).
+>
+> If you like this repository, give it a ⭐️
