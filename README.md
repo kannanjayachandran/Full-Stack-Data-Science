@@ -18,28 +18,22 @@
 
 | sl.no | Topics                                  |                               Link                                |
 | :---: | :-------------------------------------- | :---------------------------------------------------------------: |
-|   1   | Programming in Python                   | [Link](./01.%20Introduction%20to%20Programming%20using%20Python/) |
-|   2   | Data structures and Algorithms - I      |                      [Link](./02.%20DSA-I/)                       |
-|   3   | Data Science and Machine learning - I   |                      [Link](./03.%20DSML-I/)                      |
-|   4   | Python for Data science                 |                [Link](./04.%20Python%20for%20DS/)                 |
-|   5   | Mathematics-I                           |                  [Link](./05.%20Mathematics-I/)                   |
-|   6   | Databases                               |
-|   7   | Data structures and Algorithms - II     |
-|   8   | Mathematics - II                        |
-|   9   | Data Science and Machine learning - II  |
-|  10   | Data Science and Machine learning - III |
-|  11   | Machine learning Operations - I         |
-|  12   | Advanced Machine learning - I           |
-|  13   | Case Studies - I                        |
-|  14   | Advanced Machine learning - II          |
-|  15   | Case Studies - II                       |
-|  16   | Mathematics - III                       |
-|  17   | Machine learning Operations - II        |
-|  18   | Big data analytics and tools            |
-|  19   | Advanced Machine learning - III         |
-|  20   | Case Studies - III                      |
-|  21   | Cheat Sheets                            |
-
+|   1   | Programming in Python                   | [Here](./01.%20Introduction%20to%20Programming%20using%20Python/) |
+|   2   | Data structures and Algorithms - I      |                      [Here](./02.%20DSA-I/)                       |
+|   3   | Python for DS   |                      [Here](./03.%20Python%20for%20DS/)                      |
+|   4   | Database              |                [Here](./04.%20Database/)                 |
+|   5   | Data Science - I      |                  [Here](./05.%20Data_Science-I/)                   |
+|   6   | Data Science - II     |                 [Here](./06.%20Data_Science-II/)                  |
+|   7   | Data Science - III    |                [Here](./07.%20Data_Science-III/)                 |
+|   8   | Data structures and Algorithms - II    |                 [Here](./08.%20Data%20structures%20and%20Algorithms%20-%20II/)                  |
+|   9   | Advanced Machine Learning  |                 [Here](./09.%20Adv_Machine_Learning/)                  |
+|  10   | Machine Learning Operations |                 [Here](./10.%20MlOps/)                  |
+|  11   | Machine Learning System Designing |                 [Here](./10.%20MlOps/)                  |
+|  12   | Case Study - I |                 [Here](./12.%20Case%20Studies-I/)                  |
+|  13   | Case Study - II |                 [Here](./13.%20Case%20Studies-II/)                  |
+|  14   | Case Study - III |                 [Here](./14.%20Case%20Studies-III/)                  |
+|  15   | Big Data tools |                 [Here](./15.%20Big%20data%20anallytics%20and%20tools/)                  |
+|  16   | CheatSheets |                 [Here](./CheatSheets/)                  |
 ---
 
 > <picture>

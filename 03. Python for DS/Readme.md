@@ -1,6 +1,6 @@
 ## Python for Data Science
 
-This section contains some of the advanced python concepts along with some of the important libraries used in Data Science. The topics covered in this section are:
+This section contains the following topics:
 
 <details>
     <summary> Advanced Python Concepts </summary>
@@ -24,4 +24,3 @@ This section contains some of the advanced python concepts along with some of th
 - Pandas
 - Matplotlib
 - Seaborn
-- Sklearn
