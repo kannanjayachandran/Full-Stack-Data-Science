@@ -1,14 +1,10 @@
-<div align="center">
+<h1 align="center"> CheatSheets </h1>
 
-# CheatSheets
-
-</div>
-
-### This Folder contains all the cheat sheets I have prepared for various topics. They are presented in the form of jupyter notebooks
+CheatSheets would be either in the form of `Jupyter Notebooks` or `Readme` files. They are designed to act as quick references for particular topics.
 
 | Sl.No.   | Topic | Link |
 | --- |  ---  | ---  |
-| 1  | Mathematics | [Link][def] |
+| 1  | Mathematics | [Here][def] |
 
 
 [def]: ./Mathematics_CheatSheet.ipynb

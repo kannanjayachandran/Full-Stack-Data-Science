@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-**If you find any mistakes or issues with the content, feel free to open an issue . Kindly describe the  issue clearly.**
+- For corrections, open a pull request.

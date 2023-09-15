@@ -1,16 +1,13 @@
-<div align="center">
+<p align="center">
+    <a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="./DALL-E_Generated.png" alt="Logo" height=340></a>
+</p>
+<h1 align="center">Full Stack Data Science</h1>
 
-# Full Stack Data Science
+**Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from all sort of data. 
 
-<img src="./DALL-E_Generated.png" width="500" height="450" alt="DALL-E Generated Image of a old computer" />
+**Full-stack data science** refers to a comprehensive approach to the field of data science. It encompasses the entire data science everything in the data science pipeline, from data collection and preprocessing to model building and deployment.  It's a versatile set of skill stack that allows you to tackle end-to-end data science problems and deliver actionable insights to solve real-world problems.
 
-</div>
-
-
-
-#### **Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from all sort of data.
-
-> #### I am an undergraduate computer science engineering student specializing in _Artificial Intelligence_ and _Machine learning_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes** I prepare while learning **`Full-Stack Data Science`**. I would be updating this repository as I learn new topics. _Minor projects_ would be added in this repository itself within the modules or inside a Project folder. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
+> I am an undergraduate computer science engineering student specializing in _**Artificial Intelligence**_ and _**Machine learning**_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes** I prepare while learning **`Full-Stack Data Science`**. I would be updating this repository as I learn new topics. Dummy/Minor projects would be added in this repository itself. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
 
 ---
 
@@ -41,10 +38,9 @@
 >   <img alt="Warning" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/warning.svg">
 > </picture><br>
 >
-> _This is a rough outline of the course, more topics might be added in the future._
+> The repository is still under construction and this is a rough outline of the course, If you find any errors or have any suggestions, please feel free to open an issue.
 
-
-[Resources available here](/Resources.md).
+Resources available [here](/Resources.md).
 
 > <picture>
 >   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/note.svg">
