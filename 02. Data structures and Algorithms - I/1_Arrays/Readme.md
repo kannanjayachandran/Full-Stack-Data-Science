@@ -19,7 +19,7 @@
 
 1. Find the minimum and maximum element in an array
 2. Reverse an array
-3. Remove Duplicates 
+3. Remove Duplicates
 4. Remove Duplicates from Sorted Array
 5. Concatenation of Array
 6. Second largest element in an array
@@ -28,10 +28,10 @@
 9. Left rotate an array by 1 element
 10. Move all zeros to the end of the array
 11. Union of two sorted arrays
-12 Intersection of two sorted arrays
-13. Find all unique elements in an array
-14. Find whether the inverse of the array is mirror inverse or not
-15. Find all non-min-max elements in an array
+    12 Intersection of two sorted arrays
+12. Find all unique elements in an array
+13. Find whether the inverse of the array is mirror inverse or not
+14. Find all non-min-max elements in an array
 
 ## Problem set - II
 
@@ -59,3 +59,4 @@
 7. Traverse a matrix in a spiral order
 8. Minimum cost to choose 3 Christmas trees
 9. Find the anti-diagonals of a matrix
+10. Weakest row in a matrix
