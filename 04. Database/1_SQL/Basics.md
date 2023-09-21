@@ -132,7 +132,26 @@ SELECT * FROM TABLENAME;
 SELECT COLUMN1, COLUMN2 FROM TABLENAME;
 ```
 
-8. Limit in SQL
+8. DML Commands
+
+```sql
+-- Inserting data into a table
+INSERT INTO TABLENAME (COLUMN1, COLUMN2) VALUES (VALUE1, VALUE2), (VALUE3, VALUE4);
+
+-- insert from another table using sub query
+INSERT INTO phone_book2
+SELECT *
+FROM phone_book
+WHERE phone_number = '1234567890';
+
+-- Updating data in a table
+UPDATE TABLENAME SET COLUMN1 = VALUE1, COLUMN2 = VALUE2 WHERE COLUMN3 = VALUE3;
+
+-- Deleting data from a table
+DELETE FROM TABLENAME WHERE COLUMN1 = VALUE1;
+```
+
+9. Limit in SQL
 
 ```sql
 -- To get the first 10 rows of columns Column1 and Column2
@@ -142,7 +161,7 @@ SELECT Column1, Column2 FROM TABLENAME LIMIT 10;
 SELECT Column1, Column2 FROM TABLENAME LIMIT 10 OFFSET 10;
 ```
 
-9. Ordering in SQL (Sorting)
+10. Ordering in SQL (Sorting)
 
 ```sql
 -- For ordering in ascending order
@@ -154,14 +173,14 @@ SELECT Column1, Column2 FROM TABLENAME ORDER BY Column1 DESC;
 
 > The output row order may not be the same as the order in which the rows are inserted into the database. It depends on query optimizer, database engine, and the indexes on the table.
 
-10. Distinct in SQL
+11. Distinct in SQL
 
 ```sql
 -- To get the unique values of a column
 SELECT DISTINCT Column1 FROM TABLENAME;
 ```
 
-11. Where in SQL
+12. Where in SQL
 
 ```sql
 -- To get the rows where Column1 is equal to 1
@@ -174,7 +193,7 @@ SELECT * FROM TABLENAME WHERE Column1 BETWEEN 1 AND 10;
 SELECT column1, column2 FROM TABLENAME WHERE column2 IS NOT NULL;
 ```
 
-12. Logical operators in SQL
+13. Logical operators in SQL
 
 ```sql
 -- AND
@@ -207,7 +226,7 @@ SELECT * FROM TABLENAME WHERE Column1 LIKE '%A%';
 SELECT * FROM TABLENAME WHERE Column1 LIKE 'A___A';
 ```
 
-13. Aggregate functions in SQL (Count, Sum, Min, Max, Avg) - These functions ignore NULL values and return only one value
+14. Aggregate functions in SQL (Count, Sum, Min, Max, Avg) - These functions ignore NULL values and return only one value
 
 ```sql
 -- Count
@@ -226,7 +245,7 @@ SELECT MAX(Column1) FROM TABLENAME;
 SELECT AVG(Column1) FROM TABLENAME;
 ```
 
-14. Group by in SQL
+15. Group by in SQL
 
 ```sql
 -- To get the count of each unique value in Column1
@@ -236,7 +255,7 @@ SELECT column1, COUNT(column1) col1_count, FROM TABLENAME GROUP BY column1 ORDER
 -- Null values are grouped together
 ```
 
-15. Having in SQL
+16. Having in SQL
 
 ```sql
 -- To get the count of each unique value in Column1 where the count is greater than 1
@@ -247,7 +266,7 @@ SELECT column1, COUNT(column1) col1_count, FROM TABLENAME GROUP BY column1 HAVIN
 -- Where is applied on individual rows, while having is applied on groups and having is applied after grouping and where is used before grouping
 ```
 
-16. Joins in SQL
+17. Joins in SQL
 
 ```sql
 -- Inner join
@@ -269,7 +288,7 @@ SELECT * FROM TABLENAME1 FULL OUTER JOIN TABLENAME2 ON TABLENAME1.Column1 = TABL
 
 ![JOINS](image-2.png)
 
-17. Sub queries in SQL
+18. Sub queries in SQL
 
 ```sql
 --
@@ -278,3 +297,106 @@ SELECT column1, column2 FROM TABLENAME WHERE some_id IN
 ```
 
 > Consider sub queries like nested code blocks, the inner query is executed first and the result of the inner query is used in the outer query. Writing and reading sub-queries may be easier than complex joins.
+
+19. Union in SQL
+
+```sql
+-- Union is used to combine the result of two or more select statements
+SELECT column1 FROM TABLENAME1 UNION SELECT column1 FROM TABLENAME2;
+
+-- Union all is used to combine the result of two or more select statements, including duplicate values
+SELECT column1 FROM TABLENAME1 UNION ALL SELECT column1 FROM TABLENAME2;
+```
+
+20. Views in SQL
+
+```sql
+-- Views are virtual tables created from the result set of a query
+CREATE VIEW view_name AS
+SELECT column1, column2 FROM TABLENAME WHERE column1 = 'some_value';
+
+-- To get the data from a view
+SELECT * FROM view_name;
+
+-- To delete a view
+DROP VIEW view_name;
+```
+
+21. Indexes in SQL
+
+```sql
+-- Indexes are used to speed up the data retrieval process
+-- Indexes are created on columns
+-- Indexes are automatically created on primary key columns
+
+-- To create an index
+CREATE INDEX index_name ON TABLENAME (column1);
+
+-- To delete an index
+DROP INDEX index_name;
+```
+
+22. Data definition language (DDL) in SQL
+
+```sql
+-- To create a table
+CREATE TABLE TABLENAME (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype
+);
+
+-- To delete a table
+DROP TABLE TABLENAME;
+
+-- To add a column to a table
+ALTER TABLE TABLENAME ADD COLUMN column1 datatype;
+
+-- To delete a column from a table
+ALTER TABLE TABLENAME DROP COLUMN column1;
+
+-- To change the datatype of a column
+ALTER TABLE TABLENAME ALTER COLUMN column1 datatype;
+
+-- To rename a column
+ALTER TABLE TABLENAME RENAME COLUMN column1 TO column2;
+
+-- To rename a table
+ALTER TABLE TABLENAME RENAME TO TABLENAME2;
+```
+
+23. Data control language (DCL) in SQL
+
+```sql
+-- To grant privileges to a user
+GRANT privilege_name ON TABLENAME TO user_name;
+
+-- To revoke privileges from a user
+REVOKE privilege_name ON TABLENAME FROM user_name;
+```
+
+**Data-types in SQL (PostgreSQL specific)**
+
+![SQL data types](image-3.png)
+
+**Constraints in SQL**
+
+Constraints are used to specify rules for the data in a table. Constraints are used to limit the type of data that can go into a table. If there is any violation between the constraint and the data action, the action is aborted.
+
+Constraints can be column level or table level. Column level constraints apply to a column, and table level constraints apply to the whole table.
+
+The following constraints are commonly used in SQL:
+
+- NOT NULL - Ensures that a column cannot have a NULL value
+
+- UNIQUE - Ensures that all values in a column are different
+
+- PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+
+- FOREIGN KEY - Prevents actions that would destroy links between tables
+
+- CHECK - Ensures that the values in a column satisfies a specific condition
+
+- DEFAULT - Sets a default value for a column if no value is specified
+
+- INDEX - Used to create and retrieve data from the database very quickly
