@@ -1,15 +1,13 @@
 # Data science and Machine Learning - I
 
-## Introduction
+Both data science and machine learning are broad fields, and each with considerable amount of depth. Firstly I want to lay out the foundational knowledge required for both. Then sort of pick up a niche and go deeper into it.
 
-Here we will be looking at the basics of data science and machine learning. We have already the following utilities:
-- A programming language - Python and its libraries
-- Mathematics, statistics and probability
-- Database and SQL
+**In this section, we are going to cover the following topics**:
 
-These are pretty much the requirements to proceed further. We will be looking at the following topics in this section:
-
-| Topic | Link |
-|---| --- |
-| Introduction to Data science an ML| [Read](./Introduction.md) |
-| Descriptive data analysis| [Read](./Descriptive_Analysis.md) |
+| Topic                              | Link                               |
+| ---------------------------------- | ---------------------------------- |
+| Introduction to Data science an ML | [Read](./Introduction.md)          |
+| Descriptive data analysis          | [Read](./Descriptive_Analysis.md)  |
+| Diagnostic data analysis           | [Read](./Diagnostic_Analysis.md)   |
+| Predictive data analysis           | [Read](./Predictive_Analysis.md)   |
+| Prescriptive data analysis         | [Read](./Prescriptive_Analysis.md) |
