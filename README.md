@@ -5,7 +5,7 @@
 
 **Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from all sort of data.
 
-**Full-stack data science** refers to a comprehensive approach to the field of data science. It encompasses the entire data science everything in the data science pipeline, from data collection and preprocessing to model building and deployment. It's a versatile set of skill stack that allows you to tackle end-to-end data science problems and deliver actionable insights to solve real-world problems.
+**Full-stack data science** refers to a comprehensive approach to the field of data science. It encompasses the entire data science stack {from data collection and preprocessing to model building and deployment}.
 
 > I am an undergraduate computer science engineering student specializing in _**Artificial Intelligence**_ and _**Machine learning**_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes** I prepare while learning **`Full-Stack Data Science`**. I would be updating this repository as I learn new topics. Dummy/Minor projects would be added in their respective repository itself. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
 
@@ -16,7 +16,7 @@
 | sl.no | Topics                              |                               Link                                |
 | :---: | :---------------------------------- | :---------------------------------------------------------------: |
 |   1   | Programming in Python               | [Here](./01.%20Introduction%20to%20Programming%20using%20Python/) |
-|   2   | Data structures and Algorithms - I  |                      [Here](./02.%20DSA-I/)                       |
+|   2   | Data structures and Algorithms - I  |   [Here](./02.%20Data%20structures%20and%20Algorithms%20-%20I/)   |
 |   3   | Python for DS                       |                [Here](./03.%20Python%20for%20DS/)                 |
 |   4   | Database                            |                     [Here](./04.%20Database/)                     |
 |   5   | Data Science - I                    |                  [Here](./05.%20Data_Science-I/)                  |
@@ -48,10 +48,6 @@ Resources available [here](/Resources.md).
 >   <img alt="Note" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/note.svg">
 > </picture><br>
 >
-> This project is licensed under the terms of the [MIT license](/LICENSE).
->
-> Code of Conduct is available at [Code of Conduct](/CODE_OF_CONDUCT.md).
->
-> If you want to contribute to this project, please read the [Contributing Guidelines](/CONTRIBUTING.md).
->
-> If you like this repository, give it a ⭐️
+> [License](/LICENSE) | [Resources](/Resources.md) | [Code of conduct](/CODE_OF_CONDUCT.md) | [Contribution guidelines](/CONTRIBUTING.md)
+
+### If you like this repository, give it a ⭐️
