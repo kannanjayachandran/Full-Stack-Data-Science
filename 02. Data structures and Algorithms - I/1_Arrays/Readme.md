@@ -19,7 +19,7 @@
 
 1. Find the minimum and maximum element in an array
 2. Reverse an array
-3. Remove Duplicates
+3. Remove element
 4. Remove Duplicates from Sorted Array
 5. Concatenation of Array
 6. Second largest element in an array
