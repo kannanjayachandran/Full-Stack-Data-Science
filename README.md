@@ -7,7 +7,7 @@
 
 **Full-stack data science** refers to a comprehensive approach to the field of data science. It encompasses the entire data science stack {from data collection and preprocessing to model building and deployment}.
 
-> I am an undergraduate computer science engineering student specializing in _**Artificial Intelligence**_ and _**Machine learning**_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes** I prepare while learning **`Full-Stack Data Science`**. I would be updating this repository as I learn new topics. Dummy/Minor projects would be added in their respective repository itself. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
+> I am an undergraduate computer science engineering student specializing in _**Artificial Intelligence**_ and _**Machine learning**_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes**. Minor/Toy projects would be added in their respective repository itself. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
 
 ---
 
