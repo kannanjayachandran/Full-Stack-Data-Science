@@ -1,8 +1,7 @@
 # Array Questions
 
-<div align="centre" style="background-color: #007ec6; color: white; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;">
-    <strong style="font-size: 18px;">Problem Count: 36</strong>
-</div>
+| [Problem Count : 37](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/02.%20Data%20structures%20and%20Algorithms%20-%20I/1_Arrays) |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Topics covered
 
@@ -32,6 +31,7 @@
 12. Find all unique elements in an array
 13. Find whether the inverse of the array is mirror inverse or not
 14. Find all non-min-max elements in an array
+15. Find the first duplicate value {First occurrence of the duplicate value}
 
 ## Problem set - II
 
