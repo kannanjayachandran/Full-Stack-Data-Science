@@ -1,4 +1,4 @@
-# Database
+# Databases
 
 Databases are primary tools in software engineering. We use database to organize data so that we can query, search, manipulate and process data in easy and efficient way. Think of them like a _data model_ which cleanly abstract the way in which information is stored on the memory.
 
