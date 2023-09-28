@@ -1,18 +1,17 @@
 # Array Questions
 
-| [Problem Count : 37](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/02.%20Data%20structures%20and%20Algorithms%20-%20I/1_Arrays) |
+| [Problem Count : 40](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/02.%20Data%20structures%20and%20Algorithms%20-%20I/1_Arrays) |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Topics covered
 
-- Introduction to Arrays and Python List
-- Array traversal techniques {linear, reverse, indexed, two-pointer, and diagonal traversal}
-- Prefix and Postfix sums and arrays, Max and Min operations
+- Two pointer technique
+- Sliding window technique
+- Sub-array techniques
+- Prefix sum technique
+- Postfix sum and carry-forward technique
 - Array rotation
-- Array Searching and Sorting
-- Sliding Window and Two Pointer Technique
-- Sub-array, Subsequence and Subset
-- Matrix or 2D Array
+- Matrices
 
 ## Problem set - I
 
@@ -27,11 +26,10 @@
 9. Left rotate an array by 1 element
 10. Move all zeros to the end of the array
 11. Union of two sorted arrays
-    12 Intersection of two sorted arrays
-12. Find all unique elements in an array
-13. Find whether the inverse of the array is mirror inverse or not
-14. Find all non-min-max elements in an array
-15. Find the first duplicate value {First occurrence of the duplicate value}
+12. Intersection of two sorted arrays
+13. Find all unique elements in an array
+14. Find whether the inverse of the array is mirror inverse or not
+15. Find all non-min-max elements in an array
 
 ## Problem set - II
 
@@ -47,6 +45,9 @@
 10. Non-constructible change
 11. Tournament winner
 12. Product array except self
+13. Longest peak
+14. Minimum operations to reduce x to zero
+15. Find the first duplicate element in an array between 1 and N (Inclusive)
 
 ## Problem set - III
 
