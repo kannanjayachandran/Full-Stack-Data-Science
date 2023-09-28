@@ -1,5 +1,10 @@
 # Searching and Sorting
 
+| [Problem Count : 27](https://github.com/kannanjayachandran/Full-Stack-Data-Science/tree/main/02.%20Data%20structures%20and%20Algorithms%20-%20I/3_Searching_Sorting) |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## Implementation
+
 - Linear search
 - Binary Search and its variants
 - Bubble sort
@@ -41,3 +46,5 @@
 
 1. Search insert position
 2. Find the floor of the square root of a number
+3. Sort a 2d list by the first element
+4. Sort a 2d list by the second element
