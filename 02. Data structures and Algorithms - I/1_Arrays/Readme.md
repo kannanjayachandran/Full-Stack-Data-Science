@@ -61,3 +61,5 @@
 8. Minimum cost to choose 3 Christmas trees
 9. Find the anti-diagonals of a matrix
 10. Weakest row in a matrix
+11. Merge overlapping intervals
+12. Monotonic array
