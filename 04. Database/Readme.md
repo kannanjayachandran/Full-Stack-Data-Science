@@ -34,6 +34,8 @@ Document databases are a type of non-relational database that is designed to sto
 
 Key-value databases are a type of non-relational database that uses a simple key-value method to store data. It is a simple data model that stores data as a collection of key-value pairs. Each key is associated with only one value in a collection. The value can be a string, a number, a list, or even a complex data structure. The most popular key-value databases are Redis, DynamoDB, Apache Cassandra etc.
 
+### [Redis](./3_Reddis/Basics.md)
+
 ## Graph Databases
 
 Graph databases are a type of non-relational database that uses graph theory to store, map and query relationships. Graph databases are basically used to store data whose relations are more important than the data itself. The most popular graph databases are Neo4j, OrientDB, etc.

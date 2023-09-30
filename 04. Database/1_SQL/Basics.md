@@ -1,8 +1,8 @@
 # SQL
 
-SQL _Stands for Structured Query Language_. It is a language used to interact with databases. It is the standard language for interacting with relational databases. There are many different types of SQL databases, but the most popular are MySQL, SQLite, and PostgreSQL. I am going to use PostgreSQL, because it is open source and is widely used in production environments. But it doesn't really matter which one you use, because the syntax is almost same for all of them.
+SQL _Stands for Structured Query Language_. It is the standard language for interacting with relational databases. There are many different types of SQL databases, but the most popular are MySQL, SQLite, and PostgreSQL. I am going to use PostgreSQL, because it is open source and is widely used in production environments. But it doesn't really matter which one you choose, because the syntax is almost same for all.
 
-SQL is a _declarative language_, which means that you tell the database what you want to do, and it figures out how to perform the operation in the most efficient way.
+> SQL is a _declarative language_, which means that you tell the database what you want to do, and it figures out how to perform the operation in the most efficient way.
 
 ## High level overview of how SQL queries work
 
@@ -18,19 +18,21 @@ SQL is a _declarative language_, which means that you tell the database what you
 
 5. The database executes the query and returns the results.
 
-Whenever we run a SQL query, the database creates a new table from the existing table on which the query is run. The newly generated output is called _result set_ (set of rows with column names and some meta data).
+> Whenever we run a SQL query, the database creates a new table from the existing table. The newly generated output is called **result set** (set of rows with column names and some meta data).
 
 ## Database schema
 
-A schema in a database refers to the organization of data as a blueprint of how the database is constructed. We can say that a schema represents all the tables and the relationships between those tables in a database.
+A schema in a database refers to the organization of data. Think of it as a blueprint of how the database is constructed. Schema represents all the tables and the relationships between those tables in a database.
 
 > The formal definition of a database schema is a set of formulas (sentences) called integrity constraints imposed on a database.
 
-Let us consider the example from the `IMDB` dataset. The schema for the `IMDB` dataset is as follows:
+To understand schema well let us consider the example from the `IMDB` dataset. The schema for the `IMDB` dataset is as follows:
 
 ![Schema of IMDB dataset](image-1.png)
 
 ## SQL Commands
+
+![SQL Commands](image-4.png)
 
 **DDL (Data Definition Language)**
 DDL statements are used to define the database structure or schema. They are;
@@ -39,19 +41,16 @@ DDL statements are used to define the database structure or schema. They are;
 - ALTER - alters the structure of the database
 - DROP - delete objects from the database
 - TRUNCATE - remove all records from a table, including all spaces allocated for the records are removed
-- RENAME - rename an object
 
 **DML (Data Manipulation Language)**
 DML statements are used for managing data within schema objects. They are;
 
-- SELECT - retrieve data from the a database
 - INSERT - insert data into a table
 - UPDATE - updates existing data within a table
 - DELETE - deletes all records from a table, the space for the records remain
-- MERGE - update-insert operation (insert or update)
 - CALL - call a PL/SQL or Java subprogram
 - EXPLAIN PLAN - explain access path to data
-- LOCK TABLE - control concurrency
+- LOCK - control concurrency
 
 **DCL (Data Control Language)**
 DCL statements are used to control access to data in the database. They are;
