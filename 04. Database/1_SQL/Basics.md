@@ -32,44 +32,29 @@ To understand schema well let us consider the example from the `IMDB` dataset. T
 
 ## SQL Commands
 
-![SQL Commands](image-4.png)
+![SQL Command types](image-4.png)
 
-**DDL (Data Definition Language)**
-DDL statements are used to define the database structure or schema. They are;
+**DDL (Data Definition Language)** : DDL statements are used to define the database structure or schema.
 
-- CREATE - to create objects in the database
-- ALTER - alters the structure of the database
-- DROP - delete objects from the database
-- TRUNCATE - remove all records from a table, including all spaces allocated for the records are removed
+**DML (Data Manipulation Language)** : DML statements are used for managing data within schema objects.
 
-**DML (Data Manipulation Language)**
-DML statements are used for managing data within schema objects. They are;
+**DCL (Data Control Language)** : DCL statements are used to control access to data in the database.
 
-- INSERT - insert data into a table
-- UPDATE - updates existing data within a table
-- DELETE - deletes all records from a table, the space for the records remain
-- CALL - call a PL/SQL or Java subprogram
-- EXPLAIN PLAN - explain access path to data
-- LOCK - control concurrency
+**TCL (Transaction Control Language)** : TCL statements are used to manage the changes made by DML statements.
 
-**DCL (Data Control Language)**
-DCL statements are used to control access to data in the database. They are;
+## Syntax of SQL queries 
 
-- GRANT - gives user's access privileges to database
-- REVOKE - withdraw access privileges given with the GRANT command
-
-**TCL (Transaction Control Language)**
-TCL statements are used to manage the changes made by DML statements. They are;
-
-- COMMIT - save work done
-- SAVEPOINT - identify a point in a transaction to which you can later roll back
-- ROLLBACK - restore database to original since the last COMMIT
-- SET TRANSACTION - Change transaction options like isolation level and what rollback segment to use
-
-1. Creating a database
+1. Show all available databases
 
 ```sql
-CREATE DATABASE imdb;
+
+-- In PSQL
+\l
+-- or
+SELECT datname FROM pg_database;
+
+-- In my SQL
+SHOW DATABASES;
 ```
 
 2. Connect to a database
@@ -81,25 +66,9 @@ CREATE DATABASE imdb;
 -- In my SQL
 USE DBNAME;
 ```
+>  In most `PostgreSQL` client applications you would select the database when establishing the database connection, rather than using a separate SQL command to change the database context.
 
-3. To clear the shell
-
-```sql
-\! cls
-```
-
-4. Show database
-
-```sql
-
--- In PSQL
-\l
-
--- In my SQL
-SHOW DATABASES;
-```
-
-5. Show tables in a database
+3. Show tables in a database
 
 ```sql
 -- In PSQL
@@ -109,7 +78,13 @@ SHOW DATABASES;
 SHOW TABLES;
 ```
 
-6. Show schema of a table
+4. Creating a database
+
+```sql
+CREATE DATABASE imdb;
+```
+
+5. Show schema of a table
 
 ```sql
 -- In PSQL
@@ -121,7 +96,7 @@ SHOW TABLES;
 DESCRIBE TABLENAME;
 ```
 
-7. Selecting data from a table
+6. Selecting data from a table
 
 ```sql
 -- Select all columns
@@ -130,6 +105,17 @@ SELECT * FROM TABLENAME;
 -- Select specific columns
 SELECT COLUMN1, COLUMN2 FROM TABLENAME;
 ```
+
+7. Creating a table
+
+```sql
+CREATE TABLE TABLENAME (
+    COLUMN1 DATATYPE,
+    COLUMN2 DATATYPE,
+    COLUMN3 DATATYPE
+);
+```
+
 
 8. DML Commands
 
@@ -399,3 +385,8 @@ The following constraints are commonly used in SQL:
 - DEFAULT - Sets a default value for a column if no value is specified
 
 - INDEX - Used to create and retrieve data from the database very quickly
+
+## Postgres with Python
+
+When working with Python and Postgres, we can use the `psycopg2` library to connect to the database and execute queries.
+

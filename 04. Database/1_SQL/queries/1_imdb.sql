@@ -1,16 +1,5 @@
 -- Basic SQL queries on the IMDB database
 
--- Selecting the database
-\c imdb
-
--- show tables
-\dt
-
--- show table schema
-\d+ imdb
-
--- Queries
-
 -- All directors with their first and last names sorted by their first names
 SELECT DISTINCT first_name, last_name FROM director ORDER BY first_name;
 
