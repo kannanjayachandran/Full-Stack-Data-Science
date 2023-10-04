@@ -7,7 +7,8 @@ Both data science and machine learning are broad fields, and each with considera
 | Topic                              | Link                               |
 | ---------------------------------- | ---------------------------------- |
 | Introduction to Data science an ML | [Read](./Introduction.md)          |
-| Descriptive data analysis          | [Read](./Descriptive_Analysis.md)  |
-| Diagnostic data analysis           | [Read](./Diagnostic_Analysis.md)   |
-| Predictive data analysis           | [Read](./Predictive_Analysis.md)   |
-| Prescriptive data analysis         | [Read](./Prescriptive_Analysis.md) |
+| Important terms in Data science    | [Read](./Buzz_words.md)            |
+| Linear Algebra                     | [Read](./Linear_algebra.md)        |
+| Probability and Statistics         | [Read](./Probability_and_Statistics.md) |
+| Calculus                           | [Read](./Calculus.md)              |
+| Data visualization                 | [Read](./Data_visualization.md)    |

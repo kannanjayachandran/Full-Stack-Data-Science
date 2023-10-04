@@ -1,0 +1,167 @@
+<h1 align="center"> Linear Algebra </h1>
+
+Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. It is a fundamental part of machine learning, deep learning, data science, and artificial intelligence.
+
+## Points/Vectors
+
+A point/Vector is a collection of numbers which is often used to describe the state of a system. 
+
+![Point or vector](./img/Point_vector.png)
+
+Similarly we can represent an `n-dimensional` vector as $[x_1, x_2, x_3, ..., x_n]$ when the length of the vector is `n` and $x_i$ is a component of the vector.
+
+- **Distance between origin `o(0, 0)` and a point `p(a, b)`in a 2D plane** : **$d = \sqrt{a^2+b^2}$**
+
+- **Distance between origin `o(0, 0, 0)` and a point `p(a, b, c)`in a 3D plane** : **$d = \sqrt{a^2+b^2+c^2}$**
+
+- **Distance between the origin and a `n-dimensional` point `p(x1, x2, x3, ..., xn)`** : **$d = \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2}$**
+
+> This sorts of gives us a hint to a basic yet powerful concept in linear algebra, most of the concepts in linear algebra can be extended to `n-dimensional` space from `2D` and `3D` space.
+
+- **Distance between two points p $(x_1, y_1)$ and q $(x_2, y_2)$ in a 2D plane** : **$d = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2}$**
+
+- **Distance between two points p $(x_1, y_1, z_1)$ and q $(x_2, y_2, z_2)$ in a 3D plane** : **$d = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2+(z_1 - z_2)^2}$**
+
+- **Distance between two points p $(x_1, x_2, x_3, ..., x_n)$ and q $(y_1, y_2, y_3, ..., y_n)$ in a `n-dimensional` plane** : **$d = \sqrt{(x_1 - y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+...+(x_n - y_n)^2}$** or **$d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$**
+
+> This is called the `Euclidean distance` between two points.
+
+## Row and Column Vectors
+
+A row vector is a vector that has a single row and multiple columns. Similarly, a column vector is a vector that has a single column and multiple rows.
+
+![Row and column vector](./img/Row_col_vectors.png)
+
+- **Row vector** : $[x_1, x_2, x_3, ..., x_n]$ **Column vector** : $\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ ... \\ x_n \end{bmatrix}$
+
+## Dot product of two vectors
+
+The dot product of two vectors is a scalar quantity that is equal to the sum of the products of the corresponding entries of the two vectors.
+
+
+
+- **Dot product of two vectors** : $a \cdot b = a_1b_1 + a_2b_2 + a_3b_3 + ... + a_nb_n$ 
+
+which can be written as;
+
+$$[a_1, a_2, a_3, ..., a_n] \; . \; \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ ... \\ b_n \end{bmatrix}$$
+
+
+
+$$\implies a.b = a^T.b$$
+
+$$\implies a \cdot b = \sum_{i=1}^{n}a_ib_i$$
+
+where a = $[a_1, a_2, a_3, ..., a_n]$ and b = $[b_1, b_2, b_3, ..., b_n]$ are two vectors.
+
+> **Note** : The dot product of two vectors is a scalar quantity. We can interchange a row vector and a column vector by taking the `transpose of the vector`. The transpose of a row vector is a column vector and vice versa.
+
+Now let us see this what $a.b$ means geometrically.
+
+![Geometrical interpretation of dot product](./img/dot_product.png)
+
+From the above diagram if we have the angle between the two vectors as $\theta$ then we can write the dot product as;
+
+$$a.b = |a||b|cos\theta$$
+
+Hence if the two vectors are perpendicular to each other then the dot product is zero.
+
+If we extrapolate this to `n-dimensional` space then we can write the dot product as;
+
+$$a.b = \sum_{i=1}^{n}a_ib_i = |a||b|cos\theta$$
+
+where $a = [a_1, a_2, a_3, ..., a_n]$ and $b = [b_1, b_2, b_3, ..., b_n]$ are two `n-dimensional`vectors. 
+ 
+
+## Projection of a vector
+
+The projection of a vector `a` onto another vector `b`, denoted as `proj_b(a)`, is the vector `p` that lies in the direction of `b` and is collinear with `a`.
+
+![Projection of a vector](./img/Projection.png)
+
+We can express this mathematically as;
+
+$$d = \frac{a.b}{||b||}$$
+
+where $a$ and $b$ are two vectors and $||b||$ is the magnitude/length of the vector $b$. Or;
+
+$$d = ||a||cos\theta$$
+
+where $\theta$ is the angle between the two vectors.
+
+## Unit vector
+
+A unit vector is a vector that has a magnitude of 1. It is often denoted as $\hat{a}$. The unit vector would have the same direction as the original vector $a$.
+
+## A line
+
+A line is a collection of points that satisfy the equation $\color{#FF9900}ax + by + c = 0$ where $a$ and $b$ are the coefficients of $x$ and $y$ respectively and $c$ is a constant. We can define a line in a 2D plane as;
+
+$$w_{1}x_1 + w_2x_2 + w_0 = 0$$
+
+Now when we want to translate the idea of a line to a `3-Dimensional` space, we actually having something known as a `plane`. A plane is a collection of points that satisfy the equation $\color{#FF9900} ax + by + cz + d = 0$ where $a$, $b$ and $c$ are the coefficients of $x$, $y$ and $z$ respectively and $d$ is a constant. In terms of of our previous equation we can define a plane in a 3D plane as;
+
+$$w_{1}x_1 + w_2x_2 + w_3x_3 + w_0 = 0$$
+
+Now when we want to translate the idea of a line to a `n-Dimensional` space, we actually having something known as a `hyperplane`. A hyperplane is a collection of points that satisfy the equation $\color{#FF9900} a_1x_1 + a_2x_2 + a_3x_3 + ... + a_nx_n + b = 0$ where $a_1$, $a_2$, $a_3$, ..., $a_n$ are the coefficients of $x_1$, $x_2$, $x_3$, ..., $x_n$ respectively and $b$ is a constant. In terms of of our previous equation we can define a hyperplane in a n-Dimensional plane as;
+
+$$w_{0}x_0 + w_{1}x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n + w_0 = 0$$
+
+> A line in 2D becomes a plane in 3D and that becomes a hyperplane in n-Dimensional space.
+
+The above equation can be written as;
+
+$$w_0 \sum_{i=0}^{n}w_ix_i = 0$$
+
+The equation of a plane in `n-dimensional` space ($\pi_n$) can be written as;
+
+$$w_0 + w^Tx = 0$$
+
+where $w = [w_0, w_1, w_2, w_3, ..., w_n]$ and $x = [x_0, x_1, x_2, x_3, ..., x_n]$ are two vectors.
+
+Equation of a line passing through origin is $\color{#FF9900}w^Tx = 0$
+> we can drop the $w_0$ term as it is zero (because since the line is passing through origin, the y-intercept is zero).
+
+---
+---
+---
+
+## System of linear equations
+
+A system of linear equations is a collection of linear equations involving the same set of variables. For example; 
+
+$$2x + 3y = 5$$  
+
+$$3x + 4y = 6$$ 
+
+are two linear equations involving the same set of variables $x$ and $y$. A solution to a system of linear equations is a set of values for the variables that satisfies all the equations simultaneously. For example, the values $x = 1$ and $y = 1$ is a solution to the above system of linear equations.
+
+A system can have no solution, a single solution, or infinitely many solutions. A system of linear equations can be represented in `matrix` form as;
+
+$$\begin{bmatrix} 2 & 3 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 8 \\ 9 \end{bmatrix}$$
+
+where the matrix on the left is called the `coefficient matrix`, the vector on the right is the `vectors`, and the vector on the left is called the `solution vector`.
+
+## Matrix 
+
+A matrix is a rectangular array of numbers. A matrix with `m` rows and `n` columns is said to have the dimension `m x n`. We can add, subtract, and multiply matrices. We can also multiply a matrix with a scalar. While multiplying matrices we need to ensure that the number of columns in the first matrix is equal to the number of rows in the second matrix.
+
+
+## Determinant of a matrix
+
+Determinant of a matrix is a special value which tells us whether the matrix has an inverse or not. It is denoted by $$det(X) \;or \;|X|$$ 
+
+It is a scalar value and helps in solving systems of linear equations.
+
+**Calculating the determinant of a 2x2 matrix** : $det(X) = ad-bc$ where; 
+$$ X= \begin{bmatrix} a & b \\ c & d\end{bmatrix}$$
+
+> For a larger matrix we can find the determinant using a process called Co-factor expansion; which involves choosing a row or column and calculating the determinants of smaller matrices called co-factors. This process can be recursive, meaning you keep calculating determinants of smaller matrices until you reach a 2x2 matrix that you can solve using the formula above
+
+- All matrices does not have a determinant. Only square matrices have determinant. 
+
+- If the determinant is zero, the matrix is said to be singular, and it does not have an inverse, and the system of linear equations have infinitely many solutions.
+
+- If a system of linear equations has a unique solution; then they are complete and non-singular.
+
+- if the system of linear equation has no solution; it is called Contradictory and singular.
