@@ -4,7 +4,7 @@ Linear algebra is the branch of mathematics that deals with linear equations and
 
 ## Points/Vectors
 
-A point/Vector is a collection of numbers which is often used to describe the state of a system. 
+A point/Vector is a collection of numbers which is often used to describe the state of a system.
 
 ![Point or vector](./img/Point_vector.png)
 
