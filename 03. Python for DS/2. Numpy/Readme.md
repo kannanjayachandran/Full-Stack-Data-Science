@@ -81,3 +81,5 @@ x = np.array([('Sarah', (8.0, 7.0)), ('John', (6.0, 7.0))], dtype=dt)
 print(x[1]) # ('John', [6., 7.])
 print(x['grades']) # [array([8., 7.]) array([6., 7.])]
 ```
+
+### [Numpy Documentation](https://numpy.org/doc/stable/) | [Numpy tutorials](https://numpy.org/numpy-tutorials/)
