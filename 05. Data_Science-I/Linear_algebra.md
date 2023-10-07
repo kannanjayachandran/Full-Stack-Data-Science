@@ -171,13 +171,8 @@ $$x_1^2 + x_2^2 + x_3^2 + ... + x_n^2 = r^2 \implies \sum_{i=0}^{n}x_i^2 = r^2$$
 
 The same idea of a point inside a circle or not using the equation of a circle can be extended to higher dimensions. This again is pretty powerful as we can use this idea to determine whether a point lies inside a hyper-sphere or not.
 
+---
 
-
----
----
----
----
----
 ## System of linear equations
 
 A system of linear equations is a collection of linear equations involving the same set of variables. For example; 
@@ -212,8 +207,12 @@ $$ X= \begin{bmatrix} a & b \\ c & d\end{bmatrix}$$
 
 - All matrices does not have a determinant. Only square matrices have determinant. 
 
-- If the determinant is zero, the matrix is said to be singular, and it does not have an inverse, and the system of linear equations have infinitely many solutions.
+- If the determinant is zero, the matrix is said to be singular, and it does not have an inverse, and the system of linear equations have infinitely many solutions. It also means that the rows or columns of the matrix are linearly dependent and the matrix does not have full rank.
 
-- If a system of linear equations has a unique solution; then they are complete and non-singular.
+- The magnitude of the determinant indicates how much the matrix scales the volume (or area) spanned by its column vectors. A determinant of 1 indicates that the matrix preserves volume (or area) without scaling it.
 
-- if the system of linear equation has no solution; it is called Contradictory and singular.
+The determinant in general encodes information about scaling factors and orientations in linear transformations. 
+
+## Rank of a matrix
+
+The rank of a matrix is the maximum number of linearly independent rows or columns in the matrix. The rank of a matrix is denoted by $rank(X)$. We can find the rank of a matrix by reducing it to its `row echelon form` or `reduced row echelon form` and counting the number of non-zero rows.
