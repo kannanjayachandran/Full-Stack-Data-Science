@@ -22,6 +22,3 @@ Now we need to have a solid understanding of the underlying mathematical concept
 > </picture><br>
 >
 > All the above mathematics topics are covered from a data science perspective.
-
-Now let us look at some of the **Data visualization techniques**
-### [Data visualization](./Data_visualization.md)
