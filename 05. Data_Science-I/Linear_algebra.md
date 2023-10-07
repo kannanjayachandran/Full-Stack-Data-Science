@@ -4,11 +4,13 @@ Linear algebra is the branch of mathematics that deals with linear equations and
 
 ## Points/Vectors
 
-A point/Vector is a collection of numbers which is often used to describe the state of a system.
+A point/Vector is a collection of numbers which is often used to describe the state of a system. 
 
 ![Point or vector](./img/Point_vector.png)
 
 Similarly we can represent an `n-dimensional` vector as $[x_1, x_2, x_3, ..., x_n]$ when the length of the vector is `n` and $x_i$ is a component of the vector.
+
+> vectors are typically defined in spaces of two dimensions or more. When it comes to one dimensional space we call it a scalar.
 
 - **Distance between origin `o(0, 0)` and a point `p(a, b)`in a 2D plane** : **$d = \sqrt{a^2+b^2}$**
 
@@ -32,11 +34,13 @@ A row vector is a vector that has a single row and multiple columns. Similarly, 
 
 ![Row and column vector](./img/Row_col_vectors.png)
 
-- **Row vector** : $[x_1, x_2, x_3, ..., x_n]$ **Column vector** : $\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ ... \\ x_n \end{bmatrix}$
+- **Row vector** : $[x_1, x_2, x_3, ..., x_n]$ 
+
+- **Column vector** : $\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ ... \\ x_n \end{bmatrix}$
 
 ## Dot product of two vectors
 
-The dot product of two vectors is a scalar quantity that is equal to the sum of the products of the corresponding entries of the two vectors.
+The dot product of two vectors is a _scalar_ quantity that is equal to the sum of the products of the corresponding entries of the two vectors.
 
 
 
@@ -47,14 +51,11 @@ which can be written as;
 $$[a_1, a_2, a_3, ..., a_n] \; . \; \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ ... \\ b_n \end{bmatrix}$$
 
 
-
 $$\implies a.b = a^T.b$$
 
 $$\implies a \cdot b = \sum_{i=1}^{n}a_ib_i$$
 
 where a = $[a_1, a_2, a_3, ..., a_n]$ and b = $[b_1, b_2, b_3, ..., b_n]$ are two vectors.
-
-> **Note** : The dot product of two vectors is a scalar quantity. We can interchange a row vector and a column vector by taking the `transpose of the vector`. The transpose of a row vector is a column vector and vice versa.
 
 Now let us see this what $a.b$ means geometrically.
 
@@ -103,6 +104,8 @@ Now when we want to translate the idea of a line to a `3-Dimensional` space, we 
 
 $$w_{1}x_1 + w_2x_2 + w_3x_3 + w_0 = 0$$
 
+> It's better to write the expression like this as in the previous one we will eventually run out of alphabets.
+
 Now when we want to translate the idea of a line to a `n-Dimensional` space, we actually having something known as a `hyperplane`. A hyperplane is a collection of points that satisfy the equation $\color{#FF9900} a_1x_1 + a_2x_2 + a_3x_3 + ... + a_nx_n + b = 0$ where $a_1$, $a_2$, $a_3$, ..., $a_n$ are the coefficients of $x_1$, $x_2$, $x_3$, ..., $x_n$ respectively and $b$ is a constant. In terms of of our previous equation we can define a hyperplane in a n-Dimensional plane as;
 
 $$w_{0}x_0 + w_{1}x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n + w_0 = 0$$
@@ -122,10 +125,59 @@ where $w = [w_0, w_1, w_2, w_3, ..., w_n]$ and $x = [x_0, x_1, x_2, x_3, ..., x_
 Equation of a line passing through origin is $\color{#FF9900}w^Tx = 0$
 > we can drop the $w_0$ term as it is zero (because since the line is passing through origin, the y-intercept is zero).
 
----
----
----
+## Distance of a point from a plane
 
+![Distance of a point from a plane](./img/point_plane.png)
+
+Let us consider a plane $\pi_n$ that passes through origin and an `n-dimensional` point $p$. The distance between the point $p$ and the plane $\pi_n$ is given by;
+
+$$d = \frac{w^Tp}{||w||}$$
+
+where $w$ is the normal vector to the plane $\pi_n$ and $||w||$ is the magnitude of the vector $w$.
+
+Similarly we can find the distance between the plane and the point $p^{'}$ as;
+
+$$d^{'} = \frac{w^Tp^{'}}{||w||}$$
+
+> In the above diagram $\color{#FF9900}d$ is positive as the angle between the $\color{#FF9900}w$ and $\color{#FF9900}p$ is less than $\color{#FF9900}90^{\circ}$ and $\color{#FF9900}d^{'}$ is negative as the angle between the $w$ and $\color{#FF9900}p^{'}$ is greater than $\color{#FF9900}90^{\circ}$.
+
+When we want to compute the distance between the point and the plain, we take the absolute value of the distance, as negative distance does not make sense. At the same time, the sign of the distance is important as it tells us on which side of the plane (half-space) the point lies. So, when we need to determine whether something lies on which half-space, we can use the above idea.
+
+## Circle
+
+A circle is a collection of points that satisfy the equation $\color{#FF9900} (x)^2 + (y)^2 = r^2$ where $\color{#FF9900}r$ is the radius of the circle and it's center is at the origin $(0, 0)$. The general equation of a circle with center $(h, k)$ and radius $r$ is given by;
+
+$$(x - h)^2 + (y - k)^2 = r^2$$
+
+Given a point $p(x_1, x_2)$, we can determine whether that point lies inside the circle, on the circle, or outside the circle.
+
+- If $x_1^2 + x_2^2 < r^2$, the point lies inside the circle.
+
+- If $x_1^2 + x_2^2 = r^2$, the point lies on the circle.
+
+- If $x_1^2 + x_2^2 > r^2$, the point lies outside the circle.
+
+In `3D`, we have **sphere** instead of circle. The general equation for a circle with center $(h, k, l)$ and radius $r$ is given by;
+
+$$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 = r^2$$
+
+A higher dimensional sphere or a **Hypersphere** is defined as;
+
+$$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 + ... + (x_n - m)^2 = r^2$$
+
+If the center of the hypersphere is at the origin, then the equation of the hypersphere is given by;
+
+$$x_1^2 + x_2^2 + x_3^2 + ... + x_n^2 = r^2 \implies \sum_{i=0}^{n}x_i^2 = r^2$$
+
+The same idea of a point inside a circle or not using the equation of a circle can be extended to higher dimensions. This again is pretty powerful as we can use this idea to determine whether a point lies inside a hyper-sphere or not.
+
+
+
+---
+---
+---
+---
+---
 ## System of linear equations
 
 A system of linear equations is a collection of linear equations involving the same set of variables. For example; 
