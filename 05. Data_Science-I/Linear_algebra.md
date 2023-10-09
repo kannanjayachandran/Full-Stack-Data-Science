@@ -217,4 +217,8 @@ The determinant in general encodes information about scaling factors and orienta
 
 The rank of a matrix is the maximum number of linearly independent rows or columns in the matrix. The rank of a matrix is denoted by $rank(X)$. We can find the rank of a matrix by reducing it to its `row echelon form` or `reduced row echelon form` and counting the number of non-zero rows.
 
-### [Notebook](./Notebooks/Linear_algebra.ipynb)
+### [Jupyter notebook of linear algebra](./Notebooks/Linear_algebra.ipynb)
+
+**Checkout [Calculus](./Calculus.md) and [Probability and Statistics](./Probability_and_Statistics.md)**
+
+
