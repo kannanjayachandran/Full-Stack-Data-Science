@@ -10,6 +10,8 @@ I personally think books are the holy grail of learning, but I have listed cours
 
 1. [CS50](https://pll.harvard.edu/course/cs50-introduction-computer-science) By **Harvard University** and Taught by **David J. Malan**, **Brian Yu**, and **Doug Lloyd**.
 
+2. [CPU Land](https://cpu.land/) By **By Lexi Mattick & Hack Club**
+
 ### Python
 
 1. [Corey Schafer](https://www.youtube.com/@coreyms)
