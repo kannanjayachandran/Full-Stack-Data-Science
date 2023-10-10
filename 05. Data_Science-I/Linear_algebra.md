@@ -205,6 +205,8 @@ $$ X= \begin{bmatrix} a & b \\ c & d\end{bmatrix}$$
 
 > For a larger matrix we can find the determinant using a process called Co-factor expansion; which involves choosing a row or column and calculating the determinants of smaller matrices called co-factors. This process can be recursive, meaning you keep calculating determinants of smaller matrices until you reach a 2x2 matrix that you can solve using the formula above
 
+![Alt text](image-6.png)
+
 - All matrices does not have a determinant. Only square matrices have determinant. 
 
 - If the determinant is zero, the matrix is said to be singular, and it does not have an inverse, and the system of linear equations have infinitely many solutions. It also means that the rows or columns of the matrix are linearly dependent and the matrix does not have full rank.
@@ -213,9 +215,59 @@ $$ X= \begin{bmatrix} a & b \\ c & d\end{bmatrix}$$
 
 The determinant in general encodes information about scaling factors and orientations in linear transformations. 
 
+- Although the co-factor expansion method to find the determinant is intuitive, it is computationally expensive. Generally co-factor expansion requires $\color{#FF9900}O(n!)$ operations. We use other alternatives like, the `LU decomposition` along with `product of pivots` method that requires  roughly $\color{#FF9900}O(n^3)$ operations.
+
 ## Rank of a matrix
 
 The rank of a matrix is the maximum number of linearly independent rows or columns in the matrix. The rank of a matrix is denoted by $rank(X)$. We can find the rank of a matrix by reducing it to its `row echelon form` or `reduced row echelon form` and counting the number of non-zero rows.
+
+## Inner product
+
+Inner product is a generalization of the dot product. It is a function that takes in two vectors and returns a scalar. It is denoted by $\langle x, y \rangle$ and is defined as;
+
+$$\langle x, y \rangle = x^Ty = \sum_{i=1}^{N}x_iy_i$$
+
+where $x$ and $y$ are two vectors.
+
+Inner product tells us how the vectors are correlated. If two vectors are correlated
+(i.e., nearly parallel), then the inner product will give us a large value. If the vectors are close to perpendicular, then the inner vector would be small. Therefore, the inner product provides a measure of the _closeness/similarity_ between two vectors.
+
+![Inner product image](image.png)
+>Geometric interpretation of inner product
+
+## Basic Combinatorics
+
+Let us take a detour from linear algebra and look at some basic combinatorics. `Combinatorics` is the branch of mathematics that deals with counting. It is used in probability theory, statistics, and machine learning. Python has extensive support for combinatorics also through libraries like `itertools`, `SciPy`, `NetworkX`, `SymPy`, and `combinations`.
+
+### Permutations
+
+Permutations are the number of ways in which we can arrange a set of objects. 
+
+> For example, if we have three objects, say `a`, `b`, and `c`, then the number of ways in which we can arrange them is $3! = 3 \times 2 \times 1 = 6$. 
+
+Formally we can define permutations as;
+
+**Number of ordered configurations to arrange $k$ objects from a set of $n$ objects, without replacement and without repetition.**
+
+$$P(n, r) = \frac{n!}{(n-r)!}$$
+
+where $\color{#FF9900}n$ is the number of objects and $\color{#FF9900}r$ is the number of objects we want to arrange.
+
+### Combinations
+
+Combinations are the number of ways in which we can select a subset of objects from a set of objects.
+
+> For example, if we have three objects, say `a`, `b`, and `c`, then the number of ways in which we can select two objects is $3C2 = 3$.
+
+Formally we can define combinations as;
+
+**Number of unordered configurations to select $k$ objects from a set of $n$ objects, without replacement and without repetition.**
+
+$$C(n, r) = \frac{n!}{r!(n-r)!}$$
+
+where $\color{#FF9900}n$ is the number of objects and $\color{#FF9900}r$ is the number of objects we want to select.
+
+
 
 ### [Jupyter notebook of linear algebra](./Notebooks/Linear_algebra.ipynb)
 
