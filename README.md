@@ -3,11 +3,9 @@
 </p>
 <h1 align="center">Full Stack Data Science</h1>
 
-**Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from all sort of data.
+**Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from data. **Full-stack data science** refers to a comprehensive approach to the field of data science (End-to-End).
 
-**Full-stack data science** refers to a comprehensive approach to the field of data science. It encompasses the entire data science stack {from data collection and preprocessing to model building and deployment}.
-
-> I am an undergraduate computer science engineering student specializing in _**Artificial Intelligence**_ and _**Machine learning**_. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes**. Minor/Toy projects would be added in their respective repository itself. **Major projects** would be added to separate repositories and linked [here](./Major_Projects.md).
+> I am an undergraduate computer science engineering student specializing in **`Artificial Intelligence`** and **`Machine learning`**. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes**. **Major projects** created as a part of this is available [here](./Major_Projects.md).
 
 ---
 
@@ -30,7 +28,6 @@
 |  13   | Case Study - II                     |                [Here](./13.%20Case%20Studies-II/)                 |
 |  14   | Case Study - III                    |                [Here](./14.%20Case%20Studies-III/)                |
 |  15   | Big Data tools                      |      [Here](./15.%20Big%20data%20anallytics%20and%20tools/)       |
-|  16   | CheatSheets                         |                      [Here](./CheatSheets/)                       |
 
 ---
 
