@@ -1,14 +1,6 @@
 # Introduction to Programming using Python
 
-## Topics
-
-- Python Programming Basics
-
-  - Language fundamentals
-  - Loops and conditionals
-  - Functions
-  - Built-in data structures
-  - OOPS and file handling
+**[Python language basics](https://learn.microsoft.com/en-us/training/paths/beginner-python/)**
 
 ### Basic programs
 
@@ -47,3 +39,14 @@
 9. For a given string, remove all the consecutive duplicate characters
 10. Reverse each word in a given string
 11. Drunken jailer problem
+
+### Notebooks
+
+1. [Pattern printing](./2_Pattern_printing.ipynb)
+2. [List](./3_List.ipynb)
+3. [Tuple](./4_Tuple.ipynb)
+4. [Dictionary](./5_Dictionary.ipynb)
+5. [Set](./6_Set.ipynb)
+6. [String](./7_String.ipynb)  
+7. [Functions](./8_Functions.ipynb)
+8. [OOPS and File handling](./9_OOPS_and_File_handling.ipynb)
