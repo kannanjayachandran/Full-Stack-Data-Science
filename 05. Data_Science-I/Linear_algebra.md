@@ -205,7 +205,7 @@ $$ X= \begin{bmatrix} a & b \\ c & d\end{bmatrix}$$
 
 > For a larger matrix we can find the determinant using a process called Co-factor expansion; which involves choosing a row or column and calculating the determinants of smaller matrices called co-factors. This process can be recursive, meaning you keep calculating determinants of smaller matrices until you reach a 2x2 matrix that you can solve using the formula above
 
-![Alt text](image-6.png)
+![Alt text](./img/Determinant_formula.png)
 
 - All matrices does not have a determinant. Only square matrices have determinant. 
 
@@ -232,7 +232,7 @@ where $x$ and $y$ are two vectors.
 Inner product tells us how the vectors are correlated. If two vectors are correlated
 (i.e., nearly parallel), then the inner product will give us a large value. If the vectors are close to perpendicular, then the inner vector would be small. Therefore, the inner product provides a measure of the _closeness/similarity_ between two vectors.
 
-![Inner product image](image.png)
+![Inner product image](./img/Inner_product.png)
 >Geometric interpretation of inner product
 
 ## Basic Combinatorics
