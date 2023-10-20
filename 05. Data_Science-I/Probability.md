@@ -22,7 +22,7 @@ The sample space is a set that includes all the possible outcomes of a random ex
 
 ## Event 📆
 
-An event is a collection of one or more outcomes of an experiment. It is a subset of the sample space. For example, when tossing a coin, the event of getting a head is a subset of the sample space. $\color{#F99417}\{h\}\sub\{h, t\}$. We use the intersection ($\color{#F99417}\cap$) of both events when they both occur, and the union ($\color{#F99417}\cup$) when either of them occurs.
+An event is a collection of one or more outcomes of an experiment. It is a subset of the sample space. For example, when tossing a coin, the event of getting a head is a subset of the sample space. $\color{#F99417}\{h\}\subset \{h, t\}$. We use the intersection ($\color{#F99417}\cap$) of both events when they both occur, and the union ($\color{#F99417}\cup$) when either of them occurs.
 
 ![Ven diagram representation of probability](./img/ven.png)
 
