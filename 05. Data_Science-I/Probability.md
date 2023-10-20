@@ -249,7 +249,7 @@ where $\large x_i$` is the standardized value of $\large x_i$.
 
 KDE is the application of kernel smoothing to estimate Probability density function of a random variable based on kernel as weights. It is also termed the _Parzen–Rosenblatt window method_.
 
-![KDE image from Wikipedia](image.png)
+![KDE image from Wikipedia](./img/KDE.png)
 
 The image on the left side indicate a histogram which is a discrete representation of the data. The image on the right side indicate a KDE which is a continuous representation of the data. We construct a `kde` by placing a kernel at each data point and then summing up the kernels to get a smooth curve. We are using a Gaussian kernel here. The variance of each kernel is known as the `bandwidth`. The bandwidth is a hyperparameter that controls the smoothness of the curve. Setting a higher bandwidth will result in a smoother curve, while setting a lower bandwidth will result in a more jagged curve.
 
@@ -316,13 +316,13 @@ $$P(|X-\mu|\ge k\sigma)\le \frac{1}{k^2}$$
     
 where $\color{#F99417}k$ is any positive real number.
 
-![Alt text](image-2.png)
+![Chebyshev's inequality image 1](./img/Chebyshev1.png)
 
 The above equation simply says that the probability of $\color{#F99417}X$ lying in the marked region is less than or equal to $\color{#F99417}\frac{1}{k^2}$. We can interpret this in another way as well; 
 
 $$P(\mu - k\sigma < X < \mu+k\sigma)\ge 1 -\frac{1}{k^2}$$
 
-![Alt text](image-1.png)
+![Chebyshev's inequality image 2](./img/Chebyshev2.png)
 
 > Chebychev's inequality is a very powerful in practical applications because it can be applied to any distribution. Unlike the empirical rule, it does not pin point the exact percentage, instead gives then upper bound of the percentage.
 
