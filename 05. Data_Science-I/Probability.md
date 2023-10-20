@@ -1,34 +1,40 @@
-<h1 align="center"> Probability and Statistics </h1>
+<!-- 
 
-**Probability** is the mathematical framework used to model _uncertainty_. It provides a way to quantify and reason about uncertainty in various scenarios. It is the likelihood of an event occurring. **Statistics** on the other hand is the field that deals with collecting, analyzing, interpreting, presenting, and organizing data. It's a field that applies probabilistic concepts to real-world data analysis and decision-making. Probability theory is highly abstract and formalized, while statistics is more or less an applied mathematical discipline. 
+    Author : Kannan Jayachandran
+    File : Probability.md
+     
+ -->
 
-<h1 align="center" style="color: lightgrey"> PROBABILITY </h1>
 
-## Experiment
+<h1 align="center" style="color: orange"> PROBABILITY </h1>
 
-An experiment is a process that produces an outcome. For example, tossing a coin, rolling a die, etc.
+## Experiment 🧪
 
-## Outcome
+An outcome is the result of an experiment. For instance, when we flip a coin, the outcome can be either heads or tails.
+
+## Outcome 🎲
 
 An outcome is the result of an experiment. For example, if we toss a coin, the outcome can be either heads or tails.
 
-## Sample Space Ω
+## Sample Space (Ω) 📊
 
-A sample space is a set containing all possible outcomes of an experiment. For example, if we toss a coin, the sample space is {head, tails}.
+The sample space is a set that includes all the possible outcomes of a random experiment. In the case of a coin toss, the sample space is {heads, tails} or when rolling a fair six-sided die, the sample space is {1, 2, 3, 4, 5, 6}.
 
-## Event
+## Event 📆
 
-An event is a subset of the sample space. For example, if we toss a coin, the event of getting a head is a subset of the sample space. We take take the intersection $\cap$ of both events, if both of them occur. We take the union $\cup$ of both events, if either of them occur.
+An event is a collection of one or more outcomes of an experiment. It is a subset of the sample space. For example, when tossing a coin, the event of getting a head is a subset of the sample space. $\color{#F99417}\{h\}\sub\{h, t\}$. We use the intersection ($\color{#F99417}\cap$) of both events when they both occur, and the union ($\color{#F99417}\cup$) when either of them occurs.
 
-![Alt text](./img/ven.png)
+![Ven diagram representation of probability](./img/ven.png)
 
-## Event space F
+## Event space (F) 📆
 
-The collection of all possible events. For example, if we toss a coin, the event space is {∅, {head}, {tails}, {head, tails}}.
+The collection of all possible events. It is a subset of the sample space that consists of specific outcomes or combinations of outcomes
 
-## Random Variable
+For example, if we toss a coin, the event space is {∅, {head}, {tails}, {head, tails}} or the event of getting an even number when rolling the die, the event space would be {2, 4, 6}
 
-Random variable is a variable that can take on different values, and the specific value it assumes is subject to chance or randomness. There are two main types of random variables: `discrete` and `continuous`.
+## Random Variable (X) 🔢
+
+A random variable is a variable that can assume various values, and the specific value it takes is subject to chance or randomness. They are of two types; `discrete` and `continuous`. **Discrete random variables** can be represented by a **probability distribution table**, while **continuous random variables** can be represented by a **probability density function**.
 
 | Discrete Random Variable | Continuous Random Variable |
 | :----------------------: | :------------------------: |
@@ -37,63 +43,60 @@ Random variable is a variable that can take on different values, and the specifi
 |       Countable set      |       Uncountable set      |
 |       Finite set         |         Infinite set       |
 
+## Calculating Probability
 
+Generally we would calculate probability by using the following idea;
 
-- _Now consider the following `experiment` of throwing a fair die. It has 6 faces : {1, 2, 3, 4, 5, 6}. Compute the probability that you get a number that is; `less than 5` and `an even number`._
+$$P(E) = \frac{\texttt {Number\;of\;favorable\;outcomes}}{\texttt{Total\;number\;of\;possible\;outcomes}}$$
 
-    - `Sample space` : {1, 2, 3, 4, 5, 6}
+And probability would always turns out to be a number between 0 and 1. Where 0 indicates impossibility and 1 indicates certainty.
 
-    - `Events` : $E_1$ = {1, 2, 3, 4} and $E_2$ = {2, 4, 6}
+<details>
 
-    Taking the intersection of these two events, we get `E` : {2, 4}
+<summary> <b> Example </b> </summary>
 
-    $$P(E) = \frac{2}{6} = \frac{1}{3}$$
+_Now consider the following experiment of throwing a fair-six-faced die. {1, 2, 3, 4, 5, 6}. Compute the probability that you get a number that is; less than 5 and an even number._
 
-Which can be interpreted as; **Size of the event `E` relative to sample space `S` is in the ratio 1:3.** Here we are essentially measuring the size of the the event space and the sample space. All the events and the events formed by combining them are subsets of the sample space.
+- `Sample space` : {1, 2, 3, 4, 5, 6}
+
+- `Events` : $\color{#F99417}E_1$ = {1, 2, 3, 4} and $\color{#F99417}E_2$ = {2, 4, 6}
+
+- `Event space` : $\color{#F99417}F$ = {$\color{#F99417}E_1$, $\color{#F99417}E_2$} $\rightarrow$ $\color{#F99417} E_1 \cap E_2$  = {2, 4}
+
+$$P(E) = \frac{2}{6} = \frac{1}{3}$$
+
+</details>
+
+The above equation essentially tells us what probability is; **Probability is a measure of the size of a set**. If you understand this, you're sort of done with probability. This is what I would call the essence of probability.
+
+We have a sample space $\color{#F99417}S$ and an event space $\color{#F99417}F$, all probability does is represent the event space relative to the sample space as a ratio. So in turn we are measuring the size of the event space relative to the sample space.
+
 
 Hence we can define probability as `probability
 is a measure of the size of a set`
 
-![Probability](./img/Probability_process.png)
+![Probability : How probability works](./img/Probability_process.png)
 
-**Probability is a number between 0 and 1, where, 0 indicates impossibility and 1 indicates certainty.**
 
-## Population and Sample
+## Population and Sample  
 
-Population represents the entire set of objects or outcomes about which information is collected. It is large, defined (sometimes theoretical) set of data.
+Population can be any set of objects or events that we are interested in studying. It can be finite or infinite. Often we use the symbol $\color{#F99417}N$ to denote it.
+
+Sample is a subset of the population. We typically denote it using the symbol $\color{#F99417}n$.   
 
 ![population and sample](./img/population.png)
 
+`Sampling` is the process of selecting a subset of individuals from a population to estimate characteristics of the whole population. While taking sample from a population we need to be careful about the following things;
 
-While taking sample from a population we need to be careful about the following things;
+1. The sample should be `representative` of the population.
 
-1. The sample should be representative of the population.
+2. The `sample size` should be large enough to represent the population and small enough to be manageable or practical.
 
-2. The sample size should be large enough to represent the population and small enough to be manageable or practical.
+3. The sample should be `selected randomly`.
 
-3. The sample should be selected randomly.
+4. The sample should be selected without replacement. It maintains the `integrity of the sample's ` representativeness.
 
-4. The sample should be selected without replacement.
-
-**Types of Sampling**
-
-1. **Simple Random Sampling** : Simple random sampling is the process of sampling in which each member of the population has equal chance of being selected. The sample that results is called a _simple random sample_.
-
-![Alt text](./img/simple_sampling.png)
-
-2. **Stratified Sampling** : Stratified sampling is the process in which the population (N) is divided into  non-overlapping groups.
-
-![Alt text](img/stratified.png)
-
-3. **Systematic sampling** : Systematic sampling is a process in which the members are selected from a population at `nth` interval.
-
-![Alt text](img/Systematic.png)
-
-4. **Convinience sampling** : The process of taking samples from the population who has expertise in the sector.
-
-5. **Cluster sampling** : Cluster sampling is a process in which the population is divided into clusters and the researcher randomly selects the clusters to form a sample. This is often used when it's impractical to sample individuals.
-
-> When a sample misrepresents the populations we call it a **sample bias** or **sampling bias**.
+> These might not always be possible, but we should try to achieve as many as possible.
 
 ## Probability Distribution
 
@@ -240,8 +243,136 @@ where $X$ is a random variable that can take on any value in the range $[x_1, x_
 
 $\large x_i$` = $\large \frac{x_i - \mu}{\sigma} \;\;\forall \;i= 1, 2, .., 50$ 
 
+where $\large x_i$` is the standardized value of $\large x_i$.
 
-<!-- <details>
+## Kernel Density Estimation (KDE)
+
+KDE is the application of kernel smoothing to estimate Probability density function of a random variable based on kernel as weights. It is also termed the _Parzen–Rosenblatt window method_.
+
+![KDE image from Wikipedia](image.png)
+
+The image on the left side indicate a histogram which is a discrete representation of the data. The image on the right side indicate a KDE which is a continuous representation of the data. We construct a `kde` by placing a kernel at each data point and then summing up the kernels to get a smooth curve. We are using a Gaussian kernel here. The variance of each kernel is known as the `bandwidth`. The bandwidth is a hyperparameter that controls the smoothness of the curve. Setting a higher bandwidth will result in a smoother curve, while setting a lower bandwidth will result in a more jagged curve.
+
+> Kernels are functions that are used to calculate the weights of the data points.
+
+## Sampling Distribution
+
+Sampling distribution is the probability distribution of a samples; that comes from choosing random samples of a given population. We will get a better idea of what it is by looking at the process of sampling distribution.
+
+- Consider a population with a distribution (can be any distribution), we are drawing samples from this population.
+
+- Select random sample of size `n` from the population.
+
+- Calculate the mean of the sample. (we can also calculate other statistics like median, mode, standard deviation, etc.)
+
+- Repeat the above steps `M` times.
+
+- Develop a frequency distribution of the sample means or the statistics calculated.
+
+- Plot the frequency distribution of the sample statistic.
+
+**If we have `M` sample means $\bar x_i = \bar x_1, \bar x_2, \bar x_3, ...\bar x_n$ then the sampling distribution of the sample means is the probability distribution of these sample means.**
+
+## Central Limit Theorem (CLT)
+
+CLT is one of the most important theorems in statistics. It states that, if we have a population with finite mean $\color{#F99417}\mu$ and variance $\color{#F99417}\sigma^2$ and take sufficiently large random samples from the population of size $\color{#F99417}n$  with replacement $\color{#F99417}m$ times, then the distribution of the sample means (Sampling distribution of sample means) will be approximately normally distributed.
+
+$$OR$$
+
+$$ \bar x_i \sim N(\mu, \frac{\sigma^2}{n})\;\;as\;\; {n\rightarrow \infin}$$ 
+
+
+where $\color{#F99417}\bar x_i$ is the sampling distribution of the sample means, $\color{#F99417}N$ is the normal distribution with mean $\color{#F99417}\mu$ (which is same as the population mean) and variance $\color{#F99417}\frac{\sigma^2}{n}$ (where $\color{#F99417}\sigma^2$ is the population variance and $\color{#F99417}n$ is the sample size).
+
+> We generally consider CLT to be valid if the sample size ($\color{#F99417}n$) is greater than 30.
+
+## Quantile-Quantile (QQ) Plot
+
+QQ plot is a graphical technique for easily determining whether a random variable is Gaussian or normally distributed. Consider the random variable $\color{#F99417}x$, with samples/observations $\color{#F99417}\bar x_1, \bar x_2, \bar x_3, ...\bar x_n$.
+
+- First sort them in ascending order. $\color{#F99417}\bar x`_1, \bar x`_2, \bar x`_3, ...\bar x`_n$.
+
+- Calculate the percentile. $\color{#F99417}x^{(1)}, x^{(2)}, x^{(3)}, ...x^{(n)}$. We get the first percentile at $\color{#F99417}\bar x`_{\frac{n}{100}}$
+
+> If we have 100 data points, then the first percentile is the first data point. If we have 1000 data points, then the first percentile is the 10th data point.
+
+- Create $Y \sim N(0, 1)$, where $\color{#F99417}Y$ is a random variable that follows a standard Gaussian distribution, with mean $\color{#F99417}\mu = 0$ and standard deviation $\color{#F99417}\sigma = 1$.
+
+- Create $\color{#F99417}n$ observations from the $\color{#F99417}Y$ distribution. Sort them in ascending order and find the percentile. $\color{#F99417}y^{(1)}, y^{(2)}, y^{(3)}, ...y^{(n)}$. These are also called `theoretical quantiles`.
+
+- Now plot the $\color{#F99417}x^{(i)}$ vs $\color{#F99417}y^{(i)}$.
+
+If the plot is a straight line (approx.), then the random variable $\color{#F99417}x$ is normally distributed.
+
+> Q-Q plot can also help us in determining whether we have same distributions; given two random variables $\color{#F99417}x$ and $\color{#F99417}y$.
+
+## Chebyshev's Inequality
+
+Chebyshev's inequality is a fundamental theorem in probability that defines an upper bound on how much of a distribution lies within a given range from the mean. Formally we can define chebyshev's inequality as follows;
+
+Consider the random variable $\color{#F99417}X$, with finite mean $\color{#F99417}\mu$ and standard deviation $\color{#F99417}\sigma$ which is non-zero and finite. We **don't know** the distribution of $\color{#F99417}X$. Then we can write the probability of $\color{#F99417}X$ lying within $k$ standard deviations of the mean as;
+
+$$P(|X-\mu|\ge k\sigma)\le \frac{1}{k^2}$$
+    
+where $\color{#F99417}k$ is any positive real number.
+
+![Alt text](image-2.png)
+
+The above equation simply says that the probability of $\color{#F99417}X$ lying in the marked region is less than or equal to $\color{#F99417}\frac{1}{k^2}$. We can interpret this in another way as well; 
+
+$$P(\mu - k\sigma < X < \mu+k\sigma)\ge 1 -\frac{1}{k^2}$$
+
+![Alt text](image-1.png)
+
+> Chebychev's inequality is a very powerful in practical applications because it can be applied to any distribution. Unlike the empirical rule, it does not pin point the exact percentage, instead gives then upper bound of the percentage.
+
+## Uniform Distribution
+
+Uniform distribution is a probability distribution in which all the outcomes are equally likely. It can be of two types; `discrete uniform distribution` and `continuous uniform distribution`.
+
+> _If a random variable is discrete and it follows uniform distribution, then we call it `discrete uniform distribution` and if a random variable is continuous and it follows uniform distribution, then we call it `continuous uniform distribution`_.
+
+In discrete uniform distribution, outcomes are discrete and have same probability. For example if we toss a fair coin, we will get either heads or tails. Both of these outcomes have the same probability of occurring. We wont get any other outcome.
+
+In continuous uniform distribution, outcomes are continuous and infinite. An example for continuous uniform distribution is a random number generator. 
+
+We can write uniform distribution as $\color{#F99417}X \sim U(a, b)$, where $a$ and $b$ are the lower and upper limits of the distribution. They are also called the parameters of the uniform distribution. The probability density function of a uniform distribution is given by;
+
+$$f(x) = \frac{1}{b-a}$$
+
+where $a \le x \le b$.
+
+The number of outcomes in a uniform distribution is defined as $\color{#F99417}n = b-a+1$. The probability of each outcome is $\color{#F99417}\frac{1}{n}$. The mean and median of random variable from a uniform distribution is $\color{#F99417}\frac{a+b}{2}$
+
+<!-- TODO Create a table for mean, median, std.dev, variance. parameters, etc for each distributions - Pdf vs pmf -->
+
+## Bernoulli Distribution
+
+Bernoulli distribution is a type of discrete probability distribution that can have only two possible outcomes. It is a special case of binomial distribution where a single experiment is conducted. It is a discrete distribution with two possible outcomes, `success` and `failure`. It is also called a `two-point distribution` or `two-point random variable`. 
+
+We can write Bernoulli distribution as $\color{#F99417}X \sim Bernoulli(p)$, where $p$ is the probability of success. The probability mass function of a Bernoulli distribution is given by;
+
+$$f(x) = p^x(1-p)^{1-x}$$
+
+where $x \in \{0, 1\}$.
+
+<!-- ## Binomial Distribution
+
+$$\huge \color{red}FILL$$ -->
+
+<!-- Fill this section like above -->
+
+
+
+<!--Section: Probability section links -->
+
+
+<!--Section: Statistics -->
+
+
+<!-- TODO: Add the following topics
+
+ <details>
 <summary> <b> Un-edited </b> </summary>
 
 ## Probability Distribution
