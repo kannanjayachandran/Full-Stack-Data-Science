@@ -1,10 +1,7 @@
 <!-- 
-
     Author : Kannan Jayachandran
-    File : Probability.md
-     
+    File : Probability.md     
  -->
-
 
 <h1 align="center" style="color: orange"> PROBABILITY </h1>
 
@@ -77,115 +74,149 @@ is a measure of the size of a set`
 
 ![Probability : How probability works](./img/Probability_process.png)
 
-
-## Population and Sample  
-
-Population can be any set of objects or events that we are interested in studying. It can be finite or infinite. Often we use the symbol $\color{#F99417}N$ to denote it.
-
-Sample is a subset of the population. We typically denote it using the symbol $\color{#F99417}n$.   
-
-![population and sample](./img/population.png)
-
-`Sampling` is the process of selecting a subset of individuals from a population to estimate characteristics of the whole population. While taking sample from a population we need to be careful about the following things;
-
-1. The sample should be `representative` of the population.
-
-2. The `sample size` should be large enough to represent the population and small enough to be manageable or practical.
-
-3. The sample should be `selected randomly`.
-
-4. The sample should be selected without replacement. It maintains the `integrity of the sample's ` representativeness.
-
-> These might not always be possible, but we should try to achieve as many as possible.
-
 ## Probability Distribution
 
-A probability distribution describes how the values of a random variable are distributed or spread out. It is a mathematical function that gives the probabilities of occurrence of different possible outcomes for an experiment.
+A probability distribution is a mathematical function that describes how the values of a random variable are distributed or spread out. It can be used to represent both discrete (discrete probability distribution) and continuous (continuous probability distribution) random variables. 
 
-> It is important to distinguish between the distribution of the individual data points, known as the `data distribution`, and the distribution of a sample statistic known as the `sampling distribution`.
+> The distribution of individual data points is referred to as the `data distribution`, while the distribution of a sample statistic is known as the `sampling distribution`.
+
+Before seeing the types of probability distribution, let's look at 3 important concepts to understand probability distribution better (**PDF, PMF and CDF**).
 
 ## Probability Density Function (PDF)
 
-It provides the probability distribution of a continuous random variable within a certain range. Types of PDFs are `Normal`, `Uniform`, `Exponential`, etc. PDF must always satisfy the following two conditions;
+The Probability Density Function, or PDF, describes the probability distribution of a continuous random variable within a specific range. It is a function that describes the relative likelihood for this random variable to take on a given value. PDF's always satisfy the following two conditions;
 
 1. Always be non-negative $\color{#F99417}f(x) \ge 0$ for all $\color{#F99417}x$
 
 2. The total area under the PDF curve over the entire range of possible values is equal to $\color{#F99417}1$.
 
-For a continuous random variable, the PDF describes the likelihood of the variable taking on a specific value. Which means  the probability of `x` falling within a small interval, say $\color{#F99417}[a, b]$, is given by the integral of the PDF over that interval.
+The probability of a  random variable ($\color{#F99417}X$) falling within a small interval, say $\color{#F99417}[a, b]$, is given by the integral of the PDF over that interval.
 
 $$P(a\le x \le b) = \int_{a}^{b}f(x)dx$$
 
-> PDF curve represent the count of the data points at each point.
-
 ![PDF of Gaussian distribution image from wikipedia](./img/pdf.png)
-> PDF of Gaussian distribution image 
+> PDF of Gaussian distribution
+
+The PDF curve represents the probability density of the random variable at each point. This means that the area under the PDF curve between two points represents the probability of the random variable taking on a value within that range, which is what the above equation says.
+
+**We can calculate PDF using the following steps**;
+
+1. Find the probability distribution.
+
+2. Find the parameters of the distribution.
+
+3. Get the PDF formula for the distribution and calculate.
+
+## Probability Mass Function (PMF)
+
+Probability mass function (PMF) is a function that gives the probability of a discrete random variable taking on a specific value. It is denoted as $\color{#F99417}P(X=x)$. It provides the probability of $\color{#F99417}X$ taking on a specific value.
+
+The PMF must satisfy the following two conditions:
+
+1. For all possible values of $\color{#F99417}x$, $\color{#F99417}P(X=x)\ge 0$.
+
+2. The sum of the PMF over all possible values of $\color{#F99417}x$ is equal to $\color{#F99417}1$.
+
+![PMF diagram of a fair die](./img/pmf.png)
 
 ## Cumulative Distribution Function (CDF)
 
-CDF, denoted as $f(x)$ for a random variable `x`, is a function that describes the probability that `x` will take a value less than or equal to a given number `x`. In other words, it gives you the cumulative probability up to a certain point.
+The cumulative distribution function (CDF), for a random variable $\color{#F99417}X$ is a function that gives the probability that $\color{#F99417}X$ will take on a value less than or equal to $\color{#F99417}x$ for all possible values of $\color{#F99417}x$. 
+
+$$F(x) = P(X\le x)$$
+
+We can calculate CDF of a continuous random variable by integrating the PDF of the random variable and for a discrete random variable, we can calculate CDF by summing up the probabilities of all possible outcomes that are less than or equal to $\color{#F99417}x$.
 
 ![CDF image](./img/cdf.png)
-> CDF of Gaussian distribution image
+> CDF of Gaussian distribution 
 
-Mathematically we can define CDF as;
+- CDF is a monotonically increasing function (non-decreasing). That is; as $\color{#F99417}x$ increases, $\color{#F99417}F(x)$ can only increase or remain the same.
 
-$$f(x) = P(X\le x)$$
+- As shown in the above diagram, CDF in a normal distribution is a smooth `S` shaped curve
 
-**_While PDF tells us the count of the data points at each point, CDF tells us the count of the data points at or below each point._**
+- The CDF of a discrete random variable is a step function and that of a continuous random variable is a continuous function.
 
-Some important features of CDF are;
+## Symmetric Distribution and Skewness
 
-- CDF is a monotonically increasing function. ie., As `x` increases, $f(x)$ can only increase or remain the same.
+A distribution is considered **symmetric** when the right half of the distribution is a mirror image of the left half. This means that the number of data points on one side is equal to the number on the other. An example of a symmetric distribution is the `normal distribution`.
 
-- As shown in the above diagram, CDF in a normal distribution is a smooth `S` shaped curve 
+A distribution is said to be **skewed** if the right half of the distribution is not a mirror image of the left half. In this case, the number of data points on one side is not equal to the other side.  For example, the `exponential distribution` is skewed. There are two types of skewness;
 
-## Normal or Gaussian Distribution
+1. **Right Skewed or Positive Skewed** : If the right tail is longer than the left tail, the distribution is said to be right skewed. Here **mean** is greater than the **median**. 
 
-Gaussian distribution is one of the most common and important distributions. It has a bell-shaped curve and is characterized by two parameters: mean ($\color{#F99417}\mu$) and standard deviation ($\color{#F99417}\sigma$) we use the symbol $\color{#F99417}N(\mu, \sigma)$ to denote a normal distribution and variance ($\color{#F99417}\sigma^2$) is generally used in place of standard deviation for mathematical convenience. Therefore mathematically we can represent a normal distribution as 
+2. **Left Skewed or Negative Skewed** : If the left tail is longer than the right tail, the distribution is said to be left skewed. In this case, the **mean** is less than the **median**.
 
-$$X\sim N(\mu, \sigma^2)$$
+![Skewness image from wikipedia](./img/Skewness.png)
 
-> Read as `X` follows a normal distribution with $\color{#F99417}\mu$ and $\color{#F99417}\sigma^2$ as parameters.
+> Skewness is a measure asymmetry of the distribution.
 
-Here we want to look at `probability density` instead of probability because for a range (Continuous distribution), the probability of a discrete value `x` is zero, because there are infinite number of values between any two values. 
+## Kurtosis
 
-$$P(x) = \frac{1}{\sqrt{2\pi}\sigma}exp\{\frac{-(x-\mu^2)}{2\sigma^2}\}$$
+Kurtosis provides insights into the peakedness of a distribution and measures the heaviness of the tails of a distribution.
 
-where $exp\{\frac{-(x-\mu^2)}{2\sigma^2}\}$ is $\large e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$
+![Kurtosis image from wikipedia](./img/Kurtosis.png)
 
-$\large \frac{1}{\sqrt{2\pi}\sigma}$ is the normalization constant 
+From the image above, you can observe that higher kurtosis indicates a greater peakedness in the distribution.
 
-$P(x)$ is $P(X=x)$ in which $\color{#F99417}X$ is a random variable and $\color{#F99417}x$ is a value of $\color{#F99417}X$.
+- The normal distribution has a kurtosis of 3, making it a **mesokurtic** distribution.
 
-More generally, we can write the Gaussian distribution as;
+- A distribution with a kurtosis of less than 3 is classified as a **platykurtic** distribution.
 
-$$\huge f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$$
+- A distribution with a kurtosis greater than 3 is referred to as a **leptokurtic** distribution.
 
-This formula can be used to calculate the probability density for a given value `x` in a normal distribution with mean $\color{#F99417}\mu$ and standard deviation $\color{#F99417}\sigma$. Since we represents probability density as a function of `x`, we have written the equation like above.
+> We compare Kurtosis coefficient, to determine the kurtosis of a distribution (Meso, Platy, Lepto).
 
-**Observations**
+## Gaussian Distribution or Normal Distribution
 
-- As the value of `x` moves away from $\color{#F99417}\mu$, the probability density decreases (y decreases), and it reduces exponential of $\color{#F99417}-x^2$.
-> $p(x) = y = exp\{-x^2\}$
+The Gaussian distribution, also known as the Normal distribution, is one of the most common and important probability distributions. It is characterized by a bell-shaped curve and described by two key parameters: the mean ($\color{#F99417}\mu$) and the standard deviation ($\color{#F99417}\sigma$).  Mathematically we would write a normal distribution as;
 
-- The probability density is symmetric about $\color{#F99417}\mu$.
+$$X\sim N(\mu, \sigma)$$
+
+We denote normal distribution as $\color{#F99417}N(\mu, \sigma)$ or  $\color{#F99417}N(\mu, \sigma^2)$, where $\color{#F99417}\sigma^2$ is the variance of the distribution. It is a continuous distribution.
+
+We can write the **PDF** of a normal distribution as; 
+
+$$\large f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$$
+
+
+where $\color{#F99417}\large \frac{1}{\sqrt{2\pi}\sigma}$ is the normalization constant, $e$ is the base of the natural logarithm, $\color{#F99417}\large \frac{x-\mu}{\sigma}$ is the standard score or z-score.
+
+> z-score is the standard score or standard value of a random variable. It is the number of standard deviations that a data point is above from the mean. It is denoted as $\color{#F99417}z$.
+
+The **CDF** of a normal distribution is given by;
+
+$$\large F(x) = {\displaystyle \Phi ({\frac {x-\mu }{\sigma }})={\frac {1}{2}}\left[1+\operatorname {erf} \left({\frac {x-\mu }{\sigma {\sqrt {2}}}}\right)\right]}$$
+
+Where $\color{#F99417}erf$ is the error function. We can rewrite this equation as;
+
+$$\large F(x) = \frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}dx$$
  
-Gaussian distribution is important as many natural phenomena follow this distribution. For example, the height of people, the weight of people, the marks of students in a class, etc.
+Gaussian distribution is important as it is the  distribution of many natural phenomena. For example, the height of people, the weight of people, the marks of students in a class, etc. are all normally distributed.
 
+|Property | Notation/Formula |
+|:---:|:---:|
+|Mean | $\color{#F99417}\mu$ |
+|Median | $\color{#F99417}\mu$ |
+|Mode | $\color{#F99417}\mu$ |
+|Standard Deviation | $\color{#F99417}\sigma$ |
+|Variance | $\color{#F99417}\sigma^2$ |
+|Skewness | $\color{#F99417}0$ |
 
 ## Empirical rule or 68–95–99.7 rule
 
-![Alt text](./img/empirical_rule.png)
+The Empirical Rule is a statistical guideline that applies to a normal distribution, stating that almost all data points will fall within three standard deviations of the mean.
 
-Let's say we have a normal distribution $X \sim N(\mu, \sigma^2)$. From the above diagram we can see that, $\mu = 0$ and $\sigma = 2$. Where $X$ is a random variable. Provided these 3 key information, we can infer a lot of things about the data.
+![Empirical formula image from wikipedia](./img/empirical_rule.png)
 
-1. Around $68\%$ of the data lies within $\mu \pm \sigma$ $[-1\sigma, 1\sigma]$.
+Let's consider a normal distribution $\color{#F99417}X \sim N(\mu, \sigma^2)$, with $\color{#F99417}\mu = 0$. Then we can say that;
 
-2. Around $95\%$ of the values lie within $\mu \pm 2\sigma$ $[-2\sigma, 2\sigma]$.
+1. Around $\color{#F99417}68\%$ of the data lies within $\color{#F99417}\mu \pm \sigma$ $\color{#F99417}[-1\sigma, 1\sigma]$.
 
-3. Around $99.7\%$ of the values lie within $\mu \pm 3\sigma$ $[-3\sigma, 3\sigma]$.
+2. Around $\color{#F99417}95\%$ of the values lie within $\color{#F99417}\mu \pm 2\sigma$ $\color{#F99417}[-2\sigma, 2\sigma]$.
 
+3. Around $\color{#F99417}99.7\%$ of the values lie within $\color{#F99417}\mu \pm 3\sigma$ $\color{#F99417}[-3\sigma, 3\sigma]$.
+
+<div align="center">
 
 **[1 $\sigma$ = 68%]**
 
@@ -193,290 +224,235 @@ Let's say we have a normal distribution $X \sim N(\mu, \sigma^2)$. From the abov
 
 **[3 $\sigma$ = 99.7%]**
 
+</div>
 
-It does not matter how many data points we have the above observations always holds true.
-
-`Empirical formula` is used to calculate the percentage of values that lie within a range of standard deviations from the mean in a normal distribution.
-
-## Symmetric Distribution and Skewness
-
-A distribution is said to be **symmetric** if the right half of the distribution is a mirror image of the left half. If number of data points on one half is equal to the number of data points on the other half. For example, the normal distribution is symmetric. 
-
-A distribution is said to be **skewed** if the right half of the distribution is not a mirror image of the left half. If number of data points on one half is not equal to the number of data points on the other half. For example, the exponential distribution is skewed. There are two types of skewness;
-
-1. **Right Skewed or Positive Skewed** : If the right tail is longer than the left tail, the distribution is said to be right skewed. In this case, the **mean** is greater than the **median**. 
-
-2. **Left Skewed or Negative Skewed** : If the left tail is longer than the right tail, the distribution is said to be left skewed. In this case, the **mean** is less than the **median**.
-
-![Skewness image from wikipedia](./img/Skewness.png)
-
-> Skewness is a measure of symmetry, or more precisely, the lack of symmetry. 
-
-## Kurtosis
-
-Kurtosis basically tell us about the peakedness of our distribution. It is a measure of the heaviness of the tails of a distribution. 
-
-![Kurtosis image from wikipedia](./img/Kurtosis.png)
-
-From the above image, we can see that higher the kurtois, higher the peakedness of the distribution.
-
-- The normal distribution has a kurtosis of 3. A distribution with a kurtosis of 3 is called a **mesokurtic distribution**. 
-
-- A distribution with a kurtosis of less than 3 is called a **platykurtic distribution**. 
-
-- A distribution with a kurtosis of greater than 3 is called a **leptokurtic distribution**.
+It does not matter how many data points we have the above observations always holds true as long as the data is normally distributed. Empirical formula is used to calculate the percentage of values that lie within a range of standard deviations from the mean in a normal distribution. It can also help us in outlier detection.
 
 ## Standard Normal Variate
 
-Standard normal variate is a random variable that has a normal distribution with a mean of zero and a standard deviation of one. It is denoted as $\color{#F99417}Z$. 
+A standard normal variate is a random variable that follows a normal distribution with a mean of zero and a standard deviation of one. It is denoted as $\color{#F99417}Z$. 
 
 $$\large z\sim N(0, 1)$$
-> Read as `z` is a random variable which follows a normal distribution with mean 0 and standard deviation 1.
 
 The process of converting a normal distribution to a standard normal distribution is called **standardization**. 
 
-Let us consider the iris dataset, with `PetalLengthCm` as the feature. We can represent this normal distribution with mean $\color{#F99417}\mu$ and standard deviation $\color{#F99417}\sigma$ as; 
+Let us consider the iris dataset, with `PetalLengthCm` as one feature. We can represent this feature as a normal distribution as follows; 
 
 $$X \sim N(\mu, \sigma^2)$$ 
 
-where $X$ is a random variable that can take on any value in the range $[x_1, x_2, ..., x_{50}]$. Then we can standardize this distribution as;
+where $\color{#F99417}X$ can take any value in the range $\color{#F99417}[x_1, x_2, ..., x_{50}]$. We can standardize this distribution as;
 
 $\large x_i$` = $\large \frac{x_i - \mu}{\sigma} \;\;\forall \;i= 1, 2, .., 50$ 
 
-where $\large x_i$` is the standardized value of $\large x_i$.
+where $\large x_i$` is the standardized value of $\large x_i$. Now we can write the standardized distribution as;
 
-## Kernel Density Estimation (KDE)
+$$X` \sim N(0, 1)$$
 
-KDE is the application of kernel smoothing to estimate Probability density function of a random variable based on kernel as weights. It is also termed the _Parzen–Rosenblatt window method_.
-
-![KDE image from Wikipedia](./img/KDE.png)
-
-The image on the left side indicate a histogram which is a discrete representation of the data. The image on the right side indicate a KDE which is a continuous representation of the data. We construct a `kde` by placing a kernel at each data point and then summing up the kernels to get a smooth curve. We are using a Gaussian kernel here. The variance of each kernel is known as the `bandwidth`. The bandwidth is a hyperparameter that controls the smoothness of the curve. Setting a higher bandwidth will result in a smoother curve, while setting a lower bandwidth will result in a more jagged curve.
-
-> Kernels are functions that are used to calculate the weights of the data points.
-
-## Sampling Distribution
-
-Sampling distribution is the probability distribution of a samples; that comes from choosing random samples of a given population. We will get a better idea of what it is by looking at the process of sampling distribution.
-
-- Consider a population with a distribution (can be any distribution), we are drawing samples from this population.
-
-- Select random sample of size `n` from the population.
-
-- Calculate the mean of the sample. (we can also calculate other statistics like median, mode, standard deviation, etc.)
-
-- Repeat the above steps `M` times.
-
-- Develop a frequency distribution of the sample means or the statistics calculated.
-
-- Plot the frequency distribution of the sample statistic.
-
-**If we have `M` sample means $\bar x_i = \bar x_1, \bar x_2, \bar x_3, ...\bar x_n$ then the sampling distribution of the sample means is the probability distribution of these sample means.**
-
-## Central Limit Theorem (CLT)
-
-CLT is one of the most important theorems in statistics. It states that, if we have a population with finite mean $\color{#F99417}\mu$ and variance $\color{#F99417}\sigma^2$ and take sufficiently large random samples from the population of size $\color{#F99417}n$  with replacement $\color{#F99417}m$ times, then the distribution of the sample means (Sampling distribution of sample means) will be approximately normally distributed.
-
-$$OR$$
-
-$$ \bar x_i \sim N(\mu, \frac{\sigma^2}{n})\;\;as\;\; {n\rightarrow \infin}$$ 
-
-
-where $\color{#F99417}\bar x_i$ is the sampling distribution of the sample means, $\color{#F99417}N$ is the normal distribution with mean $\color{#F99417}\mu$ (which is same as the population mean) and variance $\color{#F99417}\frac{\sigma^2}{n}$ (where $\color{#F99417}\sigma^2$ is the population variance and $\color{#F99417}n$ is the sample size).
-
-> We generally consider CLT to be valid if the sample size ($\color{#F99417}n$) is greater than 30.
-
-## Quantile-Quantile (QQ) Plot
-
-QQ plot is a graphical technique for easily determining whether a random variable is Gaussian or normally distributed. Consider the random variable $\color{#F99417}x$, with samples/observations $\color{#F99417}\bar x_1, \bar x_2, \bar x_3, ...\bar x_n$.
-
-- First sort them in ascending order. $\color{#F99417}\bar x`_1, \bar x`_2, \bar x`_3, ...\bar x`_n$.
-
-- Calculate the percentile. $\color{#F99417}x^{(1)}, x^{(2)}, x^{(3)}, ...x^{(n)}$. We get the first percentile at $\color{#F99417}\bar x`_{\frac{n}{100}}$
-
-> If we have 100 data points, then the first percentile is the first data point. If we have 1000 data points, then the first percentile is the 10th data point.
-
-- Create $Y \sim N(0, 1)$, where $\color{#F99417}Y$ is a random variable that follows a standard Gaussian distribution, with mean $\color{#F99417}\mu = 0$ and standard deviation $\color{#F99417}\sigma = 1$.
-
-- Create $\color{#F99417}n$ observations from the $\color{#F99417}Y$ distribution. Sort them in ascending order and find the percentile. $\color{#F99417}y^{(1)}, y^{(2)}, y^{(3)}, ...y^{(n)}$. These are also called `theoretical quantiles`.
-
-- Now plot the $\color{#F99417}x^{(i)}$ vs $\color{#F99417}y^{(i)}$.
-
-If the plot is a straight line (approx.), then the random variable $\color{#F99417}x$ is normally distributed.
-
-> Q-Q plot can also help us in determining whether we have same distributions; given two random variables $\color{#F99417}x$ and $\color{#F99417}y$.
-
-## Chebyshev's Inequality
-
-Chebyshev's inequality is a fundamental theorem in probability that defines an upper bound on how much of a distribution lies within a given range from the mean. Formally we can define chebyshev's inequality as follows;
-
-Consider the random variable $\color{#F99417}X$, with finite mean $\color{#F99417}\mu$ and standard deviation $\color{#F99417}\sigma$ which is non-zero and finite. We **don't know** the distribution of $\color{#F99417}X$. Then we can write the probability of $\color{#F99417}X$ lying within $k$ standard deviations of the mean as;
-
-$$P(|X-\mu|\ge k\sigma)\le \frac{1}{k^2}$$
-    
-where $\color{#F99417}k$ is any positive real number.
-
-![Chebyshev's inequality image 1](./img/Chebyshev1.png)
-
-The above equation simply says that the probability of $\color{#F99417}X$ lying in the marked region is less than or equal to $\color{#F99417}\frac{1}{k^2}$. We can interpret this in another way as well; 
-
-$$P(\mu - k\sigma < X < \mu+k\sigma)\ge 1 -\frac{1}{k^2}$$
-
-![Chebyshev's inequality image 2](./img/Chebyshev2.png)
-
-> Chebychev's inequality is a very powerful in practical applications because it can be applied to any distribution. Unlike the empirical rule, it does not pin point the exact percentage, instead gives then upper bound of the percentage.
+where $\color{#F99417}X`$ can take any value in the range $\color{#F99417}[x_1`, x_2`, ..., x_{50}`]$.
 
 ## Uniform Distribution
 
-Uniform distribution is a probability distribution in which all the outcomes are equally likely. It can be of two types; `discrete uniform distribution` and `continuous uniform distribution`.
+Uniform distributions are probability distributions with equally likely outcomes. It has constant probability. It can be of two types; `discrete uniform distribution` and `continuous uniform distribution`.
 
-> _If a random variable is discrete and it follows uniform distribution, then we call it `discrete uniform distribution` and if a random variable is continuous and it follows uniform distribution, then we call it `continuous uniform distribution`_.
+In the **discrete uniform distribution**, outcomes are countable and equally likely. That is they have same probability. 
 
-In discrete uniform distribution, outcomes are discrete and have same probability. For example if we toss a fair coin, we will get either heads or tails. Both of these outcomes have the same probability of occurring. We wont get any other outcome.
+> For example if we toss a fair coin, we will get either heads or tails. Both of these outcomes have the same probability of occurring. We wont get any other outcome.
 
-In continuous uniform distribution, outcomes are continuous and infinite. An example for continuous uniform distribution is a random number generator. 
+In continuous uniform distribution, outcomes are continuous and infinite. 
 
-We can write uniform distribution as $\color{#F99417}X \sim U(a, b)$, where $a$ and $b$ are the lower and upper limits of the distribution. They are also called the parameters of the uniform distribution. The probability density function of a uniform distribution is given by;
+> An example for continuous uniform distribution is a random number generator. 
+
+We can write uniform distribution as $\color{#F99417}X \sim U(a, b)$, where $a$ and $b$ are the two parameters of the uniform distribution ( the lower and upper limits of the distribution).  The probability density function of a uniform distribution is given by;
 
 $$f(x) = \frac{1}{b-a}$$
 
-where $a \le x \le b$.
+where $\color{#F99417}a \le x \le b$
 
-The number of outcomes in a uniform distribution is defined as $\color{#F99417}n = b-a+1$. The probability of each outcome is $\color{#F99417}\frac{1}{n}$. The mean and median of random variable from a uniform distribution is $\color{#F99417}\frac{a+b}{2}$
+**PDF** of a continuous uniform distribution is a horizontal line, which is denoted by; 
 
-<!-- TODO Create a table for mean, median, std.dev, variance. parameters, etc for each distributions - Pdf vs pmf -->
+$$f(x) = \begin{cases} \frac{1}{b-a} & \text{if } a \le x \le b \\ 0 & \text{otherwise} \end{cases}$$
+
+In terms of $\color{#F99417}\mu$ and $\color{#F99417}\sigma^2$, we can write the PDF as;
+
+$$f(x) = \begin{cases} \frac{1}{2\sigma\sqrt{2}} & \text{for }-\sigma\sqrt{3}\le x - \mu \le \sigma\sqrt{3}\\ 0 &\text{otherwise} \end{cases}$$
+
+![PDF diagram of uniform continuous distribution](./img/PDF_Continuous_Uniform.png)
+
+**CDF** of a continuous uniform distribution is given by;
+
+$$F(x) = \begin{cases} 0 & \text{if } x < a \\ \frac{x-a}{b-a} & \text{if } a \le x \le b \\ 1 & \text{if } x > b \end{cases}$$
+
+In terms of $\color{#F99417}\mu$ and $\color{#F99417}\sigma^2$, we can write the CDF as;
+
+$$F(x) = \begin{cases} 0 & \text{for } x-\mu < - \sigma\sqrt{3} \\ \frac{x-\mu + \sigma\sqrt{3}}{2\sigma\sqrt{3}} & \text{for } - \sigma\sqrt{3} \le x - \mu <  \sigma\sqrt{3} \\ 1 & \text{for } x - \mu \ge \sigma\sqrt{3} \end{cases}$$
+
+![CDF of continuous uniform distribution from wikipedia](./img/CDF-Uniform-Continuous.png)
+
+|Property | Notation/Formula |
+|:---:|:---:|
+|Mean, Median | $\color{#F99417}\frac{a+b}{2}$ |   
+| Mode | $\color{#F99417}\texttt{Any value x in (a, b)} $ |
+| Variance | $\color{#F99417}\frac{1}{12}(b-a)^2$ |
+| Std. Deviation | $\large\color{#F99417}\frac{b-a}{\sqrt{12}}$ |
+| Skewness | $\color{#F99417}0$ |
+| Number of outcomes (n) | $\color{#F99417}b-a+1$ |
+| Probability of each outcome | $\color{#F99417}\frac{1}{n}$ |
+
+## Standard uniform distribution
+
+Continuous uniform distribution with parameters $\color{#F99417}a = 0$ and $\color{#F99417}b = 1$ is called the standard uniform distribution. It is denoted as $\color{#F99417}U(0, 1)$. One interesting property of this distribution is that if $\color{#F99417}u_1$ has a standard uniform distribution, then $\color{#F99417}u_2 = 1 - u_1$ also has a standard uniform distribution. This property is called inversion method, where we can use continuous standard distribution to generate random number $\color{#F99417}x$ from any continuous distribution with CDF $\color{#F99417}F$.
+
+**PMF** of discrete uniform distribution is given by;
+
+$$f(x) = \begin{cases} \frac{1}{n} & \text{for } x = 1, 2, ..., n \\ 0 & \text{otherwise} \end{cases}$$
+
+![PMF of discrete uniform distribution](./img/PMF_Discrete_Uniform.png)
+
+**CDF** of discrete uniform distribution is given by;
+
+$$F(x) = \begin{cases} 0 & \text{for } x < 1 \\ \frac{x}{n} & \text{for } 1 \le x \le n \\ 1 & \text{for } x > n \end{cases}$$
+
+![CDF of discrete uniform distribution](./img/CDF_Discrete_Uniform.png)
+
+> Uniform distribution is a special case of beta distribution. This makes uniform distribution to be used for modelling a variety of random phenomena.
+
+## Binomial Distribution
+
+Binomial distribution is a _discrete probability distribution_ with parameters : number of trials ($\color{#F99417}n$) and probability of success in each trial ($\color{#F99417}p$), that describes the number of successes in a sequence of $\color{#F99417}n$ independent experiments, each asking a `yes–no` question, and each with its own Boolean-valued outcome: `success or failure`.
+
+A single success/failure experiment is called a `Bernoulli trial` or `Bernoulli experiment`, and a sequence of outcomes is called a `Bernoulli process`. For a single trial, we can write the probability of success as $\color{#F99417}p$ and the probability of failure as $\color{#F99417}q = 1 - p$. And in this case where $\color{#F99417}n=1$, the binomial distribution is a Bernoulli distribution.
+
+We can write binomial distribution as $\color{#F99417}X \sim B(n, p)$. The **PMF** of binomial distribution is given by;
+
+$$f(x) = \begin{cases} \large\binom{n}{x}p^x(1-p)^{n-x} & \text{for } x = 0, 1, ..., n  \end{cases}$$
+
+**where**; 
+- $\color{#F99417}\binom{n}{x}$ is the binomial coefficient (_which is the number of ways of picking $\color{#F99417}x$ (number of successes) unordered outcomes from $\color{#F99417}n$ possibilities (the number of trials), also known as a combination_)
+
+- $\color{#F99417}P$ is the probability of success on a single trial 
+
+![PMF of binomial distribution](./img/PMF_Binomial.png)
+
+**PMF in binomial distribution gives the probability of getting $\color{#F99417}x$ successes in $\color{#F99417}n$ trials.**
+
+> For example if we flip a coin 5 times and want to know the probability of getting 3 heads (F(3)), we can use the PMF of binomial distribution.
+
+**CDF** of binomial distribution is given by;
+
+$$F(x) = \begin{cases} 0 & \text{for } x < 0 \\ \sum_{k=0}^{x}\binom{n}{k}p^k(1-p)^{n-k} & \text{for } 0 \le x \le n \\ 1 & \text{for } x > n \end{cases}$$
+
+![CDF of binomial distribution](./img/CDF_binomial.png)
+
+**For binomial distribution CDF gives the the number of successes will be less than or equal to a certain value.**
+
+> For example if we flip a coin 5 times and want to know the probability of getting 3 or fewer heads (F(0) + F(1) + F(2) + F(3)), we can use the CDF of binomial distribution.
+
+|Property | Notation/Formula |
+|:---:|:---:|
+|Mean & Median | $\color{#F99417}np$ |
+|Mode | $\color{#F99417}\lfloor (n+1)p \rfloor$ |
+|Variance | $\color{#F99417}npq$ |
+|Std. Deviation | $\color{#F99417}\sqrt{np(1-p)}$ |
+|Skewness | $\color{#F99417}\frac{q-p}{\sqrt{npq}}$ |
 
 ## Bernoulli Distribution
 
-Bernoulli distribution is a type of discrete probability distribution that can have only two possible outcomes. It is a special case of binomial distribution where a single experiment is conducted. It is a discrete distribution with two possible outcomes, `success` and `failure`. It is also called a `two-point distribution` or `two-point random variable`. 
+Bernoulli distribution is a `discrete probability distribution` that can have only two possible outcomes. It is a special case of binomial distribution where a single experiment is conducted. It is a discrete distribution with two possible outcomes, `success` and `failure`. It is also called a `two-point distribution` or `two-point random variable`.
 
-We can write Bernoulli distribution as $\color{#F99417}X \sim Bernoulli(p)$, where $p$ is the probability of success. The probability mass function of a Bernoulli distribution is given by;
+We can write Bernoulli distribution as $\color{#F99417}X \sim Bernoulli(p)$, where $p$ is the probability of success. **PMF** of a Bernoulli distribution is given by;
 
 $$f(x) = p^x(1-p)^{1-x}$$
 
 where $x \in \{0, 1\}$.
 
-<!-- ## Binomial Distribution
+This can also be interpreted as;
 
-$$\huge \color{red}FILL$$ -->
+$$PMF = \begin{cases} q & \text{if } k = 0 \\ p & \text{if } k = 1 \end{cases}$$
 
-<!-- Fill this section like above -->
+where $\color{#F99417}q = 1-p$ 
 
+![PMF of Bernoulli distribution](./img/PMF_bernoulli.png)
 
+|Property | Notation/Formula |
+|:---:|:---:|
+|Mean | $\color{#F99417}p$ |
+|Median | $\color{#F99417}\begin{cases} 1 & \text{if } p \ge \frac{1}{2} \\ [0, 1] & \text{if } p = \frac{1}{2} \\ 0 & \text{if } p < \frac{1}{2} \end{cases}$ |
+|Mode | $\color{#F99417}\begin{cases} 1 & \text{if } p \ge \frac{1}{2} \\ 0, 1 & \text{if } p = \frac{1}{2} \\ 0 & \text{if } p < \frac{1}{2} \end{cases}$ |
+|Variance | $\color{#F99417}pq$ |
+|Skewness | $\color{#F99417}\frac{q-p}{\sqrt{pq}}$ |
+
+## Log Normal Distribution
+
+The log-normal distribution is a continuous probability distribution that describes a random variable whose natural logarithm follows a normal distribution. In other words, if the random variable $\color{#F99417}X$ follows a log-normal distribution, then the variable $\color{#F99417}Y = \ln(X)$ is normally distributed.
+
+We can write log-normal distribution as $\color{#F99417}X \sim LN(\mu, \sigma^2)$, where $\color{#F99417}\mu$ and $\color{#F99417}\sigma^2$ are the mean and variance of the variable's natural logarithm. The **PDF** of a log-normal distribution is given by;
+
+$$f(x) = \frac{1}{x\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{ln(x)-\mu}{\sigma})^2}$$
+
+where $x > 0$.
+
+> It is similar to normal distribution, other than the ln(x) term. The PDF curve of a log-normal distribution is skewed to the right.
+
+![PDF of log normal distribution](./img/PDF_log_normal.png)
+
+> As $\color{#F99417}\sigma$ increases, the distribution gets more skewed to the right.
+
+**CDF** of a log-normal distribution is given by;
+
+$$F(x) = \frac{1}{2} + \frac{1}{2}erf(\frac{ln(x)-\mu}{\sigma\sqrt{2}})$$
+
+where $x > 0$.
+
+![CDF of log normal distribution](./img/CDF_log_normal.png)
+
+|Property | Notation/Formula |
+|:---:|:---:|
+|Mean | $\color{#F99417}e^{\mu + \frac{\sigma^2}{2}}$ |
+|Median | $\color{#F99417}e^{\mu}$ |
+|Mode | $\color{#F99417}e^{\mu - \sigma^2}$ |
+|Variance | $\color{#F99417}(e^{\sigma^2}-1)e^{2\mu + \sigma^2}$ |
+|Skewness | $\color{#F99417}\frac{e^{\sigma^2}+2}{\sqrt{e^{\sigma^2}-1}}$ |
+
+The log-normal distribution finds applications in various fields, including human behavior, finance, biology, chemistry, hydrology, and social sciences. It is particularly useful in modeling variables like the length of social media comments, user dwell time on a website, or the duration of chess games, among others. 
+
+## Pareto Distribution
+
+Pareto distribution is a continuous probability distribution used to model phenomena where a small number of items or events account for the majority of the impact or occurrences. It is commonly referred to as the "80-20" rule, where approximately 80% of the effects come from 20% of the causes. It is based on `Power Law`.
+
+### Power law
+
+Power law is a functional relationship between two quantities, where a relative change in one quantity results in a proportional relative change in the other quantity, independent of the initial size of those quantities: _**one quantity varies as a power of another**_. For instance, considering the area of a square in terms of the length of its side, if the length is doubled, the area is multiplied by a factor of four.
+
+![Power law](./img/Power_law.png)
+
+- This is what `pareto principle` also says. It says that 80% of the effects come from 20% of the causes.
+
+We can write a pareto distribution as $\color{#F99417}X \sim Pareto(\alpha, x_m)$, where $\color{#F99417}\alpha$ is the shape parameter and $\color{#F99417}x_m$ is the scale parameter. **PDF** of a pareto distribution is given by;
+
+$$f(x) = \frac{\alpha x_m^\alpha}{x^{\alpha+1}}$$
+
+where $x \ge x_m$ and $\alpha > 0$.
+
+![PDF of Pareto distribution](./img/PDF_Pareto.png)
+
+**CDF** of a pareto distribution is given by;
+
+$$F(x) = 1 - (\frac{x_m}{x})^\alpha$$
+
+where $x \ge x_m$ and $\alpha > 0$.
+
+![CDF of pareto distribution](./img/CDF_Pareto.png)
+
+|Property | Notation/Formula |
+|:---:|:---:|
+|Mean | $\color{#F99417}\begin{cases} \infty & \text{if } \alpha \le 1 \\ \frac{\alpha x_m}{\alpha - 1} & \text{if } \alpha > 1 \end{cases}$ |
+|Median | $\color{#F99417}x_m(\frac{1}{2})^{\frac{1}{\alpha}}$ |
+|Mode | $\color{#F99417}x_m$ |
+|Variance | $\color{#F99417}\begin{cases} \infty & \text{if } \alpha \in (1, 2] \\ \frac{x_m^2\alpha}{(\alpha-1)^2(\alpha-2)} & \text{if } \alpha > 2 \end{cases}$ |
+|Skewness | $\color{#F99417}\begin{cases} \text{undefined} & \text{if } \alpha \le 3 \\ \frac{2(1+\alpha)}{\alpha-3}\sqrt{\frac{\alpha-2}{\alpha}} & \text{if } \alpha > 3 \end{cases}$ |
+
+> We can use log-log plot to check if a distribution follows pareto distribution. If the plot is linear, then the distribution follows pareto distribution most of the times (not always). 
+
+<!-- BOX COX transformation -->
 
 <!--Section: Probability section links -->
-
-
-<!--Section: Statistics -->
-
-
-<!-- TODO: Add the following topics
-
- <details>
-<summary> <b> Un-edited </b> </summary>
-
-## Probability Distribution
-
-A probability distribution is a function that describes the likelihood of obtaining the possible values that a random variable can assume. In other words, the values of the variable vary based on the underlying probability distribution.
-
-
-
-<h1 align="center" style="color: lightgrey"> STATISTICS </h1>
-
-
-
-
-
-
-
-# PDF
-
-PDF stands for Probability Density Function. It is a function that describes the relative likelihood for this random variable to take on a given value. It gives a smooth curve of the probability density function.
-We use KDE to estimate the PDF.
-
-# CDF
-
-CDF stands for Cumulative Distribution Function. It is the probability that the variable takes a value less than or equal to x. It gives a step function of the cumulative distribution function.
-
-While pdf shows the count (actually probability) at each point, cdf shows the count (actually probability) at or below each point. If we differentiate the CDF, we get the PDF and if we integrate PDF, we get the CDF.
-
-
-# Univariate Analysis
-
-Univariate analysis is the simplest form of analyzing data. “Uni” means “one”, so in other words your data has only one variable. It doesn’t deal with causes or relationships (unlike regression ) and it’s major purpose is to describe; It takes data, summarizes that data and finds patterns in the data.
-
-
-## Mean $\mu$
-
-The mean is the average of the numbers. In other words it is the sum of all values divided by the number of values.
-
-$$\mu = \sum_{i=0}^{n}\frac{x_i}{n}$$
-
-It can be affected by outliers.
-
-Mean is the best measure of central tendency for symmetric distributions.
-
-## Spread or Variability
-
-Spread simply tells us what is the range of the data. It is the difference between the highest and lowest values in a data set. It shows how each of the data points are spread out from the mean.
-
-we generally use the square of the difference between each data point and the mean. This is because the sum of the differences from the mean is always zero. So we square the differences to get rid of the negative signs.
-
-
-$$var = \frac{1}{n}\sum_{i=0}^{n}(x_i-\mu)^2$$
-
-Therefore variance is the average of the squared differences from the mean.
-
-if we take the square root of the variance, we get the standard deviation. It is the most commonly used measure of spread. 
-
-$$\sigma = \sqrt{\frac{1}{n}\sum_{i=0}^{n}(x_i-\mu)^2}$$
-
-# Standard deviation
-
-A lower std. dev means the data points tends to be close to the mean. which means the data is less spread out. 
-
-A higher std. dev means the data points tends to be far from the mean. which means the data is more spread out. A higher std.dev is also an indicator of outliers or extreme values.
-
-## Median
-
-The median is the middle value in a data set. It is the value for which 50% of the values are smaller and 50% are bigger. It is not affected by outliers.
-
-$$median = \frac{n+1}{2}^{th} value$$
-
-
-Usually we sort the data and take the middle value. If the number of values is even, we take the average of the two middle values.
-
-Median can get affected by outliers only if more than 50% of the data is outliers.
-
-## Percentile
-
-Percentile is the value below which a percentage of data falls. For example, the 20th percentile is the value (or score) below which 20% of the observations may be found. ie.; it tells that 20% of the observations are below this value.
-
-50th percentile is the same as median.
-
-25th, 50th, and 75th, 100th percentiles are called Quantiles.
-
-```python
-
-np.percentile(setosa_df['PetalLengthCm'], np.arange(0, 100, 25))
-
-np.percentile(setosa_df['PetalLengthCm'], 99)
-```
-
-Median absolute deviation is similar to standard deviation but it is more robust to outliers.
-
-```python
-from statsmodels import robust
-
-robust.mad(setosa_df['PetalLengthCm'])
-```
-
-## Inter Quartile Range (IQR)
-
-IQR is the difference between the 75th and 25th percentiles. It is the range of the middle 50% of the data. It is not affected by outliers.
-
-```python
-Q1 = np.percentile(setosa_df['PetalLengthCm'], 25)
-
-</details>
- -->

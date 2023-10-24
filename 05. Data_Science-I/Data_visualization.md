@@ -1,5 +1,4 @@
-<h1 align="center"> Data Visualization </h1>
-
+<h1 align="center" style="color: orange"> Data Visualization </h1>
 
 Data visualization is a rudimentary and essential part of data science process. It is the process of making sense of the data through visual representations. It serves two fundamental purposes:
 

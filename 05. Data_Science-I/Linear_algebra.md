@@ -1,3 +1,10 @@
+<!-- 
+    Author : Kannan Jayachandran
+    File : Linear_Algebra.md   
+
+    NOT REVIEWED  
+ -->
+
 <h1 align="center"> Linear Algebra </h1>
 
 Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. It is a fundamental part of machine learning, deep learning, data science, and artificial intelligence.
@@ -267,10 +274,6 @@ $$C(n, r) = \frac{n!}{r!(n-r)!}$$
 
 where $\color{#FF9900}n$ is the number of objects and $\color{#FF9900}r$ is the number of objects we want to select.
 
-
-
 ### [Jupyter notebook of linear algebra](./Notebooks/Linear_algebra.ipynb)
 
-**Checkout [Calculus](./Calculus.md) and [Probability and Statistics](./Probability_and_Statistics.md)**
-
-
+**Checkout [Calculus](./Calculus.md) and [Probability and Statistics](./Probability_and_statistics_Introduction.md)**
