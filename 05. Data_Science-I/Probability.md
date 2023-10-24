@@ -44,7 +44,7 @@ A random variable is a variable that can assume various values, and the specific
 
 Generally we would calculate probability by using the following idea;
 
-$$P(E) = \frac{\texttt {Number\;of\;favorable\;outcomes}}{\texttt{Total\;number\;of\;possible\;outcomes}}$$
+$$P(E) = \frac{\texttt {Number of favorable outcomes}}{\texttt{Total number of possible outcomes}}$$
 
 And probability would always turns out to be a number between 0 and 1. Where 0 indicates impossibility and 1 indicates certainty.
 
@@ -64,7 +64,7 @@ $$P(E) = \frac{2}{6} = \frac{1}{3}$$
 
 </details>
 
-The above equation essentially tells us what probability is; **Probability is a measure of the size of a set**. If you understand this, you're sort of done with probability. This is what I would call the essence of probability.
+The above equation of P(E) essentially tells us what probability is; **Probability is a measure of the size of a set**. If you understand this, you're sort of done with probability. This is what I would call the essence of probability.
 
 We have a sample space $\color{#F99417}S$ and an event space $\color{#F99417}F$, all probability does is represent the event space relative to the sample space as a ratio. So in turn we are measuring the size of the event space relative to the sample space.
 
