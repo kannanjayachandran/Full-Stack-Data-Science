@@ -453,6 +453,51 @@ where $x \ge x_m$ and $\alpha > 0$.
 
 > We can use log-log plot to check if a distribution follows pareto distribution. If the plot is linear, then the distribution follows pareto distribution most of the times (not always). 
 
-<!-- BOX COX transformation -->
+## Box Cox Transformation
+
+A data transformation is the process of performing some mathematical operations on a dataset to change some aspects of the data like its scale, skewness, shape, etc. But not changing the essence of the data. We can categorize data transformations into two types; `linear transformations` and `non-linear transformations`.
+
+A `linear transformation` is a transformation that preserves the linearity of the data. It only changes the scale of the data. It won't essentially change the distribution (shape) of our data.
+
+A `non-linear transformation` is a complex transformation which involves changing the shape of the data. It usually involves using some mathematical functions like logarithmic, exponential, square root, etc.
+
+`Power transformation` is a type of non-linear transformation. It is a family of transformations that are indexed by a parameter $\color{#F99417}\lambda$. For example taking the square root and the logarithms of observation in order to make the distribution normal belongs to the class of power transforms.
+
+**Box Cox** transformation is a non-linear transformation technique that is used to transform a log-normal distribution to a normal distribution (Not always possible). It is able to perform a range of power transforms (like square root and log) to basically stabilize the variance of a non-normal distribution. We are simply transforming the data to expose the underlying normal distribution of data (Not performing any conversion).
+
+We can describe box cox transformation as;
+
+$$Y' = \frac{Y^λ - 1}{\lambda} $$
+
+where $\color{#F99417}Y$ is the response variable and $\color{#F99417}λ$ is the transformation parameter.
+
+Mathematically we can write box cox transformation as;
+
+$$y(\lambda) = \begin{cases} \frac{y^\lambda - 1}{\lambda} & \text{if } \lambda \ne 0 \\ \ln(y) & \text{if } \lambda = 0 \end{cases}$$
+
+where $\color{#F99417}y > 0$.
+
+Selecting the optimal value of $\color{#F99417}\lambda$ is important. We may use maximum likelihood estimation to find the optimal value of $\color{#F99417}\lambda$. Generally we select the value of $\color{#F99417}\lambda$ to be between [$\color{#F99417} -5, 5$]. Common values for $\color{#F99417}\lambda$ are;
+
+| value | Transformation |
+|:---:|:---:|
+| $\color{#F99417}\lambda = -1$ | reciprocal transformation  |
+| $\color{#F99417}\lambda = -0.5$ | reciprocal square root transformation  |
+| $\color{#F99417}\lambda = 0$ | log transformation  |
+| $\color{#F99417}\lambda = 0.5$ | square root transformation  |
+| $\color{#F99417}\lambda = 1$ | no transformation  |
+| $\color{#F99417}\lambda = 2$ | square transformation  |
+
+> See the notebook for implementation of box cox transformation using python.
+
+**Limitations of box cox transformation**
+
+- Defined only for positive values of $\color{#F99417}y$. We can use something like 
+
+- Although it can be used for stabilizing variance, it might not completely address the situation where, the variance of the data is not constant across all levels of the data (Assumption of Homoscedasticity).
+
+- Not always possible.
+
+- Selection of optimal value of $\color{#F99417}\lambda$ and the transformed value of $\color{#F99417}y$ is not always easily interpretable.
 
 <!--Section: Probability section links -->

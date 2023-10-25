@@ -5,9 +5,9 @@
     NOT REVIEWED  
  -->
 
-<h1 align="center"> Linear Algebra </h1>
+<h1 align="center" style="color: orange"> Linear Algebra </h1>
 
-Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. It is a fundamental part of machine learning, deep learning, data science, and artificial intelligence.
+Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. It is a fundamental part of machine learning, deep learning, data science, and artificial intelligence. Here we would cover linear algebra from a machine learning perspective.
 
 ## Points/Vectors
 
@@ -15,71 +15,54 @@ A point/Vector is a collection of numbers which is often used to describe the st
 
 ![Point or vector](./img/Point_vector.png)
 
-Similarly we can represent an `n-dimensional` vector as $[x_1, x_2, x_3, ..., x_n]$ when the length of the vector is `n` and $x_i$ is a component of the vector.
+Therefore we can represent an `n-dimensional` vector as $\color{#F99417}[x_1, x_2, x_3, ..., x_n]$ when the length of the vector is `n` and $\color{#F99417}x_i$ is a component of the vector.
 
-> vectors are typically defined in spaces of two dimensions or more. When it comes to one dimensional space we call it a scalar.
+> $\color{#F99417}Scalar → Vector → Matrix → Tensor$
 
-- **Distance between origin `o(0, 0)` and a point `p(a, b)`in a 2D plane** : **$d = \sqrt{a^2+b^2}$**
+Some of the common **distance formulas** are;
 
-- **Distance between origin `o(0, 0, 0)` and a point `p(a, b, c)`in a 3D plane** : **$d = \sqrt{a^2+b^2+c^2}$**
+| Description | Formula |
+| :--- | :--- |
+| Distance between origin $\color{#F99417}o(0, 0)$ and a point $\color{#F99417}p(x_1, x_2)$ in a 2D plane | $d = \sqrt{a^2+b^2}$ |
+| Distance between origin $\color{#F99417}o(0, 0, 0)$ and a point $\color{#F99417}p(x_1, x_2, x_3)$ in a 3D plane | $d = \sqrt{a^2+b^2+c^2}$ |
+| Distance between origin $\color{#F99417}o(0, 0, 0, ..., 0)$ and a point $\color{#F99417}p(x_1, x_2, x_3, ..., x_n)$ in a `n-dimensional` plane | $d = \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2}$ |
+| Distance between two points p $\color{#F99417}(x_1, y_1)$ and q $\color{#F99417}(x_2, y_2)$ in a 2D plane | $d = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2}$ |
+| Distance between two points p $\color{#F99417}(x_1, y_1, z_1)$ and q $\color{#F99417}(x_2, y_2, z_2)$ in a 3D plane | $d = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2+(z_1 - z_2)^2}$ |
+| Distance between two points p $\color{#F99417}(x_1, x_2, x_3, ..., x_n)$ and q $\color{#F99417}(y_1, y_2, y_3, ..., y_n)$ in a `n-dimensional` plane | $d = \sqrt{(x_1 - y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+...+(x_n - y_n)^2} \\  \texttt{ or }\\ d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$ (Euclidean distance) |
 
-- **Distance between the origin and a `n-dimensional` point `p(x1, x2, x3, ..., xn)`** : **$d = \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2}$**
-
-> This sorts of gives us a hint to a basic yet powerful concept in linear algebra, most of the concepts in linear algebra can be extended to `n-dimensional` space from `2D` and `3D` space.
-
-- **Distance between two points p $(x_1, y_1)$ and q $(x_2, y_2)$ in a 2D plane** : **$d = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2}$**
-
-- **Distance between two points p $(x_1, y_1, z_1)$ and q $(x_2, y_2, z_2)$ in a 3D plane** : **$d = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2+(z_1 - z_2)^2}$**
-
-- **Distance between two points p $(x_1, x_2, x_3, ..., x_n)$ and q $(y_1, y_2, y_3, ..., y_n)$ in a `n-dimensional` plane** : **$d = \sqrt{(x_1 - y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+...+(x_n - y_n)^2}$** or **$d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$**
-
-> This is called the `Euclidean distance` between two points.
+> We can easily derive all the above formulas using the Pythagoras theorem.
 
 ## Row and Column Vectors
 
-A row vector is a vector that has a single row and multiple columns. Similarly, a column vector is a vector that has a single column and multiple rows.
+Row vectors are vectors that have a single row and one or more columns. They are often used to represent the weights of a neural network. Column vectors are vectors that have a single column and one or more rows. They are often used to represent the features of an input to a machine learning model.
 
-![Row and column vector](./img/Row_col_vectors.png)
-
-- **Row vector** : $[x_1, x_2, x_3, ..., x_n]$ 
-
-- **Column vector** : $\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ ... \\ x_n \end{bmatrix}$
+![Row and column vector](./img/Row-Col-Vector.png)
 
 ## Dot product of two vectors
 
 The dot product of two vectors is a _scalar_ quantity that is equal to the sum of the products of the corresponding entries of the two vectors.
 
+- **Dot product of two vectors** : $\color{#F99417}a \cdot b = a_1b_1 + a_2b_2 + a_3b_3 + ... + a_nb_n$ 
 
+which can be written as the product of a row and a column vector as;
 
-- **Dot product of two vectors** : $a \cdot b = a_1b_1 + a_2b_2 + a_3b_3 + ... + a_nb_n$ 
+$$[a_1, a_2, a_3, ..., a_n] \; \cdot \; \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ ... \\ b_n \end{bmatrix} \rightarrow a^T.b \rightarrow a \cdot b = \sum_{i=1}^{n}a_ib_i$$
 
-which can be written as;
+where a = $\color{#F99417}[a_1, a_2, a_3, ..., a_n]$ and b = $\color{#F99417}[b_1, b_2, b_3, ..., b_n]$ are two vectors.
 
-$$[a_1, a_2, a_3, ..., a_n] \; . \; \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ ... \\ b_n \end{bmatrix}$$
-
-
-$$\implies a.b = a^T.b$$
-
-$$\implies a \cdot b = \sum_{i=1}^{n}a_ib_i$$
-
-where a = $[a_1, a_2, a_3, ..., a_n]$ and b = $[b_1, b_2, b_3, ..., b_n]$ are two vectors.
-
-Now let us see this what $a.b$ means geometrically.
+Geometrically interpretation of dot product.
 
 ![Geometrical interpretation of dot product](./img/dot_product.png)
 
-From the above diagram if we have the angle between the two vectors as $\theta$ then we can write the dot product as;
-
-$$a.b = |a||b|cos\theta$$
-
-Hence if the two vectors are perpendicular to each other then the dot product is zero.
+- Hence if the two vectors are perpendicular to each other then the dot product is zero.
 
 If we extrapolate this to `n-dimensional` space then we can write the dot product as;
 
-$$a.b = \sum_{i=1}^{n}a_ib_i = |a||b|cos\theta$$
+For an `n-dimensional` space, the dot product of two vectors $\color{#F99417}a$ and $\color{#F99417}b$ is given by;
 
-where $a = [a_1, a_2, a_3, ..., a_n]$ and $b = [b_1, b_2, b_3, ..., b_n]$ are two `n-dimensional`vectors. 
- 
+$$a.b = \sum_{i=1}^{n}a_ib_i = |a||b| \; cos\theta$$
+
+where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ and $\color{#F99417}b = [b_1, b_2, b_3, ..., b_n]$.
 
 ## Projection of a vector
 
@@ -89,66 +72,65 @@ The projection of a vector `a` onto another vector `b`, denoted as `proj_b(a)`, 
 
 We can express this mathematically as;
 
-$$d = \frac{a.b}{||b||}$$
+$$d = \frac{a.b}{||b||} \rightarrow d = ||a||cos\theta$$
 
-where $a$ and $b$ are two vectors and $||b||$ is the magnitude/length of the vector $b$. Or;
+where $\color{#F99417}a$ and $\color{#F99417}b$ are two vectors and $\color{#F99417}||b||$ is the magnitude/length of the vector $\color{#F99417}b$.
 
-$$d = ||a||cos\theta$$
-
-where $\theta$ is the angle between the two vectors.
+where $\color{#F99417}\theta$ is the angle between the two vectors.
 
 ## Unit vector
 
-A unit vector is a vector that has a magnitude of 1. It is often denoted as $\hat{a}$. The unit vector would have the same direction as the original vector $a$.
+A vector with a magnitude of 1. It is often denoted as $\color{#F99417}\hat{a}$. The unit vector would have the same direction as the original vector $\color{#F99417}a$.
 
 ## A line
 
-A line is a collection of points that satisfy the equation $\color{#FF9900}ax + by + c = 0$ where $a$ and $b$ are the coefficients of $x$ and $y$ respectively and $c$ is a constant. We can define a line in a 2D plane as;
+A line is a collection of points that satisfy the equation $\color{#FF9900}ax + by + c = 0$ where $a$ and $b$ are the coefficients of $x$ and $y$ respectively and $c$ is a constant. We can define a line in a `2D plane` as;
 
 $$w_{1}x_1 + w_2x_2 + w_0 = 0$$
 
-Now when we want to translate the idea of a line to a `3-Dimensional` space, we actually having something known as a `plane`. A plane is a collection of points that satisfy the equation $\color{#FF9900} ax + by + cz + d = 0$ where $a$, $b$ and $c$ are the coefficients of $x$, $y$ and $z$ respectively and $d$ is a constant. In terms of of our previous equation we can define a plane in a 3D plane as;
+In `3D space`, we have a plane instead of a line. A plane is a collection of points that satisfy the equation $\color{#FF9900} ax + by + cz + d = 0$ where $\color{#FF9900}a$, $\color{#FF9900}b$ and $\color{#FF9900}c$ are the coefficients of $\color{#FF9900}x$, $\color{#FF9900}y$ and $\color{#FF9900}z$ respectively and $\color{#FF9900}d$ is a constant. In terms of of our previous equation we can define a plane in a 3D plane as;
 
 $$w_{1}x_1 + w_2x_2 + w_3x_3 + w_0 = 0$$
 
-> It's better to write the expression like this as in the previous one we will eventually run out of alphabets.
-
-Now when we want to translate the idea of a line to a `n-Dimensional` space, we actually having something known as a `hyperplane`. A hyperplane is a collection of points that satisfy the equation $\color{#FF9900} a_1x_1 + a_2x_2 + a_3x_3 + ... + a_nx_n + b = 0$ where $a_1$, $a_2$, $a_3$, ..., $a_n$ are the coefficients of $x_1$, $x_2$, $x_3$, ..., $x_n$ respectively and $b$ is a constant. In terms of of our previous equation we can define a hyperplane in a n-Dimensional plane as;
+In `n-dimensional` space we have a `hyperplane` instead of a line or a plane. A hyperplane is a collection of points that satisfy the equation $\color{#FF9900} a_1x_1 + a_2x_2 + a_3x_3 + ... + a_nx_n + b = 0$ where $\color{#FF9900}a_1$, $\color{#FF9900}a_2$, $\color{#FF9900}a_3$, ..., $\color{#FF9900}a_n$ are the coefficients of $\color{#FF9900}x_1$, $\color{#FF9900}x_2$, $\color{#FF9900}x_3$, ..., $\color{#FF9900}x_n$ respectively and $\color{#FF9900}b$ is a constant. which can be written as;
 
 $$w_{0}x_0 + w_{1}x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n + w_0 = 0$$
 
-> A line in 2D becomes a plane in 3D and that becomes a hyperplane in n-Dimensional space.
+> A line in 2D becomes a plane in 3D which becomes a hyperplane in n-Dimensional space.
 
 The above equation can be written as;
 
 $$w_0 \sum_{i=0}^{n}w_ix_i = 0$$
 
-The equation of a plane in `n-dimensional` space ($\pi_n$) can be written as;
+**The equation of a plane in `n-dimensional` space ($\color{#FF9900}\pi_n$) can be written as**;
 
 $$w_0 + w^Tx = 0$$
 
-where $w = [w_0, w_1, w_2, w_3, ..., w_n]$ and $x = [x_0, x_1, x_2, x_3, ..., x_n]$ are two vectors.
+where $\color{#FF9900}w = [w_0, w_1, w_2, w_3, ..., w_n]$ and $\color{#FF9900}x = [x_0, x_1, x_2, x_3, ..., x_n]$ are two vectors.
 
 Equation of a line passing through origin is $\color{#FF9900}w^Tx = 0$
+
 > we can drop the $w_0$ term as it is zero (because since the line is passing through origin, the y-intercept is zero).
 
 ## Distance of a point from a plane
 
 ![Distance of a point from a plane](./img/point_plane.png)
 
-Let us consider a plane $\pi_n$ that passes through origin and an `n-dimensional` point $p$. The distance between the point $p$ and the plane $\pi_n$ is given by;
+Let us consider a plane $\color{#FF9900}\pi_n$ that passes through origin and an `n-dimensional` point $\color{#FF9900}p$. The distance between the point $\color{#FF9900}p$ and the plane $\color{#FF9900}\pi_n$ is given by;
 
 $$d = \frac{w^Tp}{||w||}$$
 
-where $w$ is the normal vector to the plane $\pi_n$ and $||w||$ is the magnitude of the vector $w$.
+where $\color{#FF9900}w$ is the normal vector to the plane $\color{#FF9900}\pi_n$ and $\color{#FF9900}||w||$ is the magnitude of the vector $\color{#FF9900}w$.
 
-Similarly we can find the distance between the plane and the point $p^{'}$ as;
+Similarly we can find the distance between the plane and the point $\color{#FF9900}p^{'}$ as;
 
 $$d^{'} = \frac{w^Tp^{'}}{||w||}$$
 
 > In the above diagram $\color{#FF9900}d$ is positive as the angle between the $\color{#FF9900}w$ and $\color{#FF9900}p$ is less than $\color{#FF9900}90^{\circ}$ and $\color{#FF9900}d^{'}$ is negative as the angle between the $w$ and $\color{#FF9900}p^{'}$ is greater than $\color{#FF9900}90^{\circ}$.
 
 When we want to compute the distance between the point and the plain, we take the absolute value of the distance, as negative distance does not make sense. At the same time, the sign of the distance is important as it tells us on which side of the plane (half-space) the point lies. So, when we need to determine whether something lies on which half-space, we can use the above idea.
+
+<!-- Reviewed -->
 
 ## Circle
 
@@ -178,7 +160,7 @@ $$x_1^2 + x_2^2 + x_3^2 + ... + x_n^2 = r^2 \implies \sum_{i=0}^{n}x_i^2 = r^2$$
 
 The same idea of a point inside a circle or not using the equation of a circle can be extended to higher dimensions. This again is pretty powerful as we can use this idea to determine whether a point lies inside a hyper-sphere or not.
 
----
+<!-- New section -->
 
 ## System of linear equations
 
