@@ -86,15 +86,15 @@ For example, we can add a scalar to an array of any shape, or we can add a 1D ar
 
 ### Universal Functions (UFuncs) and Aggregation Functions
 
-Numpy is heavily optimized for performing `Vectorized` operations. In numpy it is implemented using `UFuncs` (Universal functions). Some `UFuncs` are;
+Numpy is heavily optimized for performing `Vectorized` operations. In numpy it is implemented using `UFuncs` (Universal functions). They operate on `ndarrays` in an element-by-element fashion. Some `UFuncs` are;
 
-- `np.add(x1, x2)` : Add two arrays element-wise.
+- `np.add(x1, x2)` : Add two arrays element-wise. `+` operator can be used as a shorthand for this function.
 
-- `np.subtract(x1, x2)` : Subtract elements of second array from first array.
+- `np.subtract(x1, x2)` : Subtract elements of second array from first array. `-` operator can be used as a shorthand for this function.
 
-- `np.multiply(x1, x2)` : Multiply two arrays element-wise.
+- `np.multiply(x1, x2)` : Multiply two arrays element-wise. `*` operator can be used as a shorthand for this function.
 
-- `np.divide(x1, x2)` : Divide first array by second array element-wise.
+- `np.divide(x1, x2)` : Divide first array by second array element-wise. `/` operator can be used as a shorthand for this function.
 
 - `np.power(x1, x2)` : Raise elements of first array to powers from second array element-wise.
 
@@ -108,41 +108,55 @@ Numpy is heavily optimized for performing `Vectorized` operations. In numpy it i
 
 `Aggregate/reduction Functions` are the functions in numpy that can be used to perform operations on the entire array. Some of the aggregate functions are:
 
-- `np.sum()`
-- `np.min()`
-- `np.max()`
-- `np.mean()`
-- `np.any()`
-- `np.all()`
+- `np.sum()` : Returns the sum of all elements in the array.
 
-> All them supports operations along a specified axis. The default axis is 0, which is the row axis.  
+- `np.min()` : Returns the minimum value in the array.
+
+- `np.max()` : Returns the maximum value in the array.
+
+- `np.mean()` : Returns the mean of all elements in the array.
+
+- `np.any()` : Returns True if any of the elements is True.
+
+- `np.all()` : Returns True if all of the elements is True.
+
+- `np.nonzero()` : Returns the indices of the elements that are non-zero.
+
+- `np.unique()` : Returns the unique elements in the array.
+
+- `np.flatnonzero()` : Returns the indices of the elements that are non-zero in a flattened array.
+
+> All them supports operations along a specified axis. For example, `np.sum(arr, axis=0)` will return the sum of all elements in each column.  
 
 ![Axis representation of numpy](image-1.png)
 
-<!-- Reviewed -->
+### Sorting
+
+- `np.sort()` : Sorts the array in ascending order. It returns a copy of the array.
+
+- `np.argsort()` : Returns the indices that would sort an array.
+
+- `np.partition()` : Rearranges the elements of an array in such a way that the value of the element in the kth position is in the position it would be in a sorted array. All elements smaller than the kth element are moved before this element and all equal or greater elements are moved behind it. The ordering of the elements in the two partitions is undefined. We can pass multiple values as `k`. It returns a copy of the array.
+
+- `np.argpartition()` : Returns the indices that would partition an array.
+
+- `ndarray.sort()` : Sorts the array in place.
+
+- `ndarray.partition()` : Rearranges the elements in such a way that the value in the k-th position is in the position it would be in a sorted array. It performs the operation in place.
 
 ### Views and Copies
 
-Numpy saves memory whenever possible using by directly using a `View` instead of passing copies. It does this by accessing the internal data buffer. A `View` can be created using `np.view()` or by slicing an array. Although this enures good performance, it can become a problem if we use numpy arrays without knowing this.
+Numpy saves memory whenever possible by directly using a `View` instead of passing copies. It does this by accessing the internal data buffer. A `View` can be created using `ndarray.view()` or by slicing an array. Although this enures good performance, it can become a problem if we accidentally modify the original array. Also this put limitations on performing operations on the array. For example, we cannot reshape a view.
 
 We can find whether an array is a view or a copy by using `np.base` which returns the base object of the array. If the array is a view then it will return the original array, if it is a copy then it will return `None`.
 
-```python
-arr  = np.array([1, 2, 3, 4, 5])
-arr2 = arr[1:4]
-print(arr2.base) # [1 2 3 4 5]
-```
-
 ### Structured arrays
 
-Structured arrays are nd-arrays whose datatype is a composition of simpler data types organized as a sequence of named fields. They are designed to mimic `structs` in C. 
+Structured arrays are nd-arrays whose datatype is a composition of simpler data types organized as a sequence of named fields. They are designed to mimic `structs` in C. They are useful for reading binary files with fixed length records. 
 
-```python
-dt = np.dtype([('name', np.unicode_, 16), ('grades', np.float64, (2,))])
-x = np.array([('Sarah', (8.0, 7.0)), ('John', (6.0, 7.0))], dtype=dt)
-print(x[1]) # ('John', [6., 7.])
-print(x['grades']) # [array([8., 7.]) array([6., 7.])]
-```
+### Masked arrays
+
+Masked arrays are nd-arrays that have a `mask` property. The mask property is a boolean array that determines whether the corresponding element in the array is valid or not. The mask property can be used to filter out invalid values.
 
 ### [Numpy Documentation](https://numpy.org/doc/stable/) | [Numpy tutorials](https://numpy.org/numpy-tutorials/) | [Numpy Case study](./Case_study.ipynb) 
 
