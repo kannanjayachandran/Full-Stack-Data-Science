@@ -58,6 +58,8 @@ I personally think books are the holy grail of learning, but I have listed cours
 
 3. [Designing data intensive applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/ref=sr_1_1?crid=2ZQZQZQZQZQZQ&keywords=designing+data+intensive+applications&qid=1668994518&s=books&sprefix=designing+data+int%2Cstripbooks-intl-ship%2C966&sr=1-1) by **Martin Kleppmann**
 
+4. [Statistical Methods for Machine Learning](https://machinelearningmastery.com/statistics_for_machine_learning/) by **Jason Brownlee**
+
 ## Articles - Blogs - Websites
 
 1. [Machine Learning Mastery](https://machinelearningmastery.com/)
