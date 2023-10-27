@@ -7,8 +7,6 @@
 
 Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. We can call linear algebra as the mathematics of data.
 
-> $\color{#F99417}Scalar → Vector → Matrix → Tensor$
-
 ## Points/Vectors
 
 A point/Vector is a collection of numbers which is often used to describe the state of a system. 
@@ -36,7 +34,9 @@ Row vectors are vectors that have a single row and one or more columns. They are
 
 ![Row and column vector](./img/Row-Col-Vector.png)
 
-## Dot product of two vectors
+> Taking transpose of a row vector gives us a column vector and vice versa.
+
+## Dot product
 
 The dot product of two vectors is a _scalar_ quantity that is equal to the sum of the products of the corresponding entries of the two vectors.
 
@@ -63,6 +63,19 @@ $$a.b = \sum_{i=1}^{n}a_ib_i = |a||b| \; cos\theta$$
 where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ and $\color{#F99417}b = [b_1, b_2, b_3, ..., b_n]$.
 
 **In machine learning we use `dot` product to calculate the `weighted sum` of the inputs and weights.**
+
+## Inner product
+
+Inner product is a generalization of the dot product. It is a function that takes in two vectors and returns a scalar. It is denoted by $\color{#F99417}\langle x, y \rangle$ and is defined as;
+
+$$\langle x, y \rangle = x^Ty = \sum_{i=1}^{N}x_iy_i$$
+
+where $\color{#F99417}x$ and $\color{#F99417}y$ are two vectors.
+
+Inner product tells us how the vectors are correlated. If two vectors are correlated (i.e., nearly parallel), then the inner product will give us a large value. If the vectors are close to perpendicular, then the inner vector would be small. Therefore, the inner product provides a measure of the _closeness/similarity_ between two vectors.
+
+![Inner product image](./img/Inner_product.png)
+>Geometric interpretation of inner product
 
 ## Vector norm
 
@@ -168,23 +181,21 @@ $$d^{'} = \frac{w^Tp^{'}}{||w||}$$
 
 When we want to compute the distance between the point and the plain, we take the absolute value of the distance, as negative distance does not make sense. At the same time, the sign of the distance is important as it tells us on which side of the plane (half-space) the point lies. So, when we need to determine whether something lies on which half-space, we can use the above idea.
 
-<!-- Reviewed -->
-
 ## Circle
 
-A circle is a collection of points that satisfy the equation $\color{#FF9900} (x)^2 + (y)^2 = r^2$ where $\color{#FF9900}r$ is the radius of the circle and it's center is at the origin $(0, 0)$. The general equation of a circle with center $(h, k)$ and radius $r$ is given by;
+A circle is a collection of points that satisfy the equation $\color{#FF9900} (x)^2 + (y)^2 = r^2$ where $\color{#FF9900}r$ is the radius of the circle and it's center is at the origin $\color{#FF9900}(0, 0)$. The general equation of a circle with center $\color{#FF9900}(h, k)$ and radius $\color{#FF9900}r$ is given by;
 
 $$(x - h)^2 + (y - k)^2 = r^2$$
 
-Given a point $p(x_1, x_2)$, we can determine whether that point lies inside the circle, on the circle, or outside the circle.
+Given a point $\color{#FF9900}p(x_1, x_2)$, we can determine whether that point lies inside the circle, on the circle, or outside the circle.
 
-- If $x_1^2 + x_2^2 < r^2$, the point lies inside the circle.
+- If $\color{#FF9900}x_1^2 + x_2^2 < r^2$, the point lies inside the circle.
 
-- If $x_1^2 + x_2^2 = r^2$, the point lies on the circle.
+- If $\color{#FF9900}x_1^2 + x_2^2 = r^2$, the point lies on the circle.
 
-- If $x_1^2 + x_2^2 > r^2$, the point lies outside the circle.
+- If $\color{#FF9900}x_1^2 + x_2^2 > r^2$, the point lies outside the circle.
 
-In `3D`, we have **sphere** instead of circle. The general equation for a circle with center $(h, k, l)$ and radius $r$ is given by;
+In `3D`, we have **sphere** instead of circle. The general equation for a circle with center $\color{#FF9900}(h, k, l)$ and radius $r$ is given by;
 
 $$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 = r^2$$
 
@@ -198,69 +209,120 @@ $$x_1^2 + x_2^2 + x_3^2 + ... + x_n^2 = r^2 \implies \sum_{i=0}^{n}x_i^2 = r^2$$
 
 The same idea of a point inside a circle or not using the equation of a circle can be extended to higher dimensions. This again is pretty powerful as we can use this idea to determine whether a point lies inside a hyper-sphere or not.
 
-<!-- New section -->
-
-## System of linear equations
-
-A system of linear equations is a collection of linear equations involving the same set of variables. For example; 
-
-$$2x + 3y = 5$$  
-
-$$3x + 4y = 6$$ 
-
-are two linear equations involving the same set of variables $x$ and $y$. A solution to a system of linear equations is a set of values for the variables that satisfies all the equations simultaneously. For example, the values $x = 1$ and $y = 1$ is a solution to the above system of linear equations.
-
-A system can have no solution, a single solution, or infinitely many solutions. A system of linear equations can be represented in `matrix` form as;
-
-$$\begin{bmatrix} 2 & 3 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 8 \\ 9 \end{bmatrix}$$
-
-where the matrix on the left is called the `coefficient matrix`, the vector on the right is the `vectors`, and the vector on the left is called the `solution vector`.
-
 ## Matrix 
 
-A matrix is a rectangular array of numbers. A matrix with `m` rows and `n` columns is said to have the dimension `m x n`. We can add, subtract, and multiply matrices. We can also multiply a matrix with a scalar. While multiplying matrices we need to ensure that the number of columns in the first matrix is equal to the number of rows in the second matrix.
+A matrix is a 2d array of numbers, with one or more rows and one or more columns. A matrix with `m` rows and `n` columns is said to have the dimension `m x n`. While multiplying matrices we need to ensure that;
 
+$$\color{#FF9900}\text{No. of Col(}m_1\text{) = No. of rows(}m_2)$$
+
+## Types of matrices
+
+- **Square matrix** : A matrix with the same number of rows and columns. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$
+
+- **Diagonal matrix** : A square matrix with all the elements outside the main diagonal are zero. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 9 \end{bmatrix}$
+
+- **Identity matrix** : A diagonal matrix with all the elements in the main diagonal are one. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$
+
+- **Upper triangular matrix** : A square matrix with all the elements below the main diagonal are zero. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 5 & 6 \\ 0 & 0 & 9 \end{bmatrix}$
+
+- **Lower triangular matrix** : A square matrix with all the elements above the main diagonal are zero. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 4 & 5 & 0 \\ 7 & 8 & 9 \end{bmatrix}$
+
+- **Symmetric matrix** : A square matrix that is equal to its transpose. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 5 & 6 \\ 3 & 6 & 9 \end{bmatrix}$
+
+- **Skew-symmetric matrix** : A square matrix that is equal to the negative of its transpose. For example; $\color{#F99417}X = \begin{bmatrix} 0 & 2 & 3 \\ -2 & 0 & 6 \\ -3 & -6 & 0 \end{bmatrix}$
+
+- **Orthogonal matrix** : A square matrix whose rows and columns are orthonormal unit vectors. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$
+
+    - It is defined as $\color{#F99417}Q^T\cdot Q = I$ where $I$ is the identity matrix. Therefore we can say that a matrix is orthogonal if its transpose is equal to its inverse $\color{#F99417}Q^T = Q^{-1}$.
+
+    > Two vectors are `unit vectors` if their magnitude is one. Two vectors are `orthogonal` if their dot product is zero. If two vectors are orthogonal and unit vectors, then they are called `orthonormal vectors`.
+
+- **Sparse matrix** : A matrix with a large number of zero elements. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9 \end{bmatrix}$
+
+On the other hand a matrix with a large number of non-zero elements is called a `dense matrix`. Sparsity score of a matrix is the ratio of the number of zero elements to the total number of elements in the matrix.
+
+$$\text{Sparsity score} = \frac{\text{No. of zero elements}}{\text{Total no. of elements}}$$
+
+## Transpose of a matrix
+
+The transpose of a matrix is a new matrix whose rows are the columns of the original. It is denoted by $\color{#F99417}X^T$ and is given by;
+
+$$X = \begin{bmatrix} a & b & c \\ d & e & f \end{bmatrix} \implies X^T = \begin{bmatrix} a & d \\ b & e \\ c & f \end{bmatrix}$$
+
+## Inverse of a matrix
+
+The inverse of a matrix is a matrix that when multiplied with the original matrix gives the identity matrix. It is denoted by $\color{#F99417}X^{-1}$ and is given by;
+
+$$X = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \implies X^{-1} = \frac{1}{ad-bc}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
+
+where $\color{#F99417}ad-bc$ is called the `determinant` of the matrix.
+
+> The inverse of a matrix does not exist if the determinant of the matrix is zero.
+
+- A square matrix is invertible if and only if its determinant is non-zero. An invertible square matrix is called a `non-singular matrix`. A square matrix that is not invertible is called a `singular matrix`.
+
+## Trace of a matrix
+
+The trace of a matrix is the sum of the elements in the main diagonal of the matrix. It is denoted by $\color{#F99417}tr(X)$ and is given by;
+
+$$X = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \implies tr(X) = a + d$$
 
 ## Determinant of a matrix
 
-Determinant of a matrix is a special value which tells us whether the matrix has an inverse or not. It is denoted by $$det(X) \;or \;|X|$$ 
+Determinant of a matrix is a special value which gives us a scalar representation of the matrix volume. It is the product of the eigenvalues of the matrix. It is denoted by $\color{#F99417}det(X) \;or \;|X|$ and is given by;
 
-It is a scalar value and helps in solving systems of linear equations.
+$$X = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \implies det(X) = ad-bc$$
 
-**Calculating the determinant of a 2x2 matrix** : $det(X) = ad-bc$ where; 
-$$ X= \begin{bmatrix} a & b \\ c & d\end{bmatrix}$$
+![Formula for finding determinant](./img/Determinant_formula.png)
 
-> For a larger matrix we can find the determinant using a process called Co-factor expansion; which involves choosing a row or column and calculating the determinants of smaller matrices called co-factors. This process can be recursive, meaning you keep calculating determinants of smaller matrices until you reach a 2x2 matrix that you can solve using the formula above
+### The intuition behind determinant
 
-![Alt text](./img/Determinant_formula.png)
+The determinant of a matrix is a scalar value that tells us how much the matrix scales the volume (or area) spanned by its column vectors (The area spanned by column vectors means the area of the parallelogram formed by the column vectors.). 
+- A determinant of 1 indicates that the matrix preserves volume (or area) without scaling it. 
 
-- All matrices does not have a determinant. Only square matrices have determinant. 
+- A determinant greater than 1 indicates that the matrix expands the volume (or area).
 
-- If the determinant is zero, the matrix is said to be singular, and it does not have an inverse, and the system of linear equations have infinitely many solutions. It also means that the rows or columns of the matrix are linearly dependent and the matrix does not have full rank.
+- A determinant less than 1 indicates that the matrix shrinks the volume (or area).
 
-- The magnitude of the determinant indicates how much the matrix scales the volume (or area) spanned by its column vectors. A determinant of 1 indicates that the matrix preserves volume (or area) without scaling it.
+- A negative determinant indicates that the matrix flips the orientation (a reflection) in addition to scaling.
 
-The determinant in general encodes information about scaling factors and orientations in linear transformations. 
+- If the determinant of the matrix is zero, it means that the matrix does not have an inverse and the rows or columns of the matrix are linearly dependent. This also means the matrix squishes the space down to a lower dimension. In the context of linear transformations, it signifies that the transformation is not one-to-one, and thus, it cannot be inverted uniquely. Thus there are infinitely many solutions (inverses) or none at all, depending on the specific case.
 
-- Although the co-factor expansion method to find the determinant is intuitive, it is computationally expensive. Generally co-factor expansion requires $\color{#FF9900}O(n!)$ operations. We use other alternatives like, the `LU decomposition` along with `product of pivots` method that requires  roughly $\color{#FF9900}O(n^3)$ operations.
+![Area enclosed by parallelogram](./img/Parallelogram.png)
 
 ## Rank of a matrix
 
-The rank of a matrix is the maximum number of linearly independent rows or columns in the matrix. The rank of a matrix is denoted by $rank(X)$. We can find the rank of a matrix by reducing it to its `row echelon form` or `reduced row echelon form` and counting the number of non-zero rows.
+The rank of a matrix is the maximum number of linearly **independent** rows or columns in the matrix. It is denoted by $\color{#F99417}rank(X)$. We can find the rank of a matrix by reducing it to its `row echelon form` or `reduced row echelon form` and counting the number of non-zero rows. We use matrix decomposition techniques to find the rank of a matrix.
 
-## Inner product
+### Intuition behind rank of a matrix
 
-Inner product is a generalization of the dot product. It is a function that takes in two vectors and returns a scalar. It is denoted by $\langle x, y \rangle$ and is defined as;
+The rank of a matrix is the number of dimensions spanned by its column vectors. 
 
-$$\langle x, y \rangle = x^Ty = \sum_{i=1}^{N}x_iy_i$$
+- Rank 0 means that all the vectors span a point (zero dimensions).
 
-where $x$ and $y$ are two vectors.
+- Rank 1 means that all the vectors span a line (one dimension).
 
-Inner product tells us how the vectors are correlated. If two vectors are correlated
-(i.e., nearly parallel), then the inner product will give us a large value. If the vectors are close to perpendicular, then the inner vector would be small. Therefore, the inner product provides a measure of the _closeness/similarity_ between two vectors.
+- Rank 2 means that all the vectors span a plane (two dimensions).
 
-![Inner product image](./img/Inner_product.png)
->Geometric interpretation of inner product
+- Rank 3 means that all the vectors span a volume (three dimensions).
+
+## Tensors
+
+A tensor is a generalization of vectors and matrices and is easily understood as a multidimensional array. A tensor can be represented as a `scalar`, `vector`, `matrix`, or `n-dimensional` array. A tensor with `n` dimensions is said to have a `rank` of `n`.
+
+> $\color{#F99417}Scalar → Vector → Matrix → Tensor$
+
+All the arithmetic operation we can do with matrices can be done with tensors. We can add, subtract, multiply (both Hadamard and dot product), and divide tensors. 
+
+### Tensor dot product
+
+The dot product of two tensors is a generalization of the dot product of two vectors. It is denoted by $\color{#F99417}a ⊗ b$ and is given by;
+
+$$a \cdot b = \sum_{i=1}^{n}a_ib_i$$
+
+where $\color{#F99417}a$ and $\color{#F99417}b$ are two tensors.
+
+<!-- New section -->
 
 ## Basic Combinatorics
 
