@@ -500,4 +500,16 @@ Selecting the optimal value of $\color{#F99417}\lambda$ is important. We may use
 
 - Selection of optimal value of $\color{#F99417}\lambda$ and the transformed value of $\color{#F99417}y$ is not always easily interpretable.
 
+<!-- If required add distributions here -->
+
+## Law of Large Numbers
+
+Law of large numbers is a foundational theorem to both probability and statistics. It states that the average result from repeating an experiment multiple times will better approximate the true or expected underlying result. This theorem has important implications in applied machine learning, such as the law of large numbers is critical for understanding the selection of training datasets, test datasets, and in the evaluation of model skill.
+
+Some important terms related to law of large numbers are;
+
+- **Independent and Identically Distributed (IID)** : A sequence of random variables is independent and identically distributed if each random variable has the same probability distribution as the others and all are mutually independent (The result of one trial does not depends on another one).
+
+- **Regression to the mean** : The phenomenon that if a variable is extreme on its first measurement, it will tend to be closer to the average on its second measurement. It is also called **reversion to the mean**.
+
 <!--Section: Probability section links -->

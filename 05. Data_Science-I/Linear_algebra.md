@@ -1,13 +1,13 @@
 <!-- 
     Author : Kannan Jayachandran
-    File : Linear_Algebra.md   
-
-    NOT REVIEWED  
+    File : Linear_Algebra.md
  -->
 
 <h1 align="center" style="color: orange"> Linear Algebra </h1>
 
-Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. It is a fundamental part of machine learning, deep learning, data science, and artificial intelligence. Here we would cover linear algebra from a machine learning perspective.
+Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. We can call linear algebra as the mathematics of data.
+
+> $\color{#F99417}Scalar → Vector → Matrix → Tensor$
 
 ## Points/Vectors
 
@@ -16,8 +16,6 @@ A point/Vector is a collection of numbers which is often used to describe the st
 ![Point or vector](./img/Point_vector.png)
 
 Therefore we can represent an `n-dimensional` vector as $\color{#F99417}[x_1, x_2, x_3, ..., x_n]$ when the length of the vector is `n` and $\color{#F99417}x_i$ is a component of the vector.
-
-> $\color{#F99417}Scalar → Vector → Matrix → Tensor$
 
 Some of the common **distance formulas** are;
 
@@ -63,6 +61,46 @@ For an `n-dimensional` space, the dot product of two vectors $\color{#F99417}a$ 
 $$a.b = \sum_{i=1}^{n}a_ib_i = |a||b| \; cos\theta$$
 
 where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ and $\color{#F99417}b = [b_1, b_2, b_3, ..., b_n]$.
+
+**In machine learning we use `dot` product to calculate the `weighted sum` of the inputs and weights.**
+
+## Vector norm
+
+The norm of a vector is the length of the vector (magnitude of the vector). It is denoted by $\color{#F99417}||a||$ and is given by;
+
+$$||a|| = \sqrt{a_1^2 + a_2^2 + a_3^2 + ... + a_n^2}$$
+
+where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
+
+> Vector norm is a non-negative value, which describes the extend of the vector space. 
+
+### $L^1$ Norm
+
+$L^1$ Norm or Manhattan norm is the sum of the absolute values of the vector elements. It is denoted by $\color{#F99417}||a||_1$ and is given by;
+
+$$||a||_1 = |a_1| + |a_2| + |a_3| + ... + |a_n|$$
+
+where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
+
+> It the manhattan distance from the origin of the vector space.
+
+**$\color{#F99417}L^1$ norm is often used in machine learning as a regularization technique (to keep the co-effs of the model small).**
+
+### $L^2$ Norm
+
+$L^2$ Norm or Euclidean norm is the square root of the sum of the squares of the vector elements. It is denoted by $\color{#F99417}||a||_2$ and is given by;
+
+$$||a||_2 = \sqrt{a_1^2 + a_2^2 + a_3^2 + ... + a_n^2}$$
+
+where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
+
+###  Vector max norm or $L^\infin$ Norm
+
+Vector max norm or $L^\infin$ Norm is the maximum absolute value of the vector elements. It is denoted by $\color{#F99417}||a||_\infin$ and is given by;
+
+$$||a||_\infin = max(|a_1|, |a_2|, |a_3|, ..., |a_n|)$$
+
+where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
 
 ## Projection of a vector
 
