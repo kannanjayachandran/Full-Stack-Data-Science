@@ -1,6 +1,6 @@
-<h1 align="center"> Matplotlib - Seaborn - Plotly </h1>
+<h1 align="center"> Matplotlib - Seaborn </h1>
 
-`Matplotlib`, `seaborn` and `plotly` are three of the most popular data visualization libraries in python. Here I would like to give an idea about of the core concepts of using them. Detailed information about data visualization and working with different visualization methods are covered here : **[Data Visualization](../../05.%20Data_Science-I/Data_visualization.md)**
+This section acts as a quick reference for Matplotlib and Seaborn. For more details about data visualization, see [this](../../05.%20Data_Science-I/Data_visualization.md) notebook.
 
 ## Matplotlib 
 
