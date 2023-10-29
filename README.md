@@ -1,11 +1,14 @@
-<p align="center">
-    <a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="./DALL-E_Generated.png" alt="Logo" height=340></a>
-</p>
 <h1 align="center">Full Stack Data Science</h1>
 
-**Data science** is a vast multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, and systems to extract knowledge and insights from data. **Full-stack data science** refers to a comprehensive approach to the field of data science (End-to-End).
+<p align="center">
+    <a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Logo" height=340></a>
+</p>
 
-> I am an undergraduate computer science engineering student specializing in **`Artificial Intelligence`** and **`Machine learning`**. This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes**. **Major projects** created as a part of this is available [here](./Major_Projects.md).
+**Data science** is a vast-multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, systems and domain knowledge to extract valuable insights from data. **Full-stack data science** refers to a comprehensive approach to the field of data science (End-to-End).
+
+This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes**. **Major projects** created as a part of this is available [here](./Major_Projects.md).
+
+> _I am an undergraduate computer science engineering student specializing in **`Artificial Intelligence`** and **`Machine learning`**._
 
 ---
 
@@ -45,6 +48,6 @@ Resources available [here](/Resources.md).
 >   <img alt="Note" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/note.svg">
 > </picture><br>
 >
-> [License](/LICENSE) | [Resources](/Resources.md) | [Code of conduct](/CODE_OF_CONDUCT.md) | [Contribution guidelines](/CONTRIBUTING.md)
+> [License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)
 
 ### If you like this repository, give it a ⭐️
