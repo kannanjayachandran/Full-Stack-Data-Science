@@ -475,15 +475,17 @@ where $x \ge x_m$ and $\alpha > 0$.
 
 ## Box Cox Transformation
 
-A data transformation is the process of performing some mathematical operations on a dataset to change some aspects of the data like its scale, skewness, shape, etc. But not changing the essence of the data. We can categorize data transformations into two types; `linear transformations` and `non-linear transformations`.
+Data transformation involves applying mathematical operations to a dataset without changing its essential characteristics. There are two main types: `linear transformations` and `non-linear transformations`.
 
-A `linear transformation` is a transformation that preserves the linearity of the data. It only changes the scale of the data. It won't essentially change the distribution (shape) of our data.
+**Linear Transformation**: Preserves the linearity of the data and only scales it.
 
-A `non-linear transformation` is a complex transformation which involves changing the shape of the data. It usually involves using some mathematical functions like logarithmic, exponential, square root, etc.
+**Non-Linear Transformation**: Alters the shape and distribution of the data using mathematical functions like logarithmic or exponential.
 
-`Power transformation` is a type of non-linear transformation. It is a family of transformations that are indexed by a parameter $\color{#F99417}\lambda$. For example taking the square root and the logarithms of observation in order to make the distribution normal belongs to the class of power transforms.
+`Power transformation` is a type of non-linear transformation. It involve using a parameter $\color{#F99417}\lambda$ to perform a range of transformations to stabilize the variance of a non-normal distribution. For example taking the square root and the logarithms of observation in order to make the distribution normal belongs to the class of power transforms.
 
-**Box Cox** transformation is a non-linear transformation technique that is used to transform a log-normal distribution to a normal distribution (Not always possible). It is able to perform a range of power transforms (like square root and log) to basically stabilize the variance of a non-normal distribution. We are simply transforming the data to expose the underlying normal distribution of data (Not performing any conversion).
+### Box Cox transformation
+
+The Box-Cox transformation is a non-linear technique used to convert a log-normal distribution into a normal distribution and stabilize variance. It exposes the underlying normal distribution in the data without changing its fundamental nature.
 
 We can describe box cox transformation as;
 
@@ -512,13 +514,13 @@ Selecting the optimal value of $\color{#F99417}\lambda$ is important. We may use
 
 **Limitations of box cox transformation**
 
-- Defined only for positive values of $\color{#F99417}y$. We can use something like 
+- Defined only for strictly positive values of $\color{#F99417}y$.
 
-- Although it can be used for stabilizing variance, it might not completely address the situation where, the variance of the data is not constant across all levels of the data (Assumption of Homoscedasticity).
+- It may not fully address situations where data variance is not constant (homoscedasticity assumption).
 
-- Not always possible.
+- It may not always be applicable.
 
-- Selection of optimal value of $\color{#F99417}\lambda$ and the transformed value of $\color{#F99417}y$ is not always easily interpretable.
+- Selecting an optimal $\color{#F99417}\lambda$ and interpreting the transformed values can be challenging.
 
 <!-- If required add distributions here -->
 
