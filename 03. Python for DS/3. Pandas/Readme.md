@@ -1,3 +1,9 @@
+<!-- 
+    Author : Kannan Jayachandran
+    File : Readme.md (Pandas documentation)
+    Not reviewed, Not completed
+ -->
+
 <h1 align="center" style="color: orange"> Pandas </h1>
 
 Pandas is a python library that makes working with “relational” or “labeled” data both easy and intuitive. While learning pandas always keep in mind that they are a type of specialized-complex-powerful dictionary. It is excellent for the following types of data:
@@ -85,4 +91,4 @@ We can have two types of indices: implicit and explicit. Implicit indices are th
 
 - `df.concat()` - Concatenate pandas objects along a particular axis with optional set logic along the other axes.
 
-![Alt text](image.png)
+![Axes](Axes.png)
