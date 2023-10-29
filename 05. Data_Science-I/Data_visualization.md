@@ -24,7 +24,7 @@ plt.plot(x, y)
 plt.show()
 ```
 
-![Alt text](image-3.png)
+![Line plot of sine wave](image-3.png)
 
 ## Bar chart
 
@@ -44,7 +44,7 @@ It is also used to summarize the distribution of the data sample. The box repres
 
 ![Image of boxplot](./img/boxPlot.png)
 
-![Alt text](image-2.png)
+![Explanation of Whisker plot](image-2.png)
 
 ## Scatter plot
 
