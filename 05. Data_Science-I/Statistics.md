@@ -121,4 +121,27 @@ where $\color{#F99417}\bar x_i$ is the sampling distribution of the sample means
 
 > We generally consider CLT to be valid if the sample size ($\color{#F99417}n$) is greater than 30.
 
+## Hypothesis Testing
+
+We use _statistical hypothesis testing_ or _significance tests_ to provide confidence or likelihood about making inferences from a sample of data to a larger population. We calculate some quantity under some assumption, then we interpret the result and either reject or fail to reject the assumption.
+
+The assumption is called the _null hypothesis_ ($\color{#F99417}H_0$). The violation of the null hypothesis is known as the alternative hypothesis ($\color{#F99417}H_1$). 
+
+> We use the `proof by contradiction` method to test the hypothesis. We assume that the null hypothesis is true and then we try to prove that it is false. If we fail to prove that the null hypothesis is false, then we accept the null hypothesis.
+
+### Steps in Hypothesis Testing
+
+1. First we must interpret the statistical test result in order to make claims. There are two common ways to interpret the result of a statistical test;
+
+- **p-value**: The probability of observing a test statistic as extreme as the one observed, by chance, given that the null hypothesis is true. If the p-value is less than the significance level ($\color{#F99417}\alpha$), then we reject the null hypothesis. A common value used for $\color{#F99417}\alpha$ is 0.05 or 5%.
+
+$$\text{p-value} \le \color{#F99417}\alpha \text{ significant result, reject null hypothesis}$$
+
+$$\text{p-value} > \color{#F99417}\alpha \text{ not significant result, fail to reject the null hypothesis}$$
+
+ Given the observed sample data, we can find the confidence level of the hypothesis by subtracting the significance level from 1.
+
+$$\text{Confidence Level} = 1 - \alpha$$ 
+
+
 <!-- Append current work -->
