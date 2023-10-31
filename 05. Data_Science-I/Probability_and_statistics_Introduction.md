@@ -5,3 +5,5 @@
 **Statistics** on the other hand is the field that deals with collecting, analyzing, interpreting, presenting, and organizing data. It's a field that applies probabilistic concepts to real-world data analysis and decision-making. Probability theory is highly abstract and formalized, while statistics is more or less an applied mathematical discipline. Check the **[Statistics](./Statistics.md)** notes.
 
 > Some topics of statistics are covered in the probability for maintaining the flow of the topics. 
+
+**[Probability and Statistics Questions](./Questions.md)**

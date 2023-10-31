@@ -80,7 +80,9 @@ A probability distribution is a mathematical function that describes how the val
 
 > The distribution of individual data points is referred to as the `data distribution`, while the distribution of a sample statistic is known as the `sampling distribution`.
 
-Before seeing the types of probability distribution, let's look at 3 important concepts to understand probability distribution better (**PDF, PMF and CDF**).
+## Density functions
+
+Density functions are functions that describes how the proportion of data or likelihood of the proportion of observations change over the range of the distribution.
 
 ## Probability Density Function (PDF)
 
