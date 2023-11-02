@@ -86,7 +86,7 @@ Density functions are functions that describes how the proportion of data or lik
 
 ## Probability Density Function (PDF)
 
-The Probability Density Function, or PDF, describes the probability distribution of a continuous random variable within a specific range. It is a function that describes the relative likelihood for this random variable to take on a given value. PDF's always satisfy the following two conditions;
+The Probability Density Function, or **PDF**, calculates the probability of observing a given value. PDF is calculated for continuos random variables. PDF's always satisfy the following two conditions;
 
 1. Always be non-negative $\color{#F99417}f(x) \ge 0$ for all $\color{#F99417}x$
 
@@ -99,15 +99,13 @@ $$P(a\le x \le b) = \int_{a}^{b}f(x)dx$$
 ![PDF of Gaussian distribution image from wikipedia](./img/pdf.png)
 > PDF of Gaussian distribution
 
-The PDF curve represents the probability density of the random variable at each point. This means that the area under the PDF curve between two points represents the probability of the random variable taking on a value within that range, which is what the above equation says.
+The PDF curve represents the probability density of the random variable at each point. This means that the area under the PDF curve between two points represents the probability of the random variable taking on a value within that range.
 
 **We can calculate PDF using the following steps**;
 
-1. Find the probability distribution.
+1. Find the probability distribution and the parameters of the distribution.
 
-2. Find the parameters of the distribution.
-
-3. Get the PDF formula for the distribution and calculate.
+2. Get the PDF formula for the distribution and calculate.
 
 ## Probability Mass Function (PMF)
 
@@ -121,9 +119,9 @@ The PMF must satisfy the following two conditions:
 
 ![PMF diagram of a fair die](./img/pmf.png)
 
-## Cumulative Distribution Function (CDF)
+## Cumulative Density Function (CDF)
 
-The cumulative distribution function (CDF), for a random variable $\color{#F99417}X$ is a function that gives the probability that $\color{#F99417}X$ will take on a value less than or equal to $\color{#F99417}x$ for all possible values of $\color{#F99417}x$. 
+Calculates the probability of an observation equal or less than a value. It is also called  `cumulative distribution function`. It calculates the cumulative likelihood.
 
 $$F(x) = P(X\le x)$$
 
@@ -134,9 +132,7 @@ We can calculate CDF of a continuous random variable by integrating the PDF of t
 
 - CDF is a monotonically increasing function (non-decreasing). That is; as $\color{#F99417}x$ increases, $\color{#F99417}F(x)$ can only increase or remain the same.
 
-- As shown in the above diagram, CDF in a normal distribution is a smooth `S` shaped curve
-
-- The CDF of a discrete random variable is a step function and that of a continuous random variable is a continuous function.
+- As shown in the above diagram, CDF in a normal distribution is a smooth `S` shaped curve.
 
 ## Symmetric Distribution and Skewness
 
@@ -228,8 +224,6 @@ Let's consider a normal distribution $\color{#F99417}X \sim N(\mu, \sigma^2)$, w
 
 </div>
 
-It does not matter how many data points we have the above observations always holds true as long as the data is normally distributed. Empirical formula is used to calculate the percentage of values that lie within a range of standard deviations from the mean in a normal distribution. It can also help us in outlier detection.
-
 ## Standard Normal Variate
 
 A standard normal variate is a random variable that follows a normal distribution with a mean of zero and a standard deviation of one. It is denoted as $\color{#F99417}Z$. 
@@ -244,9 +238,9 @@ $$X \sim N(\mu, \sigma^2)$$
 
 where $\color{#F99417}X$ can take any value in the range $\color{#F99417}[x_1, x_2, ..., x_{50}]$. We can standardize this distribution as;
 
-$\large x_i$` = $\large \frac{x_i - \mu}{\sigma} \;\;\forall \;i= 1, 2, .., 50$ 
+$\large x_i$' = $\large \frac{x_i - \mu}{\sigma} \;\;\forall \;i= 1, 2, .., 50$ 
 
-where $\large x_i$` is the standardized value of $\large x_i$. Now we can write the standardized distribution as;
+where $\color{#F99417}\large x_i'$ is the standardized value of $\color{#F99417}\large x_i$. Now we can write the standardized distribution as;
 
 $$X` \sim N(0, 1)$$
 
@@ -271,6 +265,14 @@ QQ plot is a graphical technique for easily determining whether a random variabl
 If the plot is a straight line (approx.), then the random variable $\color{#F99417}x$ is normally distributed.
 
 > Q-Q plot can also help us in determining whether we have same distributions; given two random variables $\color{#F99417}x$ and $\color{#F99417}y$.
+
+## Student's t-distribution
+
+Student's t-distribution or simply t-distribution is a distribution that arises when estimating the mean of a normal distribution with different sized samples. It is a continuous probability distribution. Observations in a  t-distribution $\color{#F99417}T(\nu)$ are calculated from $\color{#F99417}N(\mu, \sigma)$, for describing the interval for the population mean in the normal distribution is;
+
+$$\texttt{data }= \frac{x - \mu(x)}{\frac{S}{\sqrt{n}}}$$
+
+Where $\color{#F99417}S$ is the sample standard deviation, $\color{#F99417}n$ is the sample size and $\color{#F99417}\mu(x)$ is the sample mean. The degrees of freedom $\color{#F99417}\nu$ is equal to $\color{#F99417}n-1$.
 
 ## Uniform Distribution
 

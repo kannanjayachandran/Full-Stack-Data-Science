@@ -29,4 +29,5 @@ All most every industry uses data science or data science techniques to improve 
 ![Data science process graphical representation](./img/Data_science_process.png)
 The data science process is a structured approach to solving business problems through data analysis.
 
-### Now let us look at some of the important terms related to [data science](./Buzz_words.md) 
+### [Visualization techniques](Data_visualization.md) | [Important terms related to data science](./Buzz_words.md) 
+

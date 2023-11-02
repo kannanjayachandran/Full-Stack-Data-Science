@@ -12,3 +12,4 @@ Both data science and machine learning are broad fields, and each with considera
 | Probability and Statistics         | [Read](./Probability_and_statistics_Introduction.md) |
 | Calculus                           | [Read](./Calculus.md)              |
 | Data visualization                 | [Read](./Data_visualization.md)    |
+| Questions                     | [Read](./Questions.md)         |

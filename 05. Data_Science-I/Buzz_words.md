@@ -12,7 +12,13 @@ Qualitative data deals with qualities and characteristics that cannot be measure
 
 ![Quantitative vs Qualitative data](./img/Types_of_data.png)
 
-Now we need to have a solid understanding of the underlying mathematical concepts to move forward, so let us look at some of the important mathematical constructs.
+## Machine learning
+
+Machine learning is a subset of artificial intelligence (AI) that deals with developing algorithms and models that enable computers to learn and make predictions or decisions without being explicitly programmed, by consuming data and using statistical analysis to derive insights from it. 
+
+![Ml tree](./img/ml_tree.png)
+
+Now that we know what data is, and what data science is, we need to learn the tools and techniques to perform data science. But for understanding almost all of them we need to have a solid understanding of the underlying mathematical concepts. So let us look at some of the important mathematical constructs.
 
 ### [Linear Algebra](./Linear_algebra.md) | [Probability and Statistics](./Probability_and_Statistics.md) | [Calculus](./Calculus.md)
 

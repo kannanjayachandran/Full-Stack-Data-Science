@@ -129,11 +129,9 @@ The assumption is called the _null hypothesis_ ($\color{#F99417}H_0$). The viola
 
 > We use the `proof by contradiction` method to test the hypothesis. We assume that the null hypothesis is true and then we try to prove that it is false. If we fail to prove that the null hypothesis is false, then we accept the null hypothesis.
 
-### Steps in Hypothesis Testing
-
 1. First we must interpret the statistical test result in order to make claims. There are two common ways to interpret the result of a statistical test;
 
-- **p-value**: The probability of observing a test statistic as extreme as the one observed, by chance, given that the null hypothesis is true. If the p-value is less than the significance level ($\color{#F99417}\alpha$), then we reject the null hypothesis. A common value used for $\color{#F99417}\alpha$ is 0.05 or 5%.
+- **p-value**: The probability of observing a test statistic as extreme as the one observed, by chance, given that the null hypothesis is true. If the p-value is less than the significance level ($\color{#F99417}\alpha$), then we reject the null hypothesis. A common value used for $\color{#F99417}\alpha$ is 0.05 or 5% (arbitrary value).
 
 $$\text{p-value} \le \color{#F99417}\alpha \text{ significant result, reject null hypothesis}$$
 
@@ -142,6 +140,38 @@ $$\text{p-value} > \color{#F99417}\alpha \text{ not significant result, fail to 
  Given the observed sample data, we can find the confidence level of the hypothesis by subtracting the significance level from 1.
 
 $$\text{Confidence Level} = 1 - \alpha$$ 
+
+- **Critical Value**: The value of the test statistic that separates the region of acceptance from the region of rejection. If the test statistic is less than the critical value, then we fail to reject the null hypothesis. If the test statistic is greater than the critical value, then we reject the null hypothesis.
+
+$$\text{test statistic} <  \text{ critical value: fail to reject null hypothesis}$$
+
+$$\text{test statistic} \ge \text{ critical value: reject null hypothesis}$$
+
+Errors in Hypothesis Testing
+
+- **Type I Error**: Rejecting the null hypothesis when it is true. The probability of making a type I error is $\color{#F99417}\alpha$. Also known as a false positive.
+
+- **Type II Error**: Failing to reject the null hypothesis when it is false. The probability of making a type II error is $\color{#F99417}\beta$. Also known as a false negative.
+
+## Degree of Freedom
+
+While calculating statistics, we must include some information about the population. One way to do this is via degrees of freedom. It is the number of independent information that go into the estimate of a parameter from the sample data. 
+
+$$\texttt{df or }\nu \le n $$
+
+Where $\color{#F99417}n$ is the sample size.
+
+If we calculate the mean of the sample data using the following formula; 
+
+$$\bar x = \frac{\sum_{i=0}^{n}x_i}{n}$$
+
+Then the degree of freedom is $\color{#F99417}n$.
+
+But if we calculate the variance of the sample data using the following formula;
+
+$$s^2 = \frac{\sum_{i=0}^{n}(x_i-\bar x)^2}{n-1}$$
+
+Then the degree of freedom is $\color{#F99417}n-1$.
 
 
 <!-- Append current work -->
