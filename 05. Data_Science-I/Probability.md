@@ -5,6 +5,37 @@
 
 <h1 align="center" style="color: orange"> PROBABILITY </h1>
 
+
+## Table of Contents   
+
+1. [Experiment](#experiment-🧪)
+1. [Outcome](#outcome-🎲)
+1. [Sample Space](#sample-space-📊)
+1. [Event](#event-📆)
+1. [Event Space](#event-space-📆)
+1. [Random Variable](#random-variable-🔢)
+1. [Calculating Probability](#calculating-probability)
+1. [Probability Distribution](#probability-distribution)
+1. [Density functions](#density-functions)
+1. [Probability Density Function (PDF)](#probability-density-function-pdf)
+1. [Probability Mass Function (PMF)](#probability-mass-function-pmf)
+1. [Cumulative Density Function (CDF)](#cumulative-density-function-cdf)
+1. [Symmetric Distribution and Skewness](#symmetric-distribution-and-skewness)
+1. [Kurtosis](#kurtosis)
+1. [Gaussian Distribution or Normal Distribution](#gaussian-distribution-or-normal-distribution)
+1. [Empirical rule or 68–95–99.7 rule](#empirical-rule-or-68–95–99.7-rule)
+1. [Standard Normal Variate](#standard-normal-variate)
+1. [Quantile-Quantile (QQ) Plot](#quantile-quantile-qq-plot)
+1. [Student's t-distribution or t-distribution](#students-t-distribution-or-t-distribution)
+1. [Uniform Distribution](#uniform-distribution)
+1. [Standard uniform distribution](#standard-uniform-distribution)
+1. [Binomial Distribution](#binomial-distribution)
+1. [Bernoulli Distribution](#bernoulli-distribution)
+1. [Lognormal Distribution](#Log-Normal-Distribution)
+1. [Pareto Distribution](#pareto-distribution)
+
+---
+
 ## Experiment 🧪
 
 An outcome is the result of an experiment. For instance, when we flip a coin, the outcome can be either heads or tails.
@@ -73,6 +104,8 @@ Hence we can define probability as `probability
 is a measure of the size of a set`
 
 ![Probability : How probability works](./img/Probability_process.png)
+
+---
 
 ## Probability Distribution
 
@@ -266,9 +299,11 @@ If the plot is a straight line (approx.), then the random variable $\color{#F994
 
 > Q-Q plot can also help us in determining whether we have same distributions; given two random variables $\color{#F99417}x$ and $\color{#F99417}y$.
 
-## Student's t-distribution
+## Student's t-distribution or t-distribution
 
-Student's t-distribution or simply t-distribution is a distribution that arises when estimating the mean of a normal distribution with different sized samples. It is a continuous probability distribution. Observations in a  t-distribution $\color{#F99417}T(\nu)$ are calculated from $\color{#F99417}N(\mu, \sigma)$, for describing the interval for the population mean in the normal distribution is;
+A continuos probability distribution that generalizes the normal distribution. It is symmetric around zero and bell-shaped, but has heavier tails than the normal distribution.  $\color{#F99417}t(\nu)$
+
+ that arises when estimating the mean of a normal distribution with different sized samples. It is a continuous probability distribution. Observations in a  t-distribution  are calculated from $\color{#F99417}N(\mu, \sigma)$, for describing the interval for the population mean in the normal distribution is;
 
 $$\texttt{data }= \frac{x - \mu(x)}{\frac{S}{\sqrt{n}}}$$
 
@@ -477,6 +512,8 @@ where $x \ge x_m$ and $\alpha > 0$.
 
 > We can use log-log plot to check if a distribution follows pareto distribution. If the plot is linear, then the distribution follows pareto distribution most of the times (not always). 
 
+---
+
 ## Box Cox Transformation
 
 Data transformation involves applying mathematical operations to a dataset without changing its essential characteristics. There are two main types: `linear transformations` and `non-linear transformations`.
@@ -537,5 +574,3 @@ Some important terms related to law of large numbers are;
 - **Independent and Identically Distributed (IID)** : A sequence of random variables is independent and identically distributed if each random variable has the same probability distribution as the others and all are mutually independent (The result of one trial does not depends on another one).
 
 - **Regression to the mean** : The phenomenon that if a variable is extreme on its first measurement, it will tend to be closer to the average on its second measurement. It is also called **reversion to the mean**.
-
-<!--Section: Probability section links -->
