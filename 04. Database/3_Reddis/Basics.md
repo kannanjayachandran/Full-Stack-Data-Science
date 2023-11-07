@@ -1,6 +1,6 @@
 <h1 align="center">Redis</h1>
 
-Redis is an open source, in memory data structure store, used as a database, cache, message broker and streaming engine. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams. Redis often serve as a data structure layer between a relational database and the application.
+Redis is an open source, in memory data structure store, used as a database, cache, message broker and streaming engine. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyper-log, geo-spatial indexes, and streams. Redis often serve as a data structure layer between a relational database and the application.
 
 Redis is known for its speed and versatility. It stores data in key-value pairs and supports various data types. Some common use cases of redis are;
 
@@ -78,4 +78,3 @@ we can set a key value and expiration in one command using the `SETEX` command.
 ```bash
 SETEX name 10 "John Doe"
 ```
-
