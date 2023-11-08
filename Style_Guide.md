@@ -19,10 +19,8 @@ Using `html` in markdown is generally a bad idea, and should be avoided as far a
 1. Centering and coloring the heading
 
 ```markdown 
-<h1 align="center" style="color: orange">Content</h1>
+<h1 align="center" style="color: orange">Most of the headings</h1>
 ```
-
-> Use only `Orange` and `light grey` for heading 
  
 2. Centering image
 
