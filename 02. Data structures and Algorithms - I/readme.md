@@ -5,17 +5,25 @@
 >   <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
 > </picture><br>
 >
-> Total questions done : 125
 
-## Overview
+## Table of Contents
 
-- Time and Space Complexity
-- Arrays ~ Lists ~ Matrices
-- Bit manipulation
-- Searching and Sorting
-- Strings ~ String Manipulation
-- Recursion
-- Linked Lists
-- Hashing ~ Maps/Dictionary
-- Stacks - Queues
-- Trees
+- [Mathematics for DSA](./DSA_Mathematics/Readme.md)
+
+- Basic data structures
+
+    - [Arrays ](./Arrays/Readme.md)
+
+    - [Strings](./Strings/Readme.md)
+
+    - [Linked Lists](./LinkedLists/Readme.md)
+
+    - [Stacks - Queues](./Stacks_Queues/Readme.md)
+
+- Advanced data structures
+
+    - [Hash Tables](./HashTables/Readme.md)
+    
+    - [Trees-Heap-Trie-Disjoint_set](./Trees_Heap_Trie_Disjoint_set/Readme.md) 
+    
+    - [Graphs](./Graphs/Readme.md)
