@@ -4,64 +4,38 @@ Here is a list of all the resources I have used while learning Full stack data s
 
 I personally think books are the holy grail of learning, but I have listed courses, videos, articles and blogs as well.
 
-## Courses or Videos
+## Free stuff
 
-### Basics of Computer Science and Programming
+- [CS50](https://pll.harvard.edu/course/cs50-introduction-computer-science) By **Harvard University** and Taught by **David J. Malan**, **Brian Yu**, and **Doug Lloyd** and [CPU Land](https://cpu.land/) By **By Lexi Mattick & Hack Club** for **basics of computer science and programming**
 
-1. [CS50](https://pll.harvard.edu/course/cs50-introduction-computer-science) By **Harvard University** and Taught by **David J. Malan**, **Brian Yu**, and **Doug Lloyd**.
+- [Corey Schafer](https://www.youtube.com/@coreyms) For **Python** (also check out his other videos)
 
-2. [CPU Land](https://cpu.land/) By **By Lexi Mattick & Hack Club**
+- [CS Dojo](https://www.youtube.com/@CSDojo), [William Fiset](https://www.youtube.com/@WilliamFiset-videos), [Neetcode](https://www.youtube.com/@NeetCode) and [Neetcode Io](https://www.youtube.com/@NeetCodeIO), [Kunal Kushwaha](https://www.youtube.com/@KunalKushwaha), [Errichto](https://www.youtube.com/@Errichto) for **DSA**
 
-### Python
-
-1. [Corey Schafer](https://www.youtube.com/@coreyms)
-
-### DSA
-
-1. [CS Dojo](https://www.youtube.com/@CSDojo)
-2. [William Fiset](https://www.youtube.com/@WilliamFiset-videos)
-3. [Neetcode](https://www.youtube.com/@NeetCode) and [Neetcode Io](https://www.youtube.com/@NeetCodeIO)
-4. [Kunal Kushwaha](https://www.youtube.com/@KunalKushwaha)
-5. [Errichto](https://www.youtube.com/@Errichto)
+- [Exponent](https://www.youtube.com/@tryexponent) for **system design and interview preparation**
 
 
-### System design and Interview preparation
+- [Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning), [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw), [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy/featured), [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw), [Data school](https://www.youtube.com/@dataschool), [Code Emporium](https://www.youtube.com/@CodeEmporium), [Darshil Parmar](https://www.youtube.com/@DarshilParmar) for **AI - ML - Data Science - Mathematics-Data engineering**
 
-1. [Exponent](https://www.youtube.com/@tryexponent)
+- [Ants are everywhere](https://www.youtube.com/@ants_are_everywhere) for **code review**
 
-### AI - ML - Data Science - Mathematics
+- [Tech with Tim](https://www.youtube.com/@TechWithTim),  [NeuralNine](https://www.youtube.com/@NeuralNine),  [Fireship](https://www.youtube.com/@Fireship),  [mCoding](https://www.youtube.com/@mCoding) for **projects and similar stuff**
 
-1. [Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)
-1. [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
-1. [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy/featured)
-1. [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
-1. [Data school](https://www.youtube.com/@dataschool)
-1. [Code Emporium](https://www.youtube.com/@CodeEmporium)
-1. [Darshil Parmar](https://www.youtube.com/@DarshilParmar)
+## Books Articles - Blogs - Websites
 
-### Code review
+| Title | Author |
+| :---: | :---: | 
+| [Hands-On Machine Learning](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1098125975/ref=sr_1_1?crid=3CDP8TML7C51S&keywords=Machine+learning&qid=1668994456&s=books&sprefix=machine+lear%2Cstripbooks-intl-ship%2C966&sr=1-1) | **Aurélien Géron** |
+| [Practical Statistics for Data Scientists](https://www.amazon.in/Practical-Statistics-Data-Scientists-2e/dp/149207294X) | **Peter Bruce**, **Andrew Bruce**, **Peter Gedeck** |
+| [An introduction to statistical learning with applications in Python](https://www.statlearning.com/) | **Gareth James**, **Daniela Witten**, **Trevor Hastie**, **Robert Tibshirani** |
+| [Designing data intensive applications](https://www.amazon.in/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/9352135245) | **Martin Kleppmann** |
+| [Statistical Methods for Machine Learning](https://machinelearningmastery.com/statistics_for_machine_learning/) | **Jason Brownlee** |
+|[Machine Learning Mastery](https://machinelearningmastery.com/) | website |
+| [ mode SQL](https://mode.com/sql-tutorial/) | website|
 
-1. [Ants are everywhere](https://www.youtube.com/@ants_are_everywhere)
+## Paid stuff
 
-### Projects and similar stuff
-
-1. [Tech with Tim](https://www.youtube.com/@TechWithTim)
-2. [NeuralNine](https://www.youtube.com/@NeuralNine)
-3. [Fireship](https://www.youtube.com/@Fireship)
-4. [mCoding](https://www.youtube.com/@mCoding)
-
-## Books
-
-1. [Hands-On Machine Learning](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1098125975/ref=sr_1_1?crid=3CDP8TML7C51S&keywords=Machine+learning&qid=1668994456&s=books&sprefix=machine+lear%2Cstripbooks-intl-ship%2C966&sr=1-1) by **Aurélien Géron**
-
-2. [An introduction to statistical learning with applications in Python](https://www.statlearning.com/)
-
-3. [Designing data intensive applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/ref=sr_1_1?crid=2ZQZQZQZQZQZQ&keywords=designing+data+intensive+applications&qid=1668994518&s=books&sprefix=designing+data+int%2Cstripbooks-intl-ship%2C966&sr=1-1) by **Martin Kleppmann**
-
-4. [Statistical Methods for Machine Learning](https://machinelearningmastery.com/statistics_for_machine_learning/) by **Jason Brownlee**
-
-## Articles - Blogs - Websites
-
-1. [Machine Learning Mastery](https://machinelearningmastery.com/)
-
-2. [SQL](https://mode.com/sql-tutorial/)
+- [Applied AI course](https://www.appliedaicourse.com/)
+- [Algoexpert](https://www.algoexpert.io/product) 
+- [Systems expert](https://www.algoexpert.io/systems/product)
+- [Ml expert](https://www.algoexpert.io/machine-learning/product)
