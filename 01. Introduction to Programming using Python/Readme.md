@@ -1,8 +1,8 @@
 # Introduction to Programming using Python
 
-**[Python language basics](https://learn.microsoft.com/en-us/training/paths/beginner-python/)**
+**[Python language basics from Microsoft](https://learn.microsoft.com/en-us/training/paths/beginner-python/)**
 
-### Basic programs
+### [Basic programs](./1_Introduction_to_programming.ipynb) 
 
 1. Factorial of a number
 2. Sum of n numbers
@@ -26,7 +26,7 @@
 20. Print random numbers between 1 and 10 until we get 5
 21. Find the first digit of a number
 
-### Problem set - I
+### [Practice problems](./ProblemSet.ipynb)
 
 1. Check whether the given number is palindrome or not
 2. GCD of two numbers using Euclidean algorithm
