@@ -39,7 +39,7 @@ This repository contains the **code samples** { Jupyter notebooks }, **datasets*
 >   <img alt="Warning" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/warning.svg">
 > </picture><br>
 >
-> The repository is still under construction and this is a rough outline of the course, If you find any errors or have any suggestions, please feel free to open an issue.
+> The repository is under construction, If you find any errors or have any suggestions, please feel free to open an issue. **Due to the limitation in rendering of equations in github, the current best way to view the notes is to clone the repository and view the notes locally.**
 
 Resources available [here](/Resources.md).
 
