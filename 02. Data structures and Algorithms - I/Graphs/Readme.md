@@ -1,8 +1,29 @@
 # Graphs
 
+## Graph Representation
+
+- Adjacency Matrix
+
+- Adjacency List
+
+## Depth-First Search
+
+## Breadth-First Search
+
+## Shortest Path Algorithms
+
+- Dijkstra's Algorithm
+
+- Bellman-Ford Algorithm
+
+## Minimum Spanning Tree
+
+- Prim's Algorithm
+
+- Kruskal's Algorithm
 
 
-```py
+<!-- ```py
 from graph import Graph
 
 g = Graph()
@@ -38,4 +59,4 @@ graph = {
     'C': ['A', 'D'],
     'D': ['B', 'C']
 }
-```
+``` -->
