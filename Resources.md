@@ -1,8 +1,6 @@
 <h1 align="center"> Resources </h1>
 
-Here is a list of all the resources I have used while learning Full stack data science. Most of them are free and Open-source ones.
-
-I personally think books are the holy grail of learning, but I have listed courses, videos, articles and blogs as well.
+Presented below are the resources I've utilized in my **Full stack data science** learning journey. Majority of these resources are freely accessible and open-source. I personally think books are the holy grail of learning, but I have listed courses, videos, articles and blogs as well.
 
 ## Free stuff
 
