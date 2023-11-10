@@ -14,6 +14,8 @@
 
 - Fenwick Trees
 
+- Persistent Segment Tree
+
 ## Heap
 
 - Min Heap

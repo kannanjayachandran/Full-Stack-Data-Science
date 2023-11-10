@@ -22,6 +22,9 @@
 
 - Kruskal's Algorithm
 
+## Strongly_Connected_Components
+
+## Articulation_Points_and_Bridges
 
 <!-- ```py
 from graph import Graph
