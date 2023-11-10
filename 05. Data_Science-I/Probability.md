@@ -5,7 +5,6 @@
 
 <h1 align="center" style="color: orange"> PROBABILITY </h1>
 
-
 ## Table of Contents   
 
 1. [Experiment](#experiment-🧪)
@@ -36,29 +35,43 @@
 
 ---
 
-## Experiment 🧪
+$$\large\color{#F99417} \texttt{Probability is a measure that quantifies the likelihood that an event will occur.}$$
 
-An outcome is the result of an experiment. For instance, when we flip a coin, the outcome can be either heads or tails.
+---
 
-## Outcome 🎲
+## Experiment 
 
-An outcome is the result of an experiment. For example, if we toss a coin, the outcome can be either heads or tails.
+The process which produces an outcome.
 
-## Sample Space (Ω) 📊
+- _For instance, when we flip a coin, flipping the coin can be considered as the experiment_.
 
-The sample space is a set that includes all the possible outcomes of a random experiment. In the case of a coin toss, the sample space is {heads, tails} or when rolling a fair six-sided die, the sample space is {1, 2, 3, 4, 5, 6}.
+## Outcome 
 
-## Event 📆
+An outcome is the result of an experiment. 
 
-An event is a collection of one or more outcomes of an experiment. It is a subset of the sample space. For example, when tossing a coin, the event of getting a head is a subset of the sample space. $\color{#F99417}\{h\}\subset \{h, t\}$. We use the intersection ($\color{#F99417}\cap$) of both events when they both occur, and the union ($\color{#F99417}\cup$) when either of them occurs.
+- _For example, if we toss a coin, the outcome can be either heads or tails_.
 
-![Ven diagram representation of probability](./img/ven.png)
+## Sample Space (Ω or S) 
+
+The sample space is the set of all possible outcomes (or events) of a random experiment. 
+
+- In the case of a coin toss, the sample space is {heads, tails} or when rolling a fair six-sided die, the sample space is {1, 2, 3, 4, 5, 6}.
+
+## Event (A)
+
+An outcome of an experiment to which a probability is assigned (can also be a collection of outcomes). It is a subset of the sample space.
+
+- _For example, when tossing a coin, the event of getting a head is a subset of the sample space. $\color{#F99417}\{h\}\subset \{h, t\}$. We use the intersection ($\color{#F99417}\cap$) of both events when they both occur, and the union ($\color{#F99417}\cup$) when either of them occurs_.
 
 ## Event space (F) 📆
 
 The collection of all possible events. It is a subset of the sample space that consists of specific outcomes or combinations of outcomes
 
 For example, if we toss a coin, the event space is {∅, {head}, {tails}, {head, tails}} or the event of getting an even number when rolling the die, the event space would be {2, 4, 6}
+
+## Probability function (P)
+
+The function used to assign a probability to an event.
 
 ## Random Variable (X) 🔢
 
@@ -70,6 +83,10 @@ A random variable is a variable that can assume various values, and the specific
 |       Whole number       |         Real number        |
 |       Countable set      |       Uncountable set      |
 |       Finite set         |         Infinite set       |
+
+## Ven diagram of probability representation
+
+![Ven diagram representation of probability](./img/ven.png)
 
 ## Calculating Probability
 
@@ -108,6 +125,8 @@ is a measure of the size of a set`
 ---
 
 ## Probability Distribution
+
+The shape ro distribution of all events in the sample space is called the probability distribution.
 
 A probability distribution is a mathematical function that describes how the values of a random variable are distributed or spread out. It can be used to represent both discrete (discrete probability distribution) and continuous (continuous probability distribution) random variables. 
 
@@ -197,7 +216,7 @@ From the image above, you can observe that higher kurtosis indicates a greater p
 
 > We compare Kurtosis coefficient, to determine the kurtosis of a distribution (Meso, Platy, Lepto).
 
-## Gaussian Distribution or Normal Distribution
+## Gaussian Distribution or Normal Distribution ($\color{#F99417}X\sim N(\mu, \sigma)$)
 
 The Gaussian distribution, also known as the Normal distribution, is one of the most common and important probability distributions. It is characterized by a bell-shaped curve and described by two key parameters: the mean ($\color{#F99417}\mu$) and the standard deviation ($\color{#F99417}\sigma$).  Mathematically we would write a normal distribution as;
 
@@ -299,15 +318,47 @@ If the plot is a straight line (approx.), then the random variable $\color{#F994
 
 > Q-Q plot can also help us in determining whether we have same distributions; given two random variables $\color{#F99417}x$ and $\color{#F99417}y$.
 
-## Student's t-distribution or t-distribution
+## Student's t-distribution or t-distribution ($\color{#F99417}t(\nu)$)
 
-A continuos probability distribution that generalizes the normal distribution. It is symmetric around zero and bell-shaped, but has heavier tails than the normal distribution.  $\color{#F99417}t(\nu)$
+The t-distribution is a continuous probability distribution that serves as a generalization of the normal distribution. It shares the symmetry around zero and bell-shaped characteristics with the normal distribution but exhibits heavier tails. The t-distribution commonly arises in statistical inference, particularly when estimating the mean of a normal distribution with samples of different sizes.
 
- that arises when estimating the mean of a normal distribution with different sized samples. It is a continuous probability distribution. Observations in a  t-distribution  are calculated from $\color{#F99417}N(\mu, \sigma)$, for describing the interval for the population mean in the normal distribution is;
-
-$$\texttt{data }= \frac{x - \mu(x)}{\frac{S}{\sqrt{n}}}$$
+$$\large\text{data }= \frac{x - \mu(x)}{\frac{S}{\sqrt{n}}}$$
 
 Where $\color{#F99417}S$ is the sample standard deviation, $\color{#F99417}n$ is the sample size and $\color{#F99417}\mu(x)$ is the sample mean. The degrees of freedom $\color{#F99417}\nu$ is equal to $\color{#F99417}n-1$.
+
+We can write the PDF of t-distribution as;
+
+$$\large f(x) = \frac{\Gamma(\frac{\nu + 1}{2})}{\sqrt{\nu\pi}\Gamma(\frac{\nu}{2})}(1 + \frac{x^2}{\nu})^{-\frac{\nu + 1}{2}}$$
+
+where $\color{#F99417}\Gamma$ is the gamma function. $\color{#F99417}\Gamma$ function is a generalization of the factorial function to non-integer values. It is defined as;
+
+$$\large \Gamma(z) = \int_{0}^{\infty}x^{z-1}e^{-x}dx$$
+
+![PDF of t-distribution](./img/student_pdf.png)
+
+> PDF of t-distribution
+
+We can write the CDF of t-distribution as;
+
+$$\large F(x) = \frac{\Gamma(\frac{\nu + 1}{2})}{\sqrt{\nu\pi}\Gamma(\frac{\nu}{2})}\int_{-\infty}^{x}(1 + \frac{x^2}{\nu})^{-\frac{\nu + 1}{2}}dx$$
+
+where $\color{#F99417}\nu$ is the degrees of freedom, $\color{#F99417} x$ is the random variable and $\color{#F99417}F(x)$ is the CDF of t-distribution.
+
+![CDF of t-distribution](./img/student_cdf.png)
+
+> CDF of t-distribution
+
+|Property | Notation/Formula |
+|:---:|:---:|
+|Mean | $\color{#F99417}0$ for $\color{#F99417}\nu > 1$ |
+|Median | $\color{#F99417}0$ |
+|Mode | $\color{#F99417}0$ |
+|Standard Deviation | $\color{#F99417}\sqrt{\frac{\nu}{\nu - 2}}$ for $\color{#F99417}\nu > 2$ |
+|Variance | $\color{#F99417}\frac{\nu}{\nu - 2}$ for $\color{#F99417}\nu > 2$ |
+|Skewness | $\color{#F99417}0$ for $\color{#F99417}\nu > 3$ |
+|Kurtosis | $\color{#F99417}\frac{6}{\nu - 4}$ for $\color{#F99417}\nu > 4$ |
+
+**As freedom increases, t-distribution approaches normal distribution.**
 
 ## Uniform Distribution
 
@@ -386,7 +437,8 @@ We can write binomial distribution as $\color{#F99417}X \sim B(n, p)$. The **PMF
 $$f(x) = \begin{cases} \large\binom{n}{x}p^x(1-p)^{n-x} & \text{for } x = 0, 1, ..., n  \end{cases}$$
 
 **where**; 
-- $\color{#F99417}\binom{n}{x}$ is the binomial coefficient (_which is the number of ways of picking $\color{#F99417}x$ (number of successes) unordered outcomes from $\color{#F99417}n$ possibilities (the number of trials), also known as a combination_)
+
+- $\color{#F99417}\binom{n}{x}$ is the binomial coefficient (which is the number of ways of picking $\color{#F99417}x$ (number of successes) unordered outcomes from $\color{#F99417}n$ possibilities (the number of trials), also known as a combination)
 
 - $\color{#F99417}P$ is the probability of success on a single trial 
 
