@@ -4,6 +4,22 @@ SQL _Stands for Structured Query Language_. It is the standard language for inte
 
 > SQL is a _declarative language_, which means that you tell the database what you want to do, and it figures out how to perform the operation in the most efficient way.
 
+## Basic terminology
+
+![Alt text](image-5.png)
+
+1. **Data value** : A single unit of data. Each entry in a table represents a data value.
+
+> Eg: `1`, `03/09/2016`, `A_1`, etc
+
+2. **Record** : A collection of related data values. Each row in a table represents a record.
+
+> Eg: `1, 03/09/2016, 1, A_1`, etc
+
+3. **Field** : A single unit of information. Each column in a table represents a field.
+
+4. **File** : A collection of related records. A table is a file.
+
 ## High level overview of how SQL queries work
 
 ![Overview of how sql queries gets executed](image.png)
