@@ -26,7 +26,7 @@ This repository contains the **code samples** { Jupyter notebooks }, **datasets*
 |   8   | Data structures and Algorithms - II |  [Here](./08.%20Data%20structures%20and%20Algorithms%20-%20II/)   |
 |   9   | Advanced Machine Learning           |               [Here](./09.%20Adv_Machine_Learning/)               |
 |  10   | Machine Learning System Designing   |                      [Here](./10.%20MlOps/)                       |
-|  11   | Machine Learning Operations         |                      [Here](./10.%20MlOps/)                       |
+|  11   | Machine Learning Operations & AI Operations |           [Here](./11.%20MlOps-AIOps/Readme.md)           |
 |  12   | Case Study - I                      |                 [Here](./12.%20Case%20Studies-I/)                 |
 |  13   | Case Study - II                     |                [Here](./13.%20Case%20Studies-II/)                 |
 |  14   | Case Study - III                    |                [Here](./14.%20Case%20Studies-III/)                |
