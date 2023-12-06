@@ -50,4 +50,4 @@ Resources available [here](/Resources.md).
 >
 > [License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)
 
-### If you like this repository, give it a ⭐️
+### Show 💖 by staring this repository ✨ 
