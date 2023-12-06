@@ -1,6 +1,6 @@
 # Style Guide
 
-These are some general styling (syntactic and semantic) guidelines specific to this project. The purpose of such a style guide is to ensure quality of the content and uniformity.
+These are some general styling guidelines specific to this project. The purpose of such a style guide is to ensure quality of the content and uniformity.
 
 ## Coding 
 
@@ -8,13 +8,13 @@ Python : PEP8 standards
 
 ## Jupyter Notebooks
 
-- Notebooks are meant to supplement the notes (in readme files) or to showcase implementation of the concept, avoid adding large amount of theories or notes to it.
+- Notebooks are meant to supplement the notes present in readme files or to showcase implementation of the concept, hence theorems and proofs should not be included in the notebooks.
 
-- Name them appropriately and add them in the `notebooks` folder in the respective folder.
+- Notebooks should be grouped inside the `notebooks` folder.
 
 ## Markdown Style 
 
-Using `html` in markdown is generally a bad idea, and should be avoided as far as possible, but for certain styling purposes described below it may be used.
+Using `html` in markdown is generally a bad idea, and should be avoided as far as possible, but for certain styling purposes described below it may be used (aesthetics purposes only).
 
 1. Centering and coloring the heading
 
@@ -32,4 +32,7 @@ Using `html` in markdown is generally a bad idea, and should be avoided as far a
 </div>
 ```
 
-For mathematical equations using latex, inline equations should be colored using Orange (#F99417). Block equations should not be colored.
+## LaTeX Style
+- For mathematical equations using latex, inline equations should be colored using Orange (#F99417). Block equations should not be colored.
+
+- Github flavoured markdown does not support latex completely, so currently the best way to include latex is to use `html` tags.
