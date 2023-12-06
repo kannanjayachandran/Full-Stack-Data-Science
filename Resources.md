@@ -1,6 +1,6 @@
 <h1 align="center"> Resources </h1>
 
-Presented below are the resources I've utilized in my **Full stack data science** learning journey. Majority of these resources are freely accessible and open-source. I personally think books are the holy grail of learning, but I have listed courses, videos, articles and blogs as well.
+Presented below are the resources I've utilized in my **Full stack data science** learning journey. Majority of these resources are freely accessible and open-source. I am not affiliated with any of these resources. 
 
 ## Free stuff
 
@@ -11,7 +11,6 @@ Presented below are the resources I've utilized in my **Full stack data science*
 - [CS Dojo](https://www.youtube.com/@CSDojo), [William Fiset](https://www.youtube.com/@WilliamFiset-videos), [Neetcode](https://www.youtube.com/@NeetCode) and [Neetcode Io](https://www.youtube.com/@NeetCodeIO), [Kunal Kushwaha](https://www.youtube.com/@KunalKushwaha), [Errichto](https://www.youtube.com/@Errichto) for **DSA**
 
 - [Exponent](https://www.youtube.com/@tryexponent) for **system design and interview preparation**
-
 
 - [Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning), [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw), [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy/featured), [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw), [Data school](https://www.youtube.com/@dataschool), [Code Emporium](https://www.youtube.com/@CodeEmporium), [Darshil Parmar](https://www.youtube.com/@DarshilParmar) for **AI - ML - Data Science - Mathematics-Data engineering**
 
