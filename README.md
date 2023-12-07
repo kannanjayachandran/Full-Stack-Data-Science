@@ -10,8 +10,6 @@ This repository contains the **code samples** { Jupyter notebooks }, **datasets*
 
 > _I am an undergraduate computer science engineering student specializing in **`Artificial Intelligence`** and **`Machine learning`**._
 
----
-
 ## Contents
 
 | sl.no | Topics                              |                               Link                                |
