@@ -14,7 +14,9 @@ Redis is known for its speed and versatility. It stores data in key-value pairs 
 
 ## Working with Redis
 
-Redis has clients for almost all major programming languages. After installing Redis, you can start the Redis server by running the following command in the terminal.
+Redis has clients for almost all major programming languages. Let's see some of the basic commands;
+
+After installing Redis, you can start the Redis server by running the following command in the terminal.
 
 ```bash
 redis-server
