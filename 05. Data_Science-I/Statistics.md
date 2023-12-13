@@ -120,18 +120,18 @@ The probability distribution of sample statistics from random samples of a popul
 **If we have `M` sample means $\color{#F99417}\bar x_i = \bar x_1, \bar x_2, \bar x_3, ...\bar x_n$ then the sampling distribution of the sample means is the probability distribution of these sample means.**
 
 ---
-> Various distributions and their properties are covered in the [Probability](Probability.md) section.
+> **Various distributions and their properties are covered in the [Probability](Probability.md) section**.
 ---
 
 ## Central Limit Theorem (CLT)
 
-CLT is one of the most important theorems in statistics. It states that, if we have a population with finite mean $\color{#F99417}\mu$ and variance $\color{#F99417}\sigma^2$, with sufficiently large random samples of size $\color{#F99417}n$  with replacement, taken $\color{#F99417}m$ times, then the distribution of sample means will approximate a normal distribution.
+**CLT** is one of the most important theorems in statistics. It states that, if we have a population with finite mean $\color{#F99417}\mu$ and variance $\color{#F99417}\sigma^2$, with sufficiently large random samples of size $\color{#F99417}n$  with replacement, taken $\color{#F99417}m$ times, then the distribution of sample means will approximate a normal distribution.
 
 $$OR$$
 
-**_As the size of the sample increases, the distribution of the mean across multiple samples will approximate a Gaussian distribution. OR ; The distribution of errors from estimating the population mean will be normally distributed_.**
+**_As the size of the sample increases, the distribution of the mean across multiple samples will approximate a Gaussian distribution. $\color{#F99417}\rightarrow$ ; The distribution of errors from estimating the population mean will be normally distributed_.**
 
-$$ \bar x_i \sim N(\mu, \frac{\sigma^2}{n})\;\;as\;\; {n\rightarrow \infin}$$ 
+$$\large \bar x_i \sim N(\mu, \frac{\sigma^2}{n})\;\;as\;\; {n\rightarrow \infin}$$ 
 
 where $\color{#F99417}\bar x_i$ is the sampling distribution of the sample means, $\color{#F99417}N$ is the normal distribution with mean $\color{#F99417}\mu$ (which is same as the population mean) and variance $\color{#F99417}\frac{\sigma^2}{n}$ (where $\color{#F99417}\sigma^2$ is the population variance and $\color{#F99417}n$ is the sample size).
 
@@ -139,23 +139,21 @@ where $\color{#F99417}\bar x_i$ is the sampling distribution of the sample means
 
 ## Statistical Significance
 
-In both probability and statistics, we are dealing with uncertainty and our attempt to comprehend it. Hence it is extremely important to quantify the uncertainty. We want to determine whether the results observed in an experiment or study are likely due to a real effect or simply due to random chance. We use **statistical significance tests** to make this determination. That is to conclude whether the observed results are **statistically significant** or not.
+In probability and statistics, our focus is on understanding and dealing with **uncertainty**. Quantifying this uncertainty is crucial. The goal is to "*determine if the outcomes observed in an experiment or study are likely a result of a genuine effect or mere random chance*". This determination is made through statistical significance tests to conclude whether the observed results are indeed **statistically significant**.
 
-_**Statistical significance testing involves assessing whether the differences or relationships observed in a sample are likely to exist in the population from which the sample is drawn.**_
+- **Statistical significance testing** involves evaluating whether the differences or relationships observed in a sample are likely to exist in the population from which the sample is drawn. 
 
-We use the **CLT** and our understanding about **a well known distribution** (like _normal distribution_) to make inferences about the population. 
-
-<!-- mention hypothesis testing here -->
+- The **Central Limit Theorem** (CLT) and our knowledge of well-known distributions, such as the normal distribution, guide us in making inferences about the population. 
 
 ## Confidence Interval
 
-A statistical concept used to estimate the range within which a population parameter (mean or proportion) is likely to fall. 
+The confidence interval is a statistical concept used to estimate the range within which a population parameter (mean or proportion) is likely to lie:
 
-- It provides a range of values rather than a single point estimate.
+- It provides a range of values instead of a single point estimate.
 
-- It quantifies the uncertainty associated with the estimate.   
+- It quantifies the uncertainty associated with the estimate.
 
-**A range of values, derived from sample data, that is used to estimate an unknown population parameter. It has a specified level of confidence associated with it, (something like 95%) that the parameter lies within the interval.**
+**It's a range derived from sample data, aiming to estimate an unknown population parameter with a specified level of confidence usually expressed in percentage**
 
 ## Statistical Hypothesis Testing
 
@@ -169,18 +167,6 @@ A mathematical proof that establishes the truth of a statement by first assuming
 
 We make an assumption and then investigate about that assumption and collect evidence to either prove that assumption or to discard it. It is the method of **Science**. Hypothesis in hypothesis testing also follows the same ideology. We make an assumption about the population and then collect evidence from the sample to either prove or discard the assumption.
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- 
 
 ## Hypothesis Testing
@@ -191,6 +177,7 @@ The assumption is called the _null hypothesis_ ($\color{#F99417}H_0$). The viola
 
 > We use the `proof by contradiction` method to test the hypothesis. We assume that the null hypothesis is true and then we try to prove that it is false. If we fail to prove that the null hypothesis is false, then we accept the null hypothesis
 
+One of the common measures of statistical significance is the **p-value**. It is the probability of observing a test statistic as extreme as the one observed, by chance, given that the null hypothesis is true. If the p-value is less than the significance level ($\color{#F99417}\alpha$), then we reject the null hypothesis. A common value used for $\color{#F99417}\alpha$ is 0.05 or 5% (arbitrary value).
 
 
 
