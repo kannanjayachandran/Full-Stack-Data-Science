@@ -1,4 +1,4 @@
-<h1 align="center"> Recursion </h1>
+<h1 align="center"> Recursion & Backtracking </h1>
 
 > ##  A function calling itself is called recursion.
 
