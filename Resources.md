@@ -2,7 +2,7 @@
 
 Presented below are the resources I've utilized in my **Full stack data science** learning journey. Majority of these resources are freely accessible and open-source. I am not affiliated with any of these resources. 
 
-## Free stuff
+## Free Resources
 
 - [CS50](https://pll.harvard.edu/course/cs50-introduction-computer-science) By **Harvard University** and Taught by **David J. Malan**, **Brian Yu**, and **Doug Lloyd** and [CPU Land](https://cpu.land/) By **By Lexi Mattick & Hack Club** for **basics of computer science and programming**
 
@@ -18,7 +18,7 @@ Presented below are the resources I've utilized in my **Full stack data science*
 
 - [Tech with Tim](https://www.youtube.com/@TechWithTim),  [NeuralNine](https://www.youtube.com/@NeuralNine),  [Fireship](https://www.youtube.com/@Fireship),  [mCoding](https://www.youtube.com/@mCoding) for **projects and similar stuff**
 
-## Books Articles - Blogs - Websites
+## Books & Websites
 
 | Title | Author |
 | :---: | :---: | 
@@ -28,11 +28,16 @@ Presented below are the resources I've utilized in my **Full stack data science*
 | [Designing data intensive applications](https://www.amazon.in/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/9352135245) | **Martin Kleppmann** |
 | [Statistical Methods for Machine Learning](https://machinelearningmastery.com/statistics_for_machine_learning/) | **Jason Brownlee** |
 |[Machine Learning Mastery](https://machinelearningmastery.com/) | website |
-| [ mode SQL](https://mode.com/sql-tutorial/) | website|
+| [mode SQL](https://mode.com/sql-tutorial/) | website|
 
-## Paid stuff
+## Paid Resources
 
-- [Applied AI course](https://www.appliedaicourse.com/)
+- [Applied AI course](https://www.appliedaicourse.com/) or [Scalar DSML program now](https://www.scaler.com/data-science-course/)
+
 - [Algoexpert](https://www.algoexpert.io/product) 
+
 - [Systems expert](https://www.algoexpert.io/systems/product)
+
 - [Ml expert](https://www.algoexpert.io/machine-learning/product)
+
+- [Neetcode io](https://neetcode.io/courses)
