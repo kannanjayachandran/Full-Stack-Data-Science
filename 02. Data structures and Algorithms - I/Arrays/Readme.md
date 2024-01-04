@@ -83,5 +83,4 @@ In python we have **Lists** that are superset of arrays. Lists can contain eleme
 10. Weakest row in a matrix
 11. Merge overlapping intervals
 12. Monotonic array
-
-> Problem count : 42
+13. Minimum operations to empty the array
