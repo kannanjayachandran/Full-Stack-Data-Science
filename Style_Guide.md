@@ -8,9 +8,9 @@ Python : PEP8 standards
 
 ## Jupyter Notebooks
 
-- Notebooks are meant to supplement the notes present in readme files or to showcase implementation of the concept, hence theorems and proofs should not be included in the notebooks.
+- Notebooks are meant to supplement the notes present in readme files or to showcase implementation of the concept only. They **should not** be used as a replacement for readme files.
 
-- Notebooks should be grouped inside the `notebooks` folder.
+- Notebooks should be present inside the `notebooks` directory inside the respective topic directory.
 
 ## Markdown Style 
 
@@ -33,6 +33,6 @@ Using `html` in markdown is generally a bad idea, and should be avoided as far a
 ```
 
 ## LaTeX Style
-- For mathematical equations using latex, inline equations should be colored using Orange (#F99417). Block equations should not be colored.
+- For mathematical equations using latex, inline equations should be colored using `Orange (#F99417)`. Block equations should not be colored.
 
 - Github flavoured markdown does not support latex completely, so currently the best way to include latex is to use `html` tags.
