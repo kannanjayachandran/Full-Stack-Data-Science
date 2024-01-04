@@ -7,8 +7,4 @@
 
 Data preprocessing before dimensionality reduction
 
-1. Colunm normalization
- -->
- ![Representation 1](image.png)
- ![Representation 2](image-1.png)
- ![Column normalization](image-2.png)
+1. Colunm normalization-->
