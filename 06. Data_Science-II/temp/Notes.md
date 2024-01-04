@@ -1,0 +1,1 @@
+Rectangle in 2d becomes a cuboid in 3D and a hyper-cuboid in higher dimensions. It is important for decision trees. 
