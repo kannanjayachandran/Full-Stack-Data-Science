@@ -36,6 +36,6 @@ This repository contains the **code samples** { Jupyter notebooks }, **datasets*
 
 _**Due to the limitation in rendering some mathematical equations (Latex) in github, the current best way to view the content is to clone the repository and view the markdown files locally.**_
 
-> [License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)
+**[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)**
 
 ### Show 💖 by staring this repository ✨ 
