@@ -21,10 +21,3 @@ Machine learning is a subset of artificial intelligence (AI) that deals with dev
 Now that we know what data is, and what data science is, we need to learn the tools and techniques to perform data science. But for understanding almost all of them we need to have a solid understanding of the underlying mathematical concepts. So let us look at some of the important mathematical constructs.
 
 ### [Linear Algebra](./Linear_algebra.md) | [Probability and Statistics](./Probability_and_Statistics.md) | [Calculus](./Calculus.md)
-
-> <picture>
->   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/note.svg">
->   <img alt="Note" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/note.svg">
-> </picture><br>
->
-> All the above mathematics topics are covered from a data science perspective.
