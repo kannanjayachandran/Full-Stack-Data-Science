@@ -1,6 +1,6 @@
 # Data science and Machine Learning - I
 
-Both data science and machine learning are broad fields, and each with considerable amount of depth. Firstly I want to lay out the foundational knowledge required for both. Then sort of pick up a niche and go deeper into it.
+Data science and machine learning encompass expansive domains, each characterized by significant depth. Here I want to introduce both of them on high level and lay out the foundational knowledge required for both and advanced topics further down the line.z
 
 **In this section, we are going to cover the following topics**:
 
