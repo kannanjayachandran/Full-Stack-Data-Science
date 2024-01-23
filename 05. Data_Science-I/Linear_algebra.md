@@ -5,32 +5,34 @@
 
 <h1 align="center" style="color: orange"> Linear Algebra </h1>
 
-Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. We can call linear algebra as the mathematics of data.
+Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices.
+> linear algebra is the mathematics of data.
 
-## Points/Vectors
+## Vector
 
 A point/Vector is a collection of numbers which is often used to describe the state of a system. 
 
-![Point or vector](./img/Point_vector.png)
+![Point or vector on cartesian coordinate system](./img/Point_vector.png)
 
-Therefore we can represent an `n-dimensional` vector as $\color{#F99417}[x_1, x_2, x_3, ..., x_n]$ when the length of the vector is `n` and $\color{#F99417}x_i$ is a component of the vector.
+Therefore we can represent an `n-dimensional` vector as $\color{#F99417}[x_1, x_2, x_3, ..., x_n]$. Where the length of the vector is `n` and $\color{#F99417}x_i$ is a component of the vector in the `i-th` dimension.
 
 Some of the common **distance formulas** are;
 
 | Description | Formula |
-| :--- | :--- |
-| Distance between origin $\color{#F99417}o(0, 0)$ and a point $\color{#F99417}p(x_1, x_2)$ in a 2D plane | $d = \sqrt{a^2+b^2}$ |
-| Distance between origin $\color{#F99417}o(0, 0, 0)$ and a point $\color{#F99417}p(x_1, x_2, x_3)$ in a 3D plane | $d = \sqrt{a^2+b^2+c^2}$ |
+| --- | :--- |
+| Distance between origin $\color{#F99417}o(0, 0)$ and a point $\color{#F99417}P(x_1, x_2)$ in a 2D plane | $d = \sqrt{x_1^2+x_2^2}$ |
+| Distance between origin $\color{#F99417}o(0, 0, 0)$ and a point $\color{#F99417}P(x_1, x_2, x_3)$ in a 3D plane | $d = \sqrt{x_1^2+x_2^2+x_3^2}$ |
 | Distance between origin $\color{#F99417}o(0, 0, 0, ..., 0)$ and a point $\color{#F99417}p(x_1, x_2, x_3, ..., x_n)$ in a `n-dimensional` plane | $d = \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2}$ |
-| Distance between two points p $\color{#F99417}(x_1, y_1)$ and q $\color{#F99417}(x_2, y_2)$ in a 2D plane | $d = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2}$ |
-| Distance between two points p $\color{#F99417}(x_1, y_1, z_1)$ and q $\color{#F99417}(x_2, y_2, z_2)$ in a 3D plane | $d = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2+(z_1 - z_2)^2}$ |
-| Distance between two points p $\color{#F99417}(x_1, x_2, x_3, ..., x_n)$ and q $\color{#F99417}(y_1, y_2, y_3, ..., y_n)$ in a `n-dimensional` plane | $d = \sqrt{(x_1 - y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+...+(x_n - y_n)^2} \\  \texttt{ or }\\ d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$ (Euclidean distance) |
+| Distance between two points  $\color{#F99417}P (x_1, y_1)$ and $\color{#F99417}Q (x_2, y_2)$ in a 2D plane | $d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2}$ |
+| Distance between two points  $\color{#F99417}P (x_1, y_1, z_1)$ and $\color{#F99417}Q (x_2, y_2, z_2)$ in a 3D plane | $d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2+(z_2 - z_1)^2}$ |
+| Distance between two points $\color{#F99417} P(x_1, x_2, x_3, ..., x_n)$ and $\color{#F99417}Q (y_1, y_2, y_3, ..., y_n)$ in a `n-dimensional` plane | $d = \sqrt{(x_1-y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+...+(x_n - y_n)^2} \\  \;\;\;\;\;{ or }\\ d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$ |
 
-> We can easily derive all the above formulas using the Pythagoras theorem.
+> All of these formulas represent the Euclidean distance, providing a way to measure the distance between two points in different-dimensional spaces. We can easily derive all the above formulas using the Pythagoras theorem.
 
 ## Row and Column Vectors
 
-Row vectors are vectors that have a single row and one or more columns. They are often used to represent the weights of a neural network. Column vectors are vectors that have a single column and one or more rows. They are often used to represent the features of an input to a machine learning model.
+Row vectors are vectors that have a single row and one or more columns. Column vectors are vectors that have a single column and one or more rows.
+We can use a row vector to represent the weights of a neural network. While we can use a column vector to represent the features of an input.
 
 ![Row and column vector](./img/Row-Col-Vector.png)
 
