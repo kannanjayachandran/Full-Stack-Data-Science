@@ -1,6 +1,11 @@
 # Calculus
 
-<!-- 1. Derivatives
+
+
+<!--
+Functions
+
+1. Derivatives
 2. Integrals
 3. Partial Derivatives
 4. Approximations
