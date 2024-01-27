@@ -2,7 +2,7 @@
 
 ## Data
 
-![Alt text](./img/data_def.png)
+![Definition of data](./img/data_def.png)
 
 > **Set**: In statistics, the population you are trying to discover something about.
 
