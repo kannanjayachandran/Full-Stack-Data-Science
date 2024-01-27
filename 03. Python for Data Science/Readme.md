@@ -24,3 +24,5 @@ This section contains the following topics:
 - Pandas
 - Matplotlib
 - Seaborn
+
+<!-- Move: Tensorflow, Pytorch & other MLOps tools -->
