@@ -50,3 +50,6 @@
 6. [String](./7_String.ipynb)  
 7. [Functions](./8_Functions.ipynb)
 8. [OOPS and File handling](./9_OOPS_and_File_handling.ipynb)
+
+
+### [Linux commands and GIT](./Linux-GIT/Readme.md)
