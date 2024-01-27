@@ -14,6 +14,8 @@ Relational Data model typically uses SQL to query and manipulate data. Relationa
 
 Even now relational databases are the most popular databases. They are used in almost all the applications. They are extremely powerful while working with structured data. The most popular relational databases are MySQL, PostgreSQL, SQLite, etc.
 
+They basically support CRUD operations which Create/Insert, Select, Update, Delete/Drop.
+
 ### [SQL](./1_SQL/Basics.md)
 
 ### Non-Relational Databases

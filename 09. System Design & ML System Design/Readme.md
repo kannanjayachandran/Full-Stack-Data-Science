@@ -1,4 +1,8 @@
-# Machine Learning System Design
+# System Design & Machine Learning System Design
+
+## System Design
+
+System design is the process of designing the architecture, components, and interfaces for a system so that it meets the requirements. It is a process of planning a working model of the system so that final system can be developed with ease. 
 
 
 <!-- 
