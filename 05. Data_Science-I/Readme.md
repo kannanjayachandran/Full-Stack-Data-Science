@@ -65,15 +65,16 @@ Deep learning is a subset of machine learning that uses artificial neural networ
 
 Now let us look the mathematical concepts that are used in data science and machine learning.
 
-### [Linear Algebra for data science and machine learning](./Linear_algebra.md)
-
-### [Probability Theory for data science and machine learning](./Probability.md)
-
-### [Statistics for data science and machine learning](./Statistics.md)
-
-### [Calculus for data science and machine learning](./Calculus.md)
+> ### [Linear Algebra for data science and machine learning](./Linear_algebra.md)
+>
+> ### [Probability Theory for data science and machine learning](./Probability.md)
+>
+> ### [Statistics for data science and machine learning](./Statistics.md)
+>
+> ### [Calculus for data science and machine learning](./Calculus.md)
 
 **Similar to mathematical tools, good understanding of data visualization is also important for data science and machine learning.**
-### [Data Visualization for data science and machine learning](./Data_visualization.md)
+
+> ### [Data Visualization for data science and machine learning](./Data_visualization.md)
 
 
