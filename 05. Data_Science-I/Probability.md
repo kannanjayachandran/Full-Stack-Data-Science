@@ -7,12 +7,12 @@
 
 ## Table of Contents   
 
-1. [Experiment](#experiment-🧪)
-1. [Outcome](#outcome-🎲)
-1. [Sample Space](#sample-space-📊)
-1. [Event](#event-📆)
-1. [Event Space](#event-space-📆)
-1. [Random Variable](#random-variable-🔢)
+1. [Experiment](#experiment)
+1. [Outcome](#outcome)
+1. [Sample Space](#sample-space)
+1. [Event](#event)
+1. [Event Space](#event-space)
+1. [Random Variable](#random-variable)
 1. [Calculating Probability](#calculating-probability)
 1. [Probability Distribution](#probability-distribution)
 1. [Density functions](#density-functions)
@@ -35,7 +35,7 @@
 
 ---
 
-$$\large\color{#F99417} \texttt{Probability is a measure that quantifies the likelihood that an event will occur.}$$
+$\color{orange}``$**_Probability is a measure that quantifies the likelihood that an event will occur._**$\color{orange}"$
 
 ---
 

@@ -42,3 +42,4 @@ $$Slope = \frac{rise}{run}$$
 
 The constants in the system of equation are not important in determining whether the system is singular or not. -->
 
+**Checkout [Probability Theory](./Probability.md)**

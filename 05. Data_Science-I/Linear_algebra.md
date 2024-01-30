@@ -360,4 +360,4 @@ where $\color{#FF9900}n$ is the number of objects and $\color{#FF9900}r$ is the 
 
 ### [Jupyter notebook of linear algebra](./Notebooks/Linear_algebra.ipynb)
 
-**Checkout [Calculus](./Calculus.md) and [Probability and Statistics](./Probability_and_statistics_Introduction.md)**
+**Checkout [Calculus](./Calculus.md)**

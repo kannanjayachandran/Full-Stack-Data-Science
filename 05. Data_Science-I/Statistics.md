@@ -5,6 +5,12 @@
 
  <h1 align="center" style="color: orange"> STATISTICS </h1>
 
+---
+
+$\color{orange}``$**_Statistics is the mathematical science of collecting, analyzing, interpreting, presenting, and organizing data._**$\color{orange}"$
+
+---
+
  ## Population vs Sample  
 
 - The entire group of objects or events under study, often denoted as  $\color{#F99417}N$ 

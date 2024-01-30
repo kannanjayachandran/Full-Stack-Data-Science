@@ -59,22 +59,24 @@ At the core of almost all machine learning model including Neural networks, lies
 
 > **_Fit a given set of data points into an appropriate function; that identifies the important information in the data from noise, then make sure this function performs well on new data_**
 
-## Deep learning and Generative AI
+## Deep learning
 
-Deep learning is a subset of machine learning that uses artificial neural networks (ANNs) to mimic the working of the human brain. It can learn complex representations of data and is used to solve complex problems such as image classification, speech recognition, natural language processing, etc. Recently deep learning has occupied the center stage in the field of AI. Generative AI is a subset of deep learning that uses deep learning to generate new data. It can be used for creating text,  images, videos, music, etc. Generative AI contributes to the recent resurgence of AI and is used in a wide variety of applications such as image generation, text generation, music generation, etc.
+Deep learning is a subset of machine learning that uses artificial neural networks (ANNs) to mimic the working of the human brain. It can learn complex representations of data and is used to solve complex problems such as image classification, speech recognition, natural language processing, etc. Recently deep learning has occupied the center stage in the field of AI. 
+
+## Generative AI
+
+Generative AI is a subset of deep learning that uses deep learning to generate new data. It can be used for creating text,  images, videos, music, etc. Generative AI contributes to the recent resurgence of AI and is used in a wide variety of applications such as image generation, text generation, music generation, etc.
 
 Now let us look the mathematical concepts that are used in data science and machine learning.
 
-> ### [Linear Algebra for data science and machine learning](./Linear_algebra.md)
->
-> ### [Probability Theory for data science and machine learning](./Probability.md)
->
-> ### [Statistics for data science and machine learning](./Statistics.md)
->
-> ### [Calculus for data science and machine learning](./Calculus.md)
+- [Linear Algebra for data science and machine learning](./Linear_algebra.md)
+
+- [Probability Theory for data science and machine learning](./Probability.md)
+
+- [Statistics for data science and machine learning](./Statistics.md)
+
+- [Calculus for data science and machine learning](./Calculus.md)
 
 **Similar to mathematical tools, good understanding of data visualization is also important for data science and machine learning.**
 
-> ### [Data Visualization for data science and machine learning](./Data_visualization.md)
-
-
+- [Data Visualization for data science and machine learning](./Data_visualization.md)
