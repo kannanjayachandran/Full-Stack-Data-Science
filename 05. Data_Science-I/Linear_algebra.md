@@ -5,8 +5,11 @@
 
 <h1 align="center" style="color: orange"> Linear Algebra </h1>
 
-Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices.
-> linear algebra is the mathematics of data.
+---
+
+$\color{orange}``$**_Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. Linear algebra is also known as the mathematics of data._**$\color{orange}"$
+
+---
 
 ## Vector
 
