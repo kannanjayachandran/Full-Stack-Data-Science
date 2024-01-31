@@ -1,16 +1,17 @@
+<!-- 
+    Author : Kannan Jayachandran
+    File : Data_visualization.md
+ -->
+
 <h1 align="center" style="color: orange"> Data Visualization </h1>
 
 Data visualization is an essential part of the data science process. It is the process of making sense of data through visual representations. Data visualization serves two fundamental purposes:
 
 1. **Exploratory data analysis (EDA)**: The best way to explore data is to visualize it. This helps us to identify patterns, trends, and outliers in the data.
 
-2. **Communicating the results**: After we have built a machine learning model, we need to communicate the results to the stakeholders. The best way to do this is through visualizations, as they are much easier to understand than a table of numbers.
+2. **Communicating the results**: After extracting meaningful insights from the data, we need to communicate the results to the stakeholders. The best way to do this is through visualizations, as they are much easier to understand than a bunch numbers. Let us see some of the most common data visualization techniques.
 
-There are numerous plotting techniques available. In this book, we will discuss some of the most common and useful ones. We will be using the following Python libraries for data visualization:
-
-- Matplotlib
-- Seaborn
-- Plotly
+> No code / low code data visualization tools would be covered in detail in the [Data Engineering Tools section](../12.%20Data%20Engineering%20and%20Big%20Data%20tools/Readme.md).
 
 ## Line plot
 
@@ -30,7 +31,7 @@ plt.show()
 
 A bar plot is a type of plot that shows the relative quantities for multiple categories. This is useful when we have a large number of values and we want to see which ranges most of the values fall into. The bars can be either vertical or horizontal and they can be stacked or grouped. **[sns.barplot()](https://seaborn.pydata.org/generated/seaborn.barplot.html)** or **[plt.bar()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html)**
 
-![Barplot image](./img/barplot.png)
+![Bar-chart image](./img/barplot.png)
 
 ## Histogram
 
@@ -59,7 +60,6 @@ A pair plot is a type of plot that shows the distribution of a variable (univari
 ![Pair plot image](./img/PairPlot.png)
 
 It is good to use a pair plot if we are dealing with a small number of features. If we have a large number of features, we can use a correlation matrix to see the correlation between the features. **[sns.pairplot()](https://seaborn.pydata.org/generated/seaborn.pairplot.html)**
-
 
 ## Violin plot
 
