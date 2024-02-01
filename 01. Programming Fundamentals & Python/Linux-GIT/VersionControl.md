@@ -29,4 +29,99 @@ Install git for your OS and get an account on GitHub. Then in your machine open 
 ```
 > These are my configs, you can change them as you like.
 
+## Creating a Repository
+
+```bash
+mkdir {repo-name}
+cd {repo-name}
+git init
+```
+
+## Cloning a Repository
+
+```bash
+git clone {repo-url}
+```
+
+## Adding Files
+
+```bash
+git add {file-name}
+```
+
+## Committing Changes
+
+```bash
+
+git commit -m "{commit-message}"
+```
+
+## Pushing Changes
+
+```bash
+git push
+```
+
+## Pulling Changes
+
+```bash
+git pull
+```
+
+## Branching
+
+```bash
+git branch {branch-name}
+git checkout {branch-name}
+```
+
+## Merging Branches
+
+```bash
+git checkout {branch-name}
+git merge {branch-name}
+```
+
+## Viewing History
+
+```bash
+git log
+```
+
+## Viewing Changes
+
+```bash
+git diff
+```
+
+## Viewing Status
+
+```bash
+git status
+```
+
+## Viewing Branches
+
+```bash
+git branch
+```
+
+## Deleting Branches
+
+```bash
+git branch -d {branch-name}
+```
+
+## Viewing Remotes
+
+```bash
+git remote -v
+```
+
+## Viewing Configs
+
+```bash
+git config --list
+```
+
 ## [GIT Online Documentation](https://git-scm.com/book/en/v2)
