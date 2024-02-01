@@ -23,7 +23,8 @@ A function is a mathematical relationship between two sets of variables (_indepe
 
 - **Range** of a function is the set of all possible outputs for the function.
 
-![Function](./img/functions_img.png)
+
+![function with Domain and range](./img/func_img.png)
 
 ### Types of Functions
 
@@ -36,6 +37,23 @@ There are a huge variety of functions, let us look at some of the most common ty
  A linear function is a function that can be represented by a straight line when plotted on a graph. It has the form $\color{orange}f(x) = mx + b$, where $\color{orange}m$ is the slope of the line  and $\color{orange}b$ is the y-intercept.
 
  > **EG:** Consider the cost of a taxi ride, it charges a fixed amount $\color{orange}b$  and an additional cost per mile $\color{orange}m$.
+
+ **2. Quadratic Functions**
+
+ ![Quadratic function](./img/quad_func.png)
+
+ A quadratic function is a second-degree polynomial function of the form $\color{orange}f(x) = ax^2 + bx + c$, where $\color{orange}a$ is not equal to zero.
+
+ > **EG:** The trajectory of a projectile, like a thrown ball, can be modeled by a quadratic function due to the influence of gravity.
+
+**3. Exponential Functions**
+
+![Exponential function](./img/exponen_func.png)
+
+An exponential function is a function where the variable is an exponent. It has the form $\color{orange}f(x) = ab^x$, where $\color{orange}a$ (_base_) and $\color{orange}b$ (_rate of growth or decay_) are constants and $\color{orange}b$ is greater than zero and not equal to one.
+
+> **EG:** The growth of a population can be modeled by an exponential function.
+
 <!--
 
 Introduction to Functions:
