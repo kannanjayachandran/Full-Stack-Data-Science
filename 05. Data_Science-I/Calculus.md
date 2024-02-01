@@ -54,6 +54,10 @@ An exponential function is a function where the variable is an exponent. It has 
 
 > **EG:** The growth of a population can be modeled by an exponential function.
 
+There are many other types of functions, such as logarithmic functions, trigonometric functions, and polynomial functions.
+
+Functions can also be differentiated as **Linear** and **Non-Linear** functions. Linear functions models flatness and non-linear functions models curvature.
+
 <!--
 
 Introduction to Functions:
