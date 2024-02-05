@@ -126,19 +126,13 @@ is a measure of the size of a set`
 
 ## Probability Distribution
 
-The shape ro distribution of all events in the sample space is called the probability distribution.
-
 A probability distribution is a mathematical function that describes how the values of a random variable are distributed or spread out. It can be used to represent both discrete (discrete probability distribution) and continuous (continuous probability distribution) random variables. 
 
 > The distribution of individual data points is referred to as the `data distribution`, while the distribution of a sample statistic is known as the `sampling distribution`.
 
-## Density functions
-
-Density functions are functions that describes how the proportion of data or likelihood of the proportion of observations change over the range of the distribution.
-
 ## Probability Density Function (PDF)
 
-The Probability Density Function, or **PDF**, calculates the probability of observing a given value. PDF is calculated for continuos random variables. PDF's always satisfy the following two conditions;
+The Probability Density Function, or **PDF** also called (Density Function), calculates the probability of observing a given outcome within a continuous probability distribution. PDF is calculated for continuos random variables. PDF's always satisfy the following two conditions;
 
 1. Always be non-negative $\color{#F99417}f(x) \ge 0$ for all $\color{#F99417}x$
 
@@ -150,6 +144,8 @@ $$P(a\le x \le b) = \int_{a}^{b}f(x)dx$$
 
 ![PDF of Gaussian distribution image from wikipedia](./img/pdf.png)
 > PDF of Gaussian distribution
+
+- The integral of the density function over a specific interval gives the probability that the random variable falls within that interval.
 
 The PDF curve represents the probability density of the random variable at each point. This means that the area under the PDF curve between two points represents the probability of the random variable taking on a value within that range.
 
