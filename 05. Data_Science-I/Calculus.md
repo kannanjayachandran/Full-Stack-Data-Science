@@ -59,13 +59,6 @@ There are many other types of functions, such as logarithmic functions, trigonom
 Functions can also be differentiated as **Linear** and **Non-Linear** functions. Linear functions models flatness and non-linear functions models curvature.
 
 <!--
-
-Introduction to Functions:
-Definition of a function.
-Understanding domains and ranges.
-
-Types of Functions:
-Linear functions.
 Quadratic functions.
 Exponential functions.
 Logarithmic functions.
