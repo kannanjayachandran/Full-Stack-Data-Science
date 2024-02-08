@@ -1,6 +1,6 @@
 <h1 align="center"> Resources </h1>
 
-Presented below are the resources I've utilized in my **Full stack data science** learning journey. Majority of these resources are freely accessible and open-source. I am not affiliated with any of these resources. 
+Majority of these resources are freely accessible and open-source. I am not affiliated with any of these resources. 
 
 ## Free Resources
 
