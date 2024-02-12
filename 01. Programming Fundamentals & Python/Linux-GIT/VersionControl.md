@@ -52,15 +52,22 @@ git add {file-name}
 ## Committing Changes
 
 ```bash
-
 git commit -m "{commit-message}"
 ```
+
+**We can use `git commit --amend` to change the last commit, without creating a new one.**
 
 ## Pushing Changes
 
 ```bash
 git push
 ```
+
+- **We can use `git push -u origin {branch-name}` to set the default remote branch.**
+
+- **We can use `git push --force` to force push.(Be careful with this one)**
+
+- **We can use `git push --force-with-lease` to force push, but only if the remote branch is the same as the local branch. Use this when we rebase or amend commits.**
 
 ## Pulling Changes
 
