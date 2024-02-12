@@ -2,7 +2,7 @@
 
 **[Python language basics from Microsoft](https://learn.microsoft.com/en-us/training/paths/beginner-python/)**
 
-### [Basic programs](./1_Introduction_to_programming.ipynb) 
+### 1.  [Basic programs](./1_Introduction_to_programming.ipynb) 
 
 1. Factorial of a number
 2. Sum of n numbers
@@ -26,7 +26,7 @@
 20. Print random numbers between 1 and 10 until we get 5
 21. Find the first digit of a number
 
-### [Practice problems](./ProblemSet.ipynb)
+### 2.  [Practice problems](./ProblemSet.ipynb)
 
 1. Check whether the given number is palindrome or not
 2. GCD of two numbers using Euclidean algorithm
@@ -40,7 +40,7 @@
 10. Reverse each word in a given string
 11. Drunken jailer problem
 
-### Notebooks
+### 3. Notebooks
 
 1. [Pattern printing](./2_Pattern_printing.ipynb)
 2. [List](./3_List.ipynb)
@@ -52,4 +52,9 @@
 8. [OOPS and File handling](./9_OOPS_and_File_handling.ipynb)
 
 
-### [Linux commands and GIT](./Linux-GIT/Readme.md)
+### 4. [Linux commands and GIT](./Linux-GIT/Readme.md)
+
+1. [Linux commands](./Linux-GIT/Linux_commands.md)
+2. [GIT](./Linux-GIT/VersionControl.md)
+
+### 5. Computer Science Concepts
