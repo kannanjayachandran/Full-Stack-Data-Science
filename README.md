@@ -14,21 +14,18 @@ This repository contains the **code samples** { Jupyter notebooks }, **datasets*
 
 | sl.no | Topics                              |                               Link                                |
 | :---: | :---------------------------------- | :---------------------------------------------------------------: |
-|   1   | Programming in Python               | [Here](./01.%20Introduction%20to%20Programming%20&%20Python/Readme.md) |
-|   2   | Data structures and Algorithms - I  |   [Here](./02.%20Data%20structures%20and%20Algorithms%20-%20I/)   |
-|   3   | Python for Data Science |                [Here](./03.%20Python%20for%20Data%20Science/Readme.md)  |
-|   4   | Database and DBMS                          |                     [Here](./04.%20Database%20&%20DBMS/)   |
-|   5   | Data Science - I                    |                  [Here](./05.%20Data_Science-I/)                  |
-|   6   | Data Science - II                   |                 [Here](./06.%20Data_Science-II/Readme.md)         |
-|   7   | Data Science - III                  |                 [Here](./07.%20Data_Science-III/)                 |
-|   8   | Data structures and Algorithms - II |  [Here](./08.%20Data%20structures%20and%20Algorithms%20-%20II/)   |
-|   9   | Advanced Machine Learning  & Deep learning         |               [Here](./09.%20Adv%20Machine%20Learning%20&%20Deep%20Learning/Readme.md)               |
-|  10   | System Designing & Machine Learning System Designing   |        [Here](./10.%20System%20Design%20&%20ML%20System%20Design/)                       |
-|  11   | Machine Learning Operations & AI Operations |           [Here](./11.%20MlOps%20&%20AIOps/Readme.md)           |
-|  12   | Case Study - I                      |                 [Here](./12.%20Case%20Studies-I/)                 |
-|  13   | Case Study - II                     |                [Here](./13.%20Case%20Studies-II/)                 |
-|  14   | Case Study - III                    |                [Here](./14.%20Case%20Studies-III/)                |
-|  15   | Data Engineering & Big Data tools                      |      [Here](./15.%20Data%20Engineering%20and%20Big%20Data%20tools/Readme.md)       |
+|   1   | Basic Computer Science & Programming in Python | [Here](./01.%20Programming%20Fundamentals%20&%20Python/Readme.md) |
+|   2   | Data structures and Algorithms | [Here](./02.%20Data%20Structures%20and%20Algorithms/Readme.md)   |
+|   3   | Python for Data Science | [Here](./03.%20Python%20for%20Data%20Science/Readme.md) |
+|   4   | Database and DBMS | [Here](./04.%20Database%20&%20DBMS/) |
+|   5   | Data Science - I | [Here](./05.%20Data_Science-I/Readme.md) |
+|   6   | Data Science - II | [Here](./06.%20Data_Science-II/Readme.md) |
+|   7   | Data Science - III | [Here](./07.%20Data_science-III/Readme.md)                 |
+|   8   | Advanced Machine Learning  & Deep learning | [Here](./08.%20Adv%20Machine%20Learning%20&%20Deep%20Learning/Readme.md)               |
+|   9   | System Designing & Machine Learning System Designing   |        [Here](./09.%20System%20Design%20&%20ML%20System%20Design/Readme.md)                       |
+|  10   | Machine Learning Operations & AI Operations | [Here](./10.%20MlOps%20&%20AIOps/Readme.md) |
+|  11   | Case Studies                     | [Here](./11.%20Case%20Studies/Readme.md)                 |
+|  12   | Data Engineering & Big Data tools   | [Here](./12.%20Data%20Engineering%20and%20Big%20Data%20tools/Readme.md)       |
 
 ---
 
