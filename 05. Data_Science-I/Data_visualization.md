@@ -66,3 +66,7 @@ It is good to use a pair plot if we are dealing with a small number of features.
 A violin plot is similar to a box plot, except that it also shows the probability density of the data at different values. It is a combination of a box plot and a kernel density plot (a histogram).
 
 ![Violin plot](./img/Violin.png)
+
+## Heatmap
+
+A heatmap is a two-dimensional representation of data in which values are represented by colors. It is useful to visualize the correlation between features. **[sns.heatmap()](https://seaborn.pydata.org/generated/seaborn.heatmap.html)**
