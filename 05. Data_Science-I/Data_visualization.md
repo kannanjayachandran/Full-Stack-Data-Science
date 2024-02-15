@@ -5,13 +5,13 @@
 
 <h1 align="center" style="color: orange"> Data Visualization </h1>
 
-Data visualization is an essential part of the data science process. It is the process of making sense of data through visual representations. Data visualization serves two fundamental purposes:
+Data visualization is the process of making sense of data through visual representations. Data visualization serves two fundamental purposes:
 
-1. **Exploratory data analysis (EDA)**: The best way to explore data is to visualize it. This helps us to identify patterns, trends, and outliers in the data.
+1. **Understanding the data**
 
-2. **Communicating the results**: After extracting meaningful insights from the data, we need to communicate the results to the stakeholders. The best way to do this is through visualizations, as they are much easier to understand than a bunch numbers. Let us see some of the most common data visualization techniques.
+2. **Communicating the results**
 
-> No code / low code data visualization tools would be covered in detail in the [Data Engineering Tools section](../12.%20Data%20Engineering%20and%20Big%20Data%20tools/Readme.md).
+> No code/low code data visualization tools would be covered in detail in the [Data Engineering Tools section](../12.%20Data%20Engineering%20and%20Big%20Data%20tools/Readme.md).
 
 ## Line plot
 
