@@ -14,6 +14,8 @@ In [Data Science - I](../05.%20Data_Science-I/Readme.md); we have seen the data 
 
 ## Machine Learning Techniques
 
+Machine learning is a subset of artificial intelligence that focuses on the development of algorithms that can learn from and make predictions or decisions based on data. 
+
 <!-- 
 - ML
     - Supervised
