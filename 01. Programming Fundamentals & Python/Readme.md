@@ -27,7 +27,6 @@ Python is a high-level, interpreted, and general-purpose dynamic programming lan
 
 - [Version Control System & basic GIT commands](./Version_Control_&_Linux/VersionControl.md)
 
-
 ## Basic problem solving
 
 > **[Notebook](./ProblemSet.ipynb)**
