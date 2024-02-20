@@ -1,6 +1,19 @@
+<h1 align="center" style="color: orange"> Python Programming </h1>
+
 **[Python language basics from Microsoft](https://learn.microsoft.com/en-us/training/paths/beginner-python/)**
 
-### 1.  [Basic programs](./1_Introduction_to_programming.ipynb) 
+## Notebooks
+
+1. [Pattern printing](./2_Pattern_printing.ipynb)
+2. [List](./3_List.ipynb)
+3. [Tuple](./4_Tuple.ipynb)
+4. [Dictionary](./5_Dictionary.ipynb)
+5. [Set](./6_Set.ipynb)
+6. [String](./7_String.ipynb)  
+7. [Functions](./8_Functions.ipynb)
+8. [OOPS and File handling](./9_OOPS_and_File_handling.ipynb)
+
+## [Basic programs using python](./1_Introduction_to_programming.ipynb) 
 
 1. Factorial of a number
 2. Sum of n numbers
@@ -23,14 +36,3 @@
 19. Given a number compute the sum of its digits
 20. Print random numbers between 1 and 10 until we get 5
 21. Find the first digit of a number
-
-### 3. Notebooks
-
-1. [Pattern printing](./2_Pattern_printing.ipynb)
-2. [List](./3_List.ipynb)
-3. [Tuple](./4_Tuple.ipynb)
-4. [Dictionary](./5_Dictionary.ipynb)
-5. [Set](./6_Set.ipynb)
-6. [String](./7_String.ipynb)  
-7. [Functions](./8_Functions.ipynb)
-8. [OOPS and File handling](./9_OOPS_and_File_handling.ipynb)
