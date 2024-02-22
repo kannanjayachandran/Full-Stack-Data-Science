@@ -1,4 +1,4 @@
-## Python for Data Science
+<h1 align="center" style="color: orange"> Python for Data Science </h1>
 
 This section contains the following topics:
 
