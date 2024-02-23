@@ -1,4 +1,4 @@
-<h1 align="center"> Databases </h1>
+<h1 align="center" style="color: orange"> Database And DBMS </h1>
 
 Databases are primary tools in software engineering. We use database to organize data so that we can query, search, manipulate and process data in easy and efficient way. Think of them like a _data model_ which cleanly abstract the way in which information is stored on the memory. They are designed to store large amount of data in a structured way and to ensure that data is always in a consistent state and that transactions are ACID compliant {Atomicity, Consistency, Isolation, Durability}.
 
