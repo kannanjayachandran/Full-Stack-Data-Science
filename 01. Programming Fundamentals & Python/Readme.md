@@ -1,14 +1,16 @@
-<h1 align="center" style="color: orange"> Computer Science Fundamentals - Python Programming - Version Control (GIT) & Linux </h1>
+<h1 align="center" style="color: orange"> Computer Science Fundamentals - Python Programming - Version Control (GIT) - Linux </h1>
 
-We are starting the program with this section by learning 3 things;
+In this section we will be learning 3 things;
 
-- Fundamentals of computer science
+- **Fundamentals of computer science**
 
-- A programming language - Python
+- A programming language - **Python**
 
-- Learning Linux and GIT
+- **Linux** and **GIT**
 
 ## Computer Science Fundamentals
+
+Computer science is the study of algorithms, computational systems, and the principles underlying the design of computer hardware and software. It encompasses a wide range of topics, including data structures, algorithms, computer architecture, programming languages, operating systems, artificial intelligence, and more.
 
 This section serves as a general introduction to computer science concepts. It contains the following topics:
 
