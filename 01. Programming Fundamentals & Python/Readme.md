@@ -12,9 +12,9 @@ In this section we will be learning 3 things;
 
 Computer science is the study of algorithms, computational systems, and the principles underlying the design of computer hardware and software. It encompasses a wide range of topics, including data structures, algorithms, computer architecture, programming languages, operating systems, artificial intelligence, and more.
 
-This section serves as a general introduction to computer science concepts. It contains the following topics:
+[Here](./Computer_Science_Fundamentals/Readme.md)
 
-1. [Information representation - Storage](./Computer_Science_Fundamentals/B1.md)
+
 <!-- links -->
 
 ## Python Language
