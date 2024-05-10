@@ -6,9 +6,7 @@
 
 **Data science** is a vast-multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, systems and domain knowledge to extract valuable insights from data. **Full-stack data science** refers to a comprehensive approach to the field of data science (End-to-End).
 
-This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes**. **Major projects** created as a part of this is available [here](./Major_Projects.md).
-
-> _I am a final year undergraduate **computer science engineering** student specializing in **`Artificial Intelligence`** and **`Machine learning`**._
+This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes**. I am a final year undergraduate **computer science engineering** student specializing in **`Artificial Intelligence`** and **`Machine learning`**.
 
 ## Contents
 
@@ -29,10 +27,7 @@ This repository contains the **code samples** { Jupyter notebooks }, **datasets*
 
 ---
 
-> The repository is under construction, If you find any errors or have any suggestions, please feel free to open an issue. 
-
-_**Due to the limitation in rendering some mathematical equations (Latex) in github, the current best way to view the content is to clone the repository and view the markdown files locally.**_
+> _Due to the limitation in rendering some mathematical equations (Latex) in github, the current best way to view the content is to clone the repository and view the markdown files locally._
 
 **[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)**
 
-### Show 💖 by staring this repository ✨ 
