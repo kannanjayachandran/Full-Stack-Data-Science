@@ -14,7 +14,6 @@ Computer science is the study of algorithms, computational systems, and the prin
 
 [Here](./Computer_Science_Fundamentals/Readme.md)
 
-
 <!-- links -->
 
 ## Python Language
