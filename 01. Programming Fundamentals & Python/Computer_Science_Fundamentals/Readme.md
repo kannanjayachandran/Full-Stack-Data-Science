@@ -77,3 +77,34 @@ Every computational device work by manipulating information. Information is repr
 - A gate is a device that generates the output of a Boolean operation based on its input values. In modern computers, gates are typically made as small electronic circuits where 0s and 1s are represented by different voltage levels. They serve as the fundamental components upon which computers are built.
 
 - The most common gates are AND, OR, and NOT. These gates can be combined to create more complex operations. For example, an XOR gate outputs true if the number of true inputs is odd.
+
+By manipulating bits using Boolean operations, we can perform arithmetic, logical, and other operations on digital information. This forms the basis of computer operations and programming. We generally do not work with bits directly but use higher-level programming languages that abstract these operations. It is like we use a calculator to perform arithmetic operations without worrying about the underlying circuitry. We provide some instructions to a complex program called a compiler, which translates our code into machine code that the computer can execute.
+
+### Programming languages
+
+Programming languages are formal languages used to communicate instructions to a computer. They allow us to write code that can be executed by a computer to perform specific tasks. Programming languages can be classified into several categories based on their design and intended use.
+
+- **Low-level languages**: These languages are close to the hardware and provide direct control over the computer's resources. They are difficult to read and write but offer high performance and efficiency. Examples include assembly language and machine code.
+
+- **High-level languages**: These languages are designed to be easy to read and write, making them more accessible to programmers. They are further divided into several categories:
+
+    - **Procedural languages**: These languages focus on procedures or functions that perform specific tasks. Examples include C, Pascal, and Fortran.
+    
+    - **Object-oriented languages**: These languages organize code into objects that interact with each other. Examples include Java, C++, and Python.
+    
+    - **Functional languages**: These languages treat computation as the evaluation of mathematical functions and avoid changing state or mutable data. Examples include Haskell, Lisp, and ML.
+    
+    - **Scripting languages**: These languages are designed for automating tasks and are often used for web development, system administration, and data analysis. Examples include JavaScript, Python, and Ruby.
+
+- **Domain-specific languages (DSLs)**: These languages are designed for specific domains or tasks, such as SQL for database queries, HTML for web development, and MATLAB for scientific computing.
+
+- **Compiled vs. interpreted languages**: Programming languages can be compiled or interpreted. Compiled languages are translated into machine code before execution, while interpreted languages are translated into machine code during execution. Then there are languages that use a combination of both techniques. Both compiled and interpreted languages have their advantages and disadvantages and the way they are executed are pretty complex.
+
+- **Syntax and semantics**: Programming languages have syntax and semantics that define the rules for writing valid code and the meaning of that code. Syntax refers to the structure of the code, while semantics refer to its meaning. Syntax errors occur when the code violates the language's rules, while semantic errors occur when the code does not behave as expected.
+
+- **Paradigms**: Programming languages are based on different programming paradigms, such as imperative, declarative, functional, and object-oriented. Each paradigm has its own set of concepts and principles for writing code.
+
+
+### Algorithms and data structures
+
+Algorithms are step-by-step procedures for solving problems. They are the building blocks of computer programs and are essential for writing efficient code. Data structures are ways of organizing and storing data to facilitate efficient access and modification. They are used in conjunction with algorithms to solve computational problems.
