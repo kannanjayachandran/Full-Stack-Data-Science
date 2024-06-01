@@ -317,7 +317,7 @@ A tensor is a generalization of vectors and matrices and is easily understood as
 
 > $\color{#F99417}Scalar → Vector → Matrix → Tensor$
 
-All the arithmetic operation we can do with matrices can be done with tensors. We can add, subtract, multiply (both Hadamard and dot product), and divide tensors. 
+All the arithmetic operation we can do with matrices can be done with tensors. We can add, subtract, multiply (both `Hadamard` and dot product), and divide tensors. 
 
 ### Tensor dot product
 
@@ -326,8 +326,6 @@ The dot product of two tensors is a generalization of the dot product of two vec
 $$a \cdot b = \sum_{i=1}^{n}a_ib_i$$
 
 where $\color{#F99417}a$ and $\color{#F99417}b$ are two tensors.
-
-<!-- New section -->
 
 ## Basic Combinatorics
 
