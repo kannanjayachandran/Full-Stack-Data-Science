@@ -3,62 +3,62 @@
 
 ![Computer science poster](./img/main_poster.png)
 
-**Computer science** is a broad and interdisciplinary field that encompasses the study of computation, algorithms, data structures, programming languages, software engineering, artificial intelligence, computer architecture, and many other areas. It deals with the theory, design, implementation, and application of computer systems and software.
-
 ## Theoretical computer science
 
-It is a branch of computer science that deals with the formal study of algorithms, computational models, and computational problems. *It focuses on understanding the fundamental principles underlying computation and exploring the theoretical limits of what can be computed efficiently.*
+It is a branch of computer science that deals with the formal study of algorithms, computational models, and computational problems. *It focuses on exploring the theoretical limits of what can be computed efficiently.*
 
-- **Theory of computation** : Studies the general properties of computation, including decidability, computability, and Turing completeness. It basically studies what problems can be solved algorithmically.
+- **Theory of computation** : Studies the general properties of computation, including decidability, computability, and Turing completeness. **In short, it studies what problems can be solved algorithmically.**
 
-    - **Turing Machines**: Introduced by Alan Turing in the 1930s, Turing machines are abstract mathematical models of computation. They consist of a tape divided into cells, a head that can read and write symbols on the tape, and a set of states that determine the machine's behavior. Turing machines provide a formal way to describe algorithms and computable functions.
+    - **Turing Machines**: Introduced by Alan Turing in the 1930s, Turing machines are abstract mathematical models of computation. It provide a formal way to describe algorithms and computable functions.
 
-- **Computational complexity theory**: Studies the resources required to solve computational problems, such as time, space, and other resources. It classifies problems based on their inherent difficulty and explores the relationships between different classes of problems.
+    - **Automata theory**: Studies abstract machines and computational models, such as finite automata, push-down automata, and Turing machines. It provides a theoretical foundation for understanding the capabilities and limitations of computational systems.
 
-    - **Time and space complexity**: Measures the amount of time and space required to solve a problem as a function of the input size. It provides a way to compare the efficiency of different algorithms.
+- **Computational complexity theory**: Studies the resources required to solve computational problems, such as time, space, and other resources.
 
-    - **Classes of problems**: Computational complexity theory classifies problems into various complexity classes based on their inherent difficulty. These classes include P, NP, NP-complete, NP-hard, and many others. 
+    - **Time and space complexity**: Measures the amount of time and space required to solve a problem as a function of the input size.
+
+    - **Classes of problems**: Computational complexity theory classifies problems into various complexity classes based on their inherent difficulty. These classes include **P**, **NP**, **NP-complete**, **NP-hard**, etc. 
         - **P (polynomial time)**: Problems that can be solved in polynomial time.
         
-        - **NP (nondeterministic polynomial time)**: Problems for which a solution can be verified in polynomial time. *In other words, if someone claims to have a solution to an NP problem, we can quickly verify whether the solution is correct using polynomial time. However, finding the solution itself might be computationally difficult.* Eg. Boolean satisfiability problem (SAT), the traveling salesman problem (TSP), and the vertex cover problem.
+        - **NP (nondeterministic polynomial time)**: Problems for which a solution can be verified in polynomial time. 
+        > *If someone claims to have a solution to an NP problem, we can quickly verify whether the solution is correct using polynomial time. However, finding the solution itself might be computationally difficult.* Eg. Boolean satisfiability problem (SAT), the traveling salesman problem (TSP), and the vertex cover problem.
         
-        - **NP-complete**: The hardest problems in NP, to which all other problems in NP can be reduced in polynomial time. In simpler terms if a problem is NP-complete, it means that it is as hard as the hardest problems in NP. *If a polynomial-time algorithm exists for any NP-complete problem, then polynomial-time algorithms exist for all problems in NP, implying that P = NP.* 
+        - **NP-complete**: If a problem is NP-complete, it means that it is as hard as the hardest problems in NP. The hardest problems in NP, to which all other problems in NP can be reduced in polynomial time. *If a polynomial-time algorithm exists for any NP-complete problem, then polynomial-time algorithms exist for all problems in NP, implying that P = NP.* 
 
         - **NP-hard**: Problems that are at least as hard as the hardest problems in NP. They may or may not be in NP.
     
     > In summary, P represents problems solvable in polynomial time, NP represents problems verifiable in polynomial time, NP-complete represents the hardest problems in NP, and NP-hard represents problems at least as hard as NP-complete problems.
 
-- **Information theory**: Studies the properties of information and how it can be stored, measured, and communicated. It provides a mathematical framework for understanding the fundamental limits of data compression, error correction, and data transmission.
+- **Information theory**: Studies the properties of information and how it can be stored, measured, and communicated.
 
-- **Cryptography**: Studies the techniques for secure communication and data protection. It involves the design and analysis of cryptographic algorithms and protocols to ensure the confidentiality, integrity, and authenticity of data. It is highly related to information theory.
+- **Cryptography**: Studies the techniques for secure communication and data protection. It involves the design and analysis of cryptographic algorithms and protocols to ensure the confidentiality, integrity, and authenticity of data. It is closely related to information theory.
 
-- **Automata theory**: Studies abstract machines and computational models, such as finite automata, pushdown automata, and Turing machines. It provides a theoretical foundation for understanding the capabilities and limitations of computational systems.
+- **Graph theory**: Studies the properties and applications of graphs, which are mathematical structures used to model pairwise relations between objects. It is extensively used in computer science for modeling networks, social relationships, and optimization problems.
 
-- **Graph theory**: Studies the properties and applications of graphs, which are mathematical structures used to model pairwise relations between objects. It has applications in diverse fields such as computer networking, social network analysis, and operations research.
-
-- **Logic**: Studies the principles of valid reasoning and inference. It provides the foundation for formal methods of verification and validation in computer science.
-
-- **Computational geometry**: Studies algorithms and data structures for solving geometric problems, such as finding the closest pair of points, computing convex hulls, etc. It has applications in computer graphics, geographic information systems, and robotics.
+- **Computational geometry**: Studies algorithms and data structures for solving geometric problems. It has applications in computer graphics, geographic information systems, and robotics.
 
 - **Quantum computation**: Studies the use of quantum-mechanical phenomena, such as superposition and entanglement, to perform computation. It has the potential to solve certain problems more efficiently than classical computers.
 
-- **Parallel programming**: Studies the techniques for developing programs that can execute multiple tasks simultaneously. It is essential for exploiting the full potential of modern multi-core and distributed computing systems.
-
-- **Formal methods**: Studies the use of mathematical techniques for specifying, designing, and verifying software and hardware systems. It provides rigorous methods for ensuring the correctness and reliability of complex systems.
-
-- **Data structures and algorithms**: Studies the design and analysis of efficient data structures and algorithms for solving computational problems. It is a fundamental area of study in computer science and is essential for writing efficient software. 
+- **Parallel programming**: Studies the techniques for developing programs that can execute multiple tasks simultaneously. It is essential for exploiting the full potential of modern multi-core and distributed computing systems. 
 
 ## Computer Engineering
 
-It is the branch of computer science that deals with the design and construction of computer systems and hardware. A computer understands and processes information in the form of digital signals, which are represented as 0s and 1s. We use programming languages to write code, which is then translated into machine code (0s and 1s) that the computer can understand and execute.
+It deals with the design and construction of computer systems and hardware. A computer understands and processes information in the form of digital signals, which are represented as 0s and 1s. We use programming languages to write code (human readable form), which is then translated into machine code (0s and 1s) that the computer can understand and execute.
 
 High level overview of computer architecture would like this:
 
-![Computer architecture](./img/Arch.png)
+![Computer architecture](image.png)
 
-> **Note**: Only the processing units are shown. There are many other components like I/O devices, memory, etc. that are not shown in the diagram.
+- Computers store information in memory. Memory is divided into small units called **cells**. typically each holding `8 bits`, known as a **byte**. 
 
-Computers store information in memory. Memory is divided into small units called cells. typically each holding 8 bits, known as a byte. While there's no physical left or right orientation within a computer, we often visualize memory cells as linear, with the high-order end on the left and the low-order end on the right. The high-order bit, or most significant bit, holds significant value in numerical interpretation, while the low-order bit, or least significant bit, holds less weight.
+While there's no physical left or right orientation within a computer, we often visualize memory cells as linear, with the high-order end on the left and the low-order end on the right. The high-order bit, or most significant bit, holds significant value in numerical interpretation, while the low-order bit, or least significant bit, holds less weight.
+
+-  For example consider `10110101`; Here he leftmost bit (1) is the most significant bit (MSB) or high-order bit, and the rightmost bit (1) is the least significant bit (LSB) or low-order bit.
+
+- **CPU (Central Processing Unit)**: CPU is the cornerstone of a computer system. It is responsible for executing instructions and performing calculations. 
+    - **CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. This allows for parallel processing and improved performance.
+    - **Cache Systems**: Cache is a small, fast memory unit that stores frequently accessed data and instructions to speed up the access.  Modern CPUs typically have a multi-level cache system, usually referred to as L1, L2, and L3 caches. L1 is the smallest and fastest, located closest to the CPU cores, while L3 is usually larger and slower.
+    - **Instruction Pipeline**: CPUs use instruction pipelines to execute multiple instructions simultaneously. Each stage of the pipeline performs a specific task, such as fetching instructions, decoding them, and executing them. This doesn’t reduce the time it takes to complete an individual instruction; instead, it increases the number of instructions that can be processed simultaneously. This leads to a significant increase in overall CPU throughput
 
 - Main memory, often termed random access memory (RAM), allows independent access to cells, unlike mass storage systems (hard disk, SSD, etc) that handle data in large blocks. Modern RAM technologies, such as Dynamic RAM (DRAM) or Synchronous DRAM (SDRAM), utilize techniques like refreshing to maintain data integrity. The following diagram illustrates the memory hierarchy in a typical computer system.
 
