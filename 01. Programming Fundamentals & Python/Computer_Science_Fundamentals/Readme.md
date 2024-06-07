@@ -47,7 +47,7 @@ It deals with the design and construction of computer systems and hardware. A co
 
 High level overview of computer architecture would like this:
 
-![Computer architecture](image.png)
+![Computer architecture](./img/Arch.png)
 
 - Computers store information in memory. Memory is divided into small units called **cells**. typically each holding `8 bits`, known as a **byte**. 
 
@@ -70,7 +70,7 @@ High level overview of the software and programming languages would look like th
 
 ### Information representation and Boolean operations
 
-Every computational device work by manipulating information. Information is represented in computers as 0s and 1s, known as bits. These bits can be used to represent numbers, letters, pictures, sounds, and more. The smallest unit of information is a bit, and a group of 8 bits is called a byte. A byte can represent 256 different values (2^8). A byte can also represent a single character in the ASCII character set. 
+Information is represented in computers as 0s and 1s, known as bits. These bits can be used to represent numbers, letters, pictures, sounds, and more. The smallest unit of information is a bit, and a group of 8 bits is called a byte. A byte can represent 256 different values `(2^8)`. A byte can also represent a single character in the ASCII character set. 
 
 - Bits represented as 0s and 1s, signify false and true values. Boolean operations are used to manipulate bits, which are the building blocks of digital information.
 
