@@ -1,22 +1,65 @@
 <h1 align="center"> Resources </h1>
 
-Majority of these resources are freely accessible and open-source. I am not affiliated with any of these resources. 
+These resources have been invaluable in my learning journey, providing me with a solid foundation and clear understanding in various domains. I regularly use the books, articles, and notes from these courses to deepen my knowledge and clarify concepts. The majority of these resources are freely accessible and open-source. Please note, I am not affiliated with any of these resources. 
 
 ## Free Resources
 
-- [CS50](https://pll.harvard.edu/course/cs50-introduction-computer-science) By **Harvard University** and Taught by **David J. Malan**, **Brian Yu**, and **Doug Lloyd** and [CPU Land](https://cpu.land/) By **By Lexi Mattick & Hack Club** for **basics of computer science and programming**
+### Basics of Computer Science and Programming
 
-- [Corey Schafer](https://www.youtube.com/@coreyms) For **Python** (also check out his other videos)
+- [CS50 by Harvard University](https://pll.harvard.edu/course/cs50-introduction-computer-science) An introduction to computer science, taught by **David J. Malan**, **Brian Yu**, and **Doug Lloyd**.
 
-- [CS Dojo](https://www.youtube.com/@CSDojo), [William Fiset](https://www.youtube.com/@WilliamFiset-videos), [Neetcode](https://www.youtube.com/@NeetCode) and [Neetcode Io](https://www.youtube.com/@NeetCodeIO), [Kunal Kushwaha](https://www.youtube.com/@KunalKushwaha), [Errichto](https://www.youtube.com/@Errichto) for **DSA**
+- [CPU Land by Lexi Mattick & Hack Club](https://cpu.land/) **Introduction to CPU Architecture and basics of memory**
+
+### Python
+
+- [Corey Schafer](https://www.youtube.com/@coreyms) Comprehensive tutorials on Python, covering a wide range of topics from the basics to advanced concepts.
+
+### Data Structures and Algorithms
+
+- [CS Dojo](https://www.youtube.com/@CSDojo)
+
+- [William Fiset](https://www.youtube.com/@WilliamFiset-videos)
+
+- [Neetcode](https://www.youtube.com/@NeetCode)
+
+- [Neetcode Io](https://www.youtube.com/@NeetCodeIO)
+
+- [Kunal Kushwaha](https://www.youtube.com/@KunalKushwaha)
+
+- [Errichto](https://www.youtube.com/@Errichto) for **DSA**
+
+### System Design and Interview Preparation
 
 - [Exponent](https://www.youtube.com/@tryexponent) for **system design and interview preparation**
 
-- [Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning), [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw), [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy/featured), [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw), [Data school](https://www.youtube.com/@dataschool), [Code Emporium](https://www.youtube.com/@CodeEmporium), [Darshil Parmar](https://www.youtube.com/@DarshilParmar) for **AI - ML - Data Science - Mathematics-Data engineering**
+### AI, Machine Learning, Data Science, and Mathematics
+
+- [Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning) 
+
+- [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
+
+- [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy/featured)
+
+- [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
+
+- [Data school](https://www.youtube.com/@dataschool)
+
+- [Code Emporium](https://www.youtube.com/@CodeEmporium)
+
+- [Darshil Parmar](https://www.youtube.com/@DarshilParmar) 
+
+### Code Review
 
 - [Ants are everywhere](https://www.youtube.com/@ants_are_everywhere) for **code review**
 
-- [Tech with Tim](https://www.youtube.com/@TechWithTim),  [NeuralNine](https://www.youtube.com/@NeuralNine),  [Fireship](https://www.youtube.com/@Fireship),  [mCoding](https://www.youtube.com/@mCoding) for **projects and similar stuff**
+### Projects and General Development
+
+- [Tech with Tim](https://www.youtube.com/@TechWithTim)
+- [NeuralNine](https://www.youtube.com/@NeuralNine)
+
+- [Fireship](https://www.youtube.com/@Fireship)
+
+- [mCoding](https://www.youtube.com/@mCoding) 
 
 ## Books & Websites
 
