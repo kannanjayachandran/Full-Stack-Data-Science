@@ -34,10 +34,16 @@ Majority of these resources are freely accessible and open-source. I am not affi
 
 - [Applied AI course](https://www.appliedaicourse.com/) or [Scalar DSML program now](https://www.scaler.com/data-science-course/)
 
-- [Algoexpert](https://www.algoexpert.io/product) 
+- [AlgoExpert](https://www.algoexpert.io/product) 
 
 - [Systems expert](https://www.algoexpert.io/systems/product)
 
 - [Ml expert](https://www.algoexpert.io/machine-learning/product)
 
 - [Neetcode io](https://neetcode.io/courses)
+
+- [NamasteSQL](https://www.namastesql.com/)
+
+- [ByteByteGo - System Design](https://bytebytego.com/)
+
+- [ByteByteGo - Machine Learning System Design Interview](https://bytebytego.com/intro/machine-learning-system-design-interview)
