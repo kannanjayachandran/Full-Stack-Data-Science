@@ -1,32 +1,12 @@
-<h1 align="center" style="color: orange"> Computer Science Fundamentals - Python Programming - Version Control (GIT) - Linux </h1>
+<h1 align="center" style="color: orange"> Computer Science Fundamentals - Python Programming - Version Control (GIT) & Linux </h1>
 
 In this section we will be learning 3 things;
 
-- **Fundamentals of computer science**
+- [Fundamentals of computer science](./Computer_Science_Fundamentals/Readme.md)
 
-- A programming language - **Python**
+- [Python](./Python_Programming/Readme.md)
 
-- **Linux** and **GIT**
-
-## Computer Science Fundamentals
-
-Computer science is the study of algorithms, computational systems, and the principles underlying the design of computer hardware and software. It encompasses a wide range of topics, including data structures, algorithms, computer architecture, programming languages, operating systems, artificial intelligence, and more.
-
-[Here](./Computer_Science_Fundamentals/Readme.md)
-
-<!-- links -->
-
-## Python Language
-
-Python is a high-level, interpreted, and general-purpose dynamic programming language that focuses on code readability. It is easy to learn and use. 
-
-**[Python](./Python/Readme.md)**
-
-## Linux and GIT
-
-- **[Basic Linux commands](./Version_Control_&_Linux/Linux_commands.md)**
-
-- [Version Control System & basic GIT commands](./Version_Control_&_Linux/VersionControl.md)
+- [Version Control System & basic GIT commands](./Version_Control_&_Linux/Linux_commands.md)
 
 ## Basic problem solving
 
