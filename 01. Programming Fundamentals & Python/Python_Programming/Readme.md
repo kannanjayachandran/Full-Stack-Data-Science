@@ -1,5 +1,7 @@
 <h1 align="center" style="color: orange"> Python Programming </h1>
 
+Python is a high-level, interpreted, and general-purpose dynamic programming language that focuses on code readability. It is easy to learn and use. 
+
 ### [Basic programs using python](./1_Introduction_to_programming.ipynb) 
 
 1. Factorial of a number
