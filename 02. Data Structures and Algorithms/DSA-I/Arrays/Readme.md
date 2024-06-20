@@ -13,8 +13,9 @@
 
 ## Introduction
 
-Arrays, as a fundamental data structure, consist of elements of the same type, stored in contiguous memory locations. The first element corresponds to the lowest address, and the last element to the highest address.
-In python we have **Lists** that are superset of arrays. Lists can contain elements of different types. Lists are mutable, i.e., their elements can be changed unlike arrays.
+Arrays, as a fundamental data structure, consist of elements of the same type and stored in contiguous memory locations. The first element corresponds to the lowest address, and the last element to the highest address.
+
+In _python_ we have **Lists** that are superset of arrays. Lists can contain elements of different and are mutable, i.e., their elements can be changed unlike arrays.
 
 ## Time complexity of operations on Lists
 
