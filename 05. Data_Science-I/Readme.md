@@ -78,6 +78,8 @@ Now let us look the mathematical concepts that are used in data science and mach
 
 - [Calculus for data science and machine learning](./Calculus.md)
 
+- [Discrete Mathematics for data science and machine learning](./Discrete_Mathematics.md)
+
 **Similar to mathematical tools, good understanding of data visualization is also important for data science and machine learning.**
 
 - [Data Visualization for data science and machine learning](./Data_visualization.md)
