@@ -1,12 +1,10 @@
 # SQL
 
-SQL _Stands for Structured Query Language_. It is the standard language for interacting with relational databases. There are many different types of SQL databases, but the most popular are MySQL, SQLite, and PostgreSQL. I am going to use PostgreSQL, because it is open source and is widely used in production environments. But it doesn't really matter which one you choose, because the syntax is almost same for all.
+SQL _Stands for Structured Query Language_. It is the standard language for interacting with relational databases. Here we are using `PostgreSQL` as the database engine.
 
 > SQL is a _declarative language_, which means that you tell the database what you want to do, and it figures out how to perform the operation in the most efficient way.
 
 ## Basic terminology
-
-![Alt text](image-5.png)
 
 1. **Data value** : A single unit of data. Each entry in a table represents a data value.
 
@@ -20,9 +18,9 @@ SQL _Stands for Structured Query Language_. It is the standard language for inte
 
 4. **File** : A collection of related records. A table is a file.
 
-## High level overview of how SQL queries work
+## Overview of how SQL queries work
 
-![Overview of how sql queries gets executed](image.png)
+![Overview of how sql queries gets executed](./img/Overview_of_SQL_QUERY_working.png)
 
 1. The user sends a query to the database.
 
@@ -42,13 +40,13 @@ A schema in a database refers to the organization of data. Think of it as a blue
 
 > The formal definition of a database schema is a set of formulas (sentences) called integrity constraints imposed on a database.
 
-To understand schema well let us consider the example from the `IMDB` dataset. The schema for the `IMDB` dataset is as follows:
+To understand database schema better, let us consider the example from the `IMDB` dataset. The schema for the `IMDB` dataset is as follows:
 
-![Schema of IMDB dataset](image-1.png)
+![Schema of IMDB dataset](./img/IMDB_data_schema.png)
 
 ## SQL Commands
 
-![SQL Command types](image-4.png)
+![SQL Command types](./img/SQL_commands.png)
 
 **DDL (Data Definition Language)** : DDL statements are used to define the database structure or schema.
 
@@ -287,7 +285,7 @@ SELECT * FROM TABLENAME1 FULL OUTER JOIN TABLENAME2 ON TABLENAME1.Column1 = TABL
 
 > **Natural join** : Returns only the rows that match in both tables, but it doesn't require us to specify the columns to join on. It automatically matches the columns with the same name.
 
-![JOINS](image-2.png)
+![JOINS](./img/JOINS.png)
 
 18. Sub queries in SQL
 
@@ -297,7 +295,7 @@ SELECT column1, column2 FROM TABLENAME WHERE some_id IN
 (SELECT column3 FROM TABLENAME2 WHERE column4 = 'some_value');
 ```
 
-> Consider sub queries like nested code blocks, the inner query is executed first and the result of the inner query is used in the outer query. Writing and reading sub-queries may be easier than complex joins.
+> Consider writing sub queries like nested code blocks, the inner query is executed first and the result of the inner query is used in the outer query. Writing and reading sub-queries may be easier than complex joins.
 
 19. Union in SQL
 
@@ -378,31 +376,54 @@ REVOKE privilege_name ON TABLENAME FROM user_name;
 
 **Data-types in SQL (PostgreSQL specific)**
 
-![SQL data types](image-3.png)
+![SQL data types](./img/DataTypes.png)
 
 **Constraints in SQL**
 
-Constraints are used to specify rules for the data in a table. Constraints are used to limit the type of data that can go into a table. If there is any violation between the constraint and the data action, the action is aborted.
-
-Constraints can be column level or table level. Column level constraints apply to a column, and table level constraints apply to the whole table.
+Constraints are used to specify rules for the data in a table. If there is any violation between the constraint and the data action, the action is aborted. Constraints can be column level or table level. 
 
 The following constraints are commonly used in SQL:
 
-- NOT NULL - Ensures that a column cannot have a NULL value
+- `NOT NULL` - Ensures that a column cannot have a NULL value
 
-- UNIQUE - Ensures that all values in a column are different
+- `UNIQUE` - Ensures that all values in a column are different
 
-- PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+- `PRIMARY KEY` - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
 
-- FOREIGN KEY - Prevents actions that would destroy links between tables
+- `FOREIGN KEY` - Prevents actions that would destroy links between tables
 
-- CHECK - Ensures that the values in a column satisfies a specific condition
+- `CHECK` - Ensures that the values in a column satisfies a specific condition
 
-- DEFAULT - Sets a default value for a column if no value is specified
+- `DEFAULT` - Sets a default value for a column if no value is specified
 
-- INDEX - Used to create and retrieve data from the database very quickly
+- `INDEX` - Used to create and retrieve data from the database very quickly
 
 ## Postgres with Python
 
-When working with Python and Postgres, we can use the `psycopg2` library to connect to the database and execute queries.
+Use the [`psycopg2`](https://www.psycopg.org/psycopg3/docs/) library to connect to the database and execute queries.
 
+```python
+import psycopg2
+
+# Connect to the database
+conn = psycopg2.connect("dbname=imdb user=postgres password=postgres")
+
+# Create a cursor object
+cur = conn.cursor()
+
+# Execute a query
+cur.execute("SELECT * FROM movies LIMIT 10")
+
+# Fetch the results
+results = cur.fetchall()
+
+# Print the results
+for row in results:
+    print(row)
+
+# Close the cursor
+cur.close()
+
+# Close the connection
+conn.close()
+```
