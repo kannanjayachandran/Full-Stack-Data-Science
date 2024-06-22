@@ -4,7 +4,7 @@
     <a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Logo" height=420></a>
 </p>
 
-**Data science** is a vast-multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, systems and domain knowledge to extract valuable insights from data.
+**Data science** is a vast-multidisciplinary field that uses scientific methods, processes, algorithms, mathematics and domain knowledge to extract valuable insights from data.
 
 This repository contains the code samples (Jupyter notebooks & Python scripts), datasets, and notes prepared while learning.
 
