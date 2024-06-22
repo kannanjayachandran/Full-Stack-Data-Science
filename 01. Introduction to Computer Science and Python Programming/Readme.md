@@ -1,14 +1,12 @@
-<h1 align="center" style="color: orange"> Computer Science Fundamentals - Python Programming - Version Control (GIT) & Linux </h1>
+<h1 align="center" style="color: orange"> Introduction to Computer Science - Python Programming - Version Control (GIT) - Linux </h1>
 
-In this section we will be learning 3 things;
-
-- [Fundamentals of computer science](./Computer_Science_Fundamentals/Readme.md)
+- [Introduction to computer science](./Introduction_to_Computer_Science/Readme.md)
 
 - [Python](./Python_Programming/Readme.md)
 
-- [Version Control System & basic GIT commands](./Version_Control_&_Linux/Linux_commands.md)
+- [Version Control System & Essential GIT commands](./Version_Control_&_Linux/Linux_commands.md)
 
-## Basic problem solving
+### Problem Set - I
 
 > **[Notebook](./ProblemSet.ipynb)**
 

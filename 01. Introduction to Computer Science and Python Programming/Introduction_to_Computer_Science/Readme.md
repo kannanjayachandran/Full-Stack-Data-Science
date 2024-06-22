@@ -1,5 +1,4 @@
-<h1 align="center" style="color: orange"> Computer Science </h1>
-
+<h1 align="center" style="color: orange"> Introduction to Computer Science </h1>
 
 ![Computer science poster](./img/main_poster.png)
 
