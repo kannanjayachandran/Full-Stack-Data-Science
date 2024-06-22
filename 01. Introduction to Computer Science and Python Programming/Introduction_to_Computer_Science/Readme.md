@@ -1,89 +1,120 @@
 <h1 align="center" style="color: orange"> Introduction to Computer Science </h1>
 
-![Computer science poster](./img/main_poster.png)
+<p align="center">
+    <a href="#theoretical-computer-science"><img src="./img/main_poster.png" alt="Logo" height=480></a>
+</p>
 
-Computer science is the study of algorithms, computational systems, and the principles underlying the design of computer hardware and software. It encompasses a wide range of topics, including data structures, algorithms, computer architecture, programming languages, operating systems, artificial intelligence, and more.
+Computer science is the study of algorithms, computational systems, and the principles underlying the design of computer hardware and software.
 
 ## Theoretical computer science
 
 It is a branch of computer science that deals with the formal study of algorithms, computational models, and computational problems. *It focuses on exploring the theoretical limits of what can be computed efficiently.*
 
-- **Theory of computation** : Studies the general properties of computation, including decidability, computability, and Turing completeness. **In short, it studies what problems can be solved algorithmically.**
+### Theory of computation
 
-    - **Turing Machines**: Introduced by Alan Turing in the 1930s, Turing machines are abstract mathematical models of computation. It provide a formal way to describe algorithms and computable functions.
+Studies the general properties of computation, including decidability, computability, and Turing completeness. **In short, it studies what problems can be solved algorithmically.**
 
-    - **Automata theory**: Studies abstract machines and computational models, such as finite automata, push-down automata, and Turing machines. It provides a theoretical foundation for understanding the capabilities and limitations of computational systems.
+- **Turing Machines**: Introduced by Alan Turing in the 1930s, Turing machines are abstract mathematical models of computation. It provide a formal way to describe algorithms and computable functions.
 
-- **Computational complexity theory**: Studies the resources required to solve computational problems, such as time, space, and other resources.
+- **Automata theory**: Studies abstract machines and computational models, such as finite automata, push-down automata, and Turing machines and provides a theoretical foundation for understanding the capabilities and limitations of computational systems.
 
-    - **Time and space complexity**: Measures the amount of time and space required to solve a problem as a function of the input size.
+### Computational complexity theory
 
-    - **Classes of problems**: Computational complexity theory classifies problems into various complexity classes based on their inherent difficulty. These classes include **P**, **NP**, **NP-complete**, **NP-hard**, etc. 
-        - **P (polynomial time)**: Problems that can be solved in polynomial time.
-        
-        - **NP (nondeterministic polynomial time)**: Problems for which a solution can be verified in polynomial time. 
-        > *If someone claims to have a solution to an NP problem, we can quickly verify whether the solution is correct using polynomial time. However, finding the solution itself might be computationally difficult.* Eg. Boolean satisfiability problem (SAT), the traveling salesman problem (TSP), and the vertex cover problem.
-        
-        - **NP-complete**: If a problem is NP-complete, it means that it is as hard as the hardest problems in NP. The hardest problems in NP, to which all other problems in NP can be reduced in polynomial time. *If a polynomial-time algorithm exists for any NP-complete problem, then polynomial-time algorithms exist for all problems in NP, implying that P = NP.* 
+Studies the resources required to solve computational problems, such as time, memory, and other resources.
 
-        - **NP-hard**: Problems that are at least as hard as the hardest problems in NP. They may or may not be in NP.
+- **Time and space complexity**: Measures the amount of time and space/memory required to solve a problem as a function of the input size.
+
+- **Classes of problems**: Computational complexity theory classifies problems into various complexity classes based on their inherent difficulty. Some of the key classes include:
+
+    - **P (polynomial time)**: Problems that can be solved in polynomial time.
     
+    - **NP (nondeterministic polynomial time)**: Problems for which a solution can be verified in polynomial time. 
+
+    > If someone claims to have a solution to an NP problem, we can quickly verify whether the solution is correct or not in polynomial time. However, finding the solution itself might be computationally difficult.
+    >
+    > Eg. _Boolean satisfiability problem (SAT)_, _The traveling salesman problem (TSP)_, and _The vertex cover problem_.
+    
+    - **NP-complete**: If a problem is NP-complete, it means that it is as hard as the hardest problems in NP. The hardest problems in NP, to which all other problems in NP can be reduced in polynomial time. *If a polynomial-time algorithm exists for any NP-complete problem, then polynomial-time algorithms exist for all problems in NP, implying that P = NP.* 
+
+    - **NP-hard**: Problems that are at least as hard as the hardest problems in NP but may not be in NP themselves. They are not necessarily verifiable in polynomial time.
+
     > In summary, P represents problems solvable in polynomial time, NP represents problems verifiable in polynomial time, NP-complete represents the hardest problems in NP, and NP-hard represents problems at least as hard as NP-complete problems.
 
-- **Information theory**: Studies the properties of information and how it can be stored, measured, and communicated.
+### Information theory
 
-- **Cryptography**: Studies the techniques for secure communication and data protection. It involves the design and analysis of cryptographic algorithms and protocols to ensure the confidentiality, integrity, and authenticity of data. It is closely related to information theory.
+Studies the properties of information and how it can be stored, measured, and communicated. 
 
-- **Graph theory**: Studies the properties and applications of graphs, which are mathematical structures used to model pairwise relations between objects. It is extensively used in computer science for modeling networks, social relationships, and optimization problems.
+### Cryptography 
 
-- **Computational geometry**: Studies algorithms and data structures for solving geometric problems. It has applications in computer graphics, geographic information systems, and robotics.
+Studies the techniques for secure communication and data protection. It involves the design and analysis of cryptographic algorithms and protocols to ensure the confidentiality, integrity, and authenticity of data. It is closely related to information theory.
 
-- **Quantum computation**: Studies the use of quantum-mechanical phenomena, such as superposition and entanglement, to perform computation. It has the potential to solve certain problems more efficiently than classical computers.
+### Graph theory 
 
-- **Parallel programming**: Studies the techniques for developing programs that can execute multiple tasks simultaneously. It is essential for exploiting the full potential of modern multi-core and distributed computing systems. 
+Studies the properties and applications of graphs, which are mathematical structures used to model pairwise relations between objects. It is extensively used in computer science for modeling networks, social relationships, and optimization problems.
+
+### Computational geometry 
+
+Studies algorithms and data structures for solving geometric problems. It has applications in computer graphics, geographic information systems, and robotics.
+
+### Quantum computation 
+
+Studies the use of quantum-mechanical phenomena, such as superposition and entanglement, to perform computation. It has the potential to solve certain problems more efficiently than classical computers. 
 
 ## Computer Engineering
 
-It deals with the design and construction of computer systems and hardware. A computer understands and processes information in the form of digital signals, which are represented as 0s and 1s. We use programming languages to write code (human readable form), which is then translated into machine code (0s and 1s) that the computer can understand and execute.
+It deals with the design and construction of computer systems and hardware. 
 
-High level overview of computer architecture would like this:
+A computer understands and processes information in the form of digital signals, which are represented as 0s and 1s. We use programming languages to write code (human readable form), which is then translated into machine code (0s and 1s) that the computer can understand and execute.
+
+A typical computer architecture would look something like this:
 
 ![Computer architecture](./img/Arch.png)
 
-- Computers store information in memory. Memory is divided into small units called **cells**. typically each holding `8 bits`, known as a **byte**. 
+- A central processing unit.
 
-While there's no physical left or right orientation within a computer, we often visualize memory cells as linear, with the high-order end on the left and the low-order end on the right. The high-order bit, or most significant bit, holds significant value in numerical interpretation, while the low-order bit, or least significant bit, holds less weight.
+- Memory (Different levels of cache memory, RAM, secondary storage, etc).
 
--  For example consider `10110101`; Here he leftmost bit (1) is the most significant bit (MSB) or high-order bit, and the rightmost bit (1) is the least significant bit (LSB) or low-order bit.
+- GPU's, TPU's, or other specialized hardware for specific tasks.
 
-- **CPU (Central Processing Unit)**: CPU is the cornerstone of a computer system. It is responsible for executing instructions and performing calculations. 
-    - **CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. This allows for parallel processing and improved performance.
-    - **Cache Systems**: Cache is a small, fast memory unit that stores frequently accessed data and instructions to speed up the access.  Modern CPUs typically have a multi-level cache system, usually referred to as L1, L2, and L3 caches. L1 is the smallest and fastest, located closest to the CPU cores, while L3 is usually larger and slower.
-    - **Instruction Pipeline**: CPUs use instruction pipelines to execute multiple instructions simultaneously. Each stage of the pipeline performs a specific task, such as fetching instructions, decoding them, and executing them. This doesn’t reduce the time it takes to complete an individual instruction; instead, it increases the number of instructions that can be processed simultaneously. This leads to a significant increase in overall CPU throughput
+### Memory and Information representation
 
-- Main memory, often termed random access memory (RAM), allows independent access to cells, unlike mass storage systems (hard disk, SSD, etc) that handle data in large blocks. Modern RAM technologies, such as Dynamic RAM (DRAM) or Synchronous DRAM (SDRAM), utilize techniques like refreshing to maintain data integrity. The following diagram illustrates the memory hierarchy in a typical computer system.
+Information is represented in computers as 0s and 1s, known as `bits`. These bits can be used to represent numbers, letters, pictures, sounds, and more. The smallest unit of information is a bit, and a group of `8 bits` is called a `byte`. A byte can represent 256 different values `(2^8)`. A byte can also represent a single character in the ASCII character set. 
 
-![Memory Hierarchy](./img/Memory_hierarchy.png)
+Computers memory is divided into small units called **cells**. Typically each cell holding a **byte**. 
 
-High level overview of the software and programming languages would look like this:
+![Computer Memory](./img/computer_memory_diagram.png)
 
-![Software and programming languages](./img/lang.png)
+While there's no physical left or right orientation, we often visualize memory cells as linear, with the high-order end on the left and the low-order end on the right. The high-order bit, or most significant bit, is the leftmost bit, and the low-order bit, or least significant bit, is the rightmost bit.
 
-### Information representation and Boolean operations
-
-Information is represented in computers as 0s and 1s, known as bits. These bits can be used to represent numbers, letters, pictures, sounds, and more. The smallest unit of information is a bit, and a group of 8 bits is called a byte. A byte can represent 256 different values `(2^8)`. A byte can also represent a single character in the ASCII character set. 
-
-- Bits represented as 0s and 1s, signify false and true values. Boolean operations are used to manipulate bits, which are the building blocks of digital information.
+- We use `boolean operations` to manipulate bits. Boolean operations are logical operations that operate on one or more bits and produce a bit as a result. The most common boolean operations are `AND`, `OR`, and `NOT`. These gates can be combined to create more complex arithmetic and logical operations.
 
 - A gate is a device that generates the output of a Boolean operation based on its input values. In modern computers, gates are typically made as small electronic circuits where 0s and 1s are represented by different voltage levels. They serve as the fundamental components upon which computers are built.
 
-- The most common gates are AND, OR, and NOT. These gates can be combined to create more complex operations. For example, an XOR gate outputs true if the number of true inputs is odd.
+### CPU (Central Processing Unit)
 
-By manipulating bits using Boolean operations, we can perform arithmetic, logical, and other operations on digital information. This forms the basis of computer operations and programming. We generally do not work with bits directly but use higher-level programming languages that abstract these operations. It is like we use a calculator to perform arithmetic operations without worrying about the underlying circuitry. We provide some instructions to a complex program called a compiler, which translates our code into machine code that the computer can execute.
+It is responsible for executing instructions and performing calculations. 
 
-### Programming languages
+- **CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. This allows for parallel processing and improved performance.
+
+- **Cache Systems**: Cache is a small, fast memory unit that stores frequently accessed data and instructions to speed up the access.  Modern CPUs typically have a multi-level cache system, usually referred to as L1, L2, and L3 caches. L1 is the smallest and fastest, located closest to the CPU cores.
+
+- **Instruction Pipeline**: CPUs use instruction pipelines to execute multiple instructions simultaneously. Each stage of the pipeline performs a specific task, such as fetching instructions, decoding them, and executing them. This doesn’t reduce the time it takes to complete an individual instruction; instead, it increases the number of instructions that can be processed simultaneously. This leads to a significant increase in overall CPU throughput
+
+- Main memory, often termed random access memory (RAM), allows independent access to cells, unlike mass storage systems (hard disk, SSD, etc) that handle data in large blocks.
+
+The following diagram illustrates the memory hierarchy in a typical computer system.
+
+![Memory Hierarchy](./img/Memory_hierarchy.png)
+
+### Programming Languages
 
 Programming languages are formal languages used to communicate instructions to a computer. They allow us to write code that can be executed by a computer to perform specific tasks. Programming languages can be classified into several categories based on their design and intended use.
+
+High level overview of programming languages would look like this:
+
+![Software and programming languages](./img/lang.png)
+
+> We have detailed discussion on our programming language of choice, **Python** in the next section.
 
 - **Low-level languages**: These languages are close to the hardware and provide direct control over the computer's resources. They are difficult to read and write but offer high performance and efficiency. Examples include assembly language and machine code.
 
@@ -103,9 +134,14 @@ Programming languages are formal languages used to communicate instructions to a
 
 - **Syntax and semantics**: Programming languages have syntax and semantics that define the rules for writing valid code and the meaning of that code. Syntax refers to the structure of the code, while semantics refer to its meaning. Syntax errors occur when the code violates the language's rules, while semantic errors occur when the code does not behave as expected.
 
-- **Paradigms**: Programming languages are based on different programming paradigms, such as imperative, declarative, functional, and object-oriented. Each paradigm has its own set of concepts and principles for writing code.
+- **Paradigms**: Programming languages are based on different programming paradigms, such as `imperative`, `declarative`, `functional`, and `object-oriented`. Each paradigm has its own set of concepts and principles for writing code.
 
+Core computer science topics are;
 
-### Algorithms and data structures
+- [Data structures and algorithms](../../02.%20Data%20Structures%20and%20Algorithms/Readme.md)
 
-Algorithms are step-by-step procedures for solving problems. They are the building blocks of computer programs and are essential for writing efficient code. Data structures are ways of organizing and storing data to facilitate efficient access and modification. They are used in conjunction with algorithms to solve computational problems.
+- [Operating Systems](./Operating_System.md)
+
+- [Computer Networks](./Computer_Networks.md)
+
+- [Databases](../../04.%20DBMS%20&%20Database%20Technologies/Readme.md)
