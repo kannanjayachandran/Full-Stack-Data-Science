@@ -12,7 +12,7 @@ This repository contains the code samples (Jupyter notebooks & Python scripts), 
 
 | sl.no | Topics                              |                               Link                                |
 | :---: | :---------------------------------- | :---------------------------------------------------------------: |
-|   1   | Basic Computer Science & Programming in Python | [Here](./01.%20Programming%20Fundamentals%20&%20Python/Readme.md) |
+|   1   | Introduction to Computer Science and Python Programming | [Here](./01.%20Introduction%20to%20Computer%20Science%20and%20Python%20Programming/Readme.md) |
 |   2   | Data structures and Algorithms | [Here](./02.%20Data%20Structures%20and%20Algorithms/Readme.md)   |
 |   3   | Python for Data Science | [Here](./03.%20Python%20for%20Data%20Science/Readme.md) |
 |   4   | Database and DBMS | [Here](./04.%20DBMS%20&%20Database%20Technologies/Readme.md) |
