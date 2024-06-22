@@ -4,9 +4,9 @@
     <a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Logo" height=420></a>
 </p>
 
-**Data science** is a vast-multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, systems and domain knowledge to extract valuable insights from data. **Full-stack data science** refers to a comprehensive approach to the field of data science (End-to-End).
+**Data science** is a vast-multidisciplinary field that uses scientific methods, processes, algorithms, mathematics, systems and domain knowledge to extract valuable insights from data.
 
-This repository contains the **code samples** { Jupyter notebooks }, **datasets**, and **notes**. I am a final year undergraduate **computer science engineering** student specializing in **`Artificial Intelligence`** and **`Machine learning`**.
+This repository contains the code samples (Jupyter notebooks & Python scripts), datasets, and notes prepared while learning.
 
 ## Contents
 
@@ -30,4 +30,3 @@ This repository contains the **code samples** { Jupyter notebooks }, **datasets*
 > _Due to the limitation in rendering some mathematical equations (Latex) in github, the current best way to view the content is to clone the repository and view the markdown files locally._
 
 **[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)**
-
