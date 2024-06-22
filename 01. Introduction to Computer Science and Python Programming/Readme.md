@@ -2,9 +2,9 @@
 
 - [Introduction to computer science](./Introduction_to_Computer_Science/Readme.md)
 
-- [Python](./Python_Programming/Readme.md)
+- [Python programming](./Python_Programming/Readme.md)
 
-- [Version Control System & Essential GIT commands](./Version_Control_&_Linux/Linux_commands.md)
+- [Version Control System and Essential GIT commands](./Version_Control_&_Linux/Linux_commands.md)
 
 ### Problem Set - I
 
