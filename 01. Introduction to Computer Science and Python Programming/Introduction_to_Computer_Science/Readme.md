@@ -8,21 +8,33 @@ Computer science is the study of algorithms, computational systems, and the prin
 
 ## Theoretical computer science
 
-It is a branch of computer science that deals with the formal study of algorithms, computational models, and computational problems. *It focuses on exploring the theoretical limits of what can be computed efficiently.*
+It is a branch of computer science and mathematics that deals with what problems can be solved on a model of computation, using an algorithm and how efficiently they can be solved or to what degree. It has 3 major subfields:
 
-### Theory of computation
+### Computability Theory
 
-Studies the general properties of computation, including decidability, computability, and Turing completeness. **In short, it studies what problems can be solved algorithmically.**
+Studies the general properties of computation, including decidability, computability, and Turing completeness. **In short, it studies what problems can be solved or to what extend solvable on a computer.**
 
-- **Turing Machines**: Introduced by Alan Turing in the 1930s, Turing machines are abstract mathematical models of computation. It provide a formal way to describe algorithms and computable functions.
+- **Turing Machines**: Introduced by Alan Turing in the 1936, Turing machines are abstract mathematical models of computation. It provide a formal way to describe algorithms and computable functions.
 
-- **Automata theory**: Studies abstract machines and computational models, such as finite automata, push-down automata, and Turing machines and provides a theoretical foundation for understanding the capabilities and limitations of computational systems.
+**More on [computability theory](https://en.wikipedia.org/wiki/Computability_theory)**
+
+### Automata Theory and Formal Language Theory
+
+Automata theory is the study of abstract machines (also known as `automata`) and the computational problems that can be solved using these machines. It is closely related to formal language theory, which studies the properties of formal languages and their relation to automata.
+
+**More on [Automata Theory](https://en.wikipedia.org/wiki/Automata_theory) and [Formal Language Theory](https://en.wikipedia.org/wiki/Formal_language)**
 
 ### Computational complexity theory
 
-Studies the resources required to solve computational problems, such as time, memory, and other resources.
+It studies how efficiently a problem can be solved. It helps us to compute the resources required to solve a problem, such as time, memory, and other resources.
 
-- **Time and space complexity**: Measures the amount of time and space/memory required to solve a problem as a function of the input size.
+- **Time and space complexity**: Measures the amount of time and space/memory required to solve a problem as a function of the input size. We use asymptotic notation, such as `O(n)`, `Ω(n)`, and `Θ(n)`, to describe the complexity of algorithms.
+
+    - **Big O notation (O)**: It provides an upper bound on the growth rate of a function. It describes the worst-case scenario of an algorithm.
+    
+    - **Big Omega notation (Ω)**: It provides a lower bound on the growth rate of a function. It describes the best-case scenario of an algorithm.
+    
+    - **Big Theta notation (Θ)**: It provides both upper and lower bounds on the growth rate of a function. It describes the average-case scenario of an algorithm.
 
 - **Classes of problems**: Computational complexity theory classifies problems into various complexity classes based on their inherent difficulty. Some of the key classes include:
 
@@ -42,7 +54,7 @@ Studies the resources required to solve computational problems, such as time, me
 
 ### Information theory
 
-Studies the properties of information and how it can be stored, measured, and communicated. 
+Studies the properties of information and how it can be stored, measured, and communicated. Read more about **[Information Theory article on Wikipedia](https://en.wikipedia.org/wiki/Information_theory)**.
 
 ### Cryptography 
 
@@ -128,7 +140,7 @@ High level overview of programming languages would look like this:
     
     - **Scripting languages**: These languages are designed for automating tasks and are often used for web development, system administration, and data analysis. Examples include JavaScript, Python, and Ruby.
 
-- **Domain-specific languages (DSLs)**: These languages are designed for specific domains or tasks, such as SQL for database queries, HTML for web development, and MATLAB for scientific computing.
+- **Domain-specific languages (DSL's)**: These languages are designed for specific domains or tasks, such as SQL for database queries, HTML for web development, and MATLAB for scientific computing.
 
 - **Compiled vs. interpreted languages**: Programming languages can be compiled or interpreted. Compiled languages are translated into machine code before execution, while interpreted languages are translated into machine code during execution. Then there are languages that use a combination of both techniques. Both compiled and interpreted languages have their advantages and disadvantages and the way they are executed are pretty complex.
 
