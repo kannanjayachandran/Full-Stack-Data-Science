@@ -90,3 +90,15 @@ These resources have been invaluable in my learning journey, providing me with a
 - [ByteByteGo - System Design](https://bytebytego.com/)
 
 - [ByteByteGo - Machine Learning System Design Interview](https://bytebytego.com/intro/machine-learning-system-design-interview)
+
+## Special Mentions
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
+
+- [GeeksforGeeks](https://www.geeksforgeeks.org/)
+
+- [LeetCode](https://leetcode.com/)
+
+- [Kaggle](https://www.kaggle.com/)
+
+- [Towards Data Science](https://towardsdatascience.com/)
