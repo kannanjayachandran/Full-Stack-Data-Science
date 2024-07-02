@@ -4,7 +4,7 @@ These are some general styling guidelines specific to this project. The purpose 
 
 ## Coding 
 
-Python : PEP8 standards
+**Python** : PEP8 standards
 
 ## Jupyter Notebooks
 
@@ -19,20 +19,18 @@ Using `html` in markdown is generally a bad idea, and should be avoided as far a
 1. Centering and coloring the heading
 
 ```markdown 
-<h1 align="center" style="color: orange">Most of the headings</h1>
+<h1 align="center">Main Readme Heading</h1>
 ```
  
 2. Centering image
 
 ```markdown
-<div align="center">
-
-![]()
-
-</div>
+<p align="center">
+    <a href="#heading">
+        <img src="./img/path.png" alt="Logo" height=380>
+    </a>
+</p>
 ```
 
 ## LaTeX Style
 - For mathematical equations using latex, inline equations should be colored using `Orange (#F99417)`. Block equations should not be colored.
-
-- Github flavoured markdown does not support latex completely, so currently the best way to include latex is to use `html` tags.
