@@ -18,4 +18,6 @@
 10. Reverse each word in a given string
 11. Drunken jailer problem
 
-> **[Notebook](./ProblemSet.ipynb)**
+> [Notebook](./ProblemSet.ipynb)
+
+**[Linux - GIT Essentials](./Introduction_to_Computer_Science/Linux_GIT.md)**
