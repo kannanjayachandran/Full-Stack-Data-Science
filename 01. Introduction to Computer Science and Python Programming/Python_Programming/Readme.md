@@ -1,30 +1,6 @@
-<h1 align="center" style="color: orange"> Python Programming </h1>
+<h1 align="center" > Python Programming </h1>
 
-Python is a high-level, interpreted, and general-purpose dynamic programming language that focuses on code readability. It is easy to learn and use. 
-
-### [Basic programs using python](./1_Introduction_to_programming.ipynb) 
-
-1. Factorial of a number
-2. Sum of n numbers
-3. Smallest number in the list
-4. Largest number in the list
-5. Fibonacci series
-6. Check whether a number is Palindrome or not
-7. Check whether a string is Palindrome or not
-8. Even or odd
-9. Check whether a number is armstrong number or not
-10. Check whether a number is prime or not
-11. Convert currency in rupees to USD
-12. Convert temperature in Celsius to Fahrenheit
-13. Area of circle, triangle, rectangle and square
-14. Average of n numbers
-15. Check whether a year is leap year or not
-16. Print all the odd numbers from 1 to n { including 1 and n}
-17. Print the squares of even numbers in the range of 2 to n { including n}
-18. Print the cubes of odd numbers form n to 1
-19. Given a number compute the sum of its digits
-20. Print random numbers between 1 and 10 until we get 5
-21. Find the first digit of a number
+Python is a `open source`, `high-level`, `interpreted`, and `general-purpose` - `dynamic` programming language that focuses on code readability.
 
 ## Notebooks
 
@@ -37,4 +13,12 @@ Python is a high-level, interpreted, and general-purpose dynamic programming lan
 7. [Functions](./8_Functions.ipynb)
 8. [OOPS and File handling](./9_OOPS_and_File_handling.ipynb)
 
-### [Amazing resource for learning Python from Microsoft](https://learn.microsoft.com/en-us/training/paths/beginner-python/)
+**[Introductory problems using python](./1_Introduction_to_programming_with_python.ipynb)**
+
+### Resources
+
+1. [Microsoft Python Guide](https://learn.microsoft.com/en-us/training/paths/beginner-python/)
+
+2. [Google's Python class ](https://developers.google.com/edu/python)
+
+3. [Official Python documentation](https://docs.python.org/3/)
