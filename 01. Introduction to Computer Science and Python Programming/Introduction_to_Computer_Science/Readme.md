@@ -1,7 +1,7 @@
-<h1 align="center" style="color: orange"> Introduction to Computer Science </h1>
+<h1 align="center" > Introduction to Computer Science </h1>
 
 <p align="center">
-    <a href="#theoretical-computer-science"><img src="./img/main_poster.png" alt="Logo" height=480></a>
+    <a href="#theoretical-computer-science"><img src="./img/main_poster.png" alt="Logo" height=380></a>
 </p>
 
 Computer science is the study of algorithms, computational systems, and the principles underlying the design of computer hardware and software.
@@ -116,7 +116,9 @@ It is responsible for executing instructions and performing calculations.
 
 The following diagram illustrates the memory hierarchy in a typical computer system.
 
-![Memory Hierarchy](./img/Memory_hierarchy.png)
+<p align="center">
+    <a href="#cpu-central-processing-unit"><img src="./img/Memory_hierarchy.png" alt="Logo" height=380></a>
+</p>
 
 ### Programming Languages
 
@@ -148,7 +150,7 @@ High level overview of programming languages would look like this:
 
 - **Paradigms**: Programming languages are based on different programming paradigms, such as `imperative`, `declarative`, `functional`, and `object-oriented`. Each paradigm has its own set of concepts and principles for writing code.
 
-Core computer science topics are;
+Core computer science topics we are going to focus on are;
 
 - [Data structures and algorithms](../../02.%20Data%20Structures%20and%20Algorithms/Readme.md)
 
