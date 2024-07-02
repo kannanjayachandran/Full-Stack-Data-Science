@@ -47,3 +47,24 @@ An Operating system is a software that manages and handle the hardware and softw
 ![Distributed Operating System](./img/Distributed_OS.png)
 
 7. **Real-time OS**: It is used in real-time systems where the response time is very critical. It is used in systems like flight control systems, medical systems, etc.
+
+## Process vs Thread
+
+### Process
+
+- A program in execution.
+
+### Thread
+
+- A lightweight process. It does independent work within a process. Threads within a process share the same memory space and resources.
+
+EG: An app that takes user input and while we fill in the data and continue to use the application, one thread may be responsible for storing that input in some cloud storage, or making some API call, etc.
+
+
+## Common Questions on Operating System:
+
+1. Difference between Multitasking and Multithreading ?
+
+> Multitasking is the ability to execute more than one task at the same time. It would have multiple processes running at the same time. It does support isolation and memory protection between processes.
+>
+> Multithreading is the ability to execute more than one thread at the same time. It would only have one process running at the same time but that process would have multiple threads running at the same time. It does not support isolation and memory protection between threads.
