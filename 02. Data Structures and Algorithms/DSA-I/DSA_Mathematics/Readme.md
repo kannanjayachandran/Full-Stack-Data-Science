@@ -1,4 +1,4 @@
-# DSA mathematics
+# Mathematics For Data Structures and Algorithms
 
 - Prime Numbers and Sieve of Eratosthenes
 - GCD and LCM
