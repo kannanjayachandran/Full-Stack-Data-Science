@@ -350,4 +350,4 @@ def sqrt_binary_search(n: float) -> float:
 3. Random Pick with weight
 4. Palindrome Number
 5. Reverse Integer
-6. Power of a number -->
+6. Power of a number 
