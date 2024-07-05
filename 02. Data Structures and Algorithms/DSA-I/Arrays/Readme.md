@@ -1,7 +1,5 @@
 <h1 align="center"> Arrays </h1>
 
-## Introduction
-
 Arrays, as a fundamental data structure, consist of elements of the same type and stored in contiguous memory locations. The first element corresponds to the lowest address, and the last element to the highest address. `Cache locality` is a significant advantage of arrays, as it allows for faster access to elements due to less `cache misses`. However, arrays have a fixed size, and inserting or deleting elements can be expensive due to shifting elements.
 
 In _python_ we have **Lists** that are superset of arrays. Lists can contain elements of different and are mutable. 
