@@ -1,15 +1,17 @@
 # Data structures and Algorithms - II
 
-## Topics
+- [Backtracking](./Backtracking/Readme.md)
 
-1. [Searching and Sorting](./Searching_Sorting/Readme.md)
+- [Greedy](./Greedy/Readme.md)
 
-2. [Recursion - Backtracking](./Recursion-Backtracking/Readme.md)
+- [Dynamic Programming](./Dynamic_Programming/Readme.md)
 
-3. [Dynamic Programming](./Dynamic_Programming/Readme.md)
+- [Graphs](./Graphs/Readme.md)
 
-4. [Greedy Algorithms](./Greedy/Readme.md)
+- [Trees](./Trees/Readme.md)
 
-5. [Bit Manipulation](./Bit_manipulation/Readme.md)
+- [Heaps](./Heap/Readme.md)
 
-6. [Important Algorithms](./Important_Algorithms/Readme.md)
+- [Important Algorithms](./Important_Algorithms/Readme.md)
+
+- [Bit Manipulation](./Bit_Manipulation/Readme.md)
