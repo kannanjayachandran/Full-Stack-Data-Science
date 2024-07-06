@@ -1,23 +1,23 @@
 # Data Structures and Algorithms - I
 
-## Table of Contents
+1. [Mathematics for DSA](./DSA_Mathematics/Readme.md)
 
-- [Mathematics for DSA](./DSA_Mathematics/Readme.md)
+2. Basic data structures
 
-- Basic data structures
+    1. [Arrays ](./Arrays/Readme.md)
 
-    - [Arrays ](./Arrays/Readme.md)
+    1. [Strings](./Strings/Readme.md)
 
-    - [Strings](./Strings/Readme.md)
+    1. [Hash Tables](./HashTables/Readme.md)
 
-    - [Linked Lists](./LinkedLists/Readme.md)
+    1. [Linked Lists](./LinkedLists/Readme.md)
 
-    - [Stacks - Queues](./Stacks_Queues/Readme.md)
+    1. [Stack](./Stack/Readme.md)
 
-- Advanced data structures
+    1. [Queue](./Queue/Readme.md)
 
-    - [Hash Tables](./HashTables/Readme.md)
-    
-    - [Trees-Heap-Trie-Disjoint_set](./Trees_Heap_Trie_Disjoint_set/Readme.md) 
-    
-    - [Graphs](./Graphs/Readme.md)
+3. [Searching](./Searching/Readme.md)
+
+4. [Sorting](./Sorting/Readme.md)
+
+5. [Recursion](./Recursion/Readme.md)
