@@ -56,7 +56,5 @@
 6. Binary Gap
 7. Sort integers by number of 1 bits
 8. Xor array
-9. Decode xored array
+9. Decode `xored` array
 10. Find Gray code
-
-> Problem count : 50
