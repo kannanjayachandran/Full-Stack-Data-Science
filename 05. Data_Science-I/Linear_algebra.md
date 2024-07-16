@@ -11,6 +11,32 @@ $\color{orange}``$**_Linear algebra is the branch of mathematics that deals with
 
 ---
 
+## Notations
+
+| Notation | Description |
+| --- | :--- |
+| $\color{#F99417}a$ | Scalar or Vector |
+| $\color{#F99417}A, B, C$ | Matrix |
+| $\color{#F99417}A$ of size $\color{#F99417}\text{m X n}$ | Matrix `A` with `m` rows and `n` columns  |
+| $\color{#F99417}A_{ij}$ | Element in the `i-th` row and `j-th` column of matrix `A` |
+| $\color{#F99417}A^T$ | Transpose of matrix `A` |
+| $\color{#F99417}v^T$ | Transpose of vector `v` |
+| $\color{#F99417}A^{-1}$ | Inverse of matrix `A` |
+| $\color{#F99417}A^*$ | Conjugate transpose of matrix `A` |
+| $\color{#F99417}det(A)$ | Determinant of matrix `A` |
+| $\color{#F99417}AB$ | Matrix multiplication of matrix `A` and matrix `B`|
+| $\color{#F99417}u.v; \langle u, v\rangle$ | Dot product of `u` and `v`|
+| $\color{#F99417}u \times v$ | Cross product of `u` and `v`|
+| $\color{#F99417}\R$ | Set of real numbers|
+| $\color{#F99417}\R^2$ | Set of two dimensional vectors|
+| $\color{#F99417}\R^n$ | Set of n-dimensional vectors|
+| $\color{#F99417}v\in\R^n$ | Vector `v` is an element of |
+| $\color{#F99417}\|v\|_1$ | L1 - Norm of vector `v`|
+| $\color{#F99417}\|v\|_2; \|\|v\|\|$ | L2 - Norm of vector `v`|
+| $\color{#F99417}\|v\|_\infin$ | L-infinity - Norm of vector `v`|
+| $\color{#F99417}T: \R^n \rightarrow \R^m;T(v)=w$ | Transformation `T` of a vector `v` $\in \R^n$ into the vector `w` $\in \R^m$|
+
+
 ## Vector
 
 A point/Vector is a collection of numbers which is often used to describe the state of a system. 
