@@ -117,12 +117,17 @@ The above equation of P(E) essentially tells us what probability is; **Probabili
 We have a sample space $\color{#F99417}S$ and an event space $\color{#F99417}F$, all probability does is represent the event space relative to the sample space as a ratio. So in turn we are measuring the size of the event space relative to the sample space.
 
 
-Hence we can define probability as `probability
-is a measure of the size of a set`
+Hence we can define probability as `a measure of the size of a set`
 
 ![Probability : How probability works](./img/Probability_process.png)
 
 ---
+
+## Compliment of Probability
+
+The complement of an event is the set of all outcomes in the sample space that are not in the event. It is denoted as $\color{#F99417}A^c$ or $\color{#F99417}A'$. The probability of the complement of an event is given by;
+
+$$P(A^c) = 1 - P(A)$$
 
 ## Probability Distribution
 
