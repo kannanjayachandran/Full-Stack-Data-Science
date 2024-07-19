@@ -4,7 +4,14 @@
 
 When we dealing with server grade or data center grade machines, we will mostly be using Linux based operating systems. So, it is important to know some basic Linux commands.
 
+![https://www.digitalocean.com/community/tutorials/linux-commands](img/Linux_commands.png)
+> image source: Digital Ocean
+
 **[Basic linux commands by **Digital Ocean**](https://www.digitalocean.com/community/tutorials/linux-commands)**
+
+### Some other useful commands:
+
+- **apropos {keyword} | more**: Search for commands based on keywords.
 
 ## GIT
 
