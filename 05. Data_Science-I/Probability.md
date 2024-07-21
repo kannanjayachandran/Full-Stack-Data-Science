@@ -35,7 +35,7 @@
 
 ---
 
-$\color{orange}``$**_Probability is a measure that quantifies the likelihood that an event will occur._**$\color{orange}"$
+**_Probability is a measure that quantifies the likelihood that an event will occur._**
 
 ---
 
