@@ -5,9 +5,15 @@
 
 <h1 align="center" style="color: orange"> Linear Algebra </h1>
 
+## Table of contents
+
+1. [Notations](#Notations)
+1. [Systems of linear equations](#Systems-of-linear-equations)
+1. [Vector](#Vector)
+
 ---
 
-$\color{orange}``$**_Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices. Linear algebra is also known as the mathematics of data._**$\color{orange}"$
+**_Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices._**
 
 ---
 
@@ -35,6 +41,50 @@ $\color{orange}``$**_Linear algebra is the branch of mathematics that deals with
 | $\color{#F99417}\|v\|_2; \|\|v\|\|$ | L2 - Norm of vector `v`|
 | $\color{#F99417}\|v\|_\infin$ | L-infinity - Norm of vector `v`|
 | $\color{#F99417}T: \R^n \rightarrow \R^m;T(v)=w$ | Transformation `T` of a vector `v` $\in \R^n$ into the vector `w` $\in \R^m$|
+
+## Systems of linear equations
+
+A system of linear equations is a collection of equations involving the same set of variables. A system of linear equations can be represented as;
+
+$$a_{11}x_1 + a_{12}x_2 + a_{13}x_3 + ... + a_{1n}x_n = b_1$$
+
+$$a_{21}x_1 + a_{22}x_2 + a_{23}x_3 + ... + a_{2n}x_n = b_2$$
+
+$$a_{31}x_1 + a_{32}x_2 + a_{33}x_3 + ... + a_{3n}x_n = b_3$$
+
+$$...$$
+
+$$a_{m1}x_1 + a_{m2}x_2 + a_{m3}x_3 + ... + a_{mn}x_n = b_m$$
+
+where $\color{#F99417}a_{ij}$ are the coefficients of the variables $\color{#F99417}x_i$ and $\color{#F99417}b_i$ are the constants. The above system of equations can be written in matrix form as;
+
+$$Ax = b$$
+
+where $\color{#F99417}A$ is the matrix of coefficients, $\color{#F99417}x$ is the vector of variables, and $\color{#F99417}b$ is the vector of constants.
+
+- A system of linear equations can have `no solution`, `unique solution`, or `infinite solutions`.
+
+- A system of linear equations are said to be `non - singular` and `consistent` if it has a unique solution. 
+
+- A system of linear equations are said to be `singular` and `redundant` if it has infinite solutions. 
+
+- A system of linear equations are said to be `Singular` and `Contradictory` if it has no solution.
+
+## Slope
+
+The slope of a line is a measure of how steep the line is. It is denoted by $\color{#F99417}m$ and is given by;
+
+$$m = \frac{y_2 - y_1}{x_2 - x_1}$$
+
+where $\color{#F99417}(x_1, y_1)$ and $\color{#F99417}(x_2, y_2)$ are two points on the line.
+
+## Intercept
+
+The intercept of a line is the point where the line crosses the y-axis. It is denoted by $\color{#F99417}c$ and is given by;
+
+$$c = y - mx$$
+
+where $\color{#F99417}(x, y)$ is a point on the line and $\color{#F99417}m$ is the slope of the line.
 
 
 ## Vector
