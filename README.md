@@ -27,6 +27,6 @@ This repository contains the code samples (Jupyter notebooks & Python scripts), 
 
 ---
 
-> _Due to the limitation in rendering some mathematical equations (Latex) in github, the current best way to view the content is to clone the repository and view the markdown files locally._
+### _Like data science; this repository is also math heavy; due to the limitation in rendering some mathematical equations (Latex) in github, the current best way to view the content is to clone the repository and view the markdown files locally._
 
 **[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)**
