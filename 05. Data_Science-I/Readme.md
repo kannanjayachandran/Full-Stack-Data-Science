@@ -11,16 +11,11 @@
 - [Deep learning](#deep-learning)
 - [Generative AI](#generative-ai)
 
-
-
-
 ## Introduction to Data Science
 
 We live in a world drowning in data. Websites, social media platforms, IOT devices and smartphones, smart cars, smart cooker (yes it exists) and what not, generates an incomprehensible amount of data every day. This enormous amount of data although seems like a ever growing problem, is a gold mine for businesses and organizations as they contains answers to questions that can help them make better decisions, understand their customers better, and improve their products and services.
 
-The concept of data science has a historical journey marked by evolving meanings and connotations. Initially, in the 1960s, it emerged as an alternative term for statistics. However, it wasn't until the late 1990s that computer science experts formalized this term. 
-
-
+Data science is the field that deals with extracting insights from data. It is an interdisciplinary field that combines domain knowledge, programming skills, and statistical and mathematical expertise to extract insights from data.
 
 ## Application of data science
 
