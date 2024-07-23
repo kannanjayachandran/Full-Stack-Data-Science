@@ -1,8 +1,26 @@
 <h1 align="center" style="color: orange"> Data Science - I </h1>
 
+## Table of contents
+
+- [Introduction to Data Science](#introduction-to-data-science)
+- [Application of data science](#application-of-data-science)
+- [The Data Science Process](#the-data-science-process)
+    - [Data](#data)
+    - [Qualitative and Quantitative data](#qualitative-and-quantitative-data)
+- [Machine learning](#machine-learning)
+- [Deep learning](#deep-learning)
+- [Generative AI](#generative-ai)
+
+
+
+
+## Introduction to Data Science
+
+We live in a world drowning in data. Websites, social media platforms, IOT devices and smartphones, smart cars, smart cooker (yes it exists) and what not, generates an incomprehensible amount of data every day. This enormous amount of data although seems like a ever growing problem, is a gold mine for businesses and organizations as they contains answers to questions that can help them make better decisions, understand their customers better, and improve their products and services.
+
 The concept of data science has a historical journey marked by evolving meanings and connotations. Initially, in the 1960s, it emerged as an alternative term for statistics. However, it wasn't until the late 1990s that computer science experts formalized this term. 
 
-A proposed definition of data science recognized it as a distinct field encompassing three key facets: **Data design**, **Collection**, and **analysis**. Like computer science, data science has also evolved rapidly from the late 90's due to internet boom, distributed computing and cheap processing and storage.
+
 
 ## Application of data science
 
@@ -20,19 +38,9 @@ A proposed definition of data science recognized it as a distinct field encompas
 
 ![Data science process graphical representation](./img/Data_science_process.png)
 
-## Data
+### Data
 
-![Definition of data](./img/data_def.png)
-
-- > **Set**: In statistics, the population you are trying to discover something about.
-
-- > **Variable**: Measurements or characteristics of an item.
-
-- > **Qualitative variable**: measurements or information about qualities.
-
-- > **Quantitative variable**: measurements or information about quantities or numerical items.
-
-Data, in essence, consists of factual information, encompassing numbers, words, measurements, observations, etc. 
+![Definition of data](./img/data_def.png) 
 
 ### Qualitative and Quantitative data
 
@@ -64,7 +72,10 @@ Deep learning is a subset of machine learning that uses artificial neural networ
 
 Generative AI is a subset of deep learning that uses deep learning to generate new data. It can be used for creating text,  images, videos, music, etc. Generative AI contributes to the recent resurgence of AI and is used in a wide variety of applications such as image generation, text generation, music generation, etc.
 
-Check out the following content to learn more about the mathematical background and data visualization tools required for data science and machine learning:
+---
+
+Now that we have a preliminary understanding of data science, let's delve deeper into the foundational concepts that underpin the field. 
+
 
 - [Linear Algebra for data science and machine learning](./Linear_algebra.md)
 
