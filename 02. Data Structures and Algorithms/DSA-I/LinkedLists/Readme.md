@@ -143,6 +143,8 @@ def reverse_linked_list(head):
     return prev
 ```
 
+- This method is more efficient as it has a time complexity of $O(n)$ and space complexity of $O(1)$.
+
 ```python
 def reverse_list_stack(head):
     stack = []
@@ -158,8 +160,6 @@ def reverse_list_stack(head):
     return new_head
 ```
 
-The second method is more efficient as it has a time complexity of $O(n)$ and space complexity of $O(1)$.
-
 Recursive solution to reverse a linked list:
 
 ```python
@@ -169,6 +169,142 @@ def reverse_linked_list_recursive(current, prev):
     next_node = current.next
     current.next = prev
     return reverse_linked_list_recursive(next_node, current)
+```
+
+### Circular Linked List
+
+In a circular linked list, the last node points to the first node, forming a circle. Circular linked lists are used in applications where the list needs to be traversed in a circular manner. (e.g., round-robin scheduling)
+
+![circular linked list](Circular_linked_list.png)
+
+Simple implementation of circular linked list would look like this:
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+one = Node(10)
+two = Node(20)
+three = Node(30)
+four = Node(40)
+
+one.next = two
+two.next = three
+three.next = four
+four.next = one
+```
+
+- We can view/traverse the circular linked list using the following code:
+
+```python
+def show_circular_list(head: Node):
+    if head is None:
+        return None
+    print(head.data, end=' ')
+    current = head.next
+    while current != head:
+        print(current.data, end=' ')
+        current = current.next
+    print()
+```
+
+- We can insert an element at the beginning of the circular linked list using the following code:
+
+```python
+def insert_at_beginning(head: Node, data: int):
+    new_node = Node(data)
+    if head is None:
+        new_node.next = new_node
+        return new_node
+    new_node.next = head.next
+    head.next = new_node
+    head.data, new_node.data = new_node.data, head.data
+    return head
+```
+
+_Here in order to insert a new node/element at the beginning; First we insert an element at the second position (next of head); then we swap the data of head and the second node, and return the head_.
+
+- We can insert an element at the end of the circular linked list using the following code:
+
+```python
+def insert_at_end(head: Node, data: int):
+    new_node = Node(data)
+    if head is None:
+        new_node.next = new_node
+        return new_node
+    new_node.next = head.next
+    head.next = new_node
+    head.data, new_node.data = new_node.data, head.data
+    return new_node
+```
+
+_Here in order to insert a new node/element at the end; First we insert an element at the second position (next of head); then we swap the data of head and the second node and return the new node_.
+
+- We can delete the first node of the circular linked list using the following code:
+
+```python
+def delete_first_node(head: Node):
+    if head is None:
+        return None
+    
+    # If there is only one node in the list
+    if head.next == head:
+        return None
+    head.data = head.next.data
+    head.next = head.next.next
+    return head
+```
+
+_Here in order to delete the first node; we copy the data of the second node to the head and then update the next of head to the next of the second node and return the head (after copying the data from second node to head node; we link head with third node instead of second node)_.
+
+- We can delete the last node of the circular linked list using the following code:
+
+```python
+def delete_last_node(head: Node):
+    if head is None:
+        return None
+    
+    # If there is only one node in the list
+    if head.next == head:
+        return None
+    current = head
+    while current.next.next != head:
+        current = current.next
+    current.next = head
+    return head
+```
+
+- We can delete the k-th node of the circular linked list using the following code:
+
+```python
+def delete_kth_node(head: Node, k: int):
+    if head is None:
+        return None
+    if k == 1:
+        return delete_first_node(head)
+    current = head
+    for _ in range(k-2):
+        current = current.next
+    current.next = current.next.next
+    return head
+```
+
+- We can search for an element in the circular linked list using the following code:
+
+```python
+def search(head: Node, key: int):
+    if head is None:
+        return False
+    current = head
+    while True:
+        if current.data == key:
+            return True
+        current = current.next
+        if current == head:
+            return False
 ```
 
 **[Implementation](./Implementation.ipynb)**
