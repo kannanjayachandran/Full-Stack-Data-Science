@@ -15,7 +15,11 @@ Data visualization is the process of making sense of data through visual represe
 
 ## Line plot
 
-A line plot is a type of plot that shows the data as a collection of points. We use a line plot to present observations collected at regular intervals. **[plt.plot()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)**
+A plot that shows the data as a collection of points.
+
+- We use a line plot to present observations collected at regular intervals.
+
+**[plt.plot()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)**
 
 ```python
 x = [x*0.1 for x in range(100)]
@@ -70,3 +74,5 @@ A violin plot is similar to a box plot, except that it also shows the probabilit
 ## Heatmap
 
 A heatmap is a two-dimensional representation of data in which values are represented by colors. It is useful to visualize the correlation between features. **[sns.heatmap()](https://seaborn.pydata.org/generated/seaborn.heatmap.html)**
+
+<!-- Add a section that explains what type of data visualization to use for what type of data. -->
