@@ -158,4 +158,4 @@ Core computer science topics we are going to focus on are;
 
 - [Computer Networks](./Computer_Networks.md)
 
-- [Databases](../../04.%20DBMS%20&%20Database%20Technologies/Readme.md)
+- [Databases](../04.%20Database%20Systems%20and%20Technologies/Readme.md)
