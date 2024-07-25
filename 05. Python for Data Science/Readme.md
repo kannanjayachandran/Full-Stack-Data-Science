@@ -5,4 +5,4 @@
 - Matplotlib
 - Seaborn
 
-<!-- Move: Scikit learn, Statmodels, SCipy, Tensorflow and  Pytorch here-->
+<!-- Move: BeautifulSoup, Scikit learn, Statmodels, SCipy, Tensorflow and  Pytorch here-->

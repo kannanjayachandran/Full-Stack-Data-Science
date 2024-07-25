@@ -24,6 +24,7 @@ venv.bak/
 
 # Items not ready for production
 /Extras
-/10. System Design & ML System Design/System_Design_primer.md
-/10. System Design & ML System Design/image.png
-/13. Data Engineering and Big Data tools/Tableau.md
+/14. System Designing and Machine Learning System Designing/System_Design_primer.md
+/14. System Designing and Machine Learning System Designing/image.png
+/15. Data Engineering and Big Data/1. Data Engineering Fundamentals/Excel.md
+/15. Data Engineering and Big Data/1. Data Engineering Fundamentals/Tableau.md
