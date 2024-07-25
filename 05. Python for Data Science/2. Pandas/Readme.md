@@ -6,15 +6,19 @@
 
 <h1 align="center" style="color: orange"> Pandas </h1>
 
-Pandas is a python library that makes working with “relational” or “labeled” data both easy and intuitive. While learning pandas always keep in mind that they are a type of specialized-complex-powerful dictionary. It is excellent for the following types of data:
+Pandas is a python library that makes working with “`relational`” or “`labeled`” data both easy and intuitive. 
 
-- Tabular data with heterogeneously-typed columns, as in an SQL table or Excel spreadsheet
+While learning pandas always keep the following analogy in mind, that they are a type of specialized-complex-powerful dictionary. 
+
+It is excellent for the following types of data:
+
+- Tabular data with heterogeneously-typed columns, as in an SQL table or Excel spreadsheet.
 
 - Ordered and unordered (not necessarily fixed-frequency) time series data.
 
-- Arbitrary matrix data (homogeneously typed or heterogeneous) with row and column labels
+- Arbitrary matrix data (homogeneously typed or heterogeneous) with row and column labels.
 
-- Any other form of observational / statistical data sets. The data need not be labeled at all to be placed into a pandas data structure
+- Any other form of observational / statistical data sets. The data need not be labeled at all to be placed into a pandas data structure.
 
 It provides two primary data structures: 1-Dimensional `Series` and 2-Dimensional `DataFrame`. Some things pandas does well are;
 
@@ -30,15 +34,19 @@ It provides two primary data structures: 1-Dimensional `Series` and 2-Dimensiona
 
 **Axis 0 $\rightarrow rows$ and Axis1 $\rightarrow columns$**
 
+![Axes](Axes.png)
+
 ## Pandas Series and DataFrame
 
 A Series is a one-dimensional array-like object containing a sequence of values (of similar types to NumPy types) and an associated array of data labels, called its index. It is important to understand that a series index can be non-numbers also. 
 
-We can have two types of indices: implicit and explicit. Implicit indices are the default indices that pandas use. They are also called positional indices. They can be numbers only. We use specialized indexer called `iloc` for implicit indexing.
+### Indexing and Slicing
 
- Explicit indices are the ones that we assign to the series. It can be numbers, strings, or any other data type. They are known as labels. By default pandas use explicit indices for indexing (`df[2]`) and implicit indices for slicing (`df[2:5]`). We use specialized indexer called `loc` for explicit indexing. 
+We can have two types of indices: `implicit` and `explicit`. They are also called positional indices. They can be numbers only. We use specialized indexer called `iloc` for implicit indexing.
 
- These two types of indexing becomes extremely important when we have to deal with duplicate indices.
+Explicit indices are the ones that we assign to the series. It can be numbers, strings, or any other data type. They are known as labels. By default pandas use explicit indices for indexing (`df[2]`) and implicit indices for slicing (`df[2:5]`). We use specialized indexer called `loc` for explicit indexing. 
+
+These two types of indexing becomes extremely important when we have to deal with duplicate indices.
 
 ## Important functions
 
@@ -91,4 +99,4 @@ We can have two types of indices: implicit and explicit. Implicit indices are th
 
 - `df.concat()` - Concatenate pandas objects along a particular axis with optional set logic along the other axes.
 
-![Axes](Axes.png)
+The ability of pandas to execute SQL-like operations is what makes it a powerful tool for data manipulation.

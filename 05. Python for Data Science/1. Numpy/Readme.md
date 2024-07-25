@@ -6,7 +6,7 @@
 
 <h1 align="center"> Numpy </h1>
 
-`Numpy` or `Numerical Python` is a python library for scientific and numerical applications. It is the preferred tool for linear algebra operations and working with multi-dimensional array objects. It is optimized for `vectorized operations` and thus it is extensively used for performing operations on individual elements. The primary data structure in Numpy is the `ndarray` (n-dimensional array). It is a `homogeneous multidimensional` array of fixed-size items. 
+`Numpy` or `Numerical Python` is a python library for scientific and numerical applications. It is the preferred tool for linear algebra operations and working with multi-dimensional array objects. It is optimized for `vectorized operations`. The primary data structure in Numpy is the `ndarray` (n-dimensional array). It is a `homogeneous multidimensional` array of fixed-size items. 
 
 ### Some basic concepts of numpy are:
 
@@ -128,7 +128,7 @@ Numpy is heavily optimized for performing `Vectorized` operations. In numpy it i
 
 > All them supports operations along a specified axis. For example, `np.sum(arr, axis=0)` will return the sum of all elements in each column.  
 
-![Axis representation of numpy](image-1.png)
+![Axis representation of numpy](axes.png)
 
 ### Sorting
 
@@ -158,6 +158,6 @@ Structured arrays are nd-arrays whose datatype is a composition of simpler data 
 
 Masked arrays are nd-arrays that have a `mask` property. The mask property is a boolean array that determines whether the corresponding element in the array is valid or not. The mask property can be used to filter out invalid values.
 
-### [Numpy Documentation](https://numpy.org/doc/stable/) | [Numpy tutorials](https://numpy.org/numpy-tutorials/) | [Numpy Case study](./Case_study.ipynb) 
+### [Numpy Documentation](https://numpy.org/doc/stable/) | [Numpy tutorials](https://numpy.org/numpy-tutorials/)
 
-**[Numpy Exercises](./Exercises.ipynb) | [Workbook 1](./Numpy-I.ipynb) | [Workbook 2](./Numpy-II.ipynb) | [Workbook 3](./Numpy-III.ipynb)**
+**[Workbook 1](./Numpy-I.ipynb) | [Workbook 2](./Numpy-II.ipynb) | [Workbook 3](./Numpy-III.ipynb)** | [Numpy Exercises](./Exercises.ipynb)
