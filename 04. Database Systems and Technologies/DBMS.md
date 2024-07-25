@@ -1,8 +1,6 @@
 <h1 align="center"> Databases Management Systems </h1>
 
-DBMS is a software package designed to define, manipulate, retrieve and manage data in a database. It also defines rules to validate and manipulate this data. SQL is used along with the DBMS package to interact with a database. The most popular DBMS's are MySQL, PostgreSQL, SQLite, MongoDB, Redis, Firestore, etc.
-
-_DBMS is a semester long course in most of the universities for undergraduate students. So, we will not go into the details of DBMS. We will only learn the basics of DBMS and SQL._
+A DBMS is a software that allows users to interact with databases. It provides an interface to perform various operations like creating, updating, deleting, and querying data. SQL is used along with the DBMS package to interact with a database. The most popular DBMS's are `MySQL`, `PostgreSQL`, `SQLite`, `MongoDB`, `Redis`, `Firestore`, etc.
 
 ## Why use database over file system ?
 
@@ -17,6 +15,16 @@ _DBMS is a semester long course in most of the universities for undergraduate st
 - **Data independence** : Databases are designed to allow multiple users to access and manipulate data at the same time.
 
 - **Data redundancy** : Databases are designed to allow multiple users to access and manipulate data at the same time.
+
+- **Data consistency** : Databases are designed to allow multiple users to access and manipulate data at the same time.
+
+Here we will be learning about the particular flavors of databases:
+
+- Relational Database : PostgreSQL
+
+- Non-Relational Database : MongoDB
+
+- Key-Value Database : Redis
 
 ## Database Normalization
 

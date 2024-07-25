@@ -1,20 +1,22 @@
-<h1 align="center" style="color: orange"> Database And DBMS </h1>
+<h1 align="center" style="color: orange"> Database And Technologies </h1>
 
-We use database to organize data so that we can query, search, manipulate and process large amount of data in easy and efficient way. Database ensure that data is always in a consistent state and transactions are ACID compliant {Atomicity, Consistency, Isolation, Durability}.
+We use database to organize data so that we can query, search, manipulate and process large amount of data in easy and efficient way.
 
-> Think of database like a _data model_ which cleanly abstract the way in which information is stored on the memory. 
+Think of database like a _`data model`_ which cleanly abstract the way in which information is stored on the memory. 
 
 ## Types of databases
 
-There are different types of databases available for various use cases. The most popular ones are **Relational databases** and **Non-relational databases**. We should choose database based on the performance and scalability requirements of our application.
+There are different types of databases available for various use cases. The most popular ones are **Relational databases** and **Non-relational databases**.
 
-**[Read about DBMS](./DBMS.md)**
+We use a DBMS (Database Management System) to manage databases. A DBMS is a software that allows users to interact with databases. It provides an interface to perform various operations like creating, updating, deleting, and querying data.
+
+**[Read about DBMS](./DBMS.md)**  
 
 ### Relational Databases
 
-Databases built on the **relational data model**, a concept proposed by `Edgar F. Codd` in 1970. It organizes data into relations (also known as tables), where each relation is an unordered collection of tuples (rows). Relational databases typically use SQL (Structured Query Language) or SQL-like query languages to interact with and manipulate data.
+Databases built on the **relational data model**, a concept proposed by `Edgar F. Codd` in 1970. It organizes data into `relations` (also known as tables), where each relation is an unordered collection of tuples (rows). 
 
-Key features of relational databases include:
+Relational databases typically use SQL (Structured Query Language) or SQL-like query languages to interact with and manipulate data. Key features of relational databases include:
 
 1. Structured data organization.
 
@@ -26,16 +28,18 @@ Key features of relational databases include:
 
 1. Support for complex joins, transactions and CRUD operations.
 
-**CRUD** operations; 
+1. Fixed schema.
+
+We majorly perform **CRUD** operations in relational databases: 
 
 1. Create/Insert
 1. Select
 1. Update
 1. Delete/Drop.
 
-- Most popular relational databases are `MySQL`, `PostgreSQL`, `SQLite`,`Oracle database`, etc.
+- Most popular relational databases are `MySQL`, `PostgreSQL`, `SQLite`,`Oracle database`, etc. (Technically, they are DBMSs).
 
-### [SQL](./1_SQL/Basics.md)
+### [Read more about SQL](./1_SQL/Basics.md)
 
 ### Non-Relational Databases
 
@@ -45,7 +49,7 @@ One of the key feature of non-relational databases is that they are horizontally
 
 **Document Databases**
 
-A type of non-relational database designed to store and query data as `JSON-like` documents. They makes it easier for developers to store and query data in a database by using the same _document-model_ format used in their application code. 
+A type of non-relational database designed to store and query data as `JSON-like` documents. They makes it easier for developers to store and query data in a database by using the same _document-model_ format used in their application code.
 
 - Most popular document databases are `MongoDB`, `CouchDB`, `Firebase`, `Firestore` ,etc.
 

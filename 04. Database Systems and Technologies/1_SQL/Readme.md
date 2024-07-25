@@ -4,6 +4,8 @@ SQL _Stands for Structured Query Language_. It is the standard language for inte
 
 > SQL is a _declarative language_, which means that you tell the database what you want to do, and it figures out how to perform the operation in the most efficient way.
 
+Check out the Scripts folder for the SQL scripts. Notebook contains examples of working with Postgres Python client `psycopg2`.
+
 ## Basic terminology
 
 1. **Data value** : A single unit of data. Each entry in a table represents a data value.
