@@ -3,30 +3,58 @@
 ## Table of contents
 
 - [Introduction to Data Science](#introduction-to-data-science)
+
 - [Application of data science](#application-of-data-science)
+
 - [The Data Science Process](#the-data-science-process)
     - [Data](#data)
+    
     - [Qualitative and Quantitative data](#qualitative-and-quantitative-data)
+
 - [Machine learning](#machine-learning)
+
 - [Deep learning](#deep-learning)
+
 - [Generative AI](#generative-ai)
+
+- [Mathematics for data science and machine learning](#mathematics-for-data-science-and-machine-learning)
+    
+- [Data visualization](#data-visualization)
+
+---
+
+In this module we will be covering two foundational areas;
+
+- **Mathematics for data science and machine learning**
+
+- **Data visualization** 
+
+---
 
 ## Introduction to Data Science
 
-We live in a world drowning in data. Websites, social media platforms, IOT devices and smartphones, smart cars, smart cooker (yes it exists) and what not, generates an incomprehensible amount of data every day. This enormous amount of data although seems like a ever growing problem, is a gold mine for businesses and organizations as they contains answers to questions that can help them make better decisions, understand their customers better, and improve their products and services.
+We live in a world drowning in data. Websites, social media platforms, IOT devices,  smartphones, smart cars, smart cooker (yes it exists) and what not, generates an incomprehensible amount of data every day. This enormous amount of data although seems like a ever growing problem, is a gold mine for businesses and organizations as they contains answers to questions that can help them make better decisions, understand their customers better, and improve their products and services.
 
-Data science is the field that deals with extracting insights from data. It is an interdisciplinary field that combines domain knowledge, programming skills, and statistical and mathematical expertise to extract insights from data.
+Data science is the field that deals with extracting insights from data. It is an interdisciplinary field that combines domain knowledge, statistical and mathematical expertise along with programming skills, to extract insights from data.
 
 ## Application of data science
 
-- Healthcare
-- Banking and Finance
-- Transportation and Logistics
 - Retail and E-commerce
-- Manufacturing
-- Education and Research
+
 - Media and Entertainment
+
+- Banking and Finance
+
+- Education and Research
+
+- Healthcare
+
+- Transportation and Logistics
+
+- Manufacturing
+
 - Energy and Utilities
+
 - Government and Public Sector
 
 ## The Data Science Process
@@ -67,10 +95,9 @@ Deep learning is a subset of machine learning that uses artificial neural networ
 
 Generative AI is a subset of deep learning that uses deep learning to generate new data. It can be used for creating text,  images, videos, music, etc. Generative AI contributes to the recent resurgence of AI and is used in a wide variety of applications such as image generation, text generation, music generation, etc.
 
----
+--- 
 
-Now that we have a preliminary understanding of data science, let's delve deeper into the foundational concepts that underpin the field. 
-
+## Mathematics for data science and machine learning
 
 - [Linear Algebra for data science and machine learning](./Linear_algebra.md)
 
@@ -81,5 +108,7 @@ Now that we have a preliminary understanding of data science, let's delve deeper
 - [Calculus for data science and machine learning](./Calculus.md)
 
 - [Discrete Mathematics for data science and machine learning](./Discrete_Mathematics.md)
+
+## Data visualization
 
 - [Data Visualization for data science and machine learning](./Data_visualization.md)
