@@ -1,6 +1,6 @@
 # Style Guide
 
-These are some general styling guidelines specific to this project. The purpose of such a style guide is to ensure quality of the content and uniformity.
+As the project grew, I realized two things large changes are extremely difficult to implement and lack of uniformity (some structure) in the content. This style guide attempts to address the both of these issues.
 
 ## Coding 
 
@@ -8,15 +8,15 @@ These are some general styling guidelines specific to this project. The purpose 
 
 ## Jupyter Notebooks
 
-- Notebooks are meant to supplement the notes present in readme files or to showcase implementation of the concept only. They **should not** be used as a replacement for readme files.
+- Jupyter notebooks are great interactive tools, but here they are meant to supplement the notes (markdown) or to showcase implementation of the concept only. Avoid writing notes in the notebook.
 
-- Notebooks should be present inside the `notebooks` directory inside the respective topic directory.
+- All notebooks should be present inside the `notebooks` directory inside the respective topic directory. If they are the only content in the topic, they can be placed in the respective topic directory.
 
 ## Markdown Style 
 
-Using `html` in markdown is generally a bad idea, and should be avoided as far as possible, but for certain styling purposes described below it may be used (aesthetics purposes only).
+Using `html` in markdown is generally a bad idea, and should be avoided as far as possible, but for certain styling purposes (_aesthetics_) described below it may be used.
 
-1. Centering and coloring the heading
+1. Centering the content
 
 ```markdown 
 <h1 align="center">Main Readme Heading</h1>
@@ -33,4 +33,5 @@ Using `html` in markdown is generally a bad idea, and should be avoided as far a
 ```
 
 ## LaTeX Style
+
 - For mathematical equations using latex, inline equations should be colored using `Orange (#F99417)`. Block equations should not be colored.
