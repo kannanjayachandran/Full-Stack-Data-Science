@@ -307,6 +307,195 @@ def search(head: Node, key: int):
             return False
 ```
 
+- We can reverse a circular linked list using the following code:
+
+```python
+def reverse_circular_list(head: Node):
+    if head is None:
+        return None
+    current = head
+    prev = None
+    while True:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+        if current == head:
+            break
+    head.next = prev
+    return prev
+```
+
+### Doubly Linked List
+
+In a doubly linked list, each node has a data field and two references to the next and previous nodes. Doubly linked lists allow traversal in both directions.
+
+![Doubly Linked list](Doubly_linked_list.png)
+
+A simple Node would look like this:
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+```
+
+- We can create a simple doubly linked list using the `Node` class:
+
+```python
+head = Node(10)
+two = Node(20)
+three = Node(30)
+four = Node(40)
+
+head.next = two
+two.prev = head
+two.next = three
+three.prev = two
+three.next = four
+four.prev = three
+```
+
+- We can traverse the above doubly linked list and print the data of each node using the following code:
+
+```python
+def print_doubly_linked_list(head):
+    current = head
+    while current:
+        print(current.data, end=' -><- ')
+        current = current.next
+    print('None')
+```
+
+- We can search for a particular element in the doubly linked list and return the position if found, else return -1:
+
+```python
+def search(head, key):
+    current = head
+    position = 1
+    while current:
+        if current.data == key:
+            return position
+        current = current.next
+        position += 1
+    return -1
+```
+
+- We can insert a new node at the beginning of the doubly linked list using the following code:
+
+```python
+def insert_at_beginning(head, data):
+    new_node = Node(data)
+    new_node.next = head
+    if head is not None:
+        head.prev = new_node
+    return new_node
+```
+
+- We can insert a new node at the end of the doubly linked list using the following code:
+
+```python
+def insert_at_end(head: Node, data):
+    new_node = Node(data)
+    if head is None or head.next is None:
+        return new_node
+    current = head
+    while current.next.next is not None:
+        current = current.next
+    current.next = new_node
+    new_node.prev = current
+    return head
+```
+
+- We can insert a new node at a given position in the doubly linked list using the following code:
+
+```python
+def insert_at_pos(head, data, position):
+    new_node = Node(data)
+    if position == 1:
+        new_node.next = head
+        head.prev = new_node
+        return new_node
+    current = head
+    for _ in range(position-2):
+        if current is None:
+            raise IndexError("Position out of bound")
+        current = current.next
+
+    if current is None:
+        raise IndexError("Position out of bound")
+
+    new_node.next = current.next
+    new_node.prev = current
+    if current.next is not None:
+        current.next.prev = new_node
+    current.next = new_node
+
+    return head
+```
+
+- We can delete the first node of the doubly linked list using the following code:
+
+```python
+def delete_first_node(head):
+    if head is None:
+        return None
+    if head.next is None:
+        return None
+    head = head.next
+    head.prev = None
+    return head
+```
+
+- We can delete the last node of the doubly linked list using the following code:
+
+```python
+def delete_last_node(head):
+    if head is None:
+        return None
+    if head.next is None:
+        return None
+    current = head
+    while current.next.next is not None:
+        current = current.next
+    current.next = None
+    return head
+```
+
+- We can delete the k-th node of the doubly linked list using the following code:
+
+```python
+def delete_kth_node(head, k):
+    if head is None:
+        return None
+    if k == 1:
+        return delete_first_node(head)
+    current = head
+    for _ in range(k-2):
+        current = current.next
+    if current.next is None:
+        raise IndexError("Position out of bound")
+    current.next = current.next.next
+    if current.next is not None:
+        current.next.prev = current
+    return head
+```
+
+- We can reverse a doubly linked list using the following code:
+
+```python
+def reverse_doubly_list(head: Node):
+    prev = None
+    current = head
+    while current is not None:
+        prev = current
+        current.next, current.prev = current.prev, current.next
+        current = current.prev
+    return prev  
+```
+
 **[Implementation](./Implementation.ipynb)**
 
 ## Questions
