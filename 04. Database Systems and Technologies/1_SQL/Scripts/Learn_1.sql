@@ -1,4 +1,4 @@
--- Learning PSQL 
+-- Creating a table
 CREATE TABLE customer(
 first_name VARCHAR(30) NOT NULL,
 last_name VARCHAR(30) NOT NULL,
