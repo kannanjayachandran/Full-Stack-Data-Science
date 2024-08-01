@@ -1,16 +1,18 @@
-<h1 align="center" style="color: orange"> Database And Technologies </h1>
+<h1 align="center" style="color: orange"> Database Systems And Technologies </h1>
 
-We use database to organize data so that we can query, search, manipulate and process large amount of data in easy and efficient way.
+A __database__ is an organized collection of data, generally stored and accessed electronically from a computer system. A __database management System__ help us to organize data so that we can query, search, manipulate and process large amount of data in easy and efficient way. Think of a database like a _`data model`_ which cleanly abstract the way in which information is stored on disk. 
 
-Think of database like a _`data model`_ which cleanly abstract the way in which information is stored on the memory. 
+**[Read about DBMS](./DBMS.md)**
 
 ## Types of databases
 
 There are different types of databases available for various use cases. The most popular ones are **Relational databases** and **Non-relational databases**.
 
-We use a DBMS (Database Management System) to manage databases. A DBMS is a software that allows users to interact with databases. It provides an interface to perform various operations like creating, updating, deleting, and querying data.
+## Database languages
 
-**[Read about DBMS](./DBMS.md)**  
+Like a programming language to work with computer programs, we have database languages to work with databases. The most popular database language is **SQL (Structured Query Language)**. It is used to interact with relational databases.
+
+**[Read more about SQL](./1_SQL/Readme.md)**
 
 ### Relational Databases
 
@@ -30,16 +32,7 @@ Relational databases typically use SQL (Structured Query Language) or SQL-like q
 
 1. Fixed schema.
 
-We majorly perform **CRUD** operations in relational databases: 
-
-1. Create/Insert
-1. Select
-1. Update
-1. Delete/Drop.
-
-- Most popular relational databases are `MySQL`, `PostgreSQL`, `SQLite`,`Oracle database`, etc. (Technically, they are DBMSs).
-
-### [Read more about SQL](./1_SQL/Basics.md)
+- Most popular relational databases (DBMS's) are `MySQL`, `PostgreSQL`, `SQLite`,`Oracle database`, etc.
 
 ### Non-Relational Databases
 
