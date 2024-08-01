@@ -1,10 +1,8 @@
 # SQL
 
-SQL _Stands for Structured Query Language_. It is the standard language for interacting with relational databases. Here we are using `PostgreSQL` as the database engine.
+SQL _Stands for Structured Query Language_. It is the standard language for interacting with relational databases. SQL is a _declarative language_, which means that you tell the database what you want to do, and it figures out how to perform the operation in the most efficient way.
 
-> SQL is a _declarative language_, which means that you tell the database what you want to do, and it figures out how to perform the operation in the most efficient way.
-
-Check out the Scripts folder for the SQL scripts. Notebook contains examples of working with Postgres Python client `psycopg2`.
+> Here we are using `PostgreSQL`. Check out the **[Scripts](./Scripts/)** folder for the SQL scripts. **[Notebook](./notebook.ipynb)** contains examples of working with Postgres Python client `psycopg2`.
 
 ## Basic terminology
 
@@ -40,23 +38,23 @@ Check out the Scripts folder for the SQL scripts. Notebook contains examples of 
 
 A schema in a database refers to the organization of data. Think of it as a blueprint of how the database is constructed. Schema represents all the tables and the relationships between those tables in a database.
 
-> The formal definition of a database schema is a set of formulas (sentences) called integrity constraints imposed on a database.
-
-To understand database schema better, let us consider the example from the `IMDB` dataset. The schema for the `IMDB` dataset is as follows:
-
-![Schema of IMDB dataset](./img/IMDB_data_schema.png)
+> The formal definition of a database schema is a set of formulas called integrity constraints imposed on a database.
 
 ## SQL Commands
 
 ![SQL Command types](./img/SQL_commands.png)
 
-**DDL (Data Definition Language)** : DDL statements are used to define the database structure or schema.
+**DDL (Data Definition Language)** : DDL statements are used to define the database schema.
 
-**DML (Data Manipulation Language)** : DML statements are used for managing data within schema objects.
+**DML (Data Manipulation Language)** : DML statements are used for managing data (database queries & updates).
 
 **DCL (Data Control Language)** : DCL statements are used to control access to data in the database.
 
 **TCL (Transaction Control Language)** : TCL statements are used to manage the changes made by DML statements.
+
+To understand database schema better, let us consider the example from the `IMDB` dataset. The schema for the `IMDB` dataset is as follows:
+
+![Schema of IMDB dataset](./img/IMDB_data_schema.png)
 
 ## Syntax of SQL queries 
 
