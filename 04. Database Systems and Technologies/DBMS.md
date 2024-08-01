@@ -18,14 +18,6 @@ A DBMS is a software that allows users to interact with databases. It provides a
 
 - **Data consistency** : Databases are designed to allow multiple users to access and manipulate data at the same time.
 
-Here we will be learning about the particular flavors of databases:
-
-- Relational Database : PostgreSQL
-
-- Non-Relational Database : MongoDB
-
-- Key-Value Database : Redis
-
 ## Database Normalization
 
 Database normalization is the process of structuring a relational database in accordance with a series of so-called normal forms in order to _reduce data redundancy_ and improve data integrity. It was first proposed by Edgar F. Codd as an integral part of his relational model.
