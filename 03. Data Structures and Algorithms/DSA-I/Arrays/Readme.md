@@ -76,3 +76,4 @@ In _python_ we have **Lists** that are superset of arrays. Lists can contain ele
 11. Merge overlapping intervals
 12. Monotonic array
 13. Minimum operations to empty the array
+14. Number of senior citizens
