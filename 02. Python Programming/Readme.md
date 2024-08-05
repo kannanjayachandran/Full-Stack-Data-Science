@@ -182,6 +182,10 @@ OOPS properties in Python are similar to other major object oriented languages. 
 
 - Python does not support constructor overloading the same way as C++ or Java.  The `__init__` method is used for initialization, and multiple ways of initializing an object can be handled with default arguments or conditional logic within `__init__`.
 
+### Dunder Methods or Magic Methods
+
+- `Dunder` methods or magic methods are special methods that have double underscores at the beginning and end of their names. They are used to create functionality that can't be represented as a normal method.
+
 [OOPS and File Handling Notebook](./Notebooks/9_OOPS_and_File_handling.ipynb)
 
 ## List
