@@ -50,6 +50,8 @@ These two types of indexing becomes extremely important when we have to deal wit
 
 ## Important functions
 
+> All most all functions in pandas return a new data frame or series; which means we can chain almost all functions together to improve readability.
+
 - `pd.read_csv()` - Read a comma-separated values (csv) file into DataFrame.
 
     >  `pd.read_excel(), pd.read_sql(), pd.read_json()` 
