@@ -4,105 +4,90 @@
     <a href="#theoretical-computer-science"><img src="./img/main_poster.png" alt="Logo" height=380></a>
 </p>
 
-Computer science is the study of algorithms, computational systems, and the principles underlying the design of computer hardware and software. Here we will discuss the core concepts of computer science.
+---
 
-## Theoretical computer science
+**Computer science** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_ to how well software is developed and designed. **Computer scientists** use various mathematical algorithms, coding procedures, and their expert programming skills to study computer processes and develop new software and systems.
 
-It is a branch of computer science and mathematics that deals with what problems can be solved on a model of computation, using an algorithm and how efficiently they can be solved or to what degree. It has 3 major subfields:
+We also have **Computer Engineering** which is concerned with the design of computer hardware and of computer-based devices or software interacting tightly with the hardware for embedded systems and computer-based devices.
 
-### Computability Theory
+**Information systems** as a field has to do with applying today’s information technology to solve today’s problems, typically in the area of businesses and other enterprises.
 
-Studies the general properties of computation, including decidability, computability, and Turing completeness. **In short, it studies what problems can be solved or to what extend solvable on a computer.**
+## Historical Context
 
-- **Turing Machines**: Introduced by Alan Turing in the 1936, Turing machines are abstract mathematical models of computation. It provide a formal way to describe algorithms and computable functions.
+Originally, computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating 0s and 1s.
 
-**More on [computability theory](https://en.wikipedia.org/wiki/Computability_theory)**
+Alan Turing is considered the father of computer science. He formalized the concept of a **Turing machine**, which is a simple description of a general-purpose computer. A Turing machine consists of an infinitely long tape divided into cells containing symbols, a head that can read and write symbols, a state register that stores the head's state, and a list of possible instructions. This forms the basis of modern computers.
 
-### Automata Theory and Formal Language Theory
+![AI generated image of a turing machine](./img/Turing_machine.jpeg)
+> AI generated image; Not an actual Turing machine
 
-Automata theory is the study of abstract machines (also known as `automata`) and the computational problems that can be solved using these machines. It is closely related to formal language theory, which studies the properties of formal languages and their relation to automata.
+## Theoretical Computer Science
 
-**More on [Automata Theory](https://en.wikipedia.org/wiki/Automata_theory) and [Formal Language Theory](https://en.wikipedia.org/wiki/Formal_language)**
+Theoretical computer science examines the problems that can be solved using computational models and algorithms, focusing on their efficiency and solvability.
 
-### Computational complexity theory
+**Computability Theory** : It studies the general properties of computation, including decidability, computability, and Turing completeness. It addresses what problems can be solved on a computer. **More on [computability theory](https://en.wikipedia.org/wiki/Computability_theory)**
 
-It studies how efficiently a problem can be solved. It helps us to compute the resources required to solve a problem, such as time, memory, and other resources.
+**Automata Theory and Formal Language Theory** : Automata theory studies abstract machines (automata) and the computational problems they can solve. It is closely linked to formal language theory, which examines the properties of formal languages and their relationship to automata. **More on [Automata Theory](https://en.wikipedia.org/wiki/Automata_theory) and [Formal Language Theory](https://en.wikipedia.org/wiki/Formal_language)**
 
-- **Time and space complexity**: Measures the amount of time and space/memory required to solve a problem as a function of the input size. We use asymptotic notation, such as `O(n)`, `Ω(n)`, and `Θ(n)`, to describe the complexity of algorithms.
+![Automata](./img/Automata_theory.png)
 
-    - **Big O notation (O)**: It provides an upper bound on the growth rate of a function. It describes the worst-case scenario of an algorithm.
-    
-    - **Big Omega notation (Ω)**: It provides a lower bound on the growth rate of a function. It describes the best-case scenario of an algorithm.
-    
-    - **Big Theta notation (Θ)**: It provides both upper and lower bounds on the growth rate of a function. It describes the average-case scenario of an algorithm.
+**Computational complexity theory** : This field examines how efficiently problems can be solved, considering resources like time and memory.
 
-- **Classes of problems**: Computational complexity theory classifies problems into various complexity classes based on their inherent difficulty. Some of the key classes include:
+1. **Time and space complexity**: Measures the time and memory required to solve a problem as a function of input size, using asymptotic notation such as `O(n)`, `Ω(n)`, and `Θ(n)`.
+
+2. **Classes of problems**: Problems are classified into complexity classes based on their difficulty.
 
     - **P (polynomial time)**: Problems that can be solved in polynomial time.
     
-    - **NP (nondeterministic polynomial time)**: Problems for which a solution can be verified in polynomial time. 
-
-    > If someone claims to have a solution to an NP problem, we can quickly verify whether the solution is correct or not in polynomial time. However, finding the solution itself might be computationally difficult.
-    >
-    > Eg. _Boolean satisfiability problem (SAT)_, _The traveling salesman problem (TSP)_, and _The vertex cover problem_.
+    - **NP (nondeterministic polynomial time)**: Problems for which a solution can be verified in polynomial time. Examples include the Boolean satisfiability problem (SAT), the traveling salesman problem (TSP), and the vertex cover problem.
     
-    - **NP-complete**: If a problem is NP-complete, it means that it is as hard as the hardest problems in NP. The hardest problems in NP, to which all other problems in NP can be reduced in polynomial time. *If a polynomial-time algorithm exists for any NP-complete problem, then polynomial-time algorithms exist for all problems in NP, implying that P = NP.* 
+    - **NP-complete**: The hardest problems in NP, to which all other NP problems can be reduced in polynomial time. A polynomial-time algorithm for any NP-complete problem implies P = NP.
 
-    - **NP-hard**: Problems that are at least as hard as the hardest problems in NP but may not be in NP themselves. They are not necessarily verifiable in polynomial time.
-
-    > In summary, P represents problems solvable in polynomial time, NP represents problems verifiable in polynomial time, NP-complete represents the hardest problems in NP, and NP-hard represents problems at least as hard as NP-complete problems.
+    - **NP-hard**: Problems at least as hard as the hardest NP problems but not necessarily in NP.
 
 ### Information theory
 
-Studies the properties of information and how it can be stored, measured, and communicated. Read more about **[Information Theory article on Wikipedia](https://en.wikipedia.org/wiki/Information_theory)**.
+This field studies the properties of information and how it can be stored, measured, and communicated. Read more about **[Information Theory article on Wikipedia](https://en.wikipedia.org/wiki/Information_theory)**.
+
+![Information theory](./img/information_theory.png)
 
 ### Cryptography 
 
-Studies the techniques for secure communication and data protection. It involves the design and analysis of cryptographic algorithms and protocols to ensure the confidentiality, integrity, and authenticity of data. It is closely related to information theory.
+Cryptography involves techniques for secure communication and data protection, designing and analyzing cryptographic algorithms and protocols to ensure data confidentiality, integrity, and authenticity.
+
+![Cryptography](./img/cryptography.png)
 
 ### Graph theory 
 
-Studies the properties and applications of graphs, which are mathematical structures used to model pairwise relations between objects. It is extensively used in computer science for modeling networks, social relationships, and optimization problems.
+Graph theory examines the properties and applications of graphs, which model pairwise relationships between objects. It is used in modeling networks, social relationships, and optimization problems.
 
-### Computational geometry 
+## Computer Architecture
 
-Studies algorithms and data structures for solving geometric problems. It has applications in computer graphics, geographic information systems, and robotics.
+A typical computer system's architecture would look like this:
 
-### Quantum computation 
+![Computer System's architecture](./img/Arch.png)
 
-Studies the use of quantum-mechanical phenomena, such as superposition and entanglement, to perform computation. It has the potential to solve certain problems more efficiently than classical computers. 
+It will have;
 
-## Computer Engineering
+- **Central Processing Unit (CPU)**: The brain of the computer, responsible for executing instructions and performing calculations.
 
-It deals with the design and construction of computer systems and hardware. 
+- **Memory**: RAM (Random Access Memory) Stores data and instructions that the CPU needs to access quickly. Then we have secondary storage devices like hard drives and SSDs that store data more permanently.
 
-A computer understands and processes information in the form of digital signals, which are represented as 0s and 1s. We use programming languages to write code (human readable form), which is then translated into machine code (0s and 1s) that the computer can understand and execute.
-
-A typical computer architecture would look something like this:
-
-![Computer architecture](./img/Arch.png)
-
-- A central processing unit.
-
-- Memory (Different levels of cache memory, RAM, secondary storage, etc).
-
-- GPU's, TPU's, or other specialized hardware for specific tasks.
-
-### Memory and Information representation
-
-Information is represented in computers as 0s and 1s, known as `bits`. These bits can be used to represent numbers, letters, pictures, sounds, and more. The smallest unit of information is a bit, and a group of `8 bits` is called a `byte`. A byte can represent 256 different values `(2^8)`. A byte can also represent a single character in the ASCII character set. 
-
-Computers memory is divided into small units called **cells**. Typically each cell holding a **byte**. 
-
-![Computer Memory](./img/computer_memory_diagram.png)
-
-While there's no physical left or right orientation, we often visualize memory cells as linear, with the high-order end on the left and the low-order end on the right. The high-order bit, or most significant bit, is the leftmost bit, and the low-order bit, or least significant bit, is the rightmost bit.
-
-- We use `boolean operations` to manipulate bits. Boolean operations are logical operations that operate on one or more bits and produce a bit as a result. The most common boolean operations are `AND`, `OR`, and `NOT`. These gates can be combined to create more complex arithmetic and logical operations.
-
-- A gate is a device that generates the output of a Boolean operation based on its input values. In modern computers, gates are typically made as small electronic circuits where 0s and 1s are represented by different voltage levels. They serve as the fundamental components upon which computers are built.
+- **Input/Output (I/O) devices**: These devices allow the computer to interact with the outside world, such as keyboard, mouse, monitors, network card, etc.
 
 ### CPU (Central Processing Unit)
+
+Inside the CPU; we find an integrated circuit or Die (or chip) that contains Processor cores, a memory controller, a graphics processor and many other components. The following is a labelled die shot of a 13-th gen Intel Core i9 processor (Raptor Lake) with 24 cores.
+
+![Die shot of a chip](./img/die_shot.png)
+> Image link: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/a/a4/Intel_Core_i9-13900K_Labelled_Die_Shot.jpg)
+
+If we zoom in further, into each individual core, we will find the following components;
+
+
+we will find a layout of around 44000 transistors physically execute 32-bit instructions. 
+
+For ease of reference; we will will be using the above diagram to explain the components of a CPU.
 
 It is responsible for executing instructions and performing calculations. 
 
@@ -119,6 +104,24 @@ The following diagram illustrates the memory hierarchy in a typical computer sys
 <p align="center">
     <a href="#cpu-central-processing-unit"><img src="./img/Memory_hierarchy.png" alt="Logo" height=380></a>
 </p>
+
+
+
+### Memory and Information representation
+
+Information is represented in computers as 0s and 1s, known as `bits`. These bits can be used to represent numbers, letters, pictures, sounds, and more. The smallest unit of information is a bit, and a group of `8 bits` is called a `byte`. A byte can represent 256 different values `(2^8)`. A byte can also represent a single character in the ASCII character set. 
+
+Computers memory is divided into small units called **cells**. Typically each cell holding a **byte**. 
+
+![Computer Memory](./img/computer_memory_diagram.png)
+
+While there's no physical left or right orientation, we often visualize memory cells as linear, with the high-order end on the left and the low-order end on the right. The high-order bit, or most significant bit, is the leftmost bit, and the low-order bit, or least significant bit, is the rightmost bit.
+
+- We use `boolean operations` to manipulate bits. Boolean operations are logical operations that operate on one or more bits and produce a bit as a result. The most common boolean operations are `AND`, `OR`, and `NOT`. These gates can be combined to create more complex arithmetic and logical operations.
+
+- A gate is a device that generates the output of a Boolean operation based on its input values. In modern computers, gates are typically made as small electronic circuits where 0s and 1s are represented by different voltage levels. They serve as the fundamental components upon which computers are built.
+
+
 
 ### Programming Languages
 
