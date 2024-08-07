@@ -17,8 +17,8 @@ We also have **Computer Engineering** which is concerned with the design of comp
 Originally, computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating 0s and 1s.
 
 Alan Turing is considered the father of computer science. He formalized the concept of a **Turing machine**, which is a simple description of a general-purpose computer. A Turing machine consists of an infinitely long tape divided into cells containing symbols, a head that can read and write symbols, a state register that stores the head's state, and a list of possible instructions. This forms the basis of modern computers.
+<p align="center"><img src="./img/Turing_machine.jpeg" alt="AI generated image of a turing machine" height=380></p>
 
-![AI generated image of a turing machine](./img/Turing_machine.jpeg)
 > AI generated image; Not an actual Turing machine
 
 ## Theoretical Computer Science
@@ -154,7 +154,7 @@ print(c)
 
 The CPU performs a machine cycle, which includes accessing data, performing operations, and storing results back in memory. Modern CPUs can execute billions of machine cycles per second, synchronized by the clock generator. The speed of the clock is measured in GHz (Gigahertz), where 1 GHz equals 1 billion cycles per second.
 
-<img src="./img/machine_cycle.png" alt="Machine Cycle" height=380>
+<p align="center"><img src="./img/machine_cycle.png" alt="Machine Cycle" height=380></p>
 
 ---
 
@@ -164,7 +164,7 @@ The CPU performs a machine cycle, which includes accessing data, performing oper
 
 A typical computer system features a hierarchy of memory levels, each with different speed, capacity, and cost characteristics. This hierarchy helps balance the trade-offs between fast, small, and expensive memory (like CPU cache) and slow, large, and cheaper memory (like secondary storage).
 
-![Memory Hierarchy](./img/memory_hierarchy.png)
+![Memory Hierarchy](./img/Memory_hierarchy.png)
 
 Computer memory is divided into small units called cells, typically each holding a **byte**. Although there's no physical orientation, memory cells are often visualized linearly, with the high-order end on the left and the low-order end on the right. The high-order bit (most significant bit) is the leftmost bit, and the low-order bit (least significant bit) is the rightmost bit.
 
