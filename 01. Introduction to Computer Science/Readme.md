@@ -69,7 +69,7 @@ A typical computer system's architecture would look like this:
 
 It will have;
 
-- **Central Processing Unit (CPU)**: The brain of the computer, responsible for executing instructions and performing calculations.
+- **Central Processing Unit (CPU)**: Responsible for executing instructions and performing calculations.
 
 - **Memory**: RAM (Random Access Memory) Stores data and instructions that the CPU needs to access quickly. Then we have secondary storage devices like hard drives and SSDs that store data more permanently.
 
@@ -82,78 +82,155 @@ Inside the CPU; we find an integrated circuit or Die (or chip) that contains Pro
 ![Die shot of a chip](./img/die_shot.png)
 > Image link: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/a/a4/Intel_Core_i9-13900K_Labelled_Die_Shot.jpg)
 
-If we zoom in further, into each individual core, we will find the following components;
+> For ease of reference; we will will be using the above diagram to explain the components of a CPU.
+
+**CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. They might also have something called hyper-threading, which allows each core to execute multiple threads simultaneously. The number of threads can be twice the number of cores in CPUs with hyper-threading. Not all cores might have similar performance to efficiency ratios; some cores might be optimized for performance while others might be optimized for efficiency (P-Cores and E-Cores).
+
+The following are the components typically found inside a modern CPU Core:
+
+- **Floating Point Unit (FPU)**: A specialized unit for performing floating-point arithmetic operations, such as addition, subtraction, multiplication, and division.
+
+- **Integer Execution Units**: These units perform integer arithmetic operations, such as addition, subtraction, multiplication, and division. It is a critical part of the CPU for general purpose computing.
+
+- **Out of order scheduler and Retirement unit**: This unit allows the CPU to execute instructions out of the order they appear in the program. This increases efficiency by making better use of CPU resources. After instructions are executed out-of-order, the retirement unit ensures they are retired (completed) in the correct order, maintaining the program's logical flow.
+
+- **Decode Unit**: This unit decodes instructions fetched from memory into micro-operations that can be executed by the CPU's execution units.
+
+- **Registers (Integer and Floating Point)**: Registers are small, fast storage locations within the CPU used to store data temporarily during processing. They are used to hold operands, intermediate results, and memory addresses.
+
+- **Cache (L1, L2, L3)**: Small, fast memory unit that stores frequently accessed data and instructions to speed up access. Modern CPUs typically have a multi-level cache system, usually referred to as L1, L2, and L3 caches. L1 is the smallest and fastest, located closest to the CPU cores.
+
+- **Branch Prediction Unit**: This unit predicts the outcome of conditional branches in the program to minimize the performance impact of branch mis-predictions.
+
+Additionally we have many other complex components also. Essentially inside every CPU Core in our current processor we will find a layout of around 44000 transistors physically execute 32-bit instructions. The processor in the diagram has around 26 Million transistors. 
+
+With transistors we can build logic gates and by combining logic gates in a certain way we can build complex circuits that can perform calculations according to boolean algebra.
+
+**An Example**: Let's see what happens when we run a python program that adds two numbers.
+
+```python
+a, b = 5, 3
+c = a + b
+print(c)
+```
+
+**PHASE 1: Python Source Code Execution**
+
+1. We run the program in the terminal. `python3 add.py`
+
+2. The Python interpreter reads the source code and breaks it down into tokens (keywords, operators, identifiers) {Lexical Analysis}.
+
+3. The tokens are parsed to form an Abstract Syntax Tree (AST), representing the structure of the code.
+
+4. The AST is compiled into Python bytecode, an intermediate representation that is platform-independent.
+
+5. The Python Virtual Machine (PVM) executes the bytecode. For each bytecode instruction:
+    - Fetches the instruction.
+
+    - Decodes the instruction.
+
+    - Executes the instruction using a stack-based virtual machine.
+
+**PHASE 2: CPU Execution**
+
+1. The CPU fetches the next instruction (bytecode) from memory.
+
+2. The decode unit translates the instruction into micro-operations (`μOps`) that the CPU can execute.
+
+3. Instructions are sent to the out-of-order execution unit, allowing the CPU to execute instructions as resources become available rather than strictly sequentially.
+
+4. Integer and floating-point values (e.g., `a` and `b`) are loaded into CPU registers.
+
+5. The integer execution unit performs the addition of `a` and `b`.
+
+6. The CPU may access L1/L2 caches to fetch operands and store results, minimizing latency compared to accessing main memory.
+
+7. The result of the addition (`c`) is stored back in the memory.
+
+8. Instructions are retired in order, ensuring the program's logical flow is maintained.
+
+9. The result (`8`) is sent to the output device (console) via system calls, which involve interaction with the operating system.
 
 
-we will find a layout of around 44000 transistors physically execute 32-bit instructions. 
+The CPU performs a machine cycle, which includes accessing data, performing operations, and storing results back in memory. Modern CPUs can execute billions of machine cycles per second, synchronized by the clock generator. The speed of the clock is measured in GHz (Gigahertz), where 1 GHz equals 1 billion cycles per second.
 
-For ease of reference; we will will be using the above diagram to explain the components of a CPU.
+<img src="./img/machine_cycle.png" alt="Machine Cycle" height=380>
 
-It is responsible for executing instructions and performing calculations. 
+---
 
-- **CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. This allows for parallel processing and improved performance.
+## Information Representation in Computers
 
-- **Cache Systems**: Cache is a small, fast memory unit that stores frequently accessed data and instructions to speed up the access.  Modern CPUs typically have a multi-level cache system, usually referred to as L1, L2, and L3 caches. L1 is the smallest and fastest, located closest to the CPU cores.
+**Binary Data** : Information in computers is represented as binary data, a sequence of 0s and 1s known as bits. A group of 8 bits forms a byte, which can have 256 different combinations, allowing it to represent numbers, characters, and other data types.
 
-- **Instruction Pipeline**: CPUs use instruction pipelines to execute multiple instructions simultaneously. Each stage of the pipeline performs a specific task, such as fetching instructions, decoding them, and executing them. This doesn’t reduce the time it takes to complete an individual instruction; instead, it increases the number of instructions that can be processed simultaneously. This leads to a significant increase in overall CPU throughput
+A typical computer system features a hierarchy of memory levels, each with different speed, capacity, and cost characteristics. This hierarchy helps balance the trade-offs between fast, small, and expensive memory (like CPU cache) and slow, large, and cheaper memory (like secondary storage).
 
-- Main memory, often termed random access memory (RAM), allows independent access to cells, unlike mass storage systems (hard disk, SSD, etc) that handle data in large blocks.
+![Memory Hierarchy](./img/memory_hierarchy.png)
 
-The following diagram illustrates the memory hierarchy in a typical computer system.
-
-<p align="center">
-    <a href="#cpu-central-processing-unit"><img src="./img/Memory_hierarchy.png" alt="Logo" height=380></a>
-</p>
-
-
-
-### Memory and Information representation
-
-Information is represented in computers as 0s and 1s, known as `bits`. These bits can be used to represent numbers, letters, pictures, sounds, and more. The smallest unit of information is a bit, and a group of `8 bits` is called a `byte`. A byte can represent 256 different values `(2^8)`. A byte can also represent a single character in the ASCII character set. 
-
-Computers memory is divided into small units called **cells**. Typically each cell holding a **byte**. 
+Computer memory is divided into small units called cells, typically each holding a **byte**. Although there's no physical orientation, memory cells are often visualized linearly, with the high-order end on the left and the low-order end on the right. The high-order bit (most significant bit) is the leftmost bit, and the low-order bit (least significant bit) is the rightmost bit.
 
 ![Computer Memory](./img/computer_memory_diagram.png)
 
 While there's no physical left or right orientation, we often visualize memory cells as linear, with the high-order end on the left and the low-order end on the right. The high-order bit, or most significant bit, is the leftmost bit, and the low-order bit, or least significant bit, is the rightmost bit.
 
-- We use `boolean operations` to manipulate bits. Boolean operations are logical operations that operate on one or more bits and produce a bit as a result. The most common boolean operations are `AND`, `OR`, and `NOT`. These gates can be combined to create more complex arithmetic and logical operations.
 
-- A gate is a device that generates the output of a Boolean operation based on its input values. In modern computers, gates are typically made as small electronic circuits where 0s and 1s are represented by different voltage levels. They serve as the fundamental components upon which computers are built.
+## Programming Languages
 
+Programming languages are formal languages used to communicate instructions to a computer, enabling the execution of specific tasks. They can be classified based on various criteria, including their level of abstraction, execution method, design paradigm, and domain-specific applications.
 
+### Level of Abstraction
 
-### Programming Languages
+- **Low-level languages**: Low-level languages are close to the hardware and provide direct control over the computer's resources. They are difficult to read and write but offer high performance and efficiency. (Assembly language, Machine code)
 
-Programming languages are formal languages used to communicate instructions to a computer. They allow us to write code that can be executed by a computer to perform specific tasks. Programming languages can be classified into several categories based on their design and intended use.
+- **High-level languages**: High-level languages are designed to be easy to read and write, making them more accessible to programmers. They can be further categorized into:
 
-High level overview of programming languages would look like this:
+    - **Procedural Languages**: Focus on procedures or functions that perform specific tasks. Examples: C, Pascal, Fortran.
 
-![Software and programming languages](./img/lang.png)
+    - **Object-Oriented Languages**: Organize code into objects that interact with each other. Examples: Java, C++, Python.
 
-> We have detailed discussion on our programming language of choice, **Python** in the next section.
+    - **Functional Languages**: Treat computation as the evaluation of mathematical functions and avoid changing state or mutable data. Examples: Haskell, Lisp.
 
-- **Low-level languages**: These languages are close to the hardware and provide direct control over the computer's resources. They are difficult to read and write but offer high performance and efficiency. Examples include assembly language and machine code.
+    - **Scripting Languages**: Designed for automating tasks and often used for web development, system administration, and data analysis. Examples: JavaScript, Python, Ruby.
 
-- **High-level languages**: These languages are designed to be easy to read and write, making them more accessible to programmers. They are further divided into several categories:
+- **Domain-Specific Languages (DSLs)**: Domain-specific languages are designed for specific domains or tasks, such as:
 
-    - **Procedural languages**: These languages focus on procedures or functions that perform specific tasks. Examples include C, Pascal, and Fortran.
-    
-    - **Object-oriented languages**: These languages organize code into objects that interact with each other. Examples include Java, C++, and Python.
-    
-    - **Functional languages**: These languages treat computation as the evaluation of mathematical functions and avoid changing state or mutable data. Examples include Haskell, Lisp, and ML.
-    
-    - **Scripting languages**: These languages are designed for automating tasks and are often used for web development, system administration, and data analysis. Examples include JavaScript, Python, and Ruby.
+    - `SQL` for database queries.
+    - `HTML` for web development.
+    - `MATLAB` for scientific computing.
+    - `VHDL` for hardware description.
 
-- **Domain-specific languages (DSL's)**: These languages are designed for specific domains or tasks, such as SQL for database queries, HTML for web development, and MATLAB for scientific computing.
+### Execution Method
+- **Compiled Languages**: Compiled languages are translated into machine code before execution, providing faster runtime performance. Examples include:
+    - C, C++, Rust, Go.
 
-- **Compiled vs. interpreted languages**: Programming languages can be compiled or interpreted. Compiled languages are translated into machine code before execution, while interpreted languages are translated into machine code during execution. Then there are languages that use a combination of both techniques. Both compiled and interpreted languages have their advantages and disadvantages and the way they are executed are pretty complex.
+- **Interpreted Languages**: Interpreted languages are translated into machine code during execution, allowing for more flexibility and easier debugging. Examples include:
+    - Python, Ruby, JavaScript.
 
-- **Syntax and semantics**: Programming languages have syntax and semantics that define the rules for writing valid code and the meaning of that code. Syntax refers to the structure of the code, while semantics refer to its meaning. Syntax errors occur when the code violates the language's rules, while semantic errors occur when the code does not behave as expected.
+- Some languages use a combination of both techniques, providing a balance between performance and flexibility. Examples include:
 
-- **Paradigms**: Programming languages are based on different programming paradigms, such as `imperative`, `declarative`, `functional`, and `object-oriented`. Each paradigm has its own set of concepts and principles for writing code.
+    - Java (compiled to bytecode, then interpreted or JIT-compiled at runtime)
+    - C# (compiled to intermediate language, then JIT-compiled)
 
-Core computer science topics we are going to focus on are;
+In fact we cannot say a language is purely compiled or interpreted. For example, Java is compiled to bytecode and then interpreted or Just-In-Time compiled at runtime. Python is compiled to bytecode and then interpreted by the Python Virtual Machine (PVM).
+
+### Language Syntax and Semantics
+
+**Syntax**: The set of rules that define the structure of valid code. Syntax errors occur when the code violates these rules.
+
+**Semantics**: The meaning of the code, defining how it behaves. Semantic errors occur when the code does not behave as expected.
+
+### Programming Paradigms
+
+Programming languages are based on different paradigms, each with its own set of concepts and principles:
+
+**Imperative Paradigm**: Focuses on how to perform tasks using statements that change a program's state. Examples: C, Java.
+
+**Declarative Paradigm**: Focuses on what the program should accomplish without specifying how. Examples: SQL, HTML.
+
+**Functional Paradigm**: Treats computation as the evaluation of mathematical functions and avoids mutable state. Examples: Haskell, Lisp.
+
+**Object-Oriented Paradigm**: Organizes code into objects that encapsulate data and behavior. Examples: Java, C++, Python.
+
+Other Core CS Concepts are covered in the following sections:
 
 - [Data structures and algorithms](../03.%20Data%20Structures%20and%20Algorithms/Readme.md)
 
