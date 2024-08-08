@@ -6,17 +6,9 @@ Python is a `open source`, `high-level`, `interpreted`, and `general-purpose` pr
 
 Every variables in python is a reference ($\color{FEC260} \tt \text{ like a  pointer}$) to an object. if we write $\color{FEC260}n = 300$ we are creating an integer object with value 300 and bind the variable $\color{FEC260}n $ to this object. Each object created would have unique id’s {$\color{FEC260} \tt \text{ the memory address }$}, which we can see using the $\tt\color{FEC260}id()$ function. Everything in python is  an object { variables, functions, modules }.
 
-<p align="center">
-    <a href="#heading">
-        <img src="./img/memory_ref.png" alt="Logo" height=150>
-    </a>
-</p>
+<p align="center"><img src="./img/memory_ref.png" alt="Logo" height=150></p>
 
-<p align="center">
-    <a href="#heading">
-        <img src="./img/memory_ref2.png" alt="Logo" height=380>
-    </a>
-</p>
+<p align="center"><img src="./img/memory_ref2.png" alt="Logo" height=380></p>
 
 > Dynamic memory allocation in the heap
 
@@ -150,13 +142,76 @@ Like other programming languages, Python also supports functions. A function is 
 
 **[Functions Notebook](./Notebooks/8_Functions.ipynb)**
 
+### Lambda Functions
+
+Lambda functions are small anonymous functions. They can have any number of arguments but only one expression. The expression is evaluated and returned. Lambda functions can be used wherever function objects are required.
+
+## String
+
+Strings in Python are immutable sequences of Unicode code-points/ arrays or bytes representing unicode characters. Strings are ordered, indexed, and can contain duplicate elements. They are also iterable. We can slice and use the membership operator in strings.
+
+**[String Notebook](./Notebooks/7_String.ipynb)**
+
+
+## Built-in Containers
+
+### List
+
+Python lists are heterogeneous, mutable built-in data structures. Lists are indexed, dynamic and allows duplicate elements. Most of the operations on a list takes $\color{FEC260}O(1)$ or $\color{FEC260}O(n)$ time complexity. Lists has a powerful mechanism to create new lists from other iterable (list, tuple, strings, etc.) called List comprehension. Lists are ordered also. Lists are superset of arrays.
+
+- During list slicing, we are creating a new list object. We can use the slicing technique in other python data structures like tuple, string, etc.
+
+- List comprehension is an elegant way to generate new lists form existing ones. Internally python would run a loop to do this, hence the complexity of comprehension would be similar to the iterative implementation. 
+
+**[List Notebook](./Notebooks/3_List.ipynb)**
+
+### Tuple
+
+Tuples are basically immutable or read-only lists. The tuple stores items as reference, hence the tuple is immutable not the items; i.e. we can change the contents of a list inside a tuple but we cannot change the item in the tuple. 
+
+- Tuples are generally faster than lists because they are immutable. 
+
+**[Tuple Notebook](./Notebooks/4_Tuple.ipynb)**
+
+### Set
+
+Set is an unordered data structure in python, where every item is unique and immutable, however the set itself is mutable. Set allows fast insertion, deletion and searching. 
+
+- We can insert, delete, and search a list in amortized  $\color{gold}O(1)$ time complexity. 
+
+- Set uses hashing under the hood and that’s how it achieves that $\color{gold}O(1)$ time complexity. 
+
+- Set also supports different set (Mathematical set) operations like Union, Intersection, Difference, Symmetric difference, etc. 
+
+- Sets are also highly optimized for membership tests, it can do membership test in $\color{gold}O(1)$ (amortized).
+
+**[Set Notebook](./Notebooks/6_Set.ipynb)**
+
+### Dictionary
+
+A dictionary is a collection of key-value pairs. They are generally unordered, indexed, and mutable. The key is used to access the value and the key must be unique (immutable objects). The value can be any data type. Under the hood dictionaries also use hashing like sets.
+
+- Dictionaries are highly optimized for searching, insertion, and deletion.
+
+- Dictionaries are also highly optimized for membership tests, it can do membership test in $\color{gold}O(1)$ (amortized).
+
+**Shallow Copy and Deep Copy**
+
+Shallow copy creates a new dictionary and copy references to the objects found in the original dictionary. Hence changes to mutable objects within the copy affect the original dictionary.
+
+Deep copy creates a new dictionary and recursively copies the objects found in the original dictionary. Hence changes to mutable objects within the copy do not affect the original dictionary.
+
+- Dictionaries also support comprehension like lists.
+
+**[Dictionary Notebook](./Notebooks/5_Dictionary.ipynb)**
+
 ## Object Oriented Programming in Python
 
 OOPS properties in Python are similar to other major object oriented languages. What python does differently are:
 
 ### Multiple Inheritance
 
-- A class can be derived from more than one base classes in Python. it is useful in something like [Mixins](https://en.wikipedia.org/wiki/Mixin). 
+- A class can be derived from more than one base classes in Python. Useful while having [Mixins](https://en.wikipedia.org/wiki/Mixin).
 
 - the C3 linearization (MRO - Method Resolution Order) to resolve method calls in a consistent and predictable manner, which avoids the diamond problem by defining a specific order in which base classes are searched.
 
@@ -186,66 +241,7 @@ OOPS properties in Python are similar to other major object oriented languages. 
 
 - `Dunder` methods or magic methods are special methods that have double underscores at the beginning and end of their names. They are used to create functionality that can't be represented as a normal method.
 
-[OOPS and File Handling Notebook](./Notebooks/9_OOPS_and_File_handling.ipynb)
-
-## List
-
-Python lists are heterogeneous, mutable built-in data structures. Lists are indexed, dynamic and allows duplicate elements. Most of the operations on a list takes $\color{FEC260}O(1)$ or $\color{FEC260}O(n)$ time complexity. Lists has a powerful mechanism to create new lists from other iterable (list, tuple, strings, etc.) called List comprehension. Lists are ordered also. Lists are superset of arrays.
-
-- During list slicing, we are creating a new list object. We can use the slicing technique in other python data structures like tuple, string, etc.
-
-- List comprehension is an elegant way to generate new lists form existing ones. Internally python would run a loop to do this, hence the complexity of comprehension would be similar to the iterative implementation. 
-
-**[List Notebook](./Notebooks/3_List.ipynb)**
-
-## Tuple
-
-Tuples are basically immutable or read-only lists. The tuple stores items as reference, hence the tuple is immutable not the items; i.e. we can change the contents of a list inside a tuple but we cannot change the item in the tuple. 
-
-- Tuples are generally faster than lists because they are immutable. 
-
-**[Tuple Notebook](./Notebooks/4_Tuple.ipynb)**
-
-## String
-
-Strings in Python are immutable sequences of Unicode code-points/ arrays or bytes representing unicode characters. Strings are ordered, indexed, and can contain duplicate elements. They are also iterable. We can slice and use the membership operator in strings.
-
-**[String Notebook](./Notebooks/7_String.ipynb)**
-
-
-## Set
-
-Set is an unordered data structure in python, where every item is unique and immutable, however the set itself is mutable. Set allows fast insertion, deletion and searching. 
-
-- We can insert, delete, and search a list in amortized  $\color{gold}O(1)$ time complexity. 
-
-- Set uses hashing under the hood and that’s how it achieves that $\color{gold}O(1)$ time complexity. 
-
-- Set also supports different set (Mathematical set) operations like Union, Intersection, Difference, Symmetric difference, etc. 
-
-- Sets are also highly optimized for membership tests, it can do membership test in $\color{gold}O(1)$ (amortized).
-
-**[Set Notebook](./Notebooks/6_Set.ipynb)**
-
-## Dictionary
-
-A dictionary is a collection of key-value pairs. They are generally unordered, indexed, and mutable. The key is used to access the value and the key must be unique (immutable objects). The value can be any data type. Under the hood dictionaries also use hashing like sets.
-
-
-- Dictionaries are highly optimized for searching, insertion, and deletion.
-
-- Dictionaries are also highly optimized for membership tests, it can do membership test in $\color{gold}O(1)$ (amortized).
-
-### Shallow Copy and Deep Copy
-
-Shallow copy creates a new dictionary and copy references to the objects found in the original dictionary. Hence changes to mutable objects within the copy affect the original dictionary.
-
-Deep copy creates a new dictionary and recursively copies the objects found in the original dictionary. Hence changes to mutable objects within the copy do not affect the original dictionary.
-
-- Dictionaries also support comprehension like lists.
-
-**[Dictionary Notebook](./Notebooks/5_Dictionary.ipynb)**
-
+[OOPS Notebook](./Notebooks/9_Object_Oriented_Programming.ipynb)
 ---
 
 ## Python Documentation
