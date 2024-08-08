@@ -84,7 +84,7 @@ Inside the CPU; we find an integrated circuit or Die (or chip) that contains Pro
 
 > For ease of reference; we will will be using the above diagram to explain the components of a CPU.
 
-**CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. They might also have something called hyper-threading, which allows each core to execute multiple threads simultaneously. The number of threads can be twice the number of cores in CPUs with hyper-threading. Not all cores might have similar performance to efficiency ratios; some cores might be optimized for performance while others might be optimized for efficiency (P-Cores and E-Cores).
+**CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. They might also have something called hyper-threading, which allows each core to execute multiple threads simultaneously. The number of threads can be twice the number of cores in CPUs with hyper-threading(Intel specific; AMD has something known as SMT, which stands for Simultaneous Multithreading). Not all cores might have similar performance to efficiency ratios; some cores might be optimized for performance while others might be optimized for efficiency (P-Cores and E-Cores).
 
 The following are the components typically found inside a modern CPU Core:
 

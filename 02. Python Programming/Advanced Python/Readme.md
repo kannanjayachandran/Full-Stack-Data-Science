@@ -310,51 +310,40 @@ print(result) # The ran in Spain
 
 Refer to the [Regular Expressions In python](./Notebooks/06_RegEx_in_Python.ipynb) notebook for more examples.
 
-## Multi-Processing in Python
+## Multi-Threading and Multi-Processing in Python
 
-Python and multi-threading are not the best friends. Due to the Global Interpreter Lock (GIL), Python threads are restricted to run on a single core. To achieve true parallelism, we can use the `multiprocessing` module in Python. Python provides the `multiprocessing` module to run multiple processes concurrently. It allows you to create multiple processes, each of which runs in its own memory space. This is useful when you want to run multiple processes in parallel, taking advantage of multiple CPU cores.
+- **Program** : An executable file containing a series of instructions that the computer can execute in sequence and is usually stored on the disk.
 
-```python
-from multiprocessing import Process
+- **Process** : A process is what we call a program that has been loaded into the memory along with all the resources it needs to operate. A process has its own memory space.
 
-# run this as a script
-def print_numbers(queue):
-    for i in range(1, 11):
-        queue.put(i)
+- **Thread** : A thread is the smallest unit of execution within a process. A process can have multiple threads. Threads share the same memory space.
+
+**Multi-threading** is a technique in which multiple threads are created within a process to execute multiple tasks concurrently (well sort of). It gives the illusion of threads running in parallel, but in reality, they are running in a concurrent manner on a single core; that is the CPU switches between threads to give the appearance of parallelism.
+
+The **Global Interpreter Lock** (GIL) in Python is a _mutex_ that protects access to Python objects, preventing multiple native threads from executing Python bytecode at once. This means that in a standard `CPython` interpreter, only one thread can execute Python code at a time, even if multiple threads are active. The GIL is necessary because CPython's memory management is not thread-safe. What that means is; 
+
+- The GIL ensures that only one thread runs in the interpreter at any given moment.
+
+- Multiple threads can exist and context switching is also possible; but only one thread can execute Python code at a time.
+
+- However in the case of I/O bound tasks and some C extensions, the GIL is released and multiple threads can run in parallel.
+
+Hence the GIL is a performance bottleneck in CPU-bound tasks with threading, but not in I/O-bound tasks.
+
+**Multi-processing** is a technique in which multiple processes are created across multiple CPU cores to execute multiple tasks concurrently. Each process has its own memory space, so they do not share memory.
+
+During multi-processing in Python, each process has its own Python interpreter and memory space, so the GIL is not a problem. This means that each process can execute Python code concurrently on different CPU cores and we can achieve true parallelism. This is particularly useful for CPU-bound tasks that require significant processing power. There are some complications that arises with multi-processing, like the overhead of creating and managing processes, extra memory usage, and the need to share data between processes and synchronize their execution. Python does a pretty good job in smoothening them over most of the time.
+
+`Threading` and `Asyncio` are two Python libraries that helps us achieve concurrency. The way the threads or tasks take turns is the big difference between the two. 
+
+In `Threading`, the OS actually knows about each thread and can interrupt it at any time to start running a different thread. This is called **pre-emptive multitasking** since the operating system can `pre-empt` your thread to make the switch. This is quite handy, as the code in the thread doesn't need to do anything special to make the switch happen. But it also means that the OS can interrupt your thread at any time, even in the middle of a critical operation.
+
+`Asyncio` on the other hand uses __Cooperative multitasking__ (Non OS initiated context switching). Therefore the code in the task has to change slightly to make the switching happen. `Asyncio` uses an event loop. It is aware of each tasks and their respective states. The event loop selects one of the ready tasks and runs it. The task would be in complete control until it cooperatively hands the control back to the event loop. Then the event loop would place that task in either the ready or waiting state (or list) and goes through each of the tasks in the waiting list to see if they are ready to run (or continue). The tasks in the ready list are already ready because they haven't run yet.
 
 
-if __name__ == '__main__':
-    queue = multiprocessing.Queue()
-    process = multiprocessing.Process(target=print_numbers, args=(queue,))
-    process.start()
-    process.join()
+Refer to [Multi-Threading In python](./Notebooks/09_Multithreading_in_Python.ipynb), [Multi-Processing In python](./Notebooks/10_MultiProcessing_in_Python.ipynb) notebooks for more examples.
 
-    while not queue.empty():
-        print(queue.get())
-
-    print('Process finished')
-```
-
-Refer to the [Multi-Processing In python](./Notebooks/07_MultiProcessing_in_Python.ipynb) notebook for more examples.
-
-### Multi-Threading in Python
-
-Python threads are used in cases where the execution of a task involves some waiting. Python threads are lightweight, and they are used to execute multiple tasks concurrently. Python provides the `threading` module to run multiple threads concurrently. 
-
-```python
-import threading
-
-def print_numbers():
-    for i in range(1, 11):
-        print(i)
-
-thread = threading.Thread(target=print_numbers)
-thread.start()
-thread.join()
-print('Thread finished')
-```
-
-Refer to the [Multi-Threading In python](./Notebooks/07_Multithreading_in_Python.ipynb) notebook for more examples.
+Also more examples can be found [here](./Scripts/Multithreading_Multiprocessing/)
 
 ## Networking in Python
 
