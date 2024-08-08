@@ -164,7 +164,7 @@ The CPU performs a machine cycle, which includes accessing data, performing oper
 
 A typical computer system features a hierarchy of memory levels, each with different speed, capacity, and cost characteristics. This hierarchy helps balance the trade-offs between fast, small, and expensive memory (like CPU cache) and slow, large, and cheaper memory (like secondary storage).
 
-![Memory Hierarchy](./img/Memory_hierarchy.png)
+<p align="center"><img src="./img/Memory_hierarchy.png" alt="Machine Cycle" height=390></p>
 
 Computer memory is divided into small units called cells, typically each holding a **byte**. Although there's no physical orientation, memory cells are often visualized linearly, with the high-order end on the left and the low-order end on the right. The high-order bit (most significant bit) is the leftmost bit, and the low-order bit (least significant bit) is the rightmost bit.
 
