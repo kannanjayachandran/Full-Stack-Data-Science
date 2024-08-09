@@ -221,7 +221,9 @@ OOPS properties in Python are similar to other major object oriented languages. 
 
 - Duck typing is a concept related to dynamic typing, where the type or class of an object is less important than the methods it defines. When you use duck typing, you do not check types at all. Instead, you check for the presence of a given method or attribute. 
 
-`If it looks like a duck and quacks like a duck, it must be a duck. 🦆`
+```python
+If it looks like a duck and quacks like a duck, it must be a duck. 🦆
+```
 
 ### Method Overloading
 
@@ -242,6 +244,7 @@ OOPS properties in Python are similar to other major object oriented languages. 
 - `Dunder` methods or magic methods are special methods that have double underscores at the beginning and end of their names. They are used to create functionality that can't be represented as a normal method.
 
 [OOPS Notebook](./Notebooks/9_Object_Oriented_Programming.ipynb)
+
 ---
 
 ## Python Documentation
