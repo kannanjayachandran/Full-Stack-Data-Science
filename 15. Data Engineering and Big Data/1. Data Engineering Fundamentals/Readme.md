@@ -1,4 +1,4 @@
-# Data Engineering
+<h1 align="center"> Data Engineering </h1>
 
 Data Engineering involves designing, building, and maintaining the infrastructure and systems that allow large amount of data to be collected, stored, processed, and analyzed efficiently. It involves creating pipelines that convert raw data into usable formats for analysis. The whole purpose of data engineering is to improve the business by reducing all sorts of data related overheads. 
 
@@ -8,19 +8,11 @@ The basic flow of data in any business is as follows:
 
 ![Basic data flow](./img/basic_data_flow.png)
 
-```mermaid
-graph LR
-    A[Data Source] --> B[Data Collection]
-    B --> C[Data Storage]
-    C --> D[Data Processing]
-    D --> E[Data Analysis]
-    E --> F[Business Decision]
-
-```
+![Basic data flow chart](./img/data_flow.png)
 
 > **Roles** varies according to the company and the size of the company. In a small company, a data engineer might be responsible for all the tasks mentioned above. In a large company, the tasks might be divided among different roles.
 
-The most important takeaway from the above diagram is that data engineering sits somewhere in between the database and data science/data analysis part.
+The most important takeaway from the above diagram is that data engineering sits somewhere in between the database and data science/data analysis part. 
 
 ## Data Engineering Lifecycle
 
@@ -49,7 +41,6 @@ We have two type of data storage processing;
 
 ![Other aspects of data engineering](./img/other_aspects.png)
 
-
 ### Security
 
 Security is a very important aspect of data engineering. We need to ensure that the data is secure and is not accessible to unauthorized users. The data should be encrypted and stored in a secure location. Additionally we may need consider data backups and disaster recovery plans.
@@ -66,11 +57,7 @@ It contains the following aspects:
 
 ### Data Ops
 
-DataOps is a set of practices and tools that help organizations improve the speed and quality of their data analytics. It is similar to DevOps. 
-
-It involves automating the data engineering processes, monitoring the data pipelines, and ensuring that the data is accurate and consistent.
-
-**(Data governance, Observability, Monitoring and Incident reporting)**
+DataOps is a set of practices and tools that help organizations improve the speed and quality of their data analytics. It is similar to DevOps. It involves automating the data engineering processes, monitoring the data pipelines, and ensuring that the data is accurate and consistent.**(Data governance, Observability, Monitoring and Incident reporting)**
 
 ### Data Architecture
 
@@ -88,6 +75,10 @@ Data engineering involves a lot of software engineering practices. It involves w
 
 Data architecture is the design of systems that support the evolving data need of an organization, achieved by flexible and reversible decisions reached through a careful evaluation of trade-offs. It encompasses data models, policies, standards, and the overall structure for data flow within an organization.
 
+The following diagram shows an high-level overview of data architecture.
+
+![Generic data architecture](./img/data_arch.png)
+
 Data architecture has two main components:
 
 - Business side or Operational architecture
@@ -96,29 +87,17 @@ Data architecture has two main components:
 
 ### Business Side
 
-Operational architecture ensures that the data practices aligns closely with your business needs. It should govern every piece of data you collect, store, and process. Some of the key insights are:
+Operational architecture ensures that the data practices aligns closely with your business needs. It should govern every piece of data you collect, store, and process. Some of the key considerations for business side are:
 
-- **Start with the end in mind**: Understand the business goals and objectives and design the data architecture to support those goals.
+- **Start with the end in mind**: Understand the business goals  or objectives and design the data architecture to support those goals.
 
 - **Iterate and improve**: Data architecture is not a one-time thing. It should evolve as the business evolves.
 
 - **Focus on impact**: Focus on the data that has the most impact on the business.
 
-**For example the business needs of an e-commerce application would be;**
-
-- Customer efficiency: Improve site navigation, personalized product recommendations, and customer service interactions.
-
-- Operational Efficiency: Streamline inventory management, order processing, and shipping to reduce costs and delivery times.
-
-- Marketing Insights: Analyze customer behavior to optimize marketing strategies, improve product placement, and increase sales.
-
-- Vendor Management: Enhance data exchange with vendors for better product availability, pricing strategies, and quality control.
-
-- Compliance and Security: Ensure customer data is secure and that the platform complies with relevant e-commerce regulations.
-
 ### Technical Architecture
 
-Technical architecture talks about the actual tools and technologies we use to build these data infrastructure. There are innumerable tools and technologies available in the market. Some general ideas to choose the right tools is:
+Technical architecture talks about the actual tools and technologies we use to build these data infrastructure. Selecting the right tools and technologies is very important. Some of the key considerations for technical architecture are:
 
 1. Keep the architecture simple while meeting the business needs; no need to over-engineer the solution or use the latest and greatest tools.
 
@@ -132,24 +111,47 @@ Technical architecture talks about the actual tools and technologies we use to b
 
 Some of the key components of the technical architecture are:
 
-- Data sources
+![Technical architecture](./img/technical_arch.png)
 
-- Data Ingestion
+A typical data architecture using services from AWS is shown below:
 
-- Data Storage
+![AWS based data architecture](./img/aws_arch.png)
 
-- Data Processing
+## Data Warehouse
 
-- Data Analysis
+Data Warehouse is a centralized repository of integrated data from various sources, optimized for analysis and reporting. It stores historical data in a structured format, supporting business intelligence and decision-making processes. We follow the `ETL` process to load data into the data warehouse.
 
-- Data Visualization
+![ETL process](./img/ETL.png)
 
-- ML/AI Models
+Some organizations may prefer `ELT` process where data is loaded into the data warehouse first and then transformed. This may not be suitable always, as real world data is messy and almost always requires some level of cleaning and transformation before it can be loaded into the data warehouse.
 
-- Data Governance
+![ELT Process](./img/ELT.png)
 
-### Data Sources
+### Dimensional Modeling
 
-Data sources are the places where the data is generated. It can be from applications, sensors, logs, social media, etc. The data sources can be internal or external to the organization.
+Dimensional modeling is a design technique for databases intended to support end-user queries in a data warehouse. It optimizes the database for fast queries and easy access to data. It is based on two types of tables:
 
+- **Fact Tables**: These tables contain the quantitative data that can be aggregated. They are typically large and contain foreign keys to dimension tables.
+
+- **Dimension Tables**: These tables contain the descriptive data that provides context to the fact data. They are typically smaller and contain textual data.
+
+We can use `Star Schema` or `Snowflake Schema` for dimensional modeling. Where in star schema, the fact table is at the center and the dimension tables are connected to the fact table. It is called a star schema because it looks like a star. In snowflake schema, the dimension tables are normalized into multiple related tables, which reduces redundancy and improves data integrity.
+
+![Schemas](./img/schema.png)
+
+### Slowly Changing Dimensions
+
+Slowly changing dimensions are dimensions that change slowly over time. There are three types of slowly changing dimensions:
+
+- **Type 1**: In this type, the old data is simply overwritten with the new data. This is the simplest method but it does not keep track of the history.
+
+> EG: If the city of a customer changes, we simply update the city in the customer table. 
+
+- **Type 2**: In this type, a new row is added to the dimension table whenever the data changes. This keeps track of the history but can lead to a large number of rows in the dimension table.
+
+> EG: If the city of a customer changes, we add a new row to the customer table with the new city and a new primary key.
+
+- **Type 3**: In this type, a new column is added to the dimension table to store the new data. This keeps track of the history but can lead to a large number of columns in the dimension table.
+
+> EG: If the city of a customer changes, we add a new column to the customer table to store the new city.
 
