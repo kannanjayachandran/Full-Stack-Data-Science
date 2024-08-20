@@ -186,7 +186,7 @@ There are many cloud providers that provide services for data engineering. There
 
 Along with them there are other cloud providers like IBM Cloud, Oracle Cloud, etc. Niche players like Snowflake, Databricks, etc. also provide services for data engineering.
 
-Essentially every cloud provider, provides two things, Compute and Storage. Then they started providing managed services on top of these two. Like database, object storage, data warehouse, etc. Formally they are called as `Infrastructure as a Service (IaaS)`, `Platform as a Service (PaaS)`, `Software as a Service (SaaS)`.
+**Essentially every cloud provider, provides two things, Compute and Storage. Along with these they also provide managed services. Like database, object storage, data warehouse, etc. Formally these are knows as `Infrastructure as a Service (IaaS)`, `Platform as a Service (PaaS)`, `Software as a Service (SaaS)`.**
 
 | PaaS | SaaS | IaaS |
 |------|------|------|
@@ -194,7 +194,11 @@ Essentially every cloud provider, provides two things, Compute and Storage. Then
 | Provides a platform for developing, running, and managing applications without the complexity of building and maintaining the infrastructure. | Provides software that is centrally hosted and managed for the end user. | Provides virtualized computing resources over the internet. |
 | Examples: AWS Lambda, Google Cloud BigQuery, Azure SQL Database, etc. | Examples: Google Suite (Docs, Slide, Sheet) | Examples: AWS EC2, Google Cloud Compute Engine, Azure Virtual Machines, etc. |
 
+**Remember, VM costs include more than just the base compute instance. You'll also pay for storage, network, and data transfer costs.**
+
 ### AWS
+
+> All images are taken from AWS documentation.
 
 AWS provides a wide range of services for data engineering. Some of the key services are:
 
@@ -299,4 +303,34 @@ Presto. It was previously known as Amazon Elastic MapReduce.
 
 ### GCP
 
-GCP provides a wide range of services for data engineering.
+> All images are taken from GCP documentation.
+
+GCP provides a wide range of services for data engineering. Following are some key services of GCP:
+
+![GCP services](./img/GCP.png)
+
+1. **Compute Engine**: It is a service that lets you create and run virtual machines on Google infrastructure, Similar to AWS EC2.
+
+![alt text](./img/compute_engine.png)
+
+2. **App Engine**: App Engine is the fully managed serverless application platform, similar to AWS Lambda.
+
+![alt text](./img/app_engine.png)
+
+3. **Cloud Functions**: They are single-purpose functions that respond to some event and perform some specific action. While App Engine is better suited to applications, which have numerous pieces of functionality behaving in various inter-related (or even unrelated) ways. CF is similar to AWS Lambda. 
+
+![alt text](./img/cloud_functions.png)
+
+4. **Cloud Storage**: It is an object storage service that allows you to store and retrieve large amounts of data. Similar to AWS S3.
+
+![alt text](./img/cloud_storage.png)
+
+4. **Cloud Bigtable**: It is a fully managed wide-column NoSQL database service that is suitable for large analytical and operational workloads. Similar to AWS DynamoDB.
+
+![alt text](./img/bigTable.png)
+
+5. **Cloud SQL**: It is a fully managed relational database service that makes it easy to set up, maintain, manage, and administer your relational databases on Google Cloud Platform. Similar to AWS RDS.
+
+![alt text](./img/cloud_SQL.png)
+
+6. **Cloud Datastore**: It is a NoSQL document database built for automatic scaling, high performance, and ease of application development. Similar to AWS DynamoDB.
