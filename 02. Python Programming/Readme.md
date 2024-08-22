@@ -152,7 +152,6 @@ Strings in Python are immutable sequences of Unicode code-points/ arrays or byte
 
 **[String Notebook](./Notebooks/7_String.ipynb)**
 
-
 ## Built-in Containers
 
 ### List
@@ -221,9 +220,7 @@ OOPS properties in Python are similar to other major object oriented languages. 
 
 - Duck typing is a concept related to dynamic typing, where the type or class of an object is less important than the methods it defines. When you use duck typing, you do not check types at all. Instead, you check for the presence of a given method or attribute. 
 
-```python
-If it looks like a duck and quacks like a duck, it must be a duck. 🦆
-```
+> If it looks like a duck and quacks like a duck, it must be a duck. 🦆
 
 ### Method Overloading
 
@@ -244,6 +241,12 @@ If it looks like a duck and quacks like a duck, it must be a duck. 🦆
 - `Dunder` methods or magic methods are special methods that have double underscores at the beginning and end of their names. They are used to create functionality that can't be represented as a normal method.
 
 [OOPS Notebook](./Notebooks/9_Object_Oriented_Programming.ipynb)
+
+## Pythonic Stuff
+
+Since python does pretty much all the heavy lifting for us, we can focus on writing clean, readable, and maintainable code. There are some `pythonic` ways to write code which are more readable and efficient. Also due the above mentioned properties of python, we can also write bad and ugly code.
+
+First thing first, Use `dir()` and `help()` functions to get information about any object or module. Most of the objects in python has so many stuff built into them, so before writing your own rocket ship, check if python already has one.
 
 ---
 
