@@ -2,7 +2,7 @@
 
 ## Linux
 
-When we dealing with server grade or data center grade machines, we will mostly be using Linux based operating systems. So, it is important to know some basic Linux commands.
+Just learn linux.
 
 ![https://www.digitalocean.com/community/tutorials/linux-commands](img/Linux_commands.png)
 > image source: Digital Ocean
