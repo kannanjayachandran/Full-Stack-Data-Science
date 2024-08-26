@@ -25,7 +25,11 @@ In _python_ we have **Lists** that are superset of arrays. Lists can contain ele
 
 <!-- Two pointer, Sliding window, binary search, sorting -->
 
-## Problem set - I
+## Problem set
+
+These are the problems I have solved in the `Arrays` section. Refer [this](https://www.techinterviewhandbook.org/grind75?hours=40&weeks=4) for most important problems related to arrays.
+
+### Problem set - I
 
 1. Find the minimum and maximum element in an array
 2. Reverse an array
