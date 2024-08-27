@@ -1,1 +1,1 @@
-<h1 align="center" style="color: orange">Case Studies</h1>
+<h1 align="center">Case Studies</h1>
