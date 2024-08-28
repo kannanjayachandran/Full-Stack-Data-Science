@@ -305,7 +305,7 @@ Presto. It was previously known as Amazon Elastic MapReduce.
 
 > All images are taken from GCP documentation.
 
-GCP provides a wide range of services for data engineering. Following are some key services of GCP:
+GCP provides a wide range of services for data engineering. In order to easily understand the services, we would list their AWS counterparts. Following are some key services of GCP:
 
 ![GCP services](./img/GCP.png)
 
@@ -333,4 +333,59 @@ GCP provides a wide range of services for data engineering. Following are some k
 
 ![alt text](./img/cloud_SQL.png)
 
-6. **Cloud Datastore**: It is a NoSQL document database built for automatic scaling, high performance, and ease of application development. Similar to AWS DynamoDB.
+6. **Cloud Datastore**: It is a NoSQL document database built for automatic scaling, high performance, and ease of application development. `Firestore` is the next version of Cloud Datastore.
+ Similar to AWS DynamoDB.
+
+> When to use different storage options in GCP
+![Flowchart](./img/dataFLowchart.png)
+
+ |                  | Cloud Datastore    | Bigtable               | Cloud Storage | Cloud SQL             | Cloud Spanner         | BigQuery             |
+|------------------|--------------------|------------------------|---------------|-----------------------|-----------------------|----------------------|
+| **Type**         | NoSQL document     | NoSQL wide column      | Blobstore     | Relational SQL for OLTP | Relational SQL for OLTP | Relational SQL for OLAP |
+| **Transactions** | Yes                | Single-row             | No            | Yes                   | Yes                   | No                   |
+| **Complex queries** | No             | No                     | No            | Yes                   | Yes                   | Yes                  |
+| **Capacity**     | Terabytes+         | Petabytes+             | Petabytes+    | Up to ~10 TB           | Petabytes             | Petabytes+           |
+| **Unit size**    | 1 MB/entity        | ~10 MB/cell <br>~100 MB/row | 5 TB/object | Determined by DB engine | 10,240 MiB/row        | 10 MB/row            |
+| **Use case**     | Web and mobile apps | IoT, financial data    | Object storage | OLTP, e-commerce      | OLTP, e-commerce      | OLAP, data warehousing |
+
+7. **Cloud Pub/Sub**: It is a messaging service that allows you to send and receive messages between independent applications. Similar to AWS SNS and SQS.
+
+![Cloud Pub sub](./img/pubSub.png)
+
+8. **Cloud Dataflow**: It is a fully managed service for stream and batch processing. Similar to AWS Kinesis Data Streams and AWS Kinesis Data Firehose.
+
+![dataflow](./img/dataflow.png)
+
+9. **Cloud Dataproc**: It is a fast, easy-to-use, fully managed cloud service for running Apache Spark and Apache Hadoop clusters. Similar to AWS EMR.
+
+![dataproc](./img/dataproc.png)
+
+### Azure
+
+> All images are taken from Azure documentation.
+
+Azure provides a wide range of services for data engineering. Some of the key services are:
+
+#### App Hosting and Compute
+
+![alt text](./img/apphosting_compute.png)
+
+#### Azure AI
+
+![alt text](./img/azure_AI.png)
+
+#### Database
+
+![alt text](./img/Database.png)
+
+#### Storage
+
+![alt text]({82469012-016B-48AC-9F79-8DA31B9437F2}.png)
+
+#### Messaging
+
+![alt text](./img/Messaging.png)
+
+#### AI and ML services
+
+![alt text](./img/AI_ML_azure.png)
