@@ -368,24 +368,24 @@ Azure provides a wide range of services for data engineering. Some of the key se
 
 #### App Hosting and Compute
 
-![alt text](./img/apphosting_compute.png)
+![App hosting and compute](./img/apphosting_compute.png)
 
 #### Azure AI
 
-![alt text](./img/azure_AI.png)
+![azure AI](./img/azure_AI.png)
 
 #### Database
 
-![alt text](./img/Database.png)
+![databases](./img/Database.png)
 
 #### Storage
 
-![alt text]({82469012-016B-48AC-9F79-8DA31B9437F2}.png)
+![storage](./img/azure_storage.png)
 
 #### Messaging
 
-![alt text](./img/Messaging.png)
+![messaging](./img/Messaging.png)
 
 #### AI and ML services
 
-![alt text](./img/AI_ML_azure.png)
+![AI ML services - azure](./img/AI_ML_azure.png)
