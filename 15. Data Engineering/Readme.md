@@ -360,3 +360,32 @@ GCP provides a wide range of services for data engineering. In order to easily u
 
 ![dataproc](./img/dataproc.png)
 
+### Azure
+
+> All images are taken from Azure documentation.
+
+Azure provides a wide range of services for data engineering. Some of the key services are:
+
+#### App Hosting and Compute
+
+![alt text](./img/apphosting_compute.png)
+
+#### Azure AI
+
+![alt text](./img/azure_AI.png)
+
+#### Database
+
+![alt text](./img/Database.png)
+
+#### Storage
+
+![alt text]({82469012-016B-48AC-9F79-8DA31B9437F2}.png)
+
+#### Messaging
+
+![alt text](./img/Messaging.png)
+
+#### AI and ML services
+
+![alt text](./img/AI_ML_azure.png)
