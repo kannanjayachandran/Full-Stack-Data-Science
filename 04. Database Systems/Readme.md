@@ -1,17 +1,26 @@
-# Database Systems
+<h1 align='center'> Database Systems </h1>
 
 ## Table of Contents
 
 1. [Introduction to Databases](#Introduction-to-Databases)
+
 2. [Types of Databases](#Types-of-Databases)
+
     - [Relational Databases](#Relational-Databases)
+
     - [Non-Relational Databases](#Non-Relational-Databases)
+
         - [Document Databases](#Document-Databases)
+
         - [Key-Value Databases](#Key-Value-Databases)
+
         - [Graph Databases](#Graph-Databases)
+
         - [Vector Databases](#Vector-Databases)
+
 3. [Database Languages](#Database-Languages)
     - [Structured Query Language (SQL)](#Structured-Query-Language-SQL)
+
 4. [Further Reading](#Further-Reading)
 
 ---
@@ -80,7 +89,4 @@ Similar to how programming languages are used to create software, database langu
 
 **SQL** is the standard language for interacting with relational databases. It allows users to perform a variety of operations, including querying data, updating records, and managing database structures.
 
-## Further Reading
-
-- [Read more about SQL](./1_SQL/Readme.md)
-- [Read more about MongoDB and Redis](./2_NoSQL_DB/Readme.md)
+#### [Read more about SQL](./1_SQL/Readme.md) | [Read more about NoSQL](./2_NoSQL_DB/Readme.md)

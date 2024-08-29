@@ -1,12 +1,10 @@
 # Database Management Systems (DBMS)
 
-## Overview
+A **Database Management System (DBMS)** is software that enables users to interact with databases. They manage the underlying database and ensures that data is stored, retrieved, and manipulated efficiently and securely. It provides an interface for performing various operations such as creating, updating, deleting, and querying data. Common DBMSs include `MySQL`, `PostgreSQL`, `SQLite`, `MongoDB`, `Redis`, etc.
 
-A **Database Management System (DBMS)** is software that enables users to interact with databases. It provides an interface for performing various operations such as creating, updating, deleting, and querying data. The DBMS manages the underlying database and ensures that data is stored, retrieved, and manipulated efficiently and securely. Common DBMSs include `MySQL`, `PostgreSQL`, `SQLite`, `MongoDB`, `Redis`, and `Firestore`.
+## Interaction with Databases
 
-### Interaction with Databases
-
-DBMSs typically use **SQL (Structured Query Language)** or other query languages to interact with databases. SQL allows users to define, manipulate, and query data, making it a powerful tool for managing relational databases.
+Generally we use **SQL (Structured Query Language)** or a similar query languages to interact with databases. SQL allows users to define, manipulate, and query data stored in a relational database.
 
 ## Advantages of Using a Database Over a File System
 
@@ -28,7 +26,7 @@ Using a database offers several advantages over traditional file systems, partic
 
 ## Database Normalization
 
-**Database Normalization** is the process of organizing the structure of a relational database to reduce data redundancy and improve data integrity. This process, first proposed by Edgar F. Codd as part of his relational model, involves structuring the database's tables (relations) and columns (attributes) to ensure that their dependencies are properly enforced.
+**Database Normalization** is the process of modifying the structure of a relational database to reduce data redundancy and improve data integrity. This process, first proposed by _Edgar F. Codd_ as part of his relational model, involves structuring the database's tables (relations) and columns (attributes) to ensure that their dependencies are properly enforced.
 
 ### Goals of Normalization
 

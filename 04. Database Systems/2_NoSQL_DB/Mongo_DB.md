@@ -1,34 +1,62 @@
-<h1 align="center"> Mongo DB </h1>
+<h1 align="center"> MongoDB </h1>
 
-Mongo DB is a NOSQL, document based, multi-modal, scalable and distributed database. One of the major issue with relational database is that, they have fixed schema and it is nightmare to change the schema once the database is in production. Also fixed schema forces computationally expensive joins and group-by operations. This is where Mongo DB shines with its flexible schema. It was introduced in 2009. Although mongo db is a document database, it is slowly becoming a multi model database, by supporting features like in-memory storage, hash based indexing, etc.
+MongoDB is a NoSQL, document-based, and distributed database. Unlike relational databases, which have fixed schemas that can be difficult and costly to change once the database is in production, MongoDB offers a flexible schema design. This flexibility reduces the need for computationally expensive joins and group-by operations, making MongoDB particularly suitable for applications with evolving data structures.
 
-![Mongo DB example](image.png)
+![MongoDB Example](./img/mongo_example.png)
 
-Mongo DB stores data in the form of documents; specifically BSON (Binary JSON). BSON is a binary encoded JSON. It extends the JSON model to provide additional data types, ordered fields, and to be efficient for encoding and decoding within different languages. 
+MongoDB stores data in the form of documents, specifically BSON (Binary JSON). BSON is a binary-encoded format of JSON that extends the JSON model by providing additional data types, maintaining the order of fields, and optimizing the encoding and decoding process across different programming languages.
 
-![relational db with mongo db](image-1.png)
+![Relational DB vs MongoDB](./img/mongo_vs_relational.png)
 
+In MongoDB, you can also embed one document inside another, which can be useful for representing hierarchical data structures.
 
-In mongo db we can also embed one document inside another document.
+## MongoDB Syntax
 
-## mongo syntax
+- **`mongosh`**: Opens the MongoDB shell.
+  
+- **`show dbs`**: Lists all databases.
+  
+- **`use <db_name>`**: Switches to the specified database.
+  
+- **`db`**: Displays the current database.
+  
+- **`show collections`**: Lists all collections in the current database.
+  
+- **`db.<collection_name>.insertOne({<document>})`**: Inserts a single document into the specified collection.
 
-- `mongosh` : Opens the mongo shell.
-- `show dbs` : Shows all the databases.
-- `use <db_name>` : Switches to the database.
-- `db` : Shows the current database.
-- `show collections` : Shows all the collections in the current database.
-- `db.<collection_name>.insertOne({<document>})` : Inserts a document into the collection.
-> `db.user.insertOne({name: "John Doe", age: 25})` : where db refers to the current db, user is the collection name and name and age are the fields. We have options like `insertMany` and `insert` also.
-- `db.<collection_name>.find()` : Shows all the documents in the collection.
-- `db.createCollection(<collection_name>)` : Creates a collection.
+```javascript
+  db.user.insertOne({name: "John Doe", age: 25});
+```
+  Here, `db` refers to the current database, `user` is the collection name, and `name` and `age` are fields within the document. You can also use `insertMany` to insert multiple documents or `insert` for legacy support.
 
-The `_id` field is automatically added to every document by mongo db. It is the default primary key of the document. It is a 12 byte hexadecimal number. The first 4 bytes are the timestamp, next 3 bytes are the machine id, next 2 bytes are the process id and the last 3 bytes are the counter. The counter is randomly generated. The `_id` field is indexed by default. It is immutable. We can specify our own `_id` field also.
+- **`db.<collection_name>.find()`**: Retrieves all documents from the specified collection.
 
-`db.col.insertOne({some_data}, {writeConcern: { "w", "majority" j: true, wtimeout: 2000 }})` : w is the write concern, j is the journal and wtimeout is the timeout {after 2 seconds if the write operation is not successful then drop it}
+- **`db.createCollection(<collection_name>)`**: Creates a new collection in the current database.
 
-`writeConcern` deals with the number of nodes that should acknowledge the write operation. `w: 1` means that only one node should acknowledge the write operation. `j: true` means that the write operation should be written to the journal. `wtimeout: 2000` means that the write operation should timeout after 2 seconds.
+### The `_id` Field
 
-`find().explain("executionStats")` : Shows the execution stats of the query. This shows the number of documents scanned, number of documents returned, etc. Basically what happens under the hood when we run the query is shown here. It is highly useful for query optimization.
+MongoDB automatically adds an `_id` field to every document, which serves as the default primary key. The `_id` field is a 12-byte hexadecimal number composed of:
 
-> pymongo is the python driver for mongo db.
+- **First 4 bytes**: Timestamp
+- **Next 3 bytes**: Machine identifier
+- **Next 2 bytes**: Process identifier
+- **Last 3 bytes**: Counter, randomly generated
+
+The `_id` field is indexed by default and is immutable. You can specify your own `_id` field if needed.
+
+### Write Concern and Journaling
+
+- **`db.col.insertOne({some_data}, {writeConcern: {w: "majority", j: true, wtimeout: 2000}})`**:
+  - `w` specifies the write concern level (e.g., `"majority"` requires acknowledgment from a majority of nodes).
+  - `j` ensures the write operation is recorded in the journal.
+  - `wtimeout` sets the timeout duration (e.g., 2000 milliseconds). If the operation is not successful within this time, it will be dropped.
+
+### Query Execution and Optimization
+
+- **`find().explain("executionStats")`**: Provides execution statistics for a query, including the number of documents scanned and returned. This is useful for understanding query performance and optimizing queries.
+
+### Python Driver
+
+- **`pymongo`**: The Python driver for MongoDB, allowing you to interact with MongoDB databases using Python.
+
+---
