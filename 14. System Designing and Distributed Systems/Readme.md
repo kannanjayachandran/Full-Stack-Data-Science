@@ -193,3 +193,47 @@ Imagine a distributed system with three nodes: Blue, Green, and Black. Each node
 
 - **Multi-Leader Replication**: Suitable for write-heavy applications requiring low latency and high availability, especially in geographically distributed setups.
 
+### Leaderless Replication
+
+Leaderless Replication is a distributed database architecture where any replica can accept writes from a client. Reads and writes are sent to all replicas in parallel, and a successful operation is confirmed once a predefined threshold of nodes returns a success value.
+
+
+#### Data Consistency Mechanisms
+
+To maintain data consistency, leaderless replication employs two primary techniques:
+
+1. **Anti-Entropy**: AA background process that compares data (some sort of version) between nodes and updates them to the most recent value. This is usually implemented with the help of a key-value stores but is not  implemented in most databases.
+
+2. **Read Repair**: When a read operation returns conflicting data from multiple replicas, the most up-to-date value is propagated to the other replicas. Similar to anti-entropy, this process also does this with the help of some key-values for data versioning.
+
+#### Quorums for Strong Consistency
+
+A quorum is a subset of nodes in a distributed system that must be contacted or accessed to achieve a certain goal, such as reading or writing data. If a quorum is reached, it is assumed that the operation is successful and consistent.
+
+In a system with `n` replicas, a write is considered successful if it is written to at least `w` nodes, and a read is successful if it is read from at least `r` nodes. If `w + r > n`, at least one node involved in the read will have the updated data, which can be used to read-repair other replicas.This configuration can tolerate up to `(n-1)/2` node failures.
+
+#### Limitations of Quorums:
+
+- **Write Failures**: If a write operation fails to meet the quorum requirement, the data may be inconsistent, and there is no mechanism for rollback.
+
+- **Write Conflicts**: Concurrent writes to different replicas can lead to conflicts.
+
+- **Node Restoration**: Restoring a failed node with outdated data can result in data loss.
+
+#### Sloppy Quorums for Availability
+
+Sloppy quorums are a generalization of quorums that allow for a more relaxed consistency requirement. They relax the strict requirement of contacting a majority of nodes for each operation, potentially improving availability and performance at the cost of reduced consistency.
+
+Sloppy quorums relax the quorum requirements to improve availability, but at the cost of potential data inconsistency. In this approach, a read or write operation can succeed as long as a certain number of nodes are available, even if they may not have the most up-to-date data.
+
+For example, in a system with 99 database nodes where `w = 50` and `r = 50`, if all 99 nodes fail, writes might be redirected to 50 nodes in a different subsystem. When the original nodes come back online, they may not have the most up-to-date data, necessitating additional data transfer operations, such as hinted handoff, to restore consistency.
+
+In summary, leaderless replication is a suitable choice for applications that prioritize high write throughput and can tolerate eventual consistency. By carefully configuring quorums and employing techniques like anti-entropy and read repair, it is possible to achieve a balance between consistency and availability.
+
+
+
+> **Single Leader**: Offers strong consistency but low write throughput.
+
+> **Multi-Leader**: Provides conflict-free writes within a data center but can encounter conflicts across data centers.
+
+> **Leaderless**: Offers high write throughput but requires careful consideration of consistency mechanisms and potential conflicts.
