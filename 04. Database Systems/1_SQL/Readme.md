@@ -1,126 +1,164 @@
-# SQL
+<h1 align='center'> SQL </h1>
 
-SQL _Stands for Structured Query Language_. It is the standard language for interacting with relational databases. SQL is a _declarative language_, which means that you tell the database what you want to do, and it figures out how to perform the operation in the most efficient way.
-
-> Here we are using `PostgreSQL`. Check out the **[Scripts](./Scripts/)** folder for the SQL scripts. **[Notebook](./notebook.ipynb)** contains examples of working with Postgres Python client `psycopg2`.
+SQL stands for Structured Query Language. It is the standard language used for interacting with relational databases. SQL is a declarative language, meaning you specify what you want to do, and the database management system determines how to execute the operation efficiently.
 
 ## Basic terminology
 
-1. **Data value** : A single unit of data. Each entry in a table represents a data value.
+Understanding SQL requires familiarity with some fundamental terms used in relational databases:
 
-> Eg: `1`, `03/09/2016`, `A_1`, etc
+1. **Data Value**: A single unit of data. Each entry in a table corresponds to a data value.
+    - Example: `1`, `03/09/2016`, `A_1`, etc.
 
-2. **Record** : A collection of related data values. Each row in a table represents a record.
+2. **Record**: A collection of related data values. Each **row** in a table represents a record.
 
-> Eg: `1, 03/09/2016, 1, A_1`, etc
+3. **Field**: A single unit of information. Each **column** in a table represents a field.
 
-3. **Field** : A single unit of information. Each column in a table represents a field.
-
-4. **File** : A collection of related records. A table is a file.
+4. **File**: A collection of related records. In the context of a database, a **table** can be considered a file.
 
 ## Overview of how SQL queries work
 
 ![Overview of how sql queries gets executed](./img/Overview_of_SQL_QUERY_working.png)
 
-1. The user sends a query to the database.
+1. **Query Submission**: The user submits a query to the database.
 
-2. The database parses the query and checks the syntax.
+1. **Syntax Parsing**: The database parses the query and checks for syntax errors.
 
-3. The database checks the query against the database schema to make sure the tables and columns exist.
+1. **Schema Validation**: The database verifies the query against the database schema to ensure the referenced tables and columns exist.
 
-4. The database determines the most efficient way to execute the query.
+1. **Optimization**: The database determines the most efficient way to execute the query.
 
-5. The database executes the query and returns the results.
+1. **Execution**: The database executes the query and returns the results.
 
-> Whenever we run a SQL query, the database creates a new table from the existing table. The newly generated output is called **result set** (set of rows with column names and some meta data).
+> **Result Set**: Whenever a SQL query is executed, the database generates a new table from the existing table(s). This newly generated output is called a result set (a set of rows with column names and some metadata).
 
 ## Database schema
 
-A schema in a database refers to the organization of data. Think of it as a blueprint of how the database is constructed. Schema represents all the tables and the relationships between those tables in a database.
+A schema in a database refers to the organization and structure of the data. It serves as a blueprint for how the database is constructed, defining all the tables and the relationships between them.
 
-> The formal definition of a database schema is a set of formulas called integrity constraints imposed on a database.
+- Formal Definition: A database schema is a set of formulas or integrity constraints imposed on a database to maintain its structure and enforce rules.
 
 ## SQL Commands
 
 ![SQL Command types](./img/SQL_commands.png)
 
-**DDL (Data Definition Language)** : DDL statements are used to define the database schema.
+1. **DDL (Data Definition Language)** : Used to define and modify the database schema.
 
-**DML (Data Manipulation Language)** : DML statements are used for managing data (database queries & updates).
+>  CREATE, ALTER, DROP, TRUNCATE, COMMENT, RENAME
 
-**DCL (Data Control Language)** : DCL statements are used to control access to data in the database.
+2. **DML (Data Manipulation Language)** : Used for managing data within schema objects (e.g., performing queries, updates).
 
-**TCL (Transaction Control Language)** : TCL statements are used to manage the changes made by DML statements.
+> SELECT, INSERT, UPDATE, DELETE
 
-To understand database schema better, let us consider the example from the `IMDB` dataset. The schema for the `IMDB` dataset is as follows:
+**DCL (Data Control Language)** : Used to control access to data in the database.
+
+> GRANT, REVOKE
+
+**TCL (Transaction Control Language)** : Used to manage changes made by DML statements, ensuring data integrity.
+
+> COMMIT, ROLLBACK, SAVEPOINT
+
+To understand database schema better, consider the schema for the `IMDB` dataset:
 
 ![Schema of IMDB dataset](./img/IMDB_data_schema.png)
 
-## Syntax of SQL queries 
+---
 
-1. Show all available databases
+## SQL Query Syntax
 
-```sql
+The syntax of SQL queries can vary slightly depending on the database engine being used (e.g., MySQL, PostgreSQL, SQLite). Below are examples of common SQL commands with variations for different database engines.
 
--- In PSQL
-\l
--- or
-SELECT datname FROM pg_database;
+### 1. Show All Available Databases
 
--- In my SQL
-SHOW DATABASES;
-```
+To list all databases available on the server:
 
-2. Connect to a database
+- **PostgreSQL (PSQL):**
 
-```sql
---  In PSQL
-\c DBNAME
+  ```sql
+  -- Command-line
+  \l
+  -- or using SQL
+  SELECT datname FROM pg_database;
+  ```
 
--- In my SQL
-USE DBNAME;
-```
->  In most `PostgreSQL` client applications you would select the database when establishing the database connection, rather than using a separate SQL command to change the database context.
+- **MySQL:**
+  ```sql
+  SHOW DATABASES;
+  ```
 
-3. Show tables in a database
+### 2. Connect to a Database
 
-```sql
--- In PSQL
-\dt
+To switch to a specific database:
 
--- In my SQL
-SHOW TABLES;
-```
+- **PostgreSQL (PSQL):**
+  ```sql
+  \c DBNAME
+  ```
+  > In most PostgreSQL client applications, the database is selected when establishing the connection rather than using a separate SQL command.
 
-4. Creating a database
+- **MySQL:**
+  ```sql
+  USE DBNAME;
+  ```
 
-```sql
-CREATE DATABASE imdb;
-```
+### 3. Show Tables in a Database
 
-5. Show schema of a table
+To list all tables within the currently connected database:
 
-```sql
--- In PSQL
-\d TABLENAME
--- for detailed schema
-\d+ TABLENAME
+- **PostgreSQL (PSQL):**
+  ```sql
+  -- Command-line
+  \dt
+  ```
 
--- In my SQL
-DESCRIBE TABLENAME;
-```
+- **MySQL:**
+  ```sql
+  SHOW TABLES;
+  ```
 
-6. Selecting data from a table
+### 4. Create a Database
 
-```sql
--- Select all columns
-SELECT * FROM TABLENAME;
+To create a new database:
 
--- Select specific columns
-SELECT COLUMN1, COLUMN2 FROM TABLENAME;
-```
+- **General Syntax (Applicable in both PostgreSQL and MySQL):**
+  ```sql
+  CREATE DATABASE imdb;
+  ```
 
-7. Creating a table
+### 5. Show Schema of a Table
+
+To display the structure of a specific table:
+
+- **PostgreSQL (PSQL):**
+  ```sql
+  -- Basic schema
+  \d TABLENAME
+  
+  -- Detailed schema
+  \d+ TABLENAME
+  ```
+
+- **MySQL:**
+  ```sql
+  DESCRIBE TABLENAME;
+  ```
+
+### 6. Selecting Data from a Table
+
+To retrieve data from a table:
+
+- **Select All Columns:**
+  ```sql
+  SELECT * FROM TABLENAME;
+  ```
+
+- **Select Specific Columns:**
+  ```sql
+  SELECT COLUMN1, COLUMN2 FROM TABLENAME;
+  ```
+
+### 7. Creating a Table
+
+To define a new table within the database:
 
 ```sql
 CREATE TABLE TABLENAME (
@@ -130,249 +168,505 @@ CREATE TABLE TABLENAME (
 );
 ```
 
+- **Example:**
+  ```sql
+  CREATE TABLE employees (
+      id INT,
+      name VARCHAR(100),
+      hire_date DATE
+  );
+  ```
 
-8. DML Commands
+### 8. Data Manipulation Language (DML) Commands
 
-```sql
--- Inserting data into a table
-INSERT INTO TABLENAME (COLUMN1, COLUMN2) VALUES (VALUE1, VALUE2), (VALUE3, VALUE4);
+DML commands are used for managing data within tables.
 
--- insert from another table using sub query
-INSERT INTO phone_book2
-SELECT *
-FROM phone_book
-WHERE phone_number = '1234567890';
+- **Inserting Data into a Table:**
+  ```sql
+  INSERT INTO TABLENAME (COLUMN1, COLUMN2) VALUES (VALUE1, VALUE2), (VALUE3, VALUE4);
+  ```
 
--- Updating data in a table
-UPDATE TABLENAME SET COLUMN1 = VALUE1, COLUMN2 = VALUE2 WHERE COLUMN3 = VALUE3;
+  - **Example:**
+    ```sql
+    INSERT INTO employees (id, name) VALUES (1, 'John Doe'), (2, 'Jane Smith');
+    ```
 
--- Deleting data from a table
-DELETE FROM TABLENAME WHERE COLUMN1 = VALUE1;
-```
+- **Inserting Data from Another Table (Using a Subquery):**
+  ```sql
+  INSERT INTO phone_book2
+  SELECT *
+  FROM phone_book
+  WHERE phone_number = '1234567890';
+  ```
 
-9. Limit in SQL
+- **Updating Data in a Table:**
+  ```sql
+  UPDATE TABLENAME
+  SET COLUMN1 = VALUE1, COLUMN2 = VALUE2
+  WHERE COLUMN3 = VALUE3;
+  ```
 
-```sql
--- To get the first 10 rows of columns Column1 and Column2
-SELECT Column1, Column2 FROM TABLENAME LIMIT 10;
+  - **Example:**
+    ```sql
+    UPDATE employees
+    SET name = 'John Smith'
+    WHERE id = 1;
+    ```
 
--- To get the next 10 rows of columns Column1 and Column2 after the first 10 rows
-SELECT Column1, Column2 FROM TABLENAME LIMIT 10 OFFSET 10;
-```
+- **Deleting Data from a Table:**
+  ```sql
+  DELETE FROM TABLENAME
+  WHERE COLUMN1 = VALUE1;
+  ```
 
-10. Ordering in SQL (Sorting)
+  - **Example:**
+    ```sql
+    DELETE FROM employees
+    WHERE id = 2;
+    ```
 
-```sql
--- For ordering in ascending order
-SELECT Column1, Column2 FROM TABLENAME ORDER BY Column1 ASC;
+### 9. Limiting Results in SQL
 
--- For ordering in descending order
-SELECT Column1, Column2 FROM TABLENAME ORDER BY Column1 DESC;
-```
+The `LIMIT` clause is used to restrict the number of rows returned by a query.
 
-> The output row order may not be the same as the order in which the rows are inserted into the database. It depends on query optimizer, database engine, and the indexes on the table.
+- **Getting the First 10 Rows:**
+  ```sql
+  SELECT Column1, Column2
+  FROM TABLENAME
+  LIMIT 10;
+  ```
 
-11. Distinct in SQL
+- **Getting the Next 10 Rows After the First 10:**
+  ```sql
+  SELECT Column1, Column2
+  FROM TABLENAME
+  LIMIT 10 OFFSET 10;
+  ```
 
-```sql
--- To get the unique values of a column
-SELECT DISTINCT Column1 FROM TABLENAME;
-```
+### 10. Ordering Results in SQL (Sorting)
 
-12. Where in SQL
+The `ORDER BY` clause is used to sort the result set based on one or more columns.
 
-```sql
--- To get the rows where Column1 is equal to 1
-SELECT * FROM TABLENAME WHERE Column1 = 1;
+- **Sorting in Ascending Order:**
+  ```sql
+  SELECT Column1, Column2
+  FROM TABLENAME
+  ORDER BY Column1 ASC;
+  ```
 
--- To get the rows where Column1 is between 1 and 10
-SELECT * FROM TABLENAME WHERE Column1 BETWEEN 1 AND 10;
+- **Sorting in Descending Order:**
+  ```sql
+  SELECT Column1, Column2
+  FROM TABLENAME
+  ORDER BY Column1 DESC;
+  ```
 
--- <> and != implies not equal to, = and != won't work for NULL values
-SELECT column1, column2 FROM TABLENAME WHERE column2 IS NOT NULL;
-```
+> **Note:** The output row order may not be the same as the order in which rows are inserted into the database. This order depends on the query optimizer, database engine, and the indexes on the table.
 
-13. Logical operators in SQL
+### 11. Retrieving Unique Values with `DISTINCT`
 
-```sql
--- AND
-SELECT * FROM TABLENAME WHERE Column1 = 1 AND Column2 = 2;
+The `DISTINCT` keyword is used to return only unique values from a column.
 
--- OR
-SELECT * FROM TABLENAME WHERE Column1 = 1 OR Column2 = 2;
+- **Getting Unique Values from a Column:**
+  ```sql
+  SELECT DISTINCT Column1
+  FROM TABLENAME;
+  ```
 
--- NOT
-SELECT * FROM TABLENAME WHERE NOT Column1 = 1;
+### 12. Filtering Data with `WHERE`
 
--- BETWEEN - It is inclusive
--- low value should always be less than or equal to high value
-SELECT * FROM TABLENAME WHERE Column1 BETWEEN 1 AND 10;
+The `WHERE` clause filters rows based on specific conditions.
 
--- IN
-SELECT column1 FROM TABLENAME WHERE Column1 IN (1, 2, 3);
+- **Equality Check:**
+  ```sql
+  SELECT * 
+  FROM TABLENAME 
+  WHERE Column1 = 1;
+  ```
 
--- LIKE
--- % is a wildcard character
--- _ is a single character wildcard
+- **Range Check:**
+  ```sql
+  SELECT * 
+  FROM TABLENAME 
+  WHERE Column1 BETWEEN 1 AND 10;
+  ```
 
--- To get all the rows where Column1 starts with A
-SELECT * FROM TABLENAME WHERE Column1 LIKE 'A%';
+- **Handling NULL Values:**
+  ```sql
+  SELECT column1, column2 
+  FROM TABLENAME 
+  WHERE column2 IS NOT NULL;
+  ```
 
--- To get all the rows where Column1 contains A
-SELECT * FROM TABLENAME WHERE Column1 LIKE '%A%';
+### 13. Using Logical Operators
 
--- To get all the rows where Column1 starts with A and ends with A and has 3 characters in between
-SELECT * FROM TABLENAME WHERE Column1 LIKE 'A___A';
-```
+Logical operators in SQL help combine multiple conditions.
 
-14. Aggregate functions in SQL (Count, Sum, Min, Max, Avg) - These functions ignore NULL values and return only one value
+- **AND Operator:**
+  ```sql
+  SELECT * 
+  FROM TABLENAME 
+  WHERE Column1 = 1 AND Column2 = 2;
+  ```
 
-```sql
--- Count
-SELECT COUNT(*) FROM TABLENAME;
+- **OR Operator:**
+  ```sql
+  SELECT * 
+  FROM TABLENAME 
+  WHERE Column1 = 1 OR Column2 = 2;
+  ```
 
--- Sum
-SELECT SUM(Column1) FROM TABLENAME;
+- **NOT Operator:**
+  ```sql
+  SELECT * 
+  FROM TABLENAME 
+  WHERE NOT Column1 = 1;
+  ```
 
--- Min
-SELECT MIN(Column1) FROM TABLENAME;
+- **BETWEEN Operator:**
+  ```sql
+  SELECT * 
+  FROM TABLENAME 
+  WHERE Column1 BETWEEN 1 AND 10;
+  ```
 
--- Max
-SELECT MAX(Column1) FROM TABLENAME;
+- **IN Operator:**
+  ```sql
+  SELECT column1 
+  FROM TABLENAME 
+  WHERE Column1 IN (1, 2, 3);
+  ```
 
--- Avg
-SELECT AVG(Column1) FROM TABLENAME;
-```
+- **LIKE Operator:**
+  - **Pattern Matching:**
+    ```sql
+    -- To get rows where Column1 starts with 'A':
+    SELECT * 
+    FROM TABLENAME 
+    WHERE Column1 LIKE 'A%';
+    ```
 
-15. Group by in SQL
+  - **Wildcard Matching:**
+    ```sql
+    -- To get rows where Column1 contains 'A':
+    SELECT * 
+    FROM TABLENAME 
+    WHERE Column1 LIKE '%A%';
 
-```sql
--- To get the count of each unique value in Column1
-SELECT column1, COUNT(column1) col1_count, FROM TABLENAME GROUP BY column1 ORDER BY col1_count;
+    -- To get rows where Column1 starts with 'A', ends with 'A', and has exactly 3 characters in between:
+    SELECT * 
+    FROM TABLENAME 
+    WHERE Column1 LIKE 'A___A';
+    ```
 
--- col1_count is an alias for the column name COUNT(column1)
--- Null values are grouped together
-```
+### 14. Using Aggregate Functions
 
-16. Having in SQL
+Aggregate functions perform a calculation on a set of values and return a single value.
 
-```sql
--- To get the count of each unique value in Column1 where the count is greater than 1
-SELECT column1, COUNT(column1) col1_count, FROM TABLENAME GROUP BY column1 HAVING col1_count > 1 ORDER BY col1_count;
+- **Count:**
+  ```sql
+  SELECT COUNT(*) 
+  FROM TABLENAME;
+  ```
 
--- Having is often used with group by, when used without group by it is same as where
+- **Sum:**
+  ```sql
+  SELECT SUM(Column1) 
+  FROM TABLENAME;
+  ```
 
--- Where is applied on individual rows, while having is applied on groups and having is applied after grouping and where is used before grouping
-```
+- **Minimum:**
+  ```sql
+  SELECT MIN(Column1) 
+  FROM TABLENAME;
+  ```
 
-17. Joins in SQL
+- **Maximum:**
+  ```sql
+  SELECT MAX(Column1) 
+  FROM TABLENAME;
+  ```
 
-```sql
--- Inner join
-SELECT * FROM TABLENAME1 INNER JOIN TABLENAME2 ON TABLENAME1.Column1 = TABLENAME2.Column1;
+- **Average:**
+  ```sql
+  SELECT AVG(Column1) 
+  FROM TABLENAME;
+  ```
 
--- Left join
-SELECT * FROM TABLENAME1 LEFT JOIN TABLENAME2 ON TABLENAME1.Column1 = TABLENAME2.Column1;
+### 15. Grouping Data with `GROUP BY`
 
--- Right join
-SELECT * FROM TABLENAME1 RIGHT JOIN TABLENAME2 ON TABLENAME1.Column1 = TABLENAME2.Column1;
+The `GROUP BY` clause groups rows that have the same values in specified columns into summary rows.
 
--- Full outer join
-SELECT * FROM TABLENAME1 FULL OUTER JOIN TABLENAME2 ON TABLENAME1.Column1 = TABLENAME2.Column1;
-```
+- **Counting Unique Values:**
+  ```sql
+  SELECT column1, COUNT(column1) AS col1_count
+  FROM TABLENAME 
+  GROUP BY column1 
+  ORDER BY col1_count;
+  ```
 
-> **Inner join** : Returns only the rows that match in both tables
+### 16. Filtering Groups with `HAVING`
 
-> **Natural join** : Returns only the rows that match in both tables, but it doesn't require us to specify the columns to join on. It automatically matches the columns with the same name.
+The `HAVING` clause is used to filter groups based on aggregate functions.
+
+- **Filtering Groups with a Count Greater Than 1:**
+
+  ```sql
+  SELECT column1, COUNT(column1) AS col1_count
+  FROM TABLENAME 
+  GROUP BY column1 
+  HAVING col1_count > 1 
+  ORDER BY col1_count;
+  ```
+
+- **Difference Between `WHERE` and `HAVING`:**
+
+  - `WHERE` filters individual rows before grouping.
+  - `HAVING` filters groups after grouping.
+
+---
+
+### 17. Joins in SQL
 
 ![JOINS](./img/JOINS.png)
 
-18. Sub queries in SQL
+Joins are used to combine rows from two or more tables based on a related column between them.
 
+- **Inner Join:**
+
+  Returns only the rows where there is a match in both tables.
+  ```sql
+  SELECT * 
+  FROM TABLENAME1 
+  INNER JOIN TABLENAME2 
+  ON TABLENAME1.Column1 = TABLENAME2.Column1;
+  ```
+
+- **Left Join (or Left Outer Join):**
+
+  Returns all rows from the left table, and the matched rows from the right table. Rows from the left table with no match in the right table will have `NULL` values for columns from the right table.
+  ```sql
+  SELECT * 
+  FROM TABLENAME1 
+  LEFT JOIN TABLENAME2 
+  ON TABLENAME1.Column1 = TABLENAME2.Column1;
+  ```
+
+- **Right Join (or Right Outer Join):**
+  Returns all rows from the right table, and the matched rows from the left table. Rows from the right table with no match in the left table will have `NULL` values for columns from the left table.
+  ```sql
+  SELECT * 
+  FROM TABLENAME1 
+  RIGHT JOIN TABLENAME2 
+  ON TABLENAME1.Column1 = TABLENAME2.Column1;
+  ```
+
+- **Full Outer Join:**
+
+  Returns all rows when there is a match in one of the tables. Rows from both tables with no match will have `NULL` values for the columns from the table without a match.
+  ```sql
+  SELECT * 
+  FROM TABLENAME1 
+  FULL OUTER JOIN TABLENAME2 
+  ON TABLENAME1.Column1 = TABLENAME2.Column1;
+  ```
+- **Join Conditions:** Ensure that the columns used for joining are indexed to improve performance.
+
+- **Avoid Cartesian Products:** Be cautious with joins that do not have proper conditions, as they may result in a Cartesian product, returning a large number of rows.
+
+- **Natural Join:** Automatically joins tables based on columns with the same names. Note that it’s less explicit and might lead to unexpected results if tables have columns with the same name but different meanings.
 ```sql
---
-SELECT column1, column2 FROM TABLENAME WHERE some_id IN
-(SELECT column3 FROM TABLENAME2 WHERE column4 = 'some_value');
+SELECT * 
+FROM TABLENAME1 
+NATURAL JOIN TABLENAME2;
 ```
 
-> Consider writing sub queries like nested code blocks, the inner query is executed first and the result of the inner query is used in the outer query. Writing and reading sub-queries may be easier than complex joins.
+---
 
-19. Union in SQL
+### 18. Subqueries in SQL
 
+Subqueries are queries nested within another query, used to perform operations that depend on the results of the inner query.
+
+- **Basic Subquery:**
+  Retrieves rows from one table based on the results from another table.
+  ```sql
+  SELECT column1, column2 
+  FROM TABLENAME 
+  WHERE some_id IN (
+    SELECT column3 
+    FROM TABLENAME2 
+    WHERE column4 = 'some_value'
+  );
+  ```
+
+- **Use Aliases:** Simplify your queries and improve readability by using table aliases.
 ```sql
--- Union is used to combine the result of two or more select statements
-SELECT column1 FROM TABLENAME1 UNION SELECT column1 FROM TABLENAME2;
-
--- Union all is used to combine the result of two or more select statements, including duplicate values
-SELECT column1 FROM TABLENAME1 UNION ALL SELECT column1 FROM TABLENAME2;
+SELECT A.Column1, B.Column2 
+FROM TABLENAME1 A 
+INNER JOIN TABLENAME2 B 
+ON A.Column1 = B.Column1;
 ```
 
-20. Views in SQL
+- **Nested Code Blocks:** Treat subqueries as nested code blocks where the inner query is executed first, and its result is used in the outer query. This approach can simplify complex queries.
 
-```sql
--- Views are virtual tables created from the result set of a query
-CREATE VIEW view_name AS
-SELECT column1, column2 FROM TABLENAME WHERE column1 = 'some_value';
+- **Performance Considerations:** Subqueries can be less efficient than joins. For better performance, consider using joins or optimizing subqueries as needed.
 
--- To get the data from a view
-SELECT * FROM view_name;
+- **Correlated Subqueries:** When the subquery references columns from the outer query, it’s called a correlated subquery. Use these when you need to perform row-by-row comparisons.
 
--- To delete a view
-DROP VIEW view_name;
-```
+- **Readability:** Ensure subqueries are well-structured and commented to maintain readability, especially in complex queries.
 
-21. Indexes in SQL
+### 19. Combining Results with `UNION`
 
-```sql
--- Indexes are used to speed up the data retrieval process
--- Indexes are created on columns
--- Indexes are automatically created on primary key columns
+The `UNION` operator combines the results of two or more `SELECT` statements, removing duplicate rows by default. Use `UNION ALL` to include duplicates.
 
--- To create an index
-CREATE INDEX index_name ON TABLENAME (column1);
+- **Union:**
+  Combines results and removes duplicate rows.
+  ```sql
+  SELECT column1 
+  FROM TABLENAME1 
+  UNION 
+  SELECT column1 
+  FROM TABLENAME2;
+  ```
 
--- To delete an index
-DROP INDEX index_name;
-```
+- **Union All:**
+  Combines results and includes duplicate rows.
+  ```sql
+  SELECT column1 
+  FROM TABLENAME1 
+  UNION ALL 
+  SELECT column1 
+  FROM TABLENAME2;
+  ```
 
-22. Data definition language (DDL) in SQL
+- **Performance:** `UNION ALL` is generally faster than `UNION` because it does not perform duplicate checking.
 
-```sql
--- To create a table
-CREATE TABLE TABLENAME (
-    column1 datatype,
-    column2 datatype,
-    column3 datatype
-);
+- **Order By Clause:** If you need to sort the combined result, use an `ORDER BY` clause at the end of the combined query.
 
--- To delete a table
-DROP TABLE TABLENAME;
+### 20. Working with Views
 
--- To add a column to a table
-ALTER TABLE TABLENAME ADD COLUMN column1 datatype;
+Views are virtual tables created from the result of a query. They simplify complex queries and provide a layer of abstraction.
 
--- To delete a column from a table
-ALTER TABLE TABLENAME DROP COLUMN column1;
+- **Creating a View:**
+  ```sql
+  CREATE VIEW view_name AS
+  SELECT column1, column2 
+  FROM TABLENAME 
+  WHERE column1 = 'some_value';
+  ```
 
--- To change the datatype of a column
-ALTER TABLE TABLENAME ALTER COLUMN column1 datatype;
+- **Selecting Data from a View:**
+  ```sql
+  SELECT * 
+  FROM view_name;
+  ```
 
--- To rename a column
-ALTER TABLE TABLENAME RENAME COLUMN column1 TO column2;
+- **Deleting a View:**
+  ```sql
+  DROP VIEW view_name;
+  ```
 
--- To rename a table
-ALTER TABLE TABLENAME RENAME TO TABLENAME2;
-```
+- **Performance Considerations:** Views themselves do not store data. They are executed when queried, so performance depends on the underlying query.
 
-23. Data control language (DCL) in SQL
+- **Use Cases:** Views are useful for encapsulating complex joins and aggregations or for providing different perspectives on the same data.
 
-```sql
--- To grant privileges to a user
-GRANT privilege_name ON TABLENAME TO user_name;
+### 21. Using Indexes
 
--- To revoke privileges from a user
-REVOKE privilege_name ON TABLENAME FROM user_name;
-```
+Indexes improve the speed of data retrieval operations on a database table. They are particularly useful for columns that are frequently used in search conditions.
+
+- **Creating an Index:**
+  ```sql
+  CREATE INDEX index_name 
+  ON TABLENAME (column1);
+  ```
+
+- **Deleting an Index:**
+  ```sql
+  DROP INDEX index_name;
+  ```
+
+- **Automatic Indexes:** Indexes are automatically created for primary key columns and unique constraints.
+
+- **Performance Impact:** While indexes speed up data retrieval, they can slow down data modification operations (INSERT, UPDATE, DELETE) because the index needs to be updated.
+
+- **Indexing Strategy:** Use indexes judiciously. Indexes on columns used in WHERE clauses, JOIN conditions, and ORDER BY clauses are usually beneficial.
+
+### 22. Data Definition Language (DDL) in SQL
+
+DDL commands are used to define and modify database structures.
+
+- **Creating a Table:**
+  ```sql
+  CREATE TABLE TABLENAME (
+      column1 datatype,
+      column2 datatype,
+      column3 datatype
+  );
+  ```
+
+- **Deleting a Table:**
+  ```sql
+  DROP TABLE TABLENAME;
+  ```
+
+- **Adding a Column:**
+  ```sql
+  ALTER TABLE TABLENAME 
+  ADD COLUMN column1 datatype;
+  ```
+
+- **Deleting a Column:**
+  ```sql
+  ALTER TABLE TABLENAME 
+  DROP COLUMN column1;
+  ```
+
+- **Changing a Column's Data Type:**
+  ```sql
+  ALTER TABLE TABLENAME 
+  ALTER COLUMN column1 datatype;
+  ```
+
+- **Renaming a Column:**
+  ```sql
+  ALTER TABLE TABLENAME 
+  RENAME COLUMN column1 TO column2;
+  ```
+
+- **Renaming a Table:**
+  ```sql
+  ALTER TABLE TABLENAME 
+  RENAME TO TABLENAME2;
+  ```
+
+- **Dependencies:** Be aware of dependencies such as foreign keys and views that may be affected by DDL changes.
+
+### 23. Data Control Language (DCL) in SQL
+
+DCL commands are used to control access to data within the database. They manage permissions for users and roles.
+
+- **Granting Privileges:**
+  Use the `GRANT` statement to give specific privileges to a user or role.
+  ```sql
+  GRANT privilege_name 
+  ON TABLENAME 
+  TO user_name;
+  ```
+
+- **Revoking Privileges:**
+  Use the `REVOKE` statement to remove specific privileges from a user or role.
+  ```sql
+  REVOKE privilege_name 
+  ON TABLENAME 
+  FROM user_name;
+  ```
+
+
+- **Privilege Types:** Common privileges include `SELECT`, `INSERT`, `UPDATE`, `DELETE`, and `ALL PRIVILEGES`. The `ALL PRIVILEGES` grants all available permissions on the specified object.
+
+- **Role Management:** Consider using roles to manage permissions for groups of users, simplifying privilege management.
+
+---
 
 **Data-types in SQL (PostgreSQL specific)**
 
@@ -427,3 +721,41 @@ cur.close()
 # Close the connection
 conn.close()
 ```
+
+## MySQL with Python
+
+Use the `mysql-connector-python` library to connect to the database and execute queries.
+
+```python
+
+import mysql.connector
+
+
+# Connect to the database
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="password",
+    database="imdb"
+)
+
+# Create a cursor object
+cur = conn.cursor()
+
+# Execute a query
+cur.execute("SELECT * FROM movies LIMIT 10")
+
+# Fetch the results
+results = cur.fetchall()
+
+# Print the results
+for row in results:
+    print(row)
+
+# Close the cursor
+cur.close()
+
+# Close the connection
+conn.close()
+```
+
