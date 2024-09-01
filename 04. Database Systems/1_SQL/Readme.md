@@ -428,7 +428,8 @@ The `HAVING` clause is used to filter groups based on aggregate functions.
 
 ### 17. Joins in SQL
 
-![JOINS](./img/JOINS.png)
+<!-- TODO: CORRECT THE BELOW IMAGE.. -->
+<!-- ![JOINS](./img/JOINS.png)  -->
 
 Joins are used to combine rows from two or more tables based on a related column between them.
 
