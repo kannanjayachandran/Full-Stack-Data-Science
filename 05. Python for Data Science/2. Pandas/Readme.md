@@ -17,23 +17,19 @@ Pandas is a Python library designed to simplify working with relational or label
 
 A one-dimensional array-like object that contains a sequence of values, similar to `NumPy` types, along with an associated array of data labels known as its `index`. The index in a Series can consist of any data type, including numbers, strings, or even dates.
 
-
-
 ### DataFrame
 
-A two-dimensional data structure that can hold data of different types in rows and columns, similar to a spreadsheet or SQL table.
+A two-dimensional data structure that can hold data of different types in rows and columns, similar to a spreadsheet or SQL table. A simpler version of how python would represent a column-oriented data structure similar to pandas dataFrame is like below:
 
-Pandas is particularly strong in the following areas:
-
-- **Handling Missing Data**: It provides robust methods to deal with missing values in your dataset.
-
-- **Size Mutability**: You can easily insert or delete rows and columns.
-
-- **Powerful Grouping (groupby)**: Pandas offers flexible group-by operations for aggregating data.
-
-- **Versatile File Handling**: Pandas can seamlessly work with a variety of file formats, including flat files (CSV, TXT), Excel files, databases, HDFS formats, parquet files, and more.
-
-- **Time Series Functionalities**: It has specialized functions for handling and manipulating time series data. In fact Pandas was originally developed for financial modeling.
+```python
+ df = {
+   'index':[0,1,2],
+    'cols': [
+      { 'name':'growth',
+      'data':[.5, .7, 1.2] },
+      . . . .
+      . . . .
+```
 
 ### Axes in Pandas
 
@@ -44,8 +40,6 @@ In Pandas, data is organized along two axes:
 The following image illustrates how data is organized along these axes in a DataFrame:
 
 ![Axes](./img/Axes.png)
-
-
 
 ### Indexing and Slicing in Pandas
 
@@ -68,6 +62,18 @@ By default, Pandas uses explicit indices for accessing data (`df[2]`) and implic
 - **Nullable Integer Datatype**: The nullable integer data type (`Int64`) allows for missing values in integer columns. Because `NaN` is a floating-point value, it forces an array of integers with any missing values to become floating point. In some cases, this may not matter much. But if your integer column is, say, an identifier, casting to float can be problematic. The nullable integer data type allows you to work with integer columns that have missing values without converting them to floating point. Read more about the [nullable integer data type]https://pandas.pydata.org/docs/user_guide/integer_na.html) in the pandas documentation.
 
 ---
+
+Pandas is particularly strong in the following areas:
+
+- **Handling Missing Data**: It provides robust methods to deal with missing values in your dataset.
+
+- **Size Mutability**: You can easily insert or delete rows and columns.
+
+- **Powerful Grouping (groupby)**: Pandas offers flexible group-by operations for aggregating data.
+
+- **Versatile File Handling**: Pandas can seamlessly work with a variety of file formats, including flat files (CSV, TXT), Excel files, databases, HDFS formats, parquet files, and more.
+
+- **Time Series Functionalities**: It has specialized functions for handling and manipulating time series data. In fact Pandas was originally developed for financial modeling.
 
 ### Common Pandas Functions
 
