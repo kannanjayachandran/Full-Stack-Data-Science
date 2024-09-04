@@ -77,9 +77,7 @@ Pandas is particularly strong in the following areas:
 
 ### Common Pandas Functions
 
-Below is a curated list of some of the most commonly used functions. But before that let's briefly discuss how these functions are distributed between Series and DataFrame objects.
-
-There are over 400 attributes on a series object. Here is a summary of them based roughly on the basis of their return type or what they return:
+Below is a curated list of some of the most commonly used functions. But before that let's briefly discuss how these functions are distributed between Series and DataFrame objects. Some of the common types of functions in Pandas are:
 
 - **Dunder methods**: (.__add__, .__iter__, etc) provide many numeric operations, looping, attribute access, and index access. For the numeric operations, these return Series.
 
