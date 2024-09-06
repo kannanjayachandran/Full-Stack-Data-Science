@@ -23,9 +23,5 @@ venv.bak/
 .idea
 
 # Items not ready for production
-/Extras
-/14. System Designing and Machine Learning System Designing/System_Design_primer.md
-/14. System Designing and Machine Learning System Designing/image.png
-/15. Data Engineering and Big Data/1. Data Engineering Fundamentals/Excel.md
-/15. Data Engineering and Big Data/1. Data Engineering Fundamentals/Tableau.md
 /07. Data_Science-II/temp
+/05. Python for Data Science/2. Pandas/Notebooks/Data
