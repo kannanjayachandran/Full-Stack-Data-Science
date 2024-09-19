@@ -5,7 +5,7 @@
 Just learn linux.
 
 ![https://www.digitalocean.com/community/tutorials/linux-commands](img/Linux_commands.png)
-> image source: Digital Ocean
+> source: Digital Ocean
 
 **[Basic linux commands by **Digital Ocean**](https://www.digitalocean.com/community/tutorials/linux-commands)**
 
