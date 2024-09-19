@@ -6,18 +6,19 @@
 
 ---
 
-**Computer science** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_ to how well software is developed and designed. **Computer scientists** use various mathematical algorithms, coding procedures, and their expert programming skills to study computer processes and develop new software and systems.
+**Computer science** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_. 
 
-We also have **Computer Engineering** which is concerned with the design of computer hardware and of computer-based devices or software interacting tightly with the hardware for embedded systems and computer-based devices.
+**Computer scientists** use various mathematical algorithms, coding procedures, and their expert programming skills to study computer processes and develop new software and systems.
 
-**Information systems** as a field has to do with applying today’s information technology to solve today’s problems, typically in the area of businesses and other enterprises.
+**Computer Engineering** is concerned with the design of computer hardware and software interacting tightly with the hardware for embedded systems and computer-based devices.
 
 ## Historical Context
 
-Originally, computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating 0s and 1s.
+Computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating 0s and 1s.
 
-Alan Turing is considered the father of computer science. He formalized the concept of a **Turing machine**, which is a simple description of a general-purpose computer. A Turing machine consists of an infinitely long tape divided into cells containing symbols, a head that can read and write symbols, a state register that stores the head's state, and a list of possible instructions. This forms the basis of modern computers.
-<p align="center"><img src="./img/Turing_machine.jpeg" alt="AI generated image of a turing machine" height=380></p>
+Alan Turing is considered as the father of computer science. He formalized the concept of a **Turing machine**, which is a simple description of a general-purpose computer. A Turing machine consists of an _infinitely long tape_ divided into cells containing symbols, a _head_ that can read and write symbols, a _state register_ that stores the head's state, and a list of possible instructions. 
+
+<p align="center"><img src="./img/Turing_machine.jpeg" alt="AI generated image of a turing machine" height=320></p>
 
 > AI generated image; Not an actual Turing machine
 
@@ -25,9 +26,13 @@ Alan Turing is considered the father of computer science. He formalized the conc
 
 Theoretical computer science examines the problems that can be solved using computational models and algorithms, focusing on their efficiency and solvability.
 
-**Computability Theory** : It studies the general properties of computation, including decidability, computability, and Turing completeness. It addresses what problems can be solved on a computer. **More on [computability theory](https://en.wikipedia.org/wiki/Computability_theory)**
+**Computability Theory** : It studies the general properties of computation, including _decidability_ (Related to the solvability of a problem; meaning there will be an algorithm that returns a 'Yes' or 'no' for any given input.), _computability_ (It investigates whether a problem can be solved with any algorithm in a finite amount of time.), and _Turing completeness_. It addresses what problems can be solved on a computer.
 
-**Automata Theory and Formal Language Theory** : Automata theory studies abstract machines (automata) and the computational problems they can solve. It is closely linked to formal language theory, which examines the properties of formal languages and their relationship to automata. **More on [Automata Theory](https://en.wikipedia.org/wiki/Automata_theory) and [Formal Language Theory](https://en.wikipedia.org/wiki/Formal_language)**
+> [Computability theory on wikipedia](https://en.wikipedia.org/wiki/Computability_theory)
+
+**Automata Theory and Formal Language Theory** : Automata theory studies abstract machines (automata) and the computational problems they can solve. It is closely linked to formal language theory, which examines the properties of formal languages and their relationship to automata. 
+
+> [Automata Theory on wikipedia](https://en.wikipedia.org/wiki/Automata_theory) and [Formal Language Theory on wikipedia](https://en.wikipedia.org/wiki/Formal_language)
 
 ![Automata](./img/Automata_theory.png)
 
@@ -47,9 +52,11 @@ Theoretical computer science examines the problems that can be solved using comp
 
 ### Information theory
 
-This field studies the properties of information and how it can be stored, measured, and communicated. Read more about **[Information Theory article on Wikipedia](https://en.wikipedia.org/wiki/Information_theory)**.
+This field studies the properties of information and how it can be stored, measured, and communicated.
 
 ![Information theory](./img/information_theory.png)
+
+> [Information Theory on Wikipedia](https://en.wikipedia.org/wiki/Information_theory)
 
 ### Cryptography 
 
@@ -69,22 +76,23 @@ A typical computer system's architecture would look like this:
 
 It will have;
 
-- **Central Processing Unit (CPU)**: Responsible for executing instructions and performing calculations.
+- **Central Processing Unit (CPU)**: Responsible for executing instructions and performing calculations (ALU).
 
-- **Memory**: RAM (Random Access Memory) Stores data and instructions that the CPU needs to access quickly. Then we have secondary storage devices like hard drives and SSDs that store data more permanently.
+- **Memory**: RAM (Random Access Memory) Stores data and instructions that the CPU needs to access quickly. Then we have secondary storage devices like hard drives and SSDs for persistent storage.
 
 - **Input/Output (I/O) devices**: These devices allow the computer to interact with the outside world, such as keyboard, mouse, monitors, network card, etc.
 
 ### CPU (Central Processing Unit)
 
-Inside the CPU; we find an integrated circuit or Die (or chip) that contains Processor cores, a memory controller, a graphics processor and many other components. The following is a labelled die shot of a 13-th gen Intel Core i9 processor (Raptor Lake) with 24 cores.
+Inside the CPU; we have an IC (integrated circuit) or Die (or chip) that contains the `Processor cores`, a `memory controller`, a `graphics processor` and many other components. 
+
+The following is a labelled die shot of `13-th gen Intel Core i9 processor` (Raptor Lake) with 24 cores.
 
 ![Die shot of a chip](./img/die_shot.png)
-> Image link: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/a/a4/Intel_Core_i9-13900K_Labelled_Die_Shot.jpg)
 
-> For ease of reference; we will will be using the above diagram to explain the components of a CPU.
+> Image Courtesy ~ [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/a/a4/Intel_Core_i9-13900K_Labelled_Die_Shot.jpg)
 
-**CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. They might also have something called hyper-threading, which allows each core to execute multiple threads simultaneously. The number of threads can be twice the number of cores in CPUs with hyper-threading(Intel specific; AMD has something known as SMT, which stands for Simultaneous Multithreading). Not all cores might have similar performance to efficiency ratios; some cores might be optimized for performance while others might be optimized for efficiency (P-Cores and E-Cores).
+**CPU Cores**: Modern CPUs have multiple cores, each capable of executing instructions independently. Further  each core could execute multiple threads simultaneously. The number of threads can be twice the number of cores in CPUs with hyper-threading(Intel specific; AMD has something known as SMT (Simultaneous Multithreading)). In this particular architecture not all cores have similar performance to efficiency ratios; some cores are optimized for performance while others are optimized for efficiency (P-Cores and E-Cores).
 
 The following are the components typically found inside a modern CPU Core:
 
@@ -102,15 +110,16 @@ The following are the components typically found inside a modern CPU Core:
 
 - **Branch Prediction Unit**: This unit predicts the outcome of conditional branches in the program to minimize the performance impact of branch mis-predictions.
 
-Additionally we have many other complex components also. Essentially inside every CPU Core in our current processor we will find a layout of around 44000 transistors physically execute 32-bit instructions. The processor in the diagram has around 26 Million transistors. 
+With the above architecture; inside every CPU core we will find a layout of around 44000 transistors physically execute 32-bit instructions, with a grand total of around 26 Million transistors in the processor.
 
-With transistors we can build logic gates and by combining logic gates in a certain way we can build complex circuits that can perform calculations according to boolean algebra.
+---
 
-**An Example**: Let's see what happens when we run a python program that adds two numbers.
+**Let's see what happens when we run a python program that adds two numbers**.
 
 ```python
 a, b = 5, 3
 c = a + b
+
 print(c)
 ```
 
@@ -118,13 +127,14 @@ print(c)
 
 1. We run the program in the terminal. `python3 add.py`
 
-2. The Python interpreter reads the source code and breaks it down into tokens (keywords, operators, identifiers) {Lexical Analysis}.
+2. The Python interpreter reads the source code and breaks it down into tokens (keywords, operators, identifiers). This process is known as lexical analysis or tokenization.
 
 3. The tokens are parsed to form an Abstract Syntax Tree (AST), representing the structure of the code.
 
 4. The AST is compiled into Python bytecode, an intermediate representation that is platform-independent.
 
-5. The Python Virtual Machine (PVM) executes the bytecode. For each bytecode instruction:
+5. The Python Virtual Machine (`PVM`) executes the bytecode. For each bytecode instruction:
+
     - Fetches the instruction.
 
     - Decodes the instruction.
@@ -151,7 +161,6 @@ print(c)
 
 9. The result (`8`) is sent to the output device (console) via system calls, which involve interaction with the operating system.
 
-
 The CPU performs a machine cycle, which includes accessing data, performing operations, and storing results back in memory. Modern CPUs can execute billions of machine cycles per second, synchronized by the clock generator. The speed of the clock is measured in GHz (Gigahertz), where 1 GHz equals 1 billion cycles per second.
 
 <p align="center"><img src="./img/machine_cycle.png" alt="Machine Cycle" height=380></p>
@@ -160,7 +169,11 @@ The CPU performs a machine cycle, which includes accessing data, performing oper
 
 ## Information Representation in Computers
 
-**Binary Data** : Information in computers is represented as binary data, a sequence of 0s and 1s known as bits. A group of 8 bits forms a byte, which can have 256 different combinations, allowing it to represent numbers, characters, and other data types.
+**Binary Data** : Information in computers is represented as binary data, a sequence of 0s and 1s known as bits. 
+
+- 8 bits -> 1 byte
+
+A byte can have `256` different combinations, allowing it to represent numbers, characters, and other data types.
 
 A typical computer system features a hierarchy of memory levels, each with different speed, capacity, and cost characteristics. This hierarchy helps balance the trade-offs between fast, small, and expensive memory (like CPU cache) and slow, large, and cheaper memory (like secondary storage).
 
@@ -169,66 +182,6 @@ A typical computer system features a hierarchy of memory levels, each with diffe
 Computer memory is divided into small units called cells, typically each holding a **byte**. Although there's no physical orientation, memory cells are often visualized linearly, with the high-order end on the left and the low-order end on the right. The high-order bit (most significant bit) is the leftmost bit, and the low-order bit (least significant bit) is the rightmost bit.
 
 ![Computer Memory](./img/computer_memory_diagram.png)
-
-While there's no physical left or right orientation, we often visualize memory cells as linear, with the high-order end on the left and the low-order end on the right. The high-order bit, or most significant bit, is the leftmost bit, and the low-order bit, or least significant bit, is the rightmost bit.
-
-
-## Programming Languages
-
-Programming languages are formal languages used to communicate instructions to a computer, enabling the execution of specific tasks. They can be classified based on various criteria, including their level of abstraction, execution method, design paradigm, and domain-specific applications.
-
-### Level of Abstraction
-
-- **Low-level languages**: Low-level languages are close to the hardware and provide direct control over the computer's resources. They are difficult to read and write but offer high performance and efficiency. (Assembly language, Machine code)
-
-- **High-level languages**: High-level languages are designed to be easy to read and write, making them more accessible to programmers. They can be further categorized into:
-
-    - **Procedural Languages**: Focus on procedures or functions that perform specific tasks. Examples: C, Pascal, Fortran.
-
-    - **Object-Oriented Languages**: Organize code into objects that interact with each other. Examples: Java, C++, Python.
-
-    - **Functional Languages**: Treat computation as the evaluation of mathematical functions and avoid changing state or mutable data. Examples: Haskell, Lisp.
-
-    - **Scripting Languages**: Designed for automating tasks and often used for web development, system administration, and data analysis. Examples: JavaScript, Python, Ruby.
-
-- **Domain-Specific Languages (DSLs)**: Domain-specific languages are designed for specific domains or tasks, such as:
-
-    - `SQL` for database queries.
-    - `HTML` for web development.
-    - `MATLAB` for scientific computing.
-    - `VHDL` for hardware description.
-
-### Execution Method
-- **Compiled Languages**: Compiled languages are translated into machine code before execution, providing faster runtime performance. Examples include:
-    - C, C++, Rust, Go.
-
-- **Interpreted Languages**: Interpreted languages are translated into machine code during execution, allowing for more flexibility and easier debugging. Examples include:
-    - Python, Ruby, JavaScript.
-
-- Some languages use a combination of both techniques, providing a balance between performance and flexibility. Examples include:
-
-    - Java (compiled to bytecode, then interpreted or JIT-compiled at runtime)
-    - C# (compiled to intermediate language, then JIT-compiled)
-
-In fact we cannot say a language is purely compiled or interpreted. For example, Java is compiled to bytecode and then interpreted or Just-In-Time compiled at runtime. Python is compiled to bytecode and then interpreted by the Python Virtual Machine (PVM).
-
-### Language Syntax and Semantics
-
-**Syntax**: The set of rules that define the structure of valid code. Syntax errors occur when the code violates these rules.
-
-**Semantics**: The meaning of the code, defining how it behaves. Semantic errors occur when the code does not behave as expected.
-
-### Programming Paradigms
-
-Programming languages are based on different paradigms, each with its own set of concepts and principles:
-
-**Imperative Paradigm**: Focuses on how to perform tasks using statements that change a program's state. Examples: C, Java.
-
-**Declarative Paradigm**: Focuses on what the program should accomplish without specifying how. Examples: SQL, HTML.
-
-**Functional Paradigm**: Treats computation as the evaluation of mathematical functions and avoids mutable state. Examples: Haskell, Lisp.
-
-**Object-Oriented Paradigm**: Organizes code into objects that encapsulate data and behavior. Examples: Java, C++, Python.
 
 Other Core CS Concepts are covered in the following sections:
 
