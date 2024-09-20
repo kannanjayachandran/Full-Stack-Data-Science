@@ -1,12 +1,8 @@
 <h1 align="center" > Computer Network </h1>
 
-Computer networking is the practice of connecting computers and other devices to share resources, exchange data, and communicate in the safest and most efficient way possible. It includes the physical devices, software, and protocols that allow the devices to communicate with each other.
+Computer networking is the practice of connecting computers and other devices to share resources, exchange data, and communicate in the safest and most efficient way possible. It includes the physical devices, software, and protocols that allow the devices to communicate with each other. `Nodes`(Equipment for Data Communication like a Modem, Router, etc.) and `Links`(wires or cables or free space of wireless networks.) are the basic building blocks of computer network.
 
-## Internet Timeline
-
-![Internet timeline](./img/timeline.png)
-
-### Types of Networks
+## Types of Networks
 
 - **LAN (Local Area Network)**: Covers a small geographic area, like a home or office.
 
@@ -17,7 +13,11 @@ Computer networking is the practice of connecting computers and other devices to
 - **PAN (Personal Area Network)**: Covers a very small area, typically around an 
 individual (e.g., Bluetooth connections).
 
-### Network Topologies
+## Network Topologies
+
+Topologies refer to the physical and logical arrangement of devices in a network. 
+
+![Network Topologies](./img/Network_topologies.png)
 
 - **Bus Topology**: All devices share a single communication line. It’s simple but can lead to collisions.
 
@@ -29,14 +29,14 @@ individual (e.g., Bluetooth connections).
 
 - **Hybrid Topology**: A combination of two or more topologies.
 
-### Network Protocols
+## Network Protocols
 
-- **TCP/IP (Transmission Control Protocol/Internet Protocol)**: The foundational protocol suite for the internet.
+- **TCP/IP (Transmission Control Protocol/Internet Protocol)**: The foundational, connection-oriented protocol suite for the internet.  It is used for applications where data integrity is critical, like web browsing and email.
     - **TCP**: Ensures reliable, ordered delivery of data.
    
     - **IP**: Handles addressing and routing of packets.
 
-- **UDP (User Datagram Protocol)**: A connectionless protocol that allows data to be sent without establishing a connection.
+- **UDP (User Datagram Protocol)**: A connection-less protocol that allows data to be sent without establishing a connection. It is used for applications where speed is more important than reliability, like streaming and gaming.
 
 - **HTTP/HTTPS (Hypertext Transfer Protocol/Secure)**: Used for transmitting web pages over the internet.
 
@@ -98,13 +98,11 @@ Major application layer protocols are HTTP, FTP, SMTP, POP3, IMAP, DNS, DHCP, et
 
 ### IP Addressing
 
-- **IPv4**: 32-bit address scheme (e.g., 192.168.1.1).
-
-- **IPv6**: 128-bit address scheme (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+An IP (Internet Protocol) address is a unique identifier assigned to each device on a network. It allows devices to locate and communicate with each other. There are two types of IP addresses: IPv4 (e.g.,`192.168.1.1`); 32-bit address scheme  and IPv6; 28-bit address scheme (e.g., `2001:0db8:85a3:0000:0000:8a2e:0370:7334`).
 
 - **Public vs. Private IPs**: Public IPs are used on the internet, while private IPs are used within private networks.
 
-- **Subnetting**: Divides an IP network into smaller sub-networks.
+- **Subnetting/subnet masking**: Divides an IP network into smaller sub-networks. It helps determine which portion of an IP address is the network address and which part is the host address.
 
 ### Routing
 - **Definition**: The process of selecting paths in a network to send data packets.
@@ -121,7 +119,7 @@ Major application layer protocols are HTTP, FTP, SMTP, POP3, IMAP, DNS, DHCP, et
 
 ### Network Security
 
-   - **Firewalls**: Devices or software that monitor and control incoming and outgoing network traffic based on security rules.
+   - **Firewalls**: Devices or software that monitor and control incoming and outgoing network traffic based on predefined security rules.
    
    - **VPN (Virtual Private Network)**: Extends a private network across a public network, enabling secure remote access.
    
