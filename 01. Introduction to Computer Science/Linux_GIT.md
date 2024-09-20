@@ -1,25 +1,16 @@
 <h1 align="center" >Linux - GIT</h1>
 
-## Linux
+- **[Linux command line for beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)**
 
-Just learn linux.
-
-![https://www.digitalocean.com/community/tutorials/linux-commands](img/Linux_commands.png)
-> source: Digital Ocean
-
-**[Basic linux commands by **Digital Ocean**](https://www.digitalocean.com/community/tutorials/linux-commands)**
-
-### Some other useful commands:
-
-- **apropos {keyword} | more**: Search for commands based on keywords.
+- **[Top 50 essential linux commands](https://www.digitalocean.com/community/tutorials/linux-commands)**
 
 ## GIT
 
-Not only from data science or machine learning perspective, from software development perspective, it is important to keep track of the changes you make to your code. This is where version control systems come into play. Version control systems are software tools that help a software team manage changes to source code over time. Here we will be covering GIT, which is the most popular version control system and GITHUB, which is a remote repository hosting service based on GIT.
+Git is a popular version control system. Version control systems are software tools that help a software team manage changes to source code over time. Git along with a central repository like GitHub, GitLab, or Bitbucket, allows multiple developers to work on the same project at the same time.
 
 ## Setting up Git
 
-Install git for your OS and get an account on GitHub. Then in your machine open the `.gitconfig` file in your home directory and add the following lines:
+Install git for your OS and get an account on GitHub. The following are my git configs. Open the `.gitconfig` file in your home directory and add the following lines:
 
 ```bash
 [user]
@@ -37,12 +28,15 @@ Install git for your OS and get an account on GitHub. Then in your machine open 
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [color]
-    branch = auto
     diff = auto
     interactive = auto
     status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
 ```
-> These are my configs, you can change them as you like.
 
 ## Creating a Repository
 
