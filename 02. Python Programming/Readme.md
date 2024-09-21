@@ -242,14 +242,6 @@ OOPS properties in Python are similar to other major object oriented languages. 
 
 [OOPS Notebook](./Notebooks/9_Object_Oriented_Programming.ipynb)
 
-## Pythonic Stuff
-
-Since python does pretty much all the heavy lifting for us, we can focus on writing clean, readable, and maintainable code. There are some `pythonic` ways to write code which are more readable and efficient. Also due the above mentioned properties of python, we can also write bad and ugly code.
-
-First thing first, Use `dir()` and `help()` functions to get information about any object or module. Most of the objects in python has so many stuff built into them, so before writing your own rocket ship, check if python already has one.
-
----
-
 ## Python Documentation
 
 [Official Python documentation](https://docs.python.org/3/)
