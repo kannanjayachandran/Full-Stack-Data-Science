@@ -6,49 +6,44 @@
 
 ---
 
-**Computer science** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_. 
+- **Computer science** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_. 
 
-**Computer scientists** use various mathematical algorithms, coding procedures, and their expert programming skills to study computer processes and develop new software and systems.
+- **Computer scientists** use various mathematical algorithms, coding procedures, and their expert programming skills to study computer processes and develop new software and systems.
 
-**Computer Engineering** is concerned with the design of computer hardware and software interacting tightly with the hardware for embedded systems and computer-based devices.
+- **Computer Engineering** is concerned with the design of computer hardware and software interacting tightly with the hardware for embedded systems and computer-based devices.
 
 ## Historical Context
 
 Computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating 0s and 1s.
 
-Alan Turing is considered as the father of computer science. He formalized the concept of a **Turing machine**, which is a simple description of a general-purpose computer. A Turing machine consists of an _infinitely long tape_ divided into cells containing symbols, a _head_ that can read and write symbols, a _state register_ that stores the head's state, and a list of possible instructions. 
-
-<p align="center"><img src="./img/Turing_machine.jpeg" alt="AI generated image of a turing machine" height=320></p>
-
-> AI generated image; Not an actual Turing machine
+Alan Turing is considered as the father of computer science. He formalized the concept of a **Turing machine**, which is a simple description of a general-purpose computer. A Turing machine consists of an _infinitely long tape_ divided into cells containing symbols, a _head_ that can read and write symbols, a _state register_ that stores the head's state, and a list of possible instructions.
 
 ## Theoretical Computer Science
 
 Theoretical computer science examines the problems that can be solved using computational models and algorithms, focusing on their efficiency and solvability.
 
-**Computability Theory** : It studies the general properties of computation, including _decidability_ (Related to the solvability of a problem; meaning there will be an algorithm that returns a 'Yes' or 'no' for any given input.), _computability_ (It investigates whether a problem can be solved with any algorithm in a finite amount of time.), and _Turing completeness_. It addresses what problems can be solved on a computer.
+- **Computability Theory** : It studies the general properties of computation, including _decidability_ (Related to the solvability of a problem; meaning there will be an algorithm that returns a 'Yes' or 'no' for any given input.), _computability_ (It investigates whether a problem can be solved with any algorithm in a finite amount of time.), and _Turing completeness_. It addresses what problems can be solved on a computer.
 
 > [Computability theory on wikipedia](https://en.wikipedia.org/wiki/Computability_theory)
 
-**Automata Theory and Formal Language Theory** : Automata theory studies abstract machines (automata) and the computational problems they can solve. It is closely linked to formal language theory, which examines the properties of formal languages and their relationship to automata. 
+- **Automata Theory and Formal Language Theory** : Automata theory studies abstract machines (automata) and the computational problems they can solve. It is closely linked to formal language theory, which examines the properties of formal languages and their relationship to automata. 
 
 > [Automata Theory on wikipedia](https://en.wikipedia.org/wiki/Automata_theory) and [Formal Language Theory on wikipedia](https://en.wikipedia.org/wiki/Formal_language)
 
 ![Automata](./img/Automata_theory.png)
 
-**Computational complexity theory** : This field examines how efficiently problems can be solved, considering resources like time and memory.
-
-1. **Time and space complexity**: Measures the time and memory required to solve a problem as a function of input size, using asymptotic notation such as `O(n)`, `Ω(n)`, and `Θ(n)`.
-
-2. **Classes of problems**: Problems are classified into complexity classes based on their difficulty.
-
-    - **P (polynomial time)**: Problems that can be solved in polynomial time.
+- **Computational complexity theory** : This field examines how efficiently problems can be solved, considering resources like time and memory.
+    - **Time and space complexity**: Measures the time and memory required to solve a problem as a function of input size, using asymptotic notation such as `O(n)`, `Ω(n)`, and `Θ(n)`.
     
-    - **NP (nondeterministic polynomial time)**: Problems for which a solution can be verified in polynomial time. Examples include the Boolean satisfiability problem (SAT), the traveling salesman problem (TSP), and the vertex cover problem.
-    
-    - **NP-complete**: The hardest problems in NP, to which all other NP problems can be reduced in polynomial time. A polynomial-time algorithm for any NP-complete problem implies P = NP.
+    - **Classes of problems**: Problems are classified into complexity classes based on their difficulty.
 
-    - **NP-hard**: Problems at least as hard as the hardest NP problems but not necessarily in NP.
+        - **P (polynomial time)**: Problems that can be solved in polynomial time.
+
+        - **NP (nondeterministic polynomial time)**: Problems for which a solution can be verified in polynomial time. Examples include the Boolean satisfiability problem (SAT), the traveling salesman problem (TSP), and the vertex cover problem.
+
+        - **NP-complete**: The hardest problems in NP, to which all other NP problems can be reduced in polynomial time. A polynomial-time algorithm for any NP-complete problem implies P = NP.
+
+        - **NP-hard**: Problems at least as hard as the hardest NP problems but not necessarily in NP.
 
 ### Information theory
 
