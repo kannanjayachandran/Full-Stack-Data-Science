@@ -132,7 +132,6 @@ To solve the critical section problem, we must ensure that:
 
 3. Bounded waiting: There exists a bound, or limit, on the number of times that other processes are allowed to enter their critical sections after a process has made a request to enter its critical section and before that request is granted.
 
-
 ### Synchronization Tools
 
 A semaphore is a synchronization tool that allows multiple processes to access a shared resource. It is an integer variable that can be accessed and modified only through two standard atomic operations: `wait (P)` and `signal (V)`. Semaphores are of two types:
@@ -157,6 +156,7 @@ IPC is an operating system technique that facilitates data sharing, synchronizat
 
 The operating system uses a data structure called a Process Control Block (PCB) to store and handle process-related data. The PCB contains information such as the process ID, state, priority, program counter, and memory allocation.
 
+---
 
 ## Common Questions on Operating System:
 
