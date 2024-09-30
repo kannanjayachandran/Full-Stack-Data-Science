@@ -29,6 +29,6 @@
 
 ---
 
-#### _Due to limitations in rendering certain mathematical equations (LaTeX) on GitHub, the optimal way to view the content is to clone the repository and view the Markdown files locally._
+#### _Given GitHub's limitations in rendering LaTeX mathematical equations, the best way to view the content is by accessing the Markdown files locally on your machine._
 
 **[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)**
