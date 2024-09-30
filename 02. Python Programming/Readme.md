@@ -1,6 +1,6 @@
 <h1 align="center" > Python Programming </h1>
 
-Python is a `open source`, `high-level`, `interpreted`, and `general-purpose` programming language. Python is both `dynamically-typed` (Type determined at runtime) and `strongly typed` (variables does not have type). It is also a `garbage-collected` language. Python supports multiple programming paradigms, which includes `structured`, `object-oriented` and `functional` programming.
+Python is a `open source`, `high-level`, `interpreted`, and `general-purpose` programming language. Python is both `dynamically-typed` (Type determined at runtime). It is also a `garbage-collected` language. Python supports multiple programming paradigms, which includes `procedural`, `object-oriented` and `functional`.
 
 ## Variables in Python
 
@@ -230,7 +230,13 @@ OOPS properties in Python are similar to other major object oriented languages. 
 
 ### Encapsulation and Access Modifiers
 
-- Python simply uses naming conventions to indicate private(__) and protected(_) members of a class.
+Encapsulation in OOP refers to two concepts:
+
+- A language construct that bind data with methods that operate on that data.
+
+- A language mechanism that restricts direct access to some of an object's components.
+
+Python simply uses naming conventions to indicate private(__) and protected(_) members of a class.
 
 ### Constructor Overloading
 
