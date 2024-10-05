@@ -1,9 +1,5 @@
 <h1 align="center" > Introduction to Computer Science </h1>
 
-<p align="center">
-    <a href="#theoretical-computer-science"><img src="./img/main_poster.png" alt="Logo" height=380></a>
-</p>
-
 ---
 
 - **Computer science** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_. 
@@ -16,23 +12,18 @@
 
 Computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating 0s and 1s.
 
-Alan Turing is considered as the father of computer science. He formalized the concept of a **Turing machine**, which is a simple description of a general-purpose computer. A Turing machine consists of an _infinitely long tape_ divided into cells containing symbols, a _head_ that can read and write symbols, a _state register_ that stores the head's state, and a list of possible instructions.
-
 ## Theoretical Computer Science
 
-Theoretical computer science examines the problems that can be solved using computational models and algorithms, focusing on their efficiency and solvability.
+Theoretical computer science examines the problems that can be solved using computational models and algorithms, focusing on their efficiency and solvability. Alan Turing is considered as the father of computer science. He formalized the concept of a **Turing machine**, which is a simple description of a general-purpose computer. A Turing machine consists of an _infinitely long tape_ divided into cells containing symbols, a _head_ that can read and write symbols, a _state register_ that stores the head's state, and a list of possible instructions.
 
 - **Computability Theory** : It studies the general properties of computation, including _decidability_ (Related to the solvability of a problem; meaning there will be an algorithm that returns a 'Yes' or 'no' for any given input.), _computability_ (It investigates whether a problem can be solved with any algorithm in a finite amount of time.), and _Turing completeness_. It addresses what problems can be solved on a computer.
 
-> [Computability theory on wikipedia](https://en.wikipedia.org/wiki/Computability_theory)
-
 - **Automata Theory and Formal Language Theory** : Automata theory studies abstract machines (automata) and the computational problems they can solve. It is closely linked to formal language theory, which examines the properties of formal languages and their relationship to automata. 
-
-> [Automata Theory on wikipedia](https://en.wikipedia.org/wiki/Automata_theory) and [Formal Language Theory on wikipedia](https://en.wikipedia.org/wiki/Formal_language)
 
 ![Automata](./img/Automata_theory.png)
 
 - **Computational complexity theory** : This field examines how efficiently problems can be solved, considering resources like time and memory.
+
     - **Time and space complexity**: Measures the time and memory required to solve a problem as a function of input size, using asymptotic notation such as `O(n)`, `Ω(n)`, and `Θ(n)`.
     
     - **Classes of problems**: Problems are classified into complexity classes based on their difficulty.
@@ -50,8 +41,6 @@ Theoretical computer science examines the problems that can be solved using comp
 This field studies the properties of information and how it can be stored, measured, and communicated.
 
 ![Information theory](./img/information_theory.png)
-
-> [Information Theory on Wikipedia](https://en.wikipedia.org/wiki/Information_theory)
 
 ### Cryptography 
 
