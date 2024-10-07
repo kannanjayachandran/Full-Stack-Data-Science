@@ -23,19 +23,11 @@
 
 ---
 
-In this module we will be covering two foundational areas;
-
-- **Mathematics for data science and machine learning**
-
-- **Data visualization** 
-
----
-
 ## Introduction to Data Science
 
 We live in a world drowning in data. Websites, social media platforms, IOT devices,  smartphones, smart cars, smart cooker (yes it exists) and what not, generates an incomprehensible amount of data every day. This enormous amount of data although seems like a ever growing problem, is a gold mine for businesses and organizations as they contains answers to questions that can help them make better decisions, understand their customers better, and improve their products and services.
 
-Data science is the field that deals with extracting insights from data. It is an interdisciplinary field that combines domain knowledge, statistical and mathematical expertise along with programming skills, to extract insights from data.
+Data science is the field that deals with extracting insights from data and using it to make informed decisions. It is an interdisciplinary field that combines domain knowledge, statistical and mathematical expertise along with programming skills, to extract insights from data.
 
 ## Application of data science
 
@@ -58,6 +50,28 @@ Data science is the field that deals with extracting insights from data. It is a
 - Government and Public Sector
 
 ## The Data Science Process
+
+The data science process refers to the steps involved in extracting insights from data. It involves the following steps:
+
+1. **Problem definition**: Define the problem you want to solve and frame the questions you want to answer.
+
+2. **Data collection**
+
+3. **Data cleaning and preprocessing**: Clean the data by removing missing values, outliers, and irrelevant data. Pre-process the data by transforming it into a suitable format for analysis.
+
+4. **Exploratory data analysis (EDA)**: Explore the data to understand its characteristics, identify patterns, and visualize relationships between variables.
+
+5. **Feature engineering**: Create new features from the existing data to improve the performance of machine learning models.
+
+6. **Model selection**: Select the appropriate machine learning or statistical model based on the problem you want to solve and the characteristics of the data.
+
+7. **Model training**: Train the model on the training data.
+
+8. **Model evaluation**: Evaluate the performance of the model on the test data.
+
+9. **Model deployment**: Deploy the model to make predictions on new data.
+
+10. **Model monitoring and maintenance**: Monitor the performance of the model over time and update it as needed.
 
 ![Data science process graphical representation](./img/Data_science_process.png)
 
@@ -96,6 +110,13 @@ Deep learning is a subset of machine learning that uses artificial neural networ
 Generative AI is a subset of deep learning that uses deep learning to generate new data. It can be used for creating text,  images, videos, music, etc. Generative AI contributes to the recent resurgence of AI and is used in a wide variety of applications such as image generation, text generation, music generation, etc.
 
 --- 
+
+In this module we will be covering two foundational areas;
+
+- **Mathematics for data science and machine learning**
+
+- **Data visualization** 
+
 
 ## Mathematics for data science and machine learning
 
