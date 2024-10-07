@@ -99,9 +99,9 @@ Machine learning is a subset of artificial intelligence (AI) that deals with dev
 
 ![Ml tree](./img/ml_tree.png)
 
-At the core of almost all machine learning model including Neural networks, lies a very simple mathematical idea; 
+At the core of nearly all machine learning models, including neural networks, is a fundamental mathematical concept; 
 
-> **_Fit a given set of data points into an appropriate function; that identifies the important information in the data from noise, then make sure this function performs well on new data_**
+> **_Fit a given set of data points to an appropriate function designed to distinguish meaningful patterns in the data from noise and then make sure this function generalizes well and performs effectively on unseen data._**
 
 ## Deep learning
 
