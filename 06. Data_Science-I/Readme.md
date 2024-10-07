@@ -11,6 +11,8 @@
     
     - [Qualitative and Quantitative data](#qualitative-and-quantitative-data)
 
+- [Artificial Intelligence](#artificial-intelligence)
+
 - [Machine learning](#machine-learning)
 
 - [Deep learning](#deep-learning)
@@ -77,19 +79,19 @@ The data science process refers to the steps involved in extracting insights fro
 
 ### Data
 
-![Definition of data](./img/data_def.png) 
+![Definition of data](./img/data_def.png)
 
 ### Qualitative and Quantitative data
 
-**Quantitative data** is numerical data that can be measured and expressed as numbers. It is further divided into **`discrete`** and **`continuous`** data. 
+**Quantitative data** is numerical data that can be measured and expressed as numbers. It is further divided into **`discrete`** and **`continuous`** data. Discrete data consists of distinct, separate values, while continuous data  can take on an infinite number of values within a given range.
 
-Discrete data consists of distinct, separate values, while continuous data  can take on an infinite number of values within a given range.
-
-**Qualitative data** deals with qualities and characteristics that cannot be measured in numerical terms. It is further divided into **`nominal`** and **`ordinal`** data. 
-
-Nominal data represents categories or labels with no inherent order or ranking. Ordinal data represents categories with a specific order or ranking but does not have a consistent interval between values. The differences between ordinal values are not meaningful. 
+**Qualitative data** deals with qualities and characteristics that cannot be measured in numerical terms. It is further divided into **`nominal`** and **`ordinal`** data. Nominal data represents categories or labels with no inherent order or ranking. Ordinal data represents categories with a specific order or ranking but does not have a consistent interval between values; That is the differences between ordinal values are not meaningful. 
 
 ![Quantitative vs Qualitative data](./img/Types_of_data.png)
+
+## Artificial Intelligence
+
+Artificial intelligence (AI) is a branch of computer science that deals with the development of computer systems that can perform tasks typically requiring human intelligence. This involves creating algorithms to classify, analyze, and make predictions based on data. AI systems can also act on data, learn from new information, and continuously improve their performance.
 
 ## Machine learning
 
@@ -103,7 +105,7 @@ At the core of almost all machine learning model including Neural networks, lies
 
 ## Deep learning
 
-Deep learning is a subset of machine learning that uses artificial neural networks (ANNs) to mimic the working of the human brain. It can learn complex representations of data and is used to solve complex problems such as image classification, speech recognition, natural language processing, etc.
+Deep learning is a subset of machine learning that uses _artificial neural networks_ (ANNs) to mimic the working of the human brain. It can learn complex representations of data and is used to solve complex problems such as image classification, speech recognition, natural language processing, etc.
 
 ## Generative AI
 
