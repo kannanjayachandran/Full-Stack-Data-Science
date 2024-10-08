@@ -1,4 +1,4 @@
-<h1 align="center" style="color: orange"> Data Science - I </h1>
+<h1 align="center"> Data Science - I </h1>
 
 ## Table of contents
 
