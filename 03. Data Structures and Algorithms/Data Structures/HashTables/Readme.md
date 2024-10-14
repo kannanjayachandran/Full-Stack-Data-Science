@@ -43,4 +43,4 @@ The following table summarizes the main difference between chaining and open add
 
 ## Questions
 
-1. Contains duplicate
+Hash table problems and array problems are closely related. Check out the [Array](../Arrays/Readme.md) section for more problems.

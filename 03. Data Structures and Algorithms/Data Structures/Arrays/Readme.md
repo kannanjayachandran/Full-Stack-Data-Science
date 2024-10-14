@@ -1,6 +1,6 @@
 <h1 align="center"> Arrays </h1>
 
-Arrays, as a fundamental data structure, consist of elements of the same type and stored in contiguous memory locations. The first element corresponds to the lowest address, and the last element to the highest address. `Cache locality` is a significant advantage of arrays, as it allows for faster access to elements due to less `cache misses`. However, arrays have a fixed size, and inserting or deleting elements can be expensive due to shifting elements.
+Arrays, as a fundamental data structure, consist of elements of the same type and stored in contiguous memory locations. The first element corresponds to the lowest address, and the last element to the highest address. [Cache locality](https://www.geeksforgeeks.org/locality-of-reference-and-cache-operation-in-cache-memory/) is a significant advantage of arrays, as it allows for faster access to elements due to less [cache misses](https://stackoverflow.com/questions/18559342/what-is-a-cache-hit-and-a-cache-miss-why-would-context-switching-cause-cache-mi). However, arrays have a fixed size, and inserting or deleting elements can be expensive due to shifting elements.
 
 In _python_ we have **Lists** that are superset of arrays. Lists can contain elements of different and are mutable. 
 
@@ -11,9 +11,9 @@ In _python_ we have **Lists** that are superset of arrays. Lists can contain ele
 | Access | O(1) |
 | Insertion | O(n) |
 | Deletion | O(n) |
-| Append | O(1) |
+| Append (to end) | O(1) |
 | len() | O(1) |
-| Pop | O(1) |
+| Pop (last element) | O(1) |
 | Pop(i) | O(n) |
 | Extend | O(k) |
 | Contains | O(n) |
@@ -24,6 +24,34 @@ In _python_ we have **Lists** that are superset of arrays. Lists can contain ele
 ## Problem Solving Techniques for Arrays
 
 <!-- Two pointer, Sliding window, binary search, sorting -->
+
+## Strings
+
+A string is a sequence of characters. In Python, strings are immutable, which means that once a string is created, it cannot be changed. There is no `char` data type in Python, and a character is represented as a string of length 1. 
+
+The operations that can be performed on strings include:
+
+1. **Concatenation**: Combining two or more strings to create a new string.
+2. **Indexing**: Accessing individual characters in a string using their position.
+3. **Slicing**: Extracting a substring from a string.
+4. **Length**: Finding the length of a string.
+5. **Membership**: Checking if a character or substring is present in a string.
+6. **Repetition**: Repeating a string multiple times.
+7. **Comparison**: Comparing two strings lexicographically.
+8. **Traversal**: Iterating over the characters of a string.
+
+### Time Complexity
+
+| Operation | Time Complexity |
+|:---------:|:---------------:|
+| Indexing | O(1) |
+| Slicing | O(k) `k` is the length of the slice |
+| Concatenation | O(n) `n` is the length of the resulting string |
+| Length | O(1) |
+| Membership | O(n) |
+| Repetition | O(n) |
+| Comparison | O(n) |
+| Traversal | O(n) |
 
 ## Problem set
 
@@ -81,3 +109,12 @@ These are the problems I have solved in the `Arrays` section. Refer [this](https
 12. Monotonic array
 13. Minimum operations to empty the array
 14. Number of senior citizens
+
+
+## Important Array and Hashing Problems
+
+1. [Duplicate Integer](https://neetcode.io/problems/duplicate-integer)
+2. [Is Anagram](https://neetcode.io/problems/is-anagram)
+3. [Two Sum](https://neetcode.io/problems/two-integer-sum)
+4. [Anagram Group](https://neetcode.io/problems/anagram-groups)
+5. [Top K Frequent Elements](https://neetcode.io/problems/top-k-elements-in-list)

@@ -2,7 +2,7 @@
 
 ![Stack data structure](stack.png)
 
-A stack is a linear data structure that follows the Last In First Out (LIFO) principle. The last element that is added to the stack is the first one to be removed. The operations of a stack are performed at one end of the stack, which is known as the top of the stack. The operations of a stack are:
+A stack is a linear data structure that follows the Last In First Out (LIFO) principle. The last element that is added to the stack is the first one to be removed. The operations of a stack are performed at one end of the stack, which is known as the top of the stack. 
 
 1. **Push**: Adds an element to the top of the stack.
 2. **Pop**: Removes an element from the top of the stack.
@@ -12,25 +12,29 @@ A stack is a linear data structure that follows the Last In First Out (LIFO) pri
 
 Stack is used in various applications such as:
 
-1. **Function Call Stack**: The function call stack is used to store the return address of the function calls.
+1. **Function Call Stack**: To store the return address of the function calls.
 
-2. **Expression Evaluation**: The stack is used to evaluate infix, postfix, and prefix expressions.
+2. **Expression Evaluation**: Tho evaluate infix, postfix, and prefix expressions.
 
-3. **Backtracking**: The stack is used to store the state of the system to backtrack to the previous state.
+3. **Backtracking**: To store the state of the system to backtrack to the previous state.
 
-4. **Undo Operation**: The stack is used to store the previous state of the system to undo the operations.
+4. **Undo Operation**: To store the previous state of the system to undo the operations.
 
-5. **Balanced Parentheses**: The stack is used to check the balanced parentheses in an expression.
+5. **Balanced Parentheses**: To check the balanced parentheses in an expression.
 
-6. **Reverse operations**: We can use a stack to reverse the order of operations.
+6. **Reverse operations**: To reverse the order of operations.
 
-7. **Browser History**: The stack is used to store the history of the web pages visited by the user.
+7. **Browser History**: To store the history of the web pages visited by the user.
 
-Overflow and underflow conditions can occur in a stack. Overflow occurs when we try to push an element into a full stack, and underflow occurs when we try to pop an element from an empty stack. In most programming languages like C++, Java, and Python, the stack is implemented using a dynamic array or a linked list; hence overflow is not a common issue.
+`Overflow` and `underflow` conditions can occur in a stack. Overflow occurs when we try to push an element into a full stack, and underflow occurs when we try to pop an element from an empty stack. In most programming languages like C++, Java, and Python, the stack is implemented using a dynamic array or a linked list; hence overflow is not a common issue.
 
-In python we can use the `list` data structure to implement a stack. The `append()` method is used to push an element into the stack, and the `pop()` method is used to pop an element from the stack. Python's `Collections` module provides a `deque` class that can be used to implement a stack.
+In python we can use the `list` data structure to implement a stack. 
 
-- Python also provides a `LifoQueue` class in the `queue` module that can be used to implement a stack. It is thread-safe and can be used in a multithreaded environment.
+- `append()` method is used to push an element into the stack.
+
+- `pop()` method is used to pop an element from the stack. 
+
+Python's `Collections` module provides a `deque` class that can be used to implement a stack. Python also provides a `queue` module that can be used to implement a stack. It is thread-safe and can be used in a multithreaded environment.
 
 ### Implementations
 
@@ -152,8 +156,6 @@ stack.clear()
 print(stack.isEmpty())  # True
 ```
 
-- `deque` is based on a doubly linked list.
-
 ### Time Complexity
 
 The time complexity of list based approach is as follows:
@@ -166,4 +168,6 @@ The time complexity of list based approach is as follows:
 6. **Size**: `O(1)`
 7. **Clear**: `O(1)`
 
-It is amortized case `O(1)` for all operations. While the deque based has worst case time complexity of `O(1)` for all operations. But list implementation is simple and also cache friendly.
+### Key points
+
+- Stack is often used when order of elements is important like optimize problems involving comparisons between elements.
