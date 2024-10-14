@@ -1,7 +1,5 @@
 <h1 align="center"> Stack </h1>
 
-![Stack data structure](stack.png)
-
 A stack is a linear data structure that follows the Last In First Out (LIFO) principle. The last element that is added to the stack is the first one to be removed. The operations of a stack are performed at one end of the stack, which is known as the top of the stack. 
 
 1. **Push**: Adds an element to the top of the stack.
@@ -9,6 +7,8 @@ A stack is a linear data structure that follows the Last In First Out (LIFO) pri
 3. **Peek**: Returns the top element of the stack without removing it.
 4. **isEmpty**: Returns true if the stack is empty, else false.
 5. **length**: Returns the number of elements in the stack.
+
+![Stack data structure](stack.png)
 
 Stack is used in various applications such as:
 
