@@ -1,50 +1,41 @@
 <!-- 
     Author : Kannan Jayachandran
     File : Linear_Algebra.md
+    Section : Mathematics for data science and machine learning
  -->
 
-<h1 align="center" style="color: orange"> Linear Algebra </h1>
+<h1 align="center"> Linear Algebra </h1>
 
 ## Table of contents
 
-1. [Notations](#Notations)
+1. [Linear Equations](#Linear-equations)
 1. [Systems of linear equations](#Systems-of-linear-equations)
-1. [Vector](#Vector)
 
 ---
 
-**_Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces through matrices._**
+**Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces, through matrices.**
 
----
+<!-- SECTION - I -->
 
-## Notations
+## Linear equations
 
-| Notation | Description |
-| --- | :--- |
-| $\color{#F99417}a$ | Scalar or Vector |
-| $\color{#F99417}A, B, C$ | Matrix |
-| $\color{#F99417}A$ of size $\color{#F99417}\text{m X n}$ | Matrix `A` with `m` rows and `n` columns  |
-| $\color{#F99417}A_{ij}$ | Element in the `i-th` row and `j-th` column of matrix `A` |
-| $\color{#F99417}A^T$ | Transpose of matrix `A` |
-| $\color{#F99417}v^T$ | Transpose of vector `v` |
-| $\color{#F99417}A^{-1}$ | Inverse of matrix `A` |
-| $\color{#F99417}A^*$ | Conjugate transpose of matrix `A` |
-| $\color{#F99417}det(A)$ | Determinant of matrix `A` |
-| $\color{#F99417}AB$ | Matrix multiplication of matrix `A` and matrix `B`|
-| $\color{#F99417}u.v; \langle u, v\rangle$ | Dot product of `u` and `v`|
-| $\color{#F99417}u \times v$ | Cross product of `u` and `v`|
-| $\color{#F99417}\R$ | Set of real numbers|
-| $\color{#F99417}\R^2$ | Set of two dimensional vectors|
-| $\color{#F99417}\R^n$ | Set of n-dimensional vectors|
-| $\color{#F99417}v\in\R^n$ | Vector `v` is an element of |
-| $\color{#F99417}\|v\|_1$ | L1 - Norm of vector `v`|
-| $\color{#F99417}\|v\|_2; \|\|v\|\|$ | L2 - Norm of vector `v`|
-| $\color{#F99417}\|v\|_\infin$ | L-infinity - Norm of vector `v`|
-| $\color{#F99417}T: \R^n \rightarrow \R^m;T(v)=w$ | Transformation `T` of a vector `v` $\in \R^n$ into the vector `w` $\in \R^m$|
+A **linear equation** is an equation that can be written in the form: 
+
+$$a_1x_1 + a_2x_2 + ... + a_nx_n + b = 0$$
+
+Where:
+
+- $x_1, x_2, ..., x_n$ are the **variables** (Unknowns),
+
+- $a_1, a_2,  ..., a_n$ are the **coefficients**,
+
+- $b$ is a **constant** term.
+
+> Example of a linear equation is $2x_1 + 3x_2 - 4 = 0$.
 
 ## Systems of linear equations
 
-A system of linear equations is a collection of equations involving the same set of variables. A system of linear equations can be represented as;
+A **system of linear equations** is a set of linear equations that involve the same set of variables. In general, a system with $𝑛$ variables and $m$ equations can be written as:
 
 $$a_{11}x_1 + a_{12}x_2 + a_{13}x_3 + ... + a_{1n}x_n = b_1$$
 
@@ -56,239 +47,251 @@ $$...$$
 
 $$a_{m1}x_1 + a_{m2}x_2 + a_{m3}x_3 + ... + a_{mn}x_n = b_m$$
 
-where $\color{#F99417}a_{ij}$ are the coefficients of the variables $\color{#F99417}x_i$ and $\color{#F99417}b_i$ are the constants. The above system of equations can be written in matrix form as;
+where:
+
+- $x_1, x_2, x_3, ..., x_n$ are the variables,
+
+- $a_{ij}$ are the coefficients of the variables,
+
+- $b_i$ are the constant terms.
+
+### Solutions of a System of Linear Equations
+
+A system of linear equations can have:
+
+1. **No solution** (the system is inconsistent and singular),
+
+2. **Exactly one solution** (the system is non-singular, consistent and independent), or
+
+3. **Infinitely many solutions** (the system is consistent and dependent).
+
+To visualize this, let us plot two linear equations in two variables on a graph:
+
+![Graph of equations ](./img/graph_solution.png)
+
+Thus, two fundamental questions about a system of linear equations are:
+
+1. Is the system consistent? (i.e., does at least one solution exist?)
+
+2. If the system is consistent, is the solution unique? (i.e., is there exactly one solution?)
+
+### Methods to Solve a System of Linear Equations
+
+There are several methods to solve a system of linear equations, such as:
+
+- Substitution method
+
+- Elimination method
+
+- Matrix inversion
+
+- Gaussian elimination
+
+- Gauss-Jordan elimination
+
+The above system of equations can be written in matrix form as:
 
 $$Ax = b$$
 
-where $\color{#F99417}A$ is the matrix of coefficients, $\color{#F99417}x$ is the vector of variables, and $\color{#F99417}b$ is the vector of constants.
+Where:
 
-- A system of linear equations can have `no solution`, `unique solution`, or `infinite solutions`.
+- $A$ is an $m X n$ matrix of coefficients, which looks like:
 
-- A system of linear equations are said to be `non - singular` and `consistent` if it has a unique solution. 
+$$A = \begin{bmatrix} a_{11} & a_{12}  & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ a_{31} & a_{32} & \cdots & a_{3n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}$$
 
-- A system of linear equations are said to be `singular` and `redundant` if it has infinite solutions. 
+- $x$ is the vector of variables,
 
-- A system of linear equations are said to be `Singular` and `Contradictory` if it has no solution.
+$$x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}$$
 
-## Slope
+- $b$ is the vector of constants.
 
-The slope of a line is a measure of how steep the line is. It is denoted by $\color{#F99417}m$ and is given by;
+$$b = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{bmatrix}$$ 
 
-$$m = \frac{y_2 - y_1}{x_2 - x_1}$$
-
-where $\color{#F99417}(x_1, y_1)$ and $\color{#F99417}(x_2, y_2)$ are two points on the line.
-
-## Intercept
-
-The intercept of a line is the point where the line crosses the y-axis. It is denoted by $\color{#F99417}c$ and is given by;
-
-$$c = y - mx$$
-
-where $\color{#F99417}(x, y)$ is a point on the line and $\color{#F99417}m$ is the slope of the line.
-
+<!-- SECTION - II -->
 
 ## Vector
 
-A point/Vector is a collection of numbers which is often used to describe the state of a system. 
+A **vector** is a collection or list of numbers, often used to describe the state or properties of a system in mathematics, physics, and engineering. Vectors can represent anything from forces to velocities in different dimensions.
 
 ![Point or vector on cartesian coordinate system](./img/Point_vector.png)
+>Point or vector on cartesian coordinate system
 
-Therefore we can represent an `n-dimensional` vector as $\color{#F99417}[x_1, x_2, x_3, ..., x_n]$. Where the length of the vector is `n` and $\color{#F99417}x_i$ is a component of the vector in the `i-th` dimension.
+An **n-dimensional** vector can be represented as $[x_1, x_2, x_3, ..., x_n]$
 
-Some of the common **distance formulas** are;
+Where:
 
-| Description | Formula |
-| --- | :--- |
-| Distance between origin $\color{#F99417}o(0, 0)$ and a point $\color{#F99417}P(x_1, x_2)$ in a 2D plane | $d = \sqrt{x_1^2+x_2^2}$ |
-| Distance between origin $\color{#F99417}o(0, 0, 0)$ and a point $\color{#F99417}P(x_1, x_2, x_3)$ in a 3D plane | $d = \sqrt{x_1^2+x_2^2+x_3^2}$ |
-| Distance between origin $\color{#F99417}o(0, 0, 0, ..., 0)$ and a point $\color{#F99417}p(x_1, x_2, x_3, ..., x_n)$ in a `n-dimensional` plane | $d = \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2}$ |
-| Distance between two points  $\color{#F99417}P (x_1, y_1)$ and $\color{#F99417}Q (x_2, y_2)$ in a 2D plane | $d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2}$ |
-| Distance between two points  $\color{#F99417}P (x_1, y_1, z_1)$ and $\color{#F99417}Q (x_2, y_2, z_2)$ in a 3D plane | $d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2+(z_2 - z_1)^2}$ |
-| Distance between two points $\color{#F99417} P(x_1, x_2, x_3, ..., x_n)$ and $\color{#F99417}Q (y_1, y_2, y_3, ..., y_n)$ in a `n-dimensional` plane | $d = \sqrt{(x_1-y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+...+(x_n - y_n)^2} \\  \;\;\;\;\;{ or }\\ d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$ |
+- $n$ is the length of the vector
 
-> All of these formulas represent the Euclidean distance, providing a way to measure the distance between two points in different-dimensional spaces. We can easily derive all the above formulas using the Pythagoras theorem.
+- $x_i$ is a component of the vector in the **i-th** dimension.
+
+> For example, a 3-dimensional vector could be written as: $[3, -4, 2]$
 
 ## Row and Column Vectors
 
-Row vectors are vectors that have a single row and one or more columns. Column vectors are vectors that have a single column and one or more rows.
-We can use a row vector to represent the weights of a neural network. While we can use a column vector to represent the features of an input.
+Row vectors are vectors that consist of a single row and multiple columns. For example:
 
-![Row and column vector](./img/Row-Col-Vector.png)
+$$[1, 2, 3]$$
 
-> Taking transpose of a row vector gives us a column vector and vice versa.
+Column vectors are vectors that consist of a single column and multiple rows. For example:
 
-## Dot product
+$$\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$$
 
-The dot product of two vectors is a _scalar_ quantity that is equal to the sum of the products of the corresponding entries of the two vectors.
+Taking the transpose of a row vector converts it into a column vector, and vice versa.
 
-- **Dot product of two vectors** : $\color{#F99417}a \cdot b = a_1b_1 + a_2b_2 + a_3b_3 + ... + a_nb_n$ 
+## Vector Dot Product
 
-which can be written as the product of a row and a column vector as;
+The **dot product** (also known as the scalar product) of two vectors is a scalar quantity, which is the sum of the products of their corresponding components. It is defined only for vectors of the same length.
 
-$$[a_1, a_2, a_3, ..., a_n] \; \cdot \; \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ ... \\ b_n \end{bmatrix} \rightarrow a^T.b \rightarrow a \cdot b = \sum_{i=1}^{n}a_ib_i$$
+The dot product of two vectors $a$ and $b$ is denoted by  $a \cdot b$, and is computed as:
 
-where a = $\color{#F99417}[a_1, a_2, a_3, ..., a_n]$ and b = $\color{#F99417}[b_1, b_2, b_3, ..., b_n]$ are two vectors.
+$$a \cdot b = a_1b_1 + a_2b_2 + ... + a_nb_n$$
 
-Geometrically interpretation of dot product.
+Alternatively, this can be expressed as the product of a row vector and a column vector:
+
+$$[a_1, a_2, a_3, ..., a_n] \; \cdot \; \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ ... \\ b_n \end{bmatrix}$$
+
+![Matrix representation of linear equation](./img/matrix_form_linear_equation.png)
+
+### Geometrically interpretation of dot product.
 
 ![Geometrical interpretation of dot product](./img/dot_product.png)
 
-- Hence if the two vectors are perpendicular to each other then the dot product is zero.
 
-If we extrapolate this to `n-dimensional` space then we can write the dot product as;
-
-For an `n-dimensional` space, the dot product of two vectors $\color{#F99417}a$ and $\color{#F99417}b$ is given by;
+In an **n-dimensional space**, the dot product of two vectors $a$ and $b$ can be expressed as:
 
 $$a.b = \sum_{i=1}^{n}a_ib_i = |a||b| \; cos\theta$$
 
-where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ and $\color{#F99417}b = [b_1, b_2, b_3, ..., b_n]$.
+where:
 
-**In machine learning we use `dot` product to calculate the `weighted sum` of the inputs and weights.**
+- $a = [a_1, a_2, a_3, ..., a_n]$ and $b = [b_1, b_2, b_3, ..., b_n]$
+
+- $|a|$ and $|b|$ are the magnitudes(or lengths) of the vectors $a$ and $b$ ($|a| = \sqrt{a_1^2 + a_2^2 + a_3^2 + ... + a_n^2}$)
+
+- $\theta$ is the angle between the two vectors.
+
+> If the two vectors are perpendicular (i.e., $\theta = 90^{\circ}$), then $\cos \theta = 0$ and the dot product is zero. 
+
+> If the two vectors are parallel (i.e., $\theta = 0^{\circ}$ or $180^\circ$), then the dot product is equal to the product of their magnitudes.
 
 ## Inner product
 
-Inner product is a generalization of the dot product. It is a function that takes in two vectors and returns a scalar. It is denoted by $\color{#F99417}\langle x, y \rangle$ and is defined as;
+The **inner product** is a generalization of the dot product that operates in any vector space, not just in Euclidean spaces. It is a function that takes in two vectors and returns a scalar, providing information about the "`correlation`" or "`similarity`" between the vectors. The inner product is typically denoted by:
+
+$$\langle x, y \rangle$$
+
+For two vectors $x$ and $y$, the inner product is defined as:
 
 $$\langle x, y \rangle = x^Ty = \sum_{i=1}^{N}x_iy_i$$
 
-where $\color{#F99417}x$ and $\color{#F99417}y$ are two vectors.
+where:
 
-Inner product tells us how the vectors are correlated. If two vectors are correlated (i.e., nearly parallel), then the inner product will give us a large value. If the vectors are close to perpendicular, then the inner vector would be small. Therefore, the inner product provides a measure of the _closeness/similarity_ between two vectors.
+- $x = [x_1, x_2, x_3, ..., x_n]$,
+
+- $y = [y_1, y_2, y_3, ..., y_n]$,
+
+- $N$ is the number of dimensions (or length) of the vectors.
+
+If the vectors are **correlated** or nearly parallel, the inner product will be large. f the vectors are close to **perpendicular**, the inner product will be small or zero.
+
+> Inner product is used by Hilbert space (Hilbert spaces allow the methods of linear algebra and calculus to be generalized from Euclidean vector spaces to spaces that may be infinite-dimensional.)
 
 ![Inner product image](./img/Inner_product.png)
 >Geometric interpretation of inner product
 
+The inner product $\langle x, y \rangle$ can be geometrically interpreted as the length of the projection of vector $y$ onto vector $x$ multiplied by the length of vector $x$.
+
 ## Vector norm
 
-The norm of a vector is the length of the vector (magnitude of the vector). It is denoted by $\color{#F99417}||a||$ and is given by;
+The **norm** of a vector is a measure of its length or magnitude. It quantifies the size or extent of the vector in its space. The norm of a vector $a$ is denoted by:
+
+$$||a||$$
+
+For an **n-dimensional** vector $a = [a_1, a_2, ..., a_n]$, the most commonly used norm (the Euclidean norm) is given by:
 
 $$||a|| = \sqrt{a_1^2 + a_2^2 + a_3^2 + ... + a_n^2}$$
 
 where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
 
-> Vector norm is a non-negative value, which describes the extend of the vector space. 
+> Vector norm is always **non-negative**, and it describes the "length" or "distance" of the vector from the origin in the vector space.
 
 ### $L^1$ Norm
 
-$L^1$ Norm or Manhattan norm is the sum of the absolute values of the vector elements. It is denoted by $\color{#F99417}||a||_1$ and is given by;
+$L^1$ Norm or also called the **Manhattan** norm, is the sum of the absolute values of a vector’s components. It is denoted by $||a||_1$ and is defined as:
 
 $$||a||_1 = |a_1| + |a_2| + |a_3| + ... + |a_n|$$
 
-where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
+where:
 
-> It the manhattan distance from the origin of the vector space.
+- $a = [a_1, a_2, ..., a_n]$ is the vector.
 
-**$\color{#F99417}L^1$ norm is often used in machine learning as a regularization technique (to keep the co-effs of the model small).**
+> It is often used in machine learning as a regularization technique (known as **Lasso regression**) to keep model coefficients small and avoid overfitting.
 
 ### $L^2$ Norm
 
-$L^2$ Norm or Euclidean norm is the square root of the sum of the squares of the vector elements. It is denoted by $\color{#F99417}||a||_2$ and is given by;
+$L^2$ Norm also known as **Euclidean** norm, is the square root of the sum of the squares of the vector components. It is denoted by $||a||_2$ and is given by;
 
 $$||a||_2 = \sqrt{a_1^2 + a_2^2 + a_3^2 + ... + a_n^2}$$
 
 where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
 
-###  Vector max norm or $L^\infin$ Norm
+> It is used as a regularization technique in machine learning (known as **Ridge regression**) to prevent overfitting.
 
-Vector max norm or $L^\infin$ Norm is the maximum absolute value of the vector elements. It is denoted by $\color{#F99417}||a||_\infin$ and is given by;
+### $L^\infin$ Norm
+
+**Vector max norm** or **maximum norm** or **supremum norm**  also called $L^\infin$ Norm is the largest absolute value of the components of the vector. It is denoted by $||a||_\infin$ and is given by;
 
 $$||a||_\infin = max(|a_1|, |a_2|, |a_3|, ..., |a_n|)$$
 
-where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
+> It useful in optimization problems where we are concerned with the maximum deviation of a vector’s components.
+
+![3 vector norms graphical equivalent](./img/3_norms.png)
 
 ## Projection of a vector
 
-The projection of a vector `a` onto another vector `b`, denoted as `proj_b(a)`, is the vector `p` that lies in the direction of `b` and is collinear with `a`.
+The projection of a vector $a$ onto another vector $b$, denoted as $proj_b(a)$, is a vector $p$ that lies in the direction of $b$ and is collinear with $a$. This projection represents the component of $a$ that points along the direction of $b$.
 
 ![Projection of a vector](./img/Projection.png)
 
-We can express this mathematically as;
+Mathematically the projection of $a$ onto $b$ is given by: 
 
-$$d = \frac{a.b}{||b||} \rightarrow d = ||a||cos\theta$$
+$$proj_b(a) = \frac{a \cdot b}{||b||^2}b$$
 
-where $\color{#F99417}a$ and $\color{#F99417}b$ are two vectors and $\color{#F99417}||b||$ is the magnitude/length of the vector $\color{#F99417}b$.
+where:
 
-where $\color{#F99417}\theta$ is the angle between the two vectors.
+- $a \cdot b$ is the dot product of vectors $a$ and $b$,
+
+- $||b||^2$ is the square of the norm (or length) of vector $b$,
+
+- $b$ is the vector in the direction of the projection.
+
+We can write this also as:
+
+
+$$d = \frac{a.b}{||b||} = d = ||a||cos\theta$$
+
+where:
+
+- $d$ is the scalar projection of $a$ onto $b$,
+
+- $\theta$ is angle between the two vectors.
+
+> If $a$ and $b$ are orthogonal (perpendicular), their dot product is zero, meaning the projection of $a$ onto $b$ is a zero vector.
 
 ## Unit vector
 
-A vector with a magnitude of 1. It is often denoted as $\color{#F99417}\hat{a}$. The unit vector would have the same direction as the original vector $\color{#F99417}a$.
+**Unit vector** is a vector with a magnitude (or norm) of 1. It is typically used to indicate direction without regard to magnitude. The unit vector of any vector $a$ is denoted by $\hat{a}$, points in the same direction as $a$, and is calculated as:
 
-## A line
+$$\hat{a} = \frac{a}{||a||}$$
 
-A line is a collection of points that satisfy the equation $\color{#FF9900}ax + by + c = 0$ where $a$ and $b$ are the coefficients of $x$ and $y$ respectively and $c$ is a constant. We can define a line in a `2D plane` as;
+where:
 
-$$w_{1}x_1 + w_2x_2 + w_0 = 0$$
+- $||a||$ is the magnitude of the original vector $a$.
 
-In `3D space`, we have a plane instead of a line. A plane is a collection of points that satisfy the equation $\color{#FF9900} ax + by + cz + d = 0$ where $\color{#FF9900}a$, $\color{#FF9900}b$ and $\color{#FF9900}c$ are the coefficients of $\color{#FF9900}x$, $\color{#FF9900}y$ and $\color{#FF9900}z$ respectively and $\color{#FF9900}d$ is a constant. In terms of of our previous equation we can define a plane in a 3D plane as;
+> Unit vector preserves the direction but normalizes the magnitude of the vector to a length of 1.
 
-$$w_{1}x_1 + w_2x_2 + w_3x_3 + w_0 = 0$$
+<!-- EDITED TILL HERE -->
 
-In `n-dimensional` space we have a `hyperplane` instead of a line or a plane. A hyperplane is a collection of points that satisfy the equation $\color{#FF9900} a_1x_1 + a_2x_2 + a_3x_3 + ... + a_nx_n + b = 0$ where $\color{#FF9900}a_1$, $\color{#FF9900}a_2$, $\color{#FF9900}a_3$, ..., $\color{#FF9900}a_n$ are the coefficients of $\color{#FF9900}x_1$, $\color{#FF9900}x_2$, $\color{#FF9900}x_3$, ..., $\color{#FF9900}x_n$ respectively and $\color{#FF9900}b$ is a constant. which can be written as;
-
-$$w_{0}x_0 + w_{1}x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n + w_0 = 0$$
-
-> A line in 2D becomes a plane in 3D which becomes a hyperplane in n-Dimensional space.
-
-The above equation can be written as;
-
-$$w_0 \sum_{i=0}^{n}w_ix_i = 0$$
-
-**The equation of a plane in `n-dimensional` space ($\color{#FF9900}\pi_n$) can be written as**;
-
-$$w_0 + w^Tx = 0$$
-
-where $\color{#FF9900}w = [w_0, w_1, w_2, w_3, ..., w_n]$ and $\color{#FF9900}x = [x_0, x_1, x_2, x_3, ..., x_n]$ are two vectors.
-
-Equation of a line passing through origin is $\color{#FF9900}w^Tx = 0$
-
-> we can drop the $w_0$ term as it is zero (because since the line is passing through origin, the y-intercept is zero).
-
-## Distance of a point from a plane
-
-![Distance of a point from a plane](./img/point_plane.png)
-
-Let us consider a plane $\color{#FF9900}\pi_n$ that passes through origin and an `n-dimensional` point $\color{#FF9900}p$. The distance between the point $\color{#FF9900}p$ and the plane $\color{#FF9900}\pi_n$ is given by;
-
-$$d = \frac{w^Tp}{||w||}$$
-
-where $\color{#FF9900}w$ is the normal vector to the plane $\color{#FF9900}\pi_n$ and $\color{#FF9900}||w||$ is the magnitude of the vector $\color{#FF9900}w$.
-
-Similarly we can find the distance between the plane and the point $\color{#FF9900}p^{'}$ as;
-
-$$d^{'} = \frac{w^Tp^{'}}{||w||}$$
-
-> In the above diagram $\color{#FF9900}d$ is positive as the angle between the $\color{#FF9900}w$ and $\color{#FF9900}p$ is less than $\color{#FF9900}90^{\circ}$ and $\color{#FF9900}d^{'}$ is negative as the angle between the $w$ and $\color{#FF9900}p^{'}$ is greater than $\color{#FF9900}90^{\circ}$.
-
-When we want to compute the distance between the point and the plain, we take the absolute value of the distance, as negative distance does not make sense. At the same time, the sign of the distance is important as it tells us on which side of the plane (half-space) the point lies. So, when we need to determine whether something lies on which half-space, we can use the above idea.
-
-## Circle
-
-A circle is a collection of points that satisfy the equation $\color{#FF9900} (x)^2 + (y)^2 = r^2$ where $\color{#FF9900}r$ is the radius of the circle and it's center is at the origin $\color{#FF9900}(0, 0)$. The general equation of a circle with center $\color{#FF9900}(h, k)$ and radius $\color{#FF9900}r$ is given by;
-
-$$(x - h)^2 + (y - k)^2 = r^2$$
-
-Given a point $\color{#FF9900}p(x_1, x_2)$, we can determine whether that point lies inside the circle, on the circle, or outside the circle.
-
-- If $\color{#FF9900}x_1^2 + x_2^2 < r^2$, the point lies inside the circle.
-
-- If $\color{#FF9900}x_1^2 + x_2^2 = r^2$, the point lies on the circle.
-
-- If $\color{#FF9900}x_1^2 + x_2^2 > r^2$, the point lies outside the circle.
-
-In `3D`, we have **sphere** instead of circle. The general equation for a circle with center $\color{#FF9900}(h, k, l)$ and radius $r$ is given by;
-
-$$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 = r^2$$
-
-A higher dimensional sphere or a **Hypersphere** is defined as;
-
-$$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 + ... + (x_n - m)^2 = r^2$$
-
-If the center of the hypersphere is at the origin, then the equation of the hypersphere is given by;
-
-$$x_1^2 + x_2^2 + x_3^2 + ... + x_n^2 = r^2 \implies \sum_{i=0}^{n}x_i^2 = r^2$$
-
-The same idea of a point inside a circle or not using the equation of a circle can be extended to higher dimensions. This again is pretty powerful as we can use this idea to determine whether a point lies inside a hyper-sphere or not.
+<!-- SECTION - III -->
 
 ## Matrix 
 
@@ -402,6 +405,155 @@ The dot product of two tensors is a generalization of the dot product of two vec
 $$a \cdot b = \sum_{i=1}^{n}a_ib_i$$
 
 where $\color{#F99417}a$ and $\color{#F99417}b$ are two tensors.
+
+<!-- SECTION - IV -->
+
+## Line
+
+A line is a `one-dimensional` figure that extends infinitely in one directions, having length but no width, depth or curvature. Eg. A ray of light, the number line, etc. 
+
+In a `two dimension`, a line is defined as the collection of points $\color{#FF9900}(x, y)$ that satisfies a linear equation:
+
+$$ax + by + c = 0$$
+
+$$or$$
+
+$$w_{1}x_1 + w_2x_2 + w_0 = 0$$
+
+In `three dimension` instead of a line, we have a **plane**. A plane is a collection of points $\color{#FF9900}x, y, z$ that satisfies the equation:
+
+$$ ax + by + cz + d = 0$$
+
+In `n-dimensional` space, we generalize this further to an `hyperplane`, which is a collection of points $\color{#FF9900}x_1, x_2, ..., x_n$ that satisfies the equation:
+
+$$a_1x_1 + a_2x_2 + a_3x_3 + ... + a_nx_n + b = 0$$
+
+$$or$$
+
+$$w_{1}x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n + w_0 = 0$$
+
+Which can be simplified using vector notation as:
+
+$$ w^Tx + w_0 = 0$$
+
+> This is also the equation for a hyperplane in an $n$ - dimensional space ($\pi_n$).
+
+where $\color{#FF9900}w = [w_1, w_2, w_3, ..., w_n]$  and $\color{#FF9900}x = [x_1, x_2, x_3, ..., x_n]$ are column vectors. If the hyperplane passes through the origin, $w_0 = 0$, then the equation simplifies to:
+
+$$w^Tx=0$$
+
+> 0-Dimension : (A point) -> 1-Dimension : (A line) -> 2-Dimension : (A plane) -> n-dimension : (Hyperplane)
+
+## Distance of a point from a plane
+
+![Distance of a point from a plane](./img/point_plane.png)
+
+Let us consider a plane $\color{#FF9900}\pi_n$ that passes through origin in an `n-dimensional` space and a point $\color{#FF9900}P$ located at the coordinates $\color{#FF9900}x_1, x_2, ..., x_n$. The distance between the point $\color{#FF9900}P$ and the plane $\color{#FF9900}\pi_n$ is given by the formula:
+
+$$d = \frac{w^Tp}{||w||}$$
+
+where:
+- $\color{#FF9900}w$ is the normal vector to the plane $\color{#FF9900}\pi_n$,
+
+- $\color{#FF9900}||w||$ is the magnitude of the vector $\color{#FF9900}w$ (or Euclidean norm).
+
+- $\color{#FF9900}w^Tp$ represents the dot product of the normal vector $\color{#FF9900}w$ and the point vector $\color{#FF9900}P$.
+
+The distance represents the perpendicular distance from the point to the plane. Similarly we can compute the distance from the plane to another  point $\color{#FF9900}P^{'}$ as;
+
+$$d^{'} = \frac{w^Tp^{'}}{||w||}$$
+
+In the above diagram, the distance $\color{#FF9900}d$ is positive because the angle between the normal vector $\color{#FF9900}w$ and the point vector $\color{#FF9900}P$ is less than $\color{#FF9900}90^{\circ}$. On the other hand, the distance $\color{#FF9900}d^{'}$ is negative because the angle between the normal vector $w$ and the point vector $\color{#FF9900}P^{'}$ is greater than $\color{#FF9900}90^{\circ}$, meaning that the point $\color{#FF9900}P^{'}$ lies on the opposite side of the plane.
+
+> A positive distance means the point lies on the same side as the normal vector $w$, while a negative distance means it lies on the opposite side.
+
+When calculating the physical distance between a point and a plane, we typically take the absolute value of the signed distance. This ensures that the distance is always non-negative, as negative physical distance does not make sense. However, the sign of the distance is important in determining the relative position of the point with respect to the plane
+
+Some of the common **distance formulas** are;
+
+| Description | Formula |
+| --- | :--- |
+| Distance between origin $\color{#F99417}o(0, 0)$ and a point $\color{#F99417}P(x_1, x_2)$ in a 2D plane | $d = \sqrt{x_1^2+x_2^2}$ |
+| Distance between origin $\color{#F99417}o(0, 0, 0)$ and a point $\color{#F99417}P(x_1, x_2, x_3)$ in a 3D plane | $d = \sqrt{x_1^2+x_2^2+x_3^2}$ |
+| Distance between origin $\color{#F99417}o(0, 0, 0, ..., 0)$ and a point $\color{#F99417}p(x_1, x_2, x_3, ..., x_n)$ in a `n-dimensional` plane | $d = \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2}$ |
+| Distance between two points  $\color{#F99417}P (x_1, y_1)$ and $\color{#F99417}Q (x_2, y_2)$ in a 2D plane | $d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2}$ |
+| Distance between two points  $\color{#F99417}P (x_1, y_1, z_1)$ and $\color{#F99417}Q (x_2, y_2, z_2)$ in a 3D plane | $d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2+(z_2 - z_1)^2}$ |
+| Distance between two points $\color{#F99417} P(x_1, x_2, x_3, ..., x_n)$ and $\color{#F99417}Q (y_1, y_2, y_3, ..., y_n)$ in a `n-dimensional` plane | $d = \sqrt{(x_1-y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+...+(x_n - y_n)^2} \\  \;\;\;\;\;{ or }\\ d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$ |
+
+> All of these formulas represent the Euclidean distance, providing a way to measure the distance between two points in different-dimensional spaces. We can easily derive all the above formulas using the Pythagoras theorem.
+
+## Slope
+
+The slope of a line is a measure of how steep the line is. It is denoted by $\color{#F99417}m$ and is given by;
+
+$$m = \frac{y_2 - y_1}{x_2 - x_1}$$
+
+where $\color{#F99417}(x_1, y_1)$ and $\color{#F99417}(x_2, y_2)$ are two points on the line.
+
+## Intercept
+
+The intercept of a line is the point where the line crosses the y-axis. It is denoted by $\color{#F99417}c$ and is given by;
+
+$$c = y - mx$$
+
+where $\color{#F99417}(x, y)$ is a point on the line and $\color{#F99417}m$ is the slope of the line.
+
+## Circle
+
+A circle is a collection of points that satisfy the equation $\color{#FF9900} (x)^2 + (y)^2 = r^2$ where $\color{#FF9900}r$ is the radius of the circle and it's center is at the origin $\color{#FF9900}(0, 0)$. The general equation of a circle with center $\color{#FF9900}(h, k)$ and radius $\color{#FF9900}r$ is given by;
+
+$$(x - h)^2 + (y - k)^2 = r^2$$
+
+Given a point $\color{#FF9900}p(x_1, x_2)$, we can determine whether that point lies inside the circle, on the circle, or outside the circle.
+
+- If $\color{#FF9900}x_1^2 + x_2^2 < r^2$, the point lies inside the circle.
+
+- If $\color{#FF9900}x_1^2 + x_2^2 = r^2$, the point lies on the circle.
+
+- If $\color{#FF9900}x_1^2 + x_2^2 > r^2$, the point lies outside the circle.
+
+In `3D`, we have **sphere** instead of circle. The general equation for a circle with center $\color{#FF9900}(h, k, l)$ and radius $r$ is given by;
+
+$$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 = r^2$$
+
+A higher dimensional sphere or a **Hypersphere** is defined as;
+
+$$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 + ... + (x_n - m)^2 = r^2$$
+
+If the center of the hypersphere is at the origin, then the equation of the hypersphere is given by;
+
+$$x_1^2 + x_2^2 + x_3^2 + ... + x_n^2 = r^2 \implies \sum_{i=0}^{n}x_i^2 = r^2$$
+
+The same idea of a point inside a circle or not using the equation of a circle can be extended to higher dimensions. This again is pretty powerful as we can use this idea to determine whether a point lies inside a hyper-sphere or not.
+
+---
+
+## Notations
+
+| Notation | Description |
+| --- | :--- |
+| $\color{#F99417}a$ | Scalar or Vector |
+| $\color{#F99417}A, B, C$ | Matrix |
+| $\color{#F99417}A$ of size $\color{#F99417}\text{m X n}$ | Matrix `A` with `m` rows and `n` columns  |
+| $\color{#F99417}A_{ij}$ | Element in the `i-th` row and `j-th` column of matrix `A` |
+| $\color{#F99417}A^T$ | Transpose of matrix `A` |
+| $\color{#F99417}v^T$ | Transpose of vector `v` |
+| $\color{#F99417}A^{-1}$ | Inverse of matrix `A` |
+| $\color{#F99417}A^*$ | Conjugate transpose of matrix `A` |
+| $\color{#F99417}det(A)$ | Determinant of matrix `A` |
+| $\color{#F99417}AB$ | Matrix multiplication of matrix `A` and matrix `B`|
+| $\color{#F99417}u.v; \langle u, v\rangle$ | Dot product of `u` and `v`|
+| $\color{#F99417}u \times v$ | Cross product of `u` and `v`|
+| $\color{#F99417}\R$ | Set of real numbers (set $\R$ is infinite and continuous)|
+| $\color{#F99417}\R^2$ | Two dimensional real vector space|
+| $\color{#F99417}\R^n$ | n-dimensional real vector space |
+| $\color{#F99417}v\in\R^n$ | Vector `v` belongs to the space $\R^n$|
+| $\color{#F99417}\|v\|_1$ | L1 Norm or Manhattan distance of the vector $v$|
+| $\color{#F99417}\|v\|_2; \|\|v\|\|$ | L2 Norm or Euclidean norm of the vector $v$|
+| $\color{#F99417}\|v\|_\infin$ | Infinity Norm or Maximum Norm or Chebyshev Norm of vector $v$|
+| $\color{#F99417}T: \R^n \rightarrow \R^m;T(v)=w$ | Transformation `T` of a vector `v` $\in \R^n$ into the vector `w` $\in \R^m$|
+
+---
 
 ### [Jupyter notebook of linear algebra](./Notebooks/Linear_algebra.ipynb)
 
