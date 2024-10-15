@@ -210,7 +210,7 @@ For an **n-dimensional** vector $a = [a_1, a_2, ..., a_n]$, the most commonly us
 
 $$||a|| = \sqrt{a_1^2 + a_2^2 + a_3^2 + ... + a_n^2}$$
 
-where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
+where $a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
 
 > Vector norm is always **non-negative**, and it describes the "length" or "distance" of the vector from the origin in the vector space.
 
@@ -232,7 +232,7 @@ $L^2$ Norm also known as **Euclidean** norm, is the square root of the sum of th
 
 $$||a||_2 = \sqrt{a_1^2 + a_2^2 + a_3^2 + ... + a_n^2}$$
 
-where $\color{#F99417}a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
+where $a = [a_1, a_2, a_3, ..., a_n]$ is a vector.
 
 > It is used as a regularization technique in machine learning (known as **Ridge regression**) to prevent overfitting.
 
