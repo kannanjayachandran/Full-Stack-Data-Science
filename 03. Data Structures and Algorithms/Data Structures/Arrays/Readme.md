@@ -85,7 +85,7 @@ These are the problems I have solved in the `Arrays` section. Refer [this](https
 6. Find all equilibrium indices in an array
 7. Count good pairs
 8. Count the number of leaders in the array
-9. Two sum problem
+9. K-th Maximum Integer in a list
 10. Non-constructible change
 11. Tournament winner
 12. Product array except self
@@ -118,3 +118,4 @@ These are the problems I have solved in the `Arrays` section. Refer [this](https
 3. [Two Sum](https://neetcode.io/problems/two-integer-sum)
 4. [Anagram Group](https://neetcode.io/problems/anagram-groups)
 5. [Top K Frequent Elements](https://neetcode.io/problems/top-k-elements-in-list)
+6. [kth Largest Element](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)

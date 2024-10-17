@@ -14,6 +14,6 @@
 
 1. [Graphs](./Graphs/Readme.md)
 
-1. [Heaps](./Heaps/Readme.md)
+1. [Heap](./Heap/Readme.md)
 
 1. [Hash Tables](./HashTables/Readme.md)
