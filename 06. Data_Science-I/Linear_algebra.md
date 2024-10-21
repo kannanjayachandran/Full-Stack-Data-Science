@@ -156,7 +156,6 @@ $$[a_1, a_2, a_3, ..., a_n] \; \cdot \; \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ ...
 
 ![Geometrical interpretation of dot product](./img/dot_product.png)
 
-
 In an **n-dimensional space**, the dot product of two vectors $a$ and $b$ can be expressed as:
 
 $$a.b = \sum_{i=1}^{n}a_ib_i = |a||b| \; cos\theta$$
@@ -172,6 +171,16 @@ where:
 > If the two vectors are perpendicular (i.e., $\theta = 90^{\circ}$), then $\cos \theta = 0$ and the dot product is zero. 
 
 > If the two vectors are parallel (i.e., $\theta = 0^{\circ}$ or $180^\circ$), then the dot product is equal to the product of their magnitudes.
+
+## Vector - Scalar Multiplication
+
+A vector can be multiplied by a scalar, in effect scaling the magnitude of the vector. The scalar multiplication of a vector $a$ by a scalar $s$ is denoted by $s \cdot a$ and is given by:
+
+$$s \cdot a = [s \cdot a_1, s \cdot a_2, s \cdot a_3, ..., s \cdot a_n]$$
+
+where:
+
+- $a = [a_1, a_2, a_3, ..., a_n]$ is the vector
 
 ## Inner product
 
@@ -287,108 +296,190 @@ where:
 
 - $||a||$ is the magnitude of the original vector $a$.
 
-> Unit vector preserves the direction but normalizes the magnitude of the vector to a length of 1.
+- If the dot product of two vectors are zero, then they are orthogonal to each other. When two vectors are orthogonal and they are unit vectors, then they are called `orthonormal vectors`.
 
-<!-- EDITED TILL HERE -->
+> Unit vector preserves the direction but normalizes the magnitude of the vector to a length of 1.
 
 <!-- SECTION - III -->
 
 ## Matrix 
 
-A matrix is a 2d array of numbers, with one or more rows and one or more columns. A matrix with `m` rows and `n` columns is said to have the dimension `m x n`. While multiplying matrices we need to ensure that;
-
-$$\color{#FF9900}\text{No. of Col(}m_1\text{) = No. of rows(}m_2)$$
+A matrix is a 2D array of numbers, organized into rows and columns. A matrix with $m$ rows and $n$ columns is said to have the dimension $m×n$.
 
 ## Types of matrices
 
-- **Square matrix** : A matrix with the same number of rows and columns. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$
+- **Square matrix** : A matrix that has the same number of rows and columns. For example; 
 
-- **Diagonal matrix** : A square matrix with all the elements outside the main diagonal are zero. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 9 \end{bmatrix}$
+$$X = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$$
 
-- **Identity matrix** : A diagonal matrix with all the elements in the main diagonal are one. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$
+- **Diagonal matrix** : A square matrix where all elements outside the main diagonal are zero. For example: 
 
-- **Upper triangular matrix** : A square matrix with all the elements below the main diagonal are zero. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 5 & 6 \\ 0 & 0 & 9 \end{bmatrix}$
+$$X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 9 \end{bmatrix}$$
 
-- **Lower triangular matrix** : A square matrix with all the elements above the main diagonal are zero. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 4 & 5 & 0 \\ 7 & 8 & 9 \end{bmatrix}$
+- **Identity matrix** :A diagonal matrix where all the elements on the main diagonal are ones. For example:
 
-- **Symmetric matrix** : A square matrix that is equal to its transpose. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 5 & 6 \\ 3 & 6 & 9 \end{bmatrix}$
+$$X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
 
-- **Skew-symmetric matrix** : A square matrix that is equal to the negative of its transpose. For example; $\color{#F99417}X = \begin{bmatrix} 0 & 2 & 3 \\ -2 & 0 & 6 \\ -3 & -6 & 0 \end{bmatrix}$
+- **Upper triangular matrix** : A square matrix where all elements below the main diagonal are zero. For example:
 
-- **Orthogonal matrix** : A square matrix whose rows and columns are orthonormal unit vectors. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$
+$$X = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 5 & 6 \\ 0 & 0 & 9 \end{bmatrix}$$
 
-    - It is defined as $\color{#F99417}Q^T\cdot Q = I$ where $I$ is the identity matrix. Therefore we can say that a matrix is orthogonal if its transpose is equal to its inverse $\color{#F99417}Q^T = Q^{-1}$.
+- **Symmetric matrix** : A square matrix that is equal to its transpose, (i.e. $X = X^T$) For example:
 
-    > Two vectors are `unit vectors` if their magnitude is one. Two vectors are `orthogonal` if their dot product is zero. If two vectors are orthogonal and unit vectors, then they are called `orthonormal vectors`.
+$$X = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 5 & 6 \\ 3 & 6 & 9 \end{bmatrix}$$
 
-- **Sparse matrix** : A matrix with a large number of zero elements. For example; $\color{#F99417}X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9 \end{bmatrix}$
+- **Skew-symmetric matrix** : A square matrix that is equal to the negative of its transpose, (i.e. $X = -X^T$) For example: 
 
-On the other hand a matrix with a large number of non-zero elements is called a `dense matrix`. Sparsity score of a matrix is the ratio of the number of zero elements to the total number of elements in the matrix.
+$$X = \begin{bmatrix} 0 & 2 & 3 \\ -2 & 0 & 6 \\ -3 & -6 & 0 \end{bmatrix}$$
+
+- **Orthogonal matrix** : A square matrix whose rows and columns are orthonormal unit vectors. Mathematically, $Q^T \cdot Q = I$, where $I$ is the identity matrix. In other words a matrix is orthogonal if its transpose is equal to its inverse, i.e., $Q^T = Q^{-1}$. Orthogonal matrices preserves vector length and angle during transformations. For example:
+
+$$Q = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+
+- **Sparse matrix** : A matrix in which most of the elements are zero. For example:
+
+$$X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9 \end{bmatrix}$$
+
+- A matrix with a high proportion of non-zero elements is referred to as a dense matrix.
+
+- The **sparsity score** of a matrix is the ratio of the number of zero elements to the total number of elements in the matrix:
 
 $$\text{Sparsity score} = \frac{\text{No. of zero elements}}{\text{Total no. of elements}}$$
 
+## Matrix addition and subtraction
+
+Two matrices with same dimensions can be added or subtracted together to create a new third matrix. The addition or subtraction of two matrices is done element-wise. For example:
+
+$$X = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \;\; Y = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}$$
+
+$$X + Y = \begin{bmatrix} 1+5 & 2+6 \\ 3+7 & 4+8 \end{bmatrix} = \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}$$
+
+$$X - Y = \begin{bmatrix} 1-5 & 2-6 \\ 3-7 & 4-8 \end{bmatrix} = \begin{bmatrix} -4 & -4 \\ -4 & -4 \end{bmatrix}$$
+
+## Matrix multiplication
+
+Two matrices with same dimensions can be multiplied together, and this is often called element-wise matrix multiplication or the `Hadamard product`. It is not the typical operation meant when referring to matrix multiplication. It is denoted as $C = A \circ B$ and is given by:
+
+$$C = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} \circ \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} = \begin{bmatrix} a_{11}b_{11} & a_{12}b_{12} \\ a_{21}b_{21} & a_{22}b_{22} \end{bmatrix}$$
+
+The **Matrix dot product** or **Matrix multiplication** is more complex than the Hadamard product and involves specific rules regarding dimensions. For two matrices to be multiplied, the number of `columns in the first matrix` ($m$) must equal the number of `rows in the second matrix` ($n$). It is denoted as $C = A \cdot B$ and is given by:
+
+$$A = \begin{bmatrix} a_{11} & a_{12}  & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{bmatrix} \cdot B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \\ b_{31} & b_{32}  \end{bmatrix} \rightarrow C = \begin{bmatrix} c_{11} & c_{12} \\ c_{21} & c_{22} \\ c_{31} & c_{32} \end{bmatrix}$$
+
+Where:
+
+- $A$ is an $m X n$ matrix,
+
+- $B$ is an $p X q$ matrix,
+
+- $C$ is an $m X q$ matrix
+
+In order to obtain the values of the resulting matrix $C$, we multiply each element of the row of matrix $A$ by the corresponding element of the column of matrix $B$ and sum the results. For example:
+
+$$c_{11} = a_{11}b_{11} + a_{12}b_{21} + a_{13}b_{31}$$
+
+$$c_{12} = a_{11}b_{12} + a_{12}b_{22} + a_{13}b_{32}$$
+
+$$c_{21} = a_{21}b_{11} + a_{22}b_{21} + a_{23}b_{31}$$
+
+$$c_{22} = a_{21}b_{12} + a_{22}b_{22} + a_{23}b_{32}$$
+
+$$c_{31} = a_{31}b_{11} + a_{32}b_{21} + a_{33}b_{31}$$
+
+$$c_{32} = a_{31}b_{12} + a_{32}b_{22} + a_{33}b_{32}$$
+
 ## Transpose of a matrix
 
-The transpose of a matrix is a new matrix whose rows are the columns of the original. It is denoted by $\color{#F99417}X^T$ and is given by;
+The **transpose** of a matrix is a new matrix formed by swapping the rows and columns of the original matrix. It is denoted by $X^T$ and is represented by:
 
 $$X = \begin{bmatrix} a & b & c \\ d & e & f \end{bmatrix} \implies X^T = \begin{bmatrix} a & d \\ b & e \\ c & f \end{bmatrix}$$
 
+> An invisible line can be drawn through the matrix from top left to bottom right on which the matrix can be flipped to give the transpose.
+
 ## Inverse of a matrix
 
-The inverse of a matrix is a matrix that when multiplied with the original matrix gives the identity matrix. It is denoted by $\color{#F99417}X^{-1}$ and is given by;
+The **inverse** of a matrix is a matrix that, when multiplied by the original matrix, results in the identity matrix. It is denoted by $X^{-1}$ and is given by:
 
-$$X = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \implies X^{-1} = \frac{1}{ad-bc}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
+$$ X^{-1} = \frac{1}{ad-bc}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
 
-where $\color{#F99417}ad-bc$ is called the `determinant` of the matrix.
+Where:
 
-> The inverse of a matrix does not exist if the determinant of the matrix is zero.
+- $X = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ is a $2 X 2$ matrix.
 
-- A square matrix is invertible if and only if its determinant is non-zero. An invertible square matrix is called a `non-singular matrix`. A square matrix that is not invertible is called a `singular matrix`.
+- A square matrix that is not invertible is called a **singular matrix**.
+
+> **Whatever A does, $A^-1$ undoes**. :- _Introduction to Linear Algebra, Fifth Edition, 2016_)
+
+> *$A^-1$ is primarily useful as a theoretical tool. In practice, we rarely compute the inverse of a matrix directly, as it is computationally expensive. Instead, we use matrix decomposition techniques like LU decomposition, QR decomposition, or Singular Value Decomposition (SVD) to solve systems of linear equations. :- **Deep Learning 2016*** 
 
 ## Trace of a matrix
 
-The trace of a matrix is the sum of the elements in the main diagonal of the matrix. It is denoted by $\color{#F99417}tr(X)$ and is given by;
+The trace of a matrix is the sum of the elements on the main diagonal (top-left to bottom-right). It is denoted by $tr(X)$ and is calculated as:
 
-$$X = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \implies tr(X) = a + d$$
+$$tr(X) = a + d$$
+
+Where:
+
+- $X = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ is a $2 X 2$ matrix.
 
 ## Determinant of a matrix
 
-Determinant of a matrix is a special value which gives us a scalar representation of the matrix volume. It is the product of the eigenvalues of the matrix. It is denoted by $\color{#F99417}det(X) \;or \;|X|$ and is given by;
+The **determinant** of a matrix is a scalar value that represents how much the matrix scales the volume (or area) of the space it transforms (represented by the linear transformation). It is the product of the eigenvalues of the matrix (This property is crucial when we are dealing with larger matrices, with known eigenvalues). The determinant is denoted by $det(X) \;or \;|X|$ and for a $2X2$ matrix it is calculated as:
 
-$$X = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \implies det(X) = ad-bc$$
+$$det(X) = ad-bc$$
+
+Where:
+
+- $X = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ is a $2 X 2$ matrix.
+
+For a $3X3$ matrix, the determinant is calculated as:
+
+$$det(X) = a(ei - fh) - b(di - fg) + c(dh - eg)$$
+
+Where:
+
+- $X = \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix}$ is a $3 X 3$ matrix.
 
 ![Formula for finding determinant](./img/Determinant_formula.png)
+>General formula
 
-### The intuition behind determinant
+- If the determinant of a matrix is zero, it means that the matrix does not have an inverse.
 
-The determinant of a matrix is a scalar value that tells us how much the matrix scales the volume (or area) spanned by its column vectors (The area spanned by column vectors means the area of the parallelogram formed by the column vectors.). 
-- A determinant of 1 indicates that the matrix preserves volume (or area) without scaling it. 
+### Intuition Behind the Determinant
 
-- A determinant greater than 1 indicates that the matrix expands the volume (or area).
-
-- A determinant less than 1 indicates that the matrix shrinks the volume (or area).
-
-- A negative determinant indicates that the matrix flips the orientation (a reflection) in addition to scaling.
-
-- If the determinant of the matrix is zero, it means that the matrix does not have an inverse and the rows or columns of the matrix are linearly dependent. This also means the matrix squishes the space down to a lower dimension. In the context of linear transformations, it signifies that the transformation is not one-to-one, and thus, it cannot be inverted uniquely. Thus there are infinitely many solutions (inverses) or none at all, depending on the specific case.
+The determinant is a scalar that tells us how much a matrix scales the volume (or area) spanned by its column vectors. In two dimensions, this is the area of the parallelogram formed by the column vectors (volume of the parallelepiped formed by the column vectors in 3D). 
 
 ![Area enclosed by parallelogram](./img/Parallelogram.png)
 
+- A determinant of 1 means the matrix preserves the volume or area without changing its size. 
+
+- A determinant greater than 1 means the matrix expands the volume or area.
+
+- A determinant between 0 and 1 indicates that the matrix shrinks the volume or area
+
+- A negative determinant indicates the matrix reflects the space, flipping its orientation, in addition to scaling.
+
+- If the determinant is zero, the matrix does not have an inverse. This happens because the rows or columns of the matrix are linearly dependent, meaning they lie along the same line or plane. In geometric terms, the matrix "squishes" (compress) the space into a lower dimension. For linear transformations, this implies that the transformation is not one-to-one, making the inverse either non-unique or nonexistent.
+
+<!-- EDITED TILL HERE -->
+
 ## Rank of a matrix
 
-The rank of a matrix is the maximum number of linearly **independent** rows or columns in the matrix. It is denoted by $\color{#F99417}rank(X)$. We can find the rank of a matrix by reducing it to its `row echelon form` or `reduced row echelon form` and counting the number of non-zero rows. We use matrix decomposition techniques to find the rank of a matrix.
+The **rank** of a matrix is the maximum number of linearly independent rows or columns in the matrix.
 
-### Intuition behind rank of a matrix
+The rank of a matrix is the maximum number of linearly **independent** rows or columns in the matrix. It is denoted by $rank(X)$. The rank can be determined by transforming the matrix into its row echelon form or reduced row echelon form and counting the number of non-zero rows. Matrix decomposition techniques, such as Singular Value Decomposition (SVD), are also used to find the rank of a matrix.
 
-The rank of a matrix is the number of dimensions spanned by its column vectors. 
+### Intuition Behind the Rank of a Matrix
 
-- Rank 0 means that all the vectors span a point (zero dimensions).
+The rank of a matrix represents the number of dimensions spanned by its column vectors, or equivalently, the number of independent directions in the space.
 
-- Rank 1 means that all the vectors span a line (one dimension).
+- Rank 0: All the vectors span a single point, representing zero dimensions.
 
-- Rank 2 means that all the vectors span a plane (two dimensions).
+- Rank 1: The vectors span a line, representing one dimension.
 
-- Rank 3 means that all the vectors span a volume (three dimensions).
+- Rank 2: The vectors span a plane, representing two dimensions.
+
+- Rank 3: The vectors span a volume, representing three dimensions.
 
 ## Tensors
 
