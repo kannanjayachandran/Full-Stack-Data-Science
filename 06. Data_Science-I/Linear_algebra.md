@@ -336,13 +336,24 @@ $$X = \begin{bmatrix} 0 & 2 & 3 \\ -2 & 0 & 6 \\ -3 & -6 & 0 \end{bmatrix}$$
 
 $$Q = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
 
-- **Sparse matrix** : A matrix in which most of the elements are zero. For example:
+- **Sparse matrix** : A matrix in which most of the elements are zero. Large sparse matrices are common, especially in applied machine learning, such as in natural language processing and recommendation systems. Working with sparse matrices as if they were dense can be computationally expensive due to memory and processing requirements. Significant performance improvements can be achieved by using specialized data structures and operations designed to efficiently handle sparse matrices.
+
+Special data structures are often used to represent sparse matrices more efficiently, like:
+ 
+- **Compressed Sparse Row** :  In this representation, the sparse matrix is stored using three one-dimensional arrays:
+
+    - `Values` : An array of non-zero values in the matrix.
+
+    - `Row offsets` : Indicates where each row starts and end in the `Values` array.
+
+    - `Column indices` : Specifies the column position of each non-zero value in the matrix.
+
+CSR is commonly used in machine learning because it allows efficient row slicing and matrix-vector multiplication.
+
 
 $$X = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9 \end{bmatrix}$$
 
-- A matrix with a high proportion of non-zero elements is referred to as a dense matrix.
-
-- The **sparsity score** of a matrix is the ratio of the number of zero elements to the total number of elements in the matrix:
+> A matrix with a high proportion of non-zero elements is referred to as a dense matrix. The **sparsity score** of a matrix is the ratio of the number of zero elements to the total number of elements in the matrix:
 
 $$\text{Sparsity score} = \frac{\text{No. of zero elements}}{\text{Total no. of elements}}$$
 
@@ -461,11 +472,7 @@ The determinant is a scalar that tells us how much a matrix scales the volume (o
 
 - If the determinant is zero, the matrix does not have an inverse. This happens because the rows or columns of the matrix are linearly dependent, meaning they lie along the same line or plane. In geometric terms, the matrix "squishes" (compress) the space into a lower dimension. For linear transformations, this implies that the transformation is not one-to-one, making the inverse either non-unique or nonexistent.
 
-<!-- EDITED TILL HERE -->
-
 ## Rank of a matrix
-
-The **rank** of a matrix is the maximum number of linearly independent rows or columns in the matrix.
 
 The rank of a matrix is the maximum number of linearly **independent** rows or columns in the matrix. It is denoted by $rank(X)$. The rank can be determined by transforming the matrix into its row echelon form or reduced row echelon form and counting the number of non-zero rows. Matrix decomposition techniques, such as Singular Value Decomposition (SVD), are also used to find the rank of a matrix.
 
@@ -483,53 +490,65 @@ The rank of a matrix represents the number of dimensions spanned by its column v
 
 ## Tensors
 
-A tensor is a generalization of vectors and matrices and is easily understood as a multidimensional array. A tensor can be represented as a `scalar`, `vector`, `matrix`, or `n-dimensional` array. A tensor with `n` dimensions is said to have a `rank` of `n`.
+A tensor is a generalization of vectors and matrices, and can be thought of as a multidimensional array. Tensors are classified based on their rank (_"rank" refers to the number of dimensions or indices needed to specify an element of the tensor_): a `scalar` is a tensor of `rank 0`, a `vector` is a tensor of `rank 1`, a `matrix` is a tensor of `rank 2`, and tensors with more than two dimensions are referred to as **n-dimensional tensors**, where $n$ represents the rank.
 
-> $\color{#F99417}Scalar → Vector → Matrix → Tensor$
+$$\large Scalar \rightarrow Vector \rightarrow Matrix \rightarrow Tensor$$
 
-All the arithmetic operation we can do with matrices can be done with tensors. We can add, subtract, multiply (both `Hadamard` and dot product), and divide tensors. 
+For a 3D tensor, axis 0 specifies the depth/height, axis 1 specifies the rows, and axis 2 specifies the columns.
+
+$$X = \begin{bmatrix} \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} & \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} \\ \begin{bmatrix} 9 & 10 \\ 11 & 12 \end{bmatrix} & \begin{bmatrix} 13 & 14 \\ 15 & 16 \end{bmatrix} \end{bmatrix}$$
+
+Where:
+
+- $X$ is a 3D tensor with dimensions $2 X 4 X 2$.
+
+> All arithmetic operations that can be performed on matrices can also be applied to tensors. This includes addition, subtraction, multiplication (both Hadamard product and dot product), and division. 
 
 ### Tensor dot product
 
-The dot product of two tensors is a generalization of the dot product of two vectors. It is denoted by $\color{#F99417}a ⊗ b$ and is given by;
+The dot product of two tensors is a generalization of the dot product of vectors. It is denoted by $a ⊗ b$ and for vectors, it is computed as: 
 
 $$a \cdot b = \sum_{i=1}^{n}a_ib_i$$
 
-where $\color{#F99417}a$ and $\color{#F99417}b$ are two tensors.
+where $a$ and $b$ are two tensors.
+
+<!-- Complete this -->
+<!-- ## Matrix Decompositions -->
+<!--  -->
 
 <!-- SECTION - IV -->
 
+---
+
 ## Line
 
-A line is a `one-dimensional` figure that extends infinitely in one directions, having length but no width, depth or curvature. Eg. A ray of light, the number line, etc. 
-
-In a `two dimension`, a line is defined as the collection of points $\color{#FF9900}(x, y)$ that satisfies a linear equation:
-
-$$ax + by + c = 0$$
-
-$$or$$
+A **line** is a one-dimensional figure that extends infinitely in both directions, having length but no width, depth, or curvature. Examples include a ray of light, the number line, etc. In two dimensions, a line is defined as the set of points $(x, y)$ that satisfy a linear equation:
 
 $$w_{1}x_1 + w_2x_2 + w_0 = 0$$
 
-In `three dimension` instead of a line, we have a **plane**. A plane is a collection of points $\color{#FF9900}x, y, z$ that satisfies the equation:
+Sometimes its also written as:
+
+$$ax + by + c = 0$$
+
+In three dimensions, instead of a line, we have a **plane**. A plane is the set of points $(x, y, z)$ that satisfy the equation:
 
 $$ ax + by + cz + d = 0$$
 
-In `n-dimensional` space, we generalize this further to an `hyperplane`, which is a collection of points $\color{#FF9900}x_1, x_2, ..., x_n$ that satisfies the equation:
+In n-dimensional space, this generalizes to a hyperplane, which is the set of points $(x_1, x_2, \dots, x_n)$ that satisfy the equation:
 
 $$a_1x_1 + a_2x_2 + a_3x_3 + ... + a_nx_n + b = 0$$
 
-$$or$$
+Which can also be written as:
 
 $$w_{1}x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n + w_0 = 0$$
 
-Which can be simplified using vector notation as:
+This can be further simplified using vector notation as:
 
 $$ w^Tx + w_0 = 0$$
 
-> This is also the equation for a hyperplane in an $n$ - dimensional space ($\pi_n$).
+> This is the equation of an hyperplane in an $n$ - dimensional space ($\pi_n$).
 
-where $\color{#FF9900}w = [w_1, w_2, w_3, ..., w_n]$  and $\color{#FF9900}x = [x_1, x_2, x_3, ..., x_n]$ are column vectors. If the hyperplane passes through the origin, $w_0 = 0$, then the equation simplifies to:
+Here, $w = [w_1, w_2, \dots, w_n]$ and $x = [x_1, x_2, \dots, x_n]$ are column vectors. If the hyperplane passes through the origin, i.e., $w_0 = 0$, then the equation simplifies to:
 
 $$w^Tx=0$$
 
@@ -539,83 +558,83 @@ $$w^Tx=0$$
 
 ![Distance of a point from a plane](./img/point_plane.png)
 
-Let us consider a plane $\color{#FF9900}\pi_n$ that passes through origin in an `n-dimensional` space and a point $\color{#FF9900}P$ located at the coordinates $\color{#FF9900}x_1, x_2, ..., x_n$. The distance between the point $\color{#FF9900}P$ and the plane $\color{#FF9900}\pi_n$ is given by the formula:
+Consider a plane $\pi_n$ passing through the origin in an n-dimensional space, and a point $P$ located at coordinates $(x_1, x_2, \dots, x_n)$. The distance between the point and the plane is given by the formula:
 
 $$d = \frac{w^Tp}{||w||}$$
 
 where:
-- $\color{#FF9900}w$ is the normal vector to the plane $\color{#FF9900}\pi_n$,
+- $w$ is the normal vector to the plane $\pi_n$,
 
-- $\color{#FF9900}||w||$ is the magnitude of the vector $\color{#FF9900}w$ (or Euclidean norm).
+- $||w||$ is the magnitude of the vector $w$ (or Euclidean norm).
 
-- $\color{#FF9900}w^Tp$ represents the dot product of the normal vector $\color{#FF9900}w$ and the point vector $\color{#FF9900}P$.
+- $w^Tp$ is the dot product of the normal vector $w$ and the point vector $P$.
 
-The distance represents the perpendicular distance from the point to the plane. Similarly we can compute the distance from the plane to another  point $\color{#FF9900}P^{'}$ as;
+This formula gives the perpendicular distance from the point to the plane. Similarly, the distance from the plane to another point $P^{'}$ is calculated as:
 
 $$d^{'} = \frac{w^Tp^{'}}{||w||}$$
 
-In the above diagram, the distance $\color{#FF9900}d$ is positive because the angle between the normal vector $\color{#FF9900}w$ and the point vector $\color{#FF9900}P$ is less than $\color{#FF9900}90^{\circ}$. On the other hand, the distance $\color{#FF9900}d^{'}$ is negative because the angle between the normal vector $w$ and the point vector $\color{#FF9900}P^{'}$ is greater than $\color{#FF9900}90^{\circ}$, meaning that the point $\color{#FF9900}P^{'}$ lies on the opposite side of the plane.
+In this context, the distance $d$ is positive if the angle between the normal vector $w$ and the point vector $P$ is less than $90^\circ$. Conversely, the distance $d^{'}$ is negative when the angle between the normal vector $w$ and the point vector $P^{'}$ is greater than $90^\circ$, indicating that the point $P^{'}$ lies on the opposite side of the plane.
 
-> A positive distance means the point lies on the same side as the normal vector $w$, while a negative distance means it lies on the opposite side.
+> A positive distance implies that the point lies on the same side as the normal vector $w$, while a negative distance implies that the point is on the opposite side.
 
-When calculating the physical distance between a point and a plane, we typically take the absolute value of the signed distance. This ensures that the distance is always non-negative, as negative physical distance does not make sense. However, the sign of the distance is important in determining the relative position of the point with respect to the plane
+When computing the physical distance between a point and a plane, we generally take the absolute value of the signed distance to ensure it is non-negative, as negative physical distances are not meaningful. However, the sign of the distance is important for determining the relative position of the point with respect to the plane.
 
 Some of the common **distance formulas** are;
 
 | Description | Formula |
 | --- | :--- |
-| Distance between origin $\color{#F99417}o(0, 0)$ and a point $\color{#F99417}P(x_1, x_2)$ in a 2D plane | $d = \sqrt{x_1^2+x_2^2}$ |
-| Distance between origin $\color{#F99417}o(0, 0, 0)$ and a point $\color{#F99417}P(x_1, x_2, x_3)$ in a 3D plane | $d = \sqrt{x_1^2+x_2^2+x_3^2}$ |
-| Distance between origin $\color{#F99417}o(0, 0, 0, ..., 0)$ and a point $\color{#F99417}p(x_1, x_2, x_3, ..., x_n)$ in a `n-dimensional` plane | $d = \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2}$ |
-| Distance between two points  $\color{#F99417}P (x_1, y_1)$ and $\color{#F99417}Q (x_2, y_2)$ in a 2D plane | $d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2}$ |
-| Distance between two points  $\color{#F99417}P (x_1, y_1, z_1)$ and $\color{#F99417}Q (x_2, y_2, z_2)$ in a 3D plane | $d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2+(z_2 - z_1)^2}$ |
-| Distance between two points $\color{#F99417} P(x_1, x_2, x_3, ..., x_n)$ and $\color{#F99417}Q (y_1, y_2, y_3, ..., y_n)$ in a `n-dimensional` plane | $d = \sqrt{(x_1-y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+...+(x_n - y_n)^2} \\  \;\;\;\;\;{ or }\\ d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$ |
+| Distance between the origin $O(0, 0)$ and a point $P(x_1, x_2)$ in a 2D plane | $d = \sqrt{x_1^2+x_2^2}$ |
+| Distance between the origin $O(0, 0, 0)$ and a point $P(x_1, x_2, x_3)$ in a 3D space | $d = \sqrt{x_1^2 + x_2^2 + x_3^2}$ |
+| Distance between the origin $O(0, 0, 0, \dots, 0)$ and a point $P(x_1, x_2, x_3, \dots, x_n)$ in an n-dimensional space | $d = \sqrt{x_1^2 + x_2^2 + x_3^2 + \dots + x_n^2}$ |
+| Distance between two points $P(x_1, y_1)$ and $Q(x_2, y_2)$ in a 2D plane | $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$ |
+| Distance between two points $P(x_1, y_1, z_1)$ and $Q(x_2, y_2, z_2)$ in a 3D space | $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$ |
+| Distance between two points $P(x_1, x_2, x_3, \dots, x_n)$ and $Q(y_1, y_2, y_3, \dots, y_n)$ in an n-dimensional space | $d = \sqrt{(x_1-y_1)^2+(x_2 - y_2)^2+(x_3 - y_3)^2+\dots+(x_n - y_n)^2} \\\ { or }\\ d = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}$ |
 
-> All of these formulas represent the Euclidean distance, providing a way to measure the distance between two points in different-dimensional spaces. We can easily derive all the above formulas using the Pythagoras theorem.
+> All these formulas represent the Euclidean distance, which measures the straight-line distance between two points in various dimensions. Each formula can be derived using the Pythagorean theorem.
 
 ## Slope
 
-The slope of a line is a measure of how steep the line is. It is denoted by $\color{#F99417}m$ and is given by;
+The slope of a line measures its steepness and is denoted by $m$. It is given by the formula:
 
 $$m = \frac{y_2 - y_1}{x_2 - x_1}$$
 
-where $\color{#F99417}(x_1, y_1)$ and $\color{#F99417}(x_2, y_2)$ are two points on the line.
+where $(x_1, y_1)$ and $(x_2, y_2)$ are two distinct points on the line.
 
 ## Intercept
 
-The intercept of a line is the point where the line crosses the y-axis. It is denoted by $\color{#F99417}c$ and is given by;
+The intercept of a line is the point where the line crosses the y-axis. It is denoted by $c$ and can be found using the equation:
 
 $$c = y - mx$$
 
-where $\color{#F99417}(x, y)$ is a point on the line and $\color{#F99417}m$ is the slope of the line.
+where $(x, y)$ is a point on the line,s and $m$ is the slope.
 
 ## Circle
 
-A circle is a collection of points that satisfy the equation $\color{#FF9900} (x)^2 + (y)^2 = r^2$ where $\color{#FF9900}r$ is the radius of the circle and it's center is at the origin $\color{#FF9900}(0, 0)$. The general equation of a circle with center $\color{#FF9900}(h, k)$ and radius $\color{#FF9900}r$ is given by;
+A circle is a set of points that satisfy the equation $x^2 + y^2 = r^2$, where $r$ is the radius, and the center is at the origin $(0, 0)$. The general form of a circle with center $(h, k)$ and radius $r$ is given by:
 
 $$(x - h)^2 + (y - k)^2 = r^2$$
 
-Given a point $\color{#FF9900}p(x_1, x_2)$, we can determine whether that point lies inside the circle, on the circle, or outside the circle.
+To determine whether a point $P(x_1, x_2)$ lies inside, on, or outside the circle, we use the following conditions:
 
-- If $\color{#FF9900}x_1^2 + x_2^2 < r^2$, the point lies inside the circle.
+- If $x_1^2 + x_2^2 < r^2$, the point lies inside the circle.
 
-- If $\color{#FF9900}x_1^2 + x_2^2 = r^2$, the point lies on the circle.
+- If $x_1^2 + x_2^2 = r^2$, the point lies on the circle.
 
-- If $\color{#FF9900}x_1^2 + x_2^2 > r^2$, the point lies outside the circle.
+- If $x_1^2 + x_2^2 > r^2$, the point lies outside the circle.
 
-In `3D`, we have **sphere** instead of circle. The general equation for a circle with center $\color{#FF9900}(h, k, l)$ and radius $r$ is given by;
+In three dimensions, the equivalent of a circle is a **sphere**. The general equation for a sphere with center $(h, k, l)$ and radius $r$ is:
 
 $$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 = r^2$$
 
-A higher dimensional sphere or a **Hypersphere** is defined as;
+A **hypersphere** in n-dimensional space is defined by the equation:
 
 $$(x_1 - h)^2 + (x_2 - k)^2 + (x_3 - l)^2 + ... + (x_n - m)^2 = r^2$$
 
-If the center of the hypersphere is at the origin, then the equation of the hypersphere is given by;
+If the center of the hypersphere is at the origin, the equation simplifies to:
 
-$$x_1^2 + x_2^2 + x_3^2 + ... + x_n^2 = r^2 \implies \sum_{i=0}^{n}x_i^2 = r^2$$
+$$x_1^2 + x_2^2 + x_3^2 + ... + x_n^2 = r^2 \\ or \\ \sum_{i=0}^{n}x_i^2 = r^2$$
 
-The same idea of a point inside a circle or not using the equation of a circle can be extended to higher dimensions. This again is pretty powerful as we can use this idea to determine whether a point lies inside a hyper-sphere or not.
+The idea of determining whether a point lies inside, on, or outside a circle can be extended to higher dimensions. This concept is powerful, as it allows us to determine if a point lies inside a hypersphere in any dimensional space.
 
 ---
 
@@ -623,26 +642,26 @@ The same idea of a point inside a circle or not using the equation of a circle c
 
 | Notation | Description |
 | --- | :--- |
-| $\color{#F99417}a$ | Scalar or Vector |
-| $\color{#F99417}A, B, C$ | Matrix |
-| $\color{#F99417}A$ of size $\color{#F99417}\text{m X n}$ | Matrix `A` with `m` rows and `n` columns  |
-| $\color{#F99417}A_{ij}$ | Element in the `i-th` row and `j-th` column of matrix `A` |
-| $\color{#F99417}A^T$ | Transpose of matrix `A` |
-| $\color{#F99417}v^T$ | Transpose of vector `v` |
-| $\color{#F99417}A^{-1}$ | Inverse of matrix `A` |
-| $\color{#F99417}A^*$ | Conjugate transpose of matrix `A` |
-| $\color{#F99417}det(A)$ | Determinant of matrix `A` |
-| $\color{#F99417}AB$ | Matrix multiplication of matrix `A` and matrix `B`|
-| $\color{#F99417}u.v; \langle u, v\rangle$ | Dot product of `u` and `v`|
-| $\color{#F99417}u \times v$ | Cross product of `u` and `v`|
-| $\color{#F99417}\R$ | Set of real numbers (set $\R$ is infinite and continuous)|
-| $\color{#F99417}\R^2$ | Two dimensional real vector space|
-| $\color{#F99417}\R^n$ | n-dimensional real vector space |
-| $\color{#F99417}v\in\R^n$ | Vector `v` belongs to the space $\R^n$|
-| $\color{#F99417}\|v\|_1$ | L1 Norm or Manhattan distance of the vector $v$|
-| $\color{#F99417}\|v\|_2; \|\|v\|\|$ | L2 Norm or Euclidean norm of the vector $v$|
-| $\color{#F99417}\|v\|_\infin$ | Infinity Norm or Maximum Norm or Chebyshev Norm of vector $v$|
-| $\color{#F99417}T: \R^n \rightarrow \R^m;T(v)=w$ | Transformation `T` of a vector `v` $\in \R^n$ into the vector `w` $\in \R^m$|
+| $a$ | Scalar or Vector |
+| $A, B, C$ | Matrix |
+| $A$ of size $\text{m X n}$ | Matrix `A` with `m` rows and `n` columns  |
+| $A_{ij}$ | Element in the `i-th` row and `j-th` column of matrix `A` |
+| $A^T$ | Transpose of matrix `A` |
+| $v^T$ | Transpose of vector `v` |
+| $A^{-1}$ | Inverse of matrix `A` |
+| $A^*$ | Conjugate transpose of matrix `A` |
+| $det(A)$ | Determinant of matrix `A` |
+| $AB$ | Matrix multiplication of matrix `A` and matrix `B`|
+| $u.v; \langle u, v\rangle$ | Dot product of `u` and `v`|
+| $u \times v$ | Cross product of `u` and `v`|
+| $\R$ | Set of real numbers (set $\R$ is infinite and continuous)|
+| $\R^2$ | Two dimensional real vector space|
+| $\R^n$ | n-dimensional real vector space |
+| $v\in\R^n$ | Vector `v` belongs to the space $\R^n$|
+| $\|v\|_1$ | L1 Norm or Manhattan distance of the vector $v$|
+| $\|v\|_2; \|\|v\|\|$ | L2 Norm or Euclidean norm of the vector $v$|
+| $\|v\|_\infin$ | Infinity Norm or Maximum Norm or Chebyshev Norm of vector $v$|
+| $T: \R^n \rightarrow \R^m;T(v)=w$ | Transformation `T` of a vector `v` $\in \R^n$ into the vector `w` $\in \R^m$|
 
 ---
 
