@@ -3,7 +3,9 @@
     File : Probability.md     
  -->
 
-<h1 align="center" style="color: orange"> PROBABILITY </h1>
+<h1 align="center"> PROBABILITY </h1>
+
+---
 
 ## Table of Contents   
 
@@ -35,9 +37,7 @@
 
 ---
 
-**_Probability is a measure that quantifies the likelihood that an event will occur._**
-
----
+<h3 align="center"> Probability is a measure that quantifies the likelihood that an event will occur. </h3>
 
 ## Experiment 
 
