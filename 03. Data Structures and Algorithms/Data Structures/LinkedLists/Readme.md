@@ -498,9 +498,9 @@ def reverse_doubly_list(head: Node):
 
 **[Implementation](./Implementation.ipynb)**
 
-## Questions
+## Important Questions
 
-1. Reverse a linked list
-2. Merge two sorted linked lists
-3. Design browser history using linked list
+1. [Reverse a linked list](https://leetcode.com/problems/reverse-linked-list/description/)
+2. [Merge two sorted linked lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
+3. [Design browser history using linked list](https://leetcode.com/problems/design-browser-history/description/)
 4. Find the duplicate element {Floyd's Cycle Detection Algorithm}
