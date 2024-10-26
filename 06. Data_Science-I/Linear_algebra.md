@@ -488,6 +488,112 @@ The rank of a matrix represents the number of dimensions spanned by its column v
 
 - Rank 3: The vectors span a volume, representing three dimensions.
 
+## Matrix Decompositions
+
+**Matrix decompositions** are methods that break down a matrix into constituent parts, making it easier to perform complex matrix operations with greater numerical stability on limited precision computers. These techniques do not compress the matrix; instead, they decompose it into its components. Matrix decompositions are also known as **matrix factorization techniques**. Two commonly used decompositions are:
+
+### LU Decomposition
+
+LU decomposition applies to square matrices, decomposing a matrix into a Lower triangular matrix $L$ and an Upper triangular matrix $U$. This decomposition can be written as:
+
+$$A = L \cdot U \;or\; A = LU$$
+
+Where:
+
+- $A$ is the original square matrix,
+
+- $L$ is the lower triangular matrix,
+
+- $U$ is the upper triangular matrix.
+
+LU decomposition is typically found through iterative numerical methods and may fail if the matrix cannot be decomposed directly. In practice, a variation called **LUP decomposition** (LU decomposition with partial pivoting) is often used to improve stability and robustness. In LUP decomposition, rows in the original matrix are reordered to make the decomposition feasible, and an additional $P$ matrix is included to capture this row reordering ($P$ matrix specifies a way to return to the original order). Unlike standard LU decomposition, LUP decomposition permits row exchanges. Thus we have:
+
+$$A = L \cdot U \cdot P$$
+
+Where:
+
+- $P$ is the permutation matrix.
+
+### QR Decomposition
+
+The **QR decomposition** applies to $m X n$ matrices (not necessarily square) and decomposes a matrix into the product of an orthogonal matrix $Q$ of size $m X m$ and an upper triangular matrix $R$ of size $m X n$. It can be represented as:
+
+$$A = Q \cdot R\; or \;A = QR$$
+
+Where:
+
+- $A$ is the original matrix,
+
+- $Q$ is an orthogonal matrix (with $Q^T \cdot Q = I$),
+
+- $R$ is an upper triangular matrix.
+
+QR decomposition is typically computed through iterative numerical methods and may occasionally fail if the matrix cannot be decomposed directly. This decomposition is particularly useful for solving linear least squares problems and serves as the foundation for the QR algorithm in eigenvalue decomposition.
+
+### Cholesky Decomposition
+
+Cholesky decomposition applies to _symmetric positive definite matrices_ and decomposes a matrix into the product of a lower triangular matrix and its transpose. This can be represented as:
+
+$$A = L \cdot L^T \;or\; A = U \cdot U^T$$
+
+Where:
+
+- $A$ is the original matrix,
+
+- $L$ is the lower triangular matrix,
+
+- $U$ is the upper triangular matrix (where $U = L^{T}$).
+
+Cholesky decomposition is frequently used in machine learning for solving linear least squares problems (e.g., in linear regression) and in simulation and optimization tasks. For symmetric positive definite matrices, Cholesky decomposition is nearly twice as efficient as LU decomposition, making it a preferred choice when applicable.
+
+### Eigendecomposition
+
+**Eigendecomposition** is a technique for decomposing a square matrix into a set of `eigenvectors` and `eigenvalues`. A matrix can have one eigenvector and eigenvalue for each of its dimensions. We can express the original matrix as a product of its eigenvectors and eigenvalues:
+
+$$A = Q \cdot \Lambda \cdot Q^{T}$$
+
+Where:
+
+- $Q$ is a matrix of the eigenvectors,
+
+- $\Lambda$ is a diagonal matrix of the eigenvalues.
+
+> Eigendecomposition has numerous applications, including principal component analysis (PCA) for dimensionality reduction, signal processing, and quantum mechanics.
+
+### Eigenvectors and Eigenvalues
+
+**Eigenvectors** are unit vectors (often represented as column vectors) that indicate the directions preserved by the linear transformation defined by the matrix. They are not rotated under the transformation—only scaled by their corresponding eigenvalues. A vector $v$ is called an eigenvector if it satisfies the following equation:
+
+$$A \cdot v = \lambda \cdot v$$
+
+Where:
+
+- $A$ is the parent square matrix,
+
+- $v$ is the eigenvector,
+
+- $\lambda$ is the eigenvalue (a scalar).
+
+This equation is known as the eigenvalue equation.
+
+**Eigenvalues** ($λ$) represent how much an eigenvector is scaled during the transformation and satisfy the equation $A \cdot v = \lambda \cdot v$. 
+
+Consider a matrix $A$ and a vector $x$, when we multiply $A$ by $x$, the resulting vector $Ax$ typically differs from $x$ in both magnitude and direction. However, certain special vectors, called eigenvectors, only change in magnitude when multiplied by $A$. The associated eigenvalue $\lambda$ indicates the extend fo this change:
+
+- If $λ$ > $1$, the eigenvector is stretched.
+
+- If $0$ < $λ$ < 1, the eigenvector is shrunk.
+
+- If $λ$ = $1$, the eigenvector remains unchanged.
+
+- If $λ$ < $0$, the eigenvector is reversed in direction and may also be stretched or shrunk.
+
+Eigenvalues are often found first, and eigenvectors are then calculated by solving the equation $(A - λI)v = 0$, where $I$ is the identity matrix.
+
+<!-- Edited till here -->
+<!-- ### Singular Value Decomposition (SVD) -->
+<!-- complete -->
+
 ## Tensors
 
 A tensor is a generalization of vectors and matrices, and can be thought of as a multidimensional array. Tensors are classified based on their rank (_"rank" refers to the number of dimensions or indices needed to specify an element of the tensor_): a `scalar` is a tensor of `rank 0`, a `vector` is a tensor of `rank 1`, a `matrix` is a tensor of `rank 2`, and tensors with more than two dimensions are referred to as **n-dimensional tensors**, where $n$ represents the rank.
@@ -511,10 +617,6 @@ The dot product of two tensors is a generalization of the dot product of vectors
 $$a \cdot b = \sum_{i=1}^{n}a_ib_i$$
 
 where $a$ and $b$ are two tensors.
-
-<!-- Complete this -->
-<!-- ## Matrix Decompositions -->
-<!--  -->
 
 <!-- SECTION - IV -->
 
