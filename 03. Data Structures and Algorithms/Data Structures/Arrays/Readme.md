@@ -111,7 +111,7 @@ These are the problems I have solved in the `Arrays` section. Refer [this](https
 14. Number of senior citizens
 
 
-## Important Array and Hashing Problems
+## Important Array and Hashing Problems (also Two Pointer and Sliding Window)
 
 1. [Duplicate Integer](https://neetcode.io/problems/duplicate-integer)
 2. [Is Anagram](https://neetcode.io/problems/is-anagram)
@@ -119,3 +119,12 @@ These are the problems I have solved in the `Arrays` section. Refer [this](https
 4. [Anagram Group](https://neetcode.io/problems/anagram-groups)
 5. [Top K Frequent Elements](https://neetcode.io/problems/top-k-elements-in-list)
 6. [kth Largest Element](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
+7. [Encode decode Strings](https://leetcode.com/problems/encode-and-decode-strings/description/)
+8. [Product of array except self](https://leetcode.com/problems/product-of-array-except-self/description/)
+9. [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/)
+10. [Longest consecutive sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/)
+11. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)
+12. [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
+13. [3Sum](https://leetcode.com/problems/3sum/description/)
+14. [Container with most water](https://leetcode.com/problems/container-with-most-water/description/)
+15. [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
