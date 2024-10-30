@@ -608,6 +608,16 @@ Where:
 
 > Each singular value in $Σ$ represents the extent to which its corresponding singular vector direction contributes to the overall data spread in $A$.
 
+For example, consider using SVD to perform dimensionality reduction on a dataset where the number of features (columns) is much larger than the number of observations (rows). SVD allows us to approximate the data by focusing on the most significant patterns, represented by the largest singular values. We can achieve dimensionality reduction by selecting only the top \( k \) largest singular values in \( \Sigma \), along with the corresponding columns in \( U \) and rows in \( V^T \). This selection process results in a reduced representation of \( A \) that retains the essential structure of the original data.
+
+Specifically:
+
+1. **Select the Top \( k \) Singular Values**: Retain only the \( k \) largest singular values from \( \Sigma \). This step effectively captures the most meaningful data patterns while discarding smaller, less significant components.
+
+2. **Truncate \( U \) and \( V^T \)**: Select the first \( k \) columns of \( U \) and the first \( k \) rows of \( V^T \), corresponding to the retained singular values. This truncated SVD representation captures the primary structure of \( A \) in a lower-dimensional form, significantly reducing the number of features while preserving the most important information.
+
+This approach is especially useful in machine learning and data science, where reducing dimensionality can improve computational efficiency and reduce the risk of overfitting by eliminating noise.
+
 ## Pseudoinverse
 
 The pseudoinverse is a generalization of the matrix inverse that applies to both square and non-square (rectangular) matrices. The pseudoinverse of a matrix $A$ is denoted as $A^+$ and is particularly useful for solving systems of linear equations when an exact solution may not exist or when $A$ is not invertible. We can compute the pseudoinverse of $A$ using its SVD representation:
