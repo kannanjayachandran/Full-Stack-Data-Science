@@ -590,9 +590,45 @@ Consider a matrix $A$ and a vector $x$, when we multiply $A$ by $x$, the resulti
 
 Eigenvalues are often found first, and eigenvectors are then calculated by solving the equation $(A - λI)v = 0$, where $I$ is the identity matrix.
 
-<!-- Edited till here -->
-<!-- ### Singular Value Decomposition (SVD) -->
-<!-- complete -->
+### Singular Value Decomposition (SVD)
+
+Singular Value Decomposition (SVD) is a matrix factorization technique that decomposes a matrix $A$ into three matrices: $U$, $\Sigma$ and $V^T$. SVD is widely applied in machine learning and data science for tasks such as dimensionality reduction, data compression, and noise reduction. By leveraging SVD, a matrix can be represented in terms of its singular vectors and singular values, which are useful for analyzing its structure and properties. The SVD of a matrix $A$ is given by:
+
+$$A = U \cdot \Sigma \cdot V^T$$
+
+Where:
+
+- $A$ is an $m X n$ matrix.
+
+- $U$ is an $m X m$ orthogonal matrix, whose columns are left singular vectors of $A$.
+
+- $\Sigma$ is an $m X n$ diagonal matrix, containing the singular values of $A$ arranged in descending order.
+
+- $V^T$ is the transpose of an $n X n$ orthogonal matrix $V$, whose columns are right singular vectors of $A$.
+
+> Each singular value in $Σ$ represents the extent to which its corresponding singular vector direction contributes to the overall data spread in $A$.
+
+## Pseudoinverse
+
+The pseudoinverse is a generalization of the matrix inverse that applies to both square and non-square (rectangular) matrices. The pseudoinverse of a matrix $A$ is denoted as $A^+$ and is particularly useful for solving systems of linear equations when an exact solution may not exist or when $A$ is not invertible. We can compute the pseudoinverse of $A$ using its SVD representation:
+
+
+$$A^+ = V \cdot \Sigma^+ \cdot U^T$$
+
+Where:
+
+- $A$ is the matrix to be pseudoinverted,
+
+- $V$ and $U$ are the matrices obtained from the SVD of $A$,
+
+- $\Sigma^+$ is the pseudoinverse of the diagonal matrix $\Sigma$.
+
+To compute $\Sigma^+$, we take the reciprocal of each non-zero element in $\Sigma$ and construct a new diagonal matrix with these reciprocals, then transpose it to fit the dimensions of $A^+$. Specifically:
+
+$$\Sigma = \begin{bmatrix} \sigma_1 & 0 & 0 \\ 0 & \sigma_2 & 0 \\ 0 & 0 & \sigma_3 \end{bmatrix} \implies D^+ = \begin{bmatrix} \frac{1}{\sigma_1} & 0 & 0 \\ 0 & \frac{1}{\sigma_2} & 0 \\ 0 & 0 & \frac{1}{\sigma_3} \end{bmatrix}$$
+
+> The pseudoinverse provides a way to find one of potentially many solutions to underdetermined or overdetermined linear systems.
+
 
 ## Tensors
 
