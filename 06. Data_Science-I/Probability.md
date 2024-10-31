@@ -37,43 +37,47 @@
 
 ---
 
-<h3 align="center"> Probability is a measure that quantifies the likelihood that an event will occur. </h3>
-
 ## Experiment 
 
-The process which produces an outcome.
+An **experiment** is a process that generates a specific outcome.
 
-- _For instance, when we flip a coin, flipping the coin can be considered as the experiment_.
+- For instance, flipping a coin is an experiment as it produces a result, either heads or tails.
 
 ## Outcome 
 
-An outcome is the result of an experiment. 
+An **outcome** is the specific result of a single trial of an experiment.
 
-- _For example, if we toss a coin, the outcome can be either heads or tails_.
+- For example, if we toss a coin, the possible outcomes are heads or tails.
 
 ## Sample Space (Ω or S) 
 
-The sample space is the set of all possible outcomes (or events) of a random experiment. 
+The **sample space** is the set of all possible outcomes for a random experiment. 
 
-- In the case of a coin toss, the sample space is {heads, tails} or when rolling a fair six-sided die, the sample space is {1, 2, 3, 4, 5, 6}.
+- For example, in a coin toss, the sample space is {heads, tails}. For a roll of a six-sided die, the sample space is {1, 2, 3, 4, 5, 6}.
 
 ## Event (A)
 
-An outcome of an experiment to which a probability is assigned (can also be a collection of outcomes). It is a subset of the sample space.
+An event is a subset of the sample space. In other words, an event is a specific outcome or a collection of outcomes within the sample space, to which a probability is assigned.
 
-- _For example, when tossing a coin, the event of getting a head is a subset of the sample space. $\color{#F99417}\{h\}\subset \{h, t\}$. We use the intersection ($\color{#F99417}\cap$) of both events when they both occur, and the union ($\color{#F99417}\cup$) when either of them occurs_.
+- For example, in a coin toss, the event of getting a head is a subset of the sample space, represented as $\{head\}\subset \{head, tail\}$. We use the intersection ($\cap$) when two events occur simultaneously and the $(\cup)$ when at least one of the events occurs.
 
-## Event space (F) 📆
+## Event space (F) 
 
-The collection of all possible events. It is a subset of the sample space that consists of specific outcomes or combinations of outcomes
+The event space (also called $\sigma$-algebra) is the collection of all possible events (including the empty set and the full sample space) for an experiment. It consists of specific outcomes or combinations of outcomes.
 
-For example, if we toss a coin, the event space is {∅, {head}, {tails}, {head, tails}} or the event of getting an even number when rolling the die, the event space would be {2, 4, 6}
+- For example, for a coin toss, the event space is {∅, {head}, {tail}, {head, tail}}.
+
+## Probability (P)
+
+Probability quantifies the likelihood that an event will occur. It is a value between 0 and 1, where 0 indicates an impossible event and 1 indicates a certain event.
+
+- For example, the probability of getting a head when tossing a fair coin is 0.5 (50%) or the probability of getting an even number when rolling a fair six-sided die is 0.5 (50%).
 
 ## Probability function (P)
 
 The function used to assign a probability to an event.
 
-## Random Variable (X) 🔢
+## Random Variable (X) 
 
 A random variable is a variable that can assume various values, and the specific value it takes is subject to chance or randomness. They are of two types; `discrete` and `continuous`. **Discrete random variables** can be represented by a **probability distribution table**, while **continuous random variables** can be represented by a **probability density function**.
 
