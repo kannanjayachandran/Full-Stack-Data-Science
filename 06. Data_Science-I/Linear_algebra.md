@@ -4,14 +4,54 @@
     Section : Mathematics for data science and machine learning
  -->
 
+## Table of Contents
+
+1. Section - I
+    - [Linear equations](#linear-equations)
+    - [Systems of linear equations](#systems-of-linear-equations)
+    - [Solutions of a System of Linear Equations](#solutions-of-a-system-of-linear-equations)
+    - [Methods to Solve a System of Linear Equations](#methods-to-solve-a-system-of-linear-equations)
+
+1. Section - II
+    - [Vector](#vector)
+    - [Row and Column Vectors](#row-and-column-vectors)
+    - [Vector Dot Product](#vector-dot-product)
+    - [Vector - Scalar Multiplication](#vector---scalar-multiplication)
+    - [Inner product](#inner-product)
+    - [Vector norm](#vector-norm)
+    - [Projection of a vector](#projection-of-a-vector)
+    - [Unit vector](#unit-vector)
+
+1. Section - III
+    - [Matrix](#matrix)
+    - [Types of matrices](#types-of-matrices)
+    - [Matrix addition and subtraction](#matrix-addition-and-subtraction)
+    - [Matrix multiplication](#matrix-multiplication)
+    - [Transpose of a matrix](#transpose-of-a-matrix)
+    - [Inverse of a matrix](#inverse-of-a-matrix)
+    - [Trace of a matrix](#trace-of-a-matrix)
+    - [Determinant of a matrix](#determinant-of-a-matrix)
+    - [Rank of a matrix](#rank-of-a-matrix)
+    - [Matrix Decompositions](#matrix-decompositions)
+    - [Eigendecomposition](#eigendecomposition)
+    - [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
+    - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
+    - [Pseudo Inverse](#Pseudoinverse)
+    - [Tensor](#tensors)
+    - [Tensor dot product](#tensor-dot-product)
+
+1. Section - IV
+    - [Line](#line)
+    - [Distance of a point from a plane](#distance-of-a-point-from-a-plane)
+    - [Slope](#slope)
+    - [Intercept](#intercept)
+    - [Circle](#circle)
+
+1. Notations
+    - [Notations](#notations)
+
+
 <h1 align="center"> Linear Algebra </h1>
-
-## Table of contents
-
-1. [Linear Equations](#Linear-equations)
-1. [Systems of linear equations](#Systems-of-linear-equations)
-
----
 
 **Linear algebra is the branch of mathematics that deals with linear equations and their representations in vector spaces, through matrices.**
 
