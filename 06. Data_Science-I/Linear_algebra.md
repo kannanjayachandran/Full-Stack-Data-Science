@@ -3,6 +3,7 @@
     File : Linear_Algebra.md
     Section : Mathematics for data science and machine learning
  -->
+ <h1 align="center"> Linear Algebra </h1>
 
 ## Table of Contents
 
