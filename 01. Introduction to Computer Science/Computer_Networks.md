@@ -94,7 +94,7 @@ It is the top most layer where most of the applications that we use live. It rel
 
 Major application layer protocols are HTTP, FTP, SMTP, POP3, IMAP, DNS, DHCP, etc.
 
-![OSI Model and TCP/IP Model](./img/OSI_TCP_IP.png)
+<img src="./img/OSI_TCP_IP.png" height=700 width=700/>
 
 ### IP Addressing
 
