@@ -1,15 +1,12 @@
 <h1 align="center"> Searching </h1>
 
-Searching is the process of finding a particular element in the given data structure. It is one of the most common operations performed on data structures. 
-
 There are mainly two types of searching algorithms:
 
 - **Linear search**
 
 - **Binary Search** and its variants
  
-
- ## Problem set - I
+## Problem set - I
 
 1. Iterative and recursive implementation of Binary Search { Ascending order }
 2. Binary search implementation { Descending order }
@@ -36,3 +33,9 @@ There are mainly two types of searching algorithms:
 23. Find the minimum and maximum indices in a sorted-rotated array
 24. Search insert position
 25. Floor of the square root of a number
+
+## Important Binary Search Problems
+
+1. [Binary search](https://leetcode.com/problems/binary-search/)
+2. [Search in 2D matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+3. [Koko eating bananas](https://leetcode.com/problems/koko-eating-bananas/)
