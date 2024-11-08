@@ -22,6 +22,5 @@ venv.bak/
 .vscode
 .idea
 
-# Items not ready for production
-/07. Data_Science-II/temp
-/05. Python for Data Science/2. Pandas/Notebooks/Data
+# Data folders
+*.csv
