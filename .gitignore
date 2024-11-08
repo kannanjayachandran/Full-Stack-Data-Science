@@ -24,3 +24,6 @@ venv.bak/
 
 # Data folders
 *.csv
+
+# ToDO
+TODO.md
