@@ -111,7 +111,7 @@ These are the problems I have solved in the `Arrays` section. Refer [this](https
 14. Number of senior citizens
 
 
-## Important Array and Hashing Problems (also Two Pointer and Sliding Window)
+## Important Array and Hashing Problems ( + Two Pointer and Sliding Window)
 
 1. [Duplicate Integer](https://neetcode.io/problems/duplicate-integer)
 2. [Is Anagram](https://neetcode.io/problems/is-anagram)
