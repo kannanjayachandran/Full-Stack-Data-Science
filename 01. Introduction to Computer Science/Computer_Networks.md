@@ -1,6 +1,12 @@
 <h1 align="center" > Computer Network </h1>
 
-Computer networking is the practice of connecting computers and other devices to share resources, exchange data, and communicate in the safest and most efficient way possible. It includes the physical devices, software, and protocols that allow the devices to communicate with each other. `Nodes`(Equipment for Data Communication like a Modem, Router, etc.) and `Links`(wires or cables or free space of wireless networks.) are the basic building blocks of computer network.
+<div align=center>
+
+![Computer Network Cover photo](./img/cn_cover.png)
+
+</div>
+
+Computer network consists of two or more computers that are linked together in order to share resources (Printers, CD's, Exchange files, electronic communication). The computers on a network may be linked through cables, telephone lines, radio waves, satellites, or infrared light beams. Computer networking includes the physical devices, software, and protocols that allow the devices to communicate with each other. 
 
 ## Types of Networks
 
@@ -17,7 +23,11 @@ individual (e.g., Bluetooth connections).
 
 Topologies refer to the physical and logical arrangement of devices in a network. 
 
+<div align=center>
+
 ![Network Topologies](./img/Network_topologies.png)
+
+</div>
 
 - **Bus Topology**: All devices share a single communication line. It’s simple but can lead to collisions.
 
@@ -76,7 +86,7 @@ Some examples of Link layer protocols are Ethernet, Wi-Fi, and Bluetooth.
 
 #### Internet Layer
 
-Responsible for routing data accross different networks to get it to the right destination.
+Responsible for routing data across different networks to get it to the right destination.
 
 Fundamental protocol in this layer is the IP (Internet Protocol). It also has other protocols like ICMP(Internet Control Message Protocol) used by programs like `ping` to test connectivity and ARP(Address Resolution Protocol) to map IP addresses to MAC addresses.
 
