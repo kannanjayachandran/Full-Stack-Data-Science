@@ -1,15 +1,10 @@
 <!-- 
     Author : Kannan Jayachandran
     File : Statistics.md
+    Section : Mathematics for data science and machine learning
  -->
 
- <h1 align="center" style="color: orange"> STATISTICS </h1>
-
----
-
-$\color{orange}``$**_Statistics is the mathematical science of collecting, analyzing, interpreting, presenting, and organizing data._**$\color{orange}"$
-
----
+ <h1 align="center"> STATISTICS </h1>
 
  ## Population vs Sample  
 
@@ -243,12 +238,6 @@ The margin of error depends on the standard error of the estimate and the critic
 
 
 
-
-
-
-
-
-.
 
 1. First we must interpret the statistical test result in order to make claims. There are two common ways to interpret the result of a statistical test;
 
