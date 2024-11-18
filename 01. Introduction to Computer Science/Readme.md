@@ -12,7 +12,11 @@ Computers were built to solve arithmetic problems, but they have since evolved t
 
 A typical computer system's architecture would look like this:
 
-<img src="./img/Arch.png" height=600 width=700/>
+<div align="center">
+
+![Computer Architecture](./img/Arch.png)
+
+</div>
 
 It will have;
 
@@ -103,7 +107,11 @@ print(c)
 
 The CPU performs a machine cycle, which includes accessing data, performing operations, and storing results back in memory. Modern CPUs can execute billions of machine cycles per second, synchronized by the clock generator. The speed of the clock is measured in GHz (Gigahertz), where 1 GHz equals 1 billion cycles per second.
 
-<img src="./img/machine_cycle.png" height=400 width="600"/>
+<div align="center">
+
+![Machine Cycle](./img/machine_cycle.png)
+
+</div>
 
 ---
 
@@ -111,14 +119,12 @@ Other Core CS Concepts are covered in the following sections:
 
 - [Theoretical Computer Science](./Theoretical_Computer_Science.md)
 
-- [Data structures and algorithms](../03.%20Data%20Structures%20and%20Algorithms/Readme.md)
-
 - [Operating Systems](./Operating_System.md)
 
 - [Computer Networks](./Computer_Networks.md)
 
-- [Databases](../04.%20Database%20Systems%20and%20Technologies/Readme.md)
-
 - [Linux & Git](./Linux_GIT.md)
 
-[Reference](./Source.md)
+- [Data structures and algorithms](../03.%20Data%20Structures%20and%20Algorithms/Readme.md)
+
+- [Databases](../04.%20Database%20Systems/Readme.md)
