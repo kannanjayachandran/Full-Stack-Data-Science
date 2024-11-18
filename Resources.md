@@ -1,8 +1,6 @@
 <h1 align="center"> Resources </h1>
 
-These resources have been invaluable in my learning journey, providing me with a solid foundation and clear understanding in various domains. I regularly use the books, articles, and notes from these courses to deepen my knowledge and clarify concepts. The majority of these resources are freely accessible and open-source. Please note, I am not affiliated with any of these resources. 
-
-## Free Resources
+I regularly use the YouTube videos, books, articles, websites, and notes mentioned below for revision and deepening my understanding of the concepts. Please note, I am not affiliated with any of these resources.
 
 ### Basics of Computer Science and Programming
 
@@ -10,29 +8,27 @@ These resources have been invaluable in my learning journey, providing me with a
 
 - [CPU Land by Lexi Mattick & Hack Club](https://cpu.land/) **Introduction to CPU Architecture and basics of memory**
 
+- [Missing Semester by MIT](https://missing.csail.mit.edu/) **A course on the basics of computer science and programming**
+
 ### Python
 
-- [Corey Schafer](https://www.youtube.com/@coreyms) Comprehensive tutorials on Python, covering a wide range of topics from the basics to advanced concepts.
+- [Corey Schafer](https://www.youtube.com/@coreyms) for **Python**
 
 ### Data Structures and Algorithms
-
-- [CS Dojo](https://www.youtube.com/@CSDojo)
-
-- [William Fiset](https://www.youtube.com/@WilliamFiset-videos)
 
 - [Neetcode](https://www.youtube.com/@NeetCode)
 
 - [Neetcode Io](https://www.youtube.com/@NeetCodeIO)
 
-- [Kunal Kushwaha](https://www.youtube.com/@KunalKushwaha)
+- [Kunal Kushwaha ~ Java](https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ)
 
-- [Errichto](https://www.youtube.com/@Errichto) for **DSA**
+- [GFG Python DSA](https://www.geeksforgeeks.org/courses/Data-Structures-With-Python)
 
 ### System Design and Interview Preparation
 
 - [Exponent](https://www.youtube.com/@tryexponent) for **system design and interview preparation**
 
-### AI, Machine Learning, Data Science, and Mathematics
+### AI - ML - DL
 
 - [Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning) 
 
@@ -44,10 +40,6 @@ These resources have been invaluable in my learning journey, providing me with a
 
 - [Data school](https://www.youtube.com/@dataschool)
 
-- [Code Emporium](https://www.youtube.com/@CodeEmporium)
-
-- [Darshil Parmar](https://www.youtube.com/@DarshilParmar) 
-
 ### Code Review
 
 - [Ants are everywhere](https://www.youtube.com/@ants_are_everywhere) for **code review**
@@ -55,6 +47,7 @@ These resources have been invaluable in my learning journey, providing me with a
 ### Projects and General Development
 
 - [Tech with Tim](https://www.youtube.com/@TechWithTim)
+
 - [NeuralNine](https://www.youtube.com/@NeuralNine)
 
 - [Fireship](https://www.youtube.com/@Fireship)
@@ -73,11 +66,9 @@ These resources have been invaluable in my learning journey, providing me with a
 |[Machine Learning Mastery](https://machinelearningmastery.com/) | website |
 | [mode SQL](https://mode.com/sql-tutorial/) | website|
 
-## Paid Resources
+## Courses
 
-- [Applied AI course](https://www.appliedaicourse.com/) or [Scalar DSML program now](https://www.scaler.com/data-science-course/)
-
-- [AlgoExpert](https://www.algoexpert.io/product) 
+- [Applied AI course](https://www.appliedaicourse.com/) (Discontinued ~ But by far my favorite 💖) or [Scalar DSML program now](https://www.scaler.com/data-science-course/)
 
 - [Systems expert](https://www.algoexpert.io/systems/product)
 
@@ -91,14 +82,6 @@ These resources have been invaluable in my learning journey, providing me with a
 
 - [ByteByteGo - Machine Learning System Design Interview](https://bytebytego.com/intro/machine-learning-system-design-interview)
 
-## Special Mentions
+### My undergrad computer science Engineering (Specialization in AI and ML) - Syllabus
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
-
-- [GeeksforGeeks](https://www.geeksforgeeks.org/)
-
-- [LeetCode](https://leetcode.com/)
-
-- [Kaggle](https://www.kaggle.com/)
-
-- [Towards Data Science](https://towardsdatascience.com/)
+**[Here](https://outrageous-collarbone-1c8.notion.site/B-Tech-CSE-AIML-Syllabus-13ebe8768a0a8020bcd1eeaee9558ff5?pvs=4)**
