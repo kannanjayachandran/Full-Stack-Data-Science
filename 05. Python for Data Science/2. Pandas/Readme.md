@@ -1,45 +1,130 @@
 <!-- 
     Author : Kannan Jayachandran
-    File : Readme.md (Pandas documentation)Not completed
+    File : Readme.md (Pandas)
  -->
 
-<h1 align="center" style="color: orange"> Pandas </h1>
+<h1 align="center"> Pandas </h1>
 
-Pandas is a Python library designed to simplify working with relational or labeled data, making the process both easy and intuitive. One of the keys to understanding pandas is to understand the data model. At the core of pandas are two data structures. `Series` for array data and `DataFrame` for tabular data.
-
-![Comparing series and dataFrame with other things](./img/pd_datastructures.png)
+Pandas is a Python library that simplifies working with relational or labeled data, making data manipulation and analysis both easy and intuitive. At its core, pandas provides two primary data structures; **Series** and **DataFrame**.
 
 ## Pandas Data Structures
 
-![series and dataFrame in pandas](./img/series_df.png)
+<div align="center">
 
-### Series 
+![series and dataFrame in pandas](./img/pd_data_structures.png)
 
-A one-dimensional array-like object that contains a sequence of values, similar to `NumPy` types, along with an associated array of data labels known as its `index`. The index in a Series can consist of any data type, including numbers, strings, or even dates.
+</div>
+
+### Series
+
+A **Series** is a one dimensional, array-like object capable of holding data of any type (integers, floats, strings, etc.) along with an associated array of data labels known as its `index`. The index in a Series is versatile and can contain any data type, such as numbers, strings, or dates. This allows for efficient data retrieval and manipulation using labels. A Series is also like a fixed size dictionary in that you can get and set values by index label.
+
+```python
+import pandas as pd
+
+# Creating a Series with custom index
+data = pd.Series([3.5, 7.2, 1.8], index=['A', 'B', 'C'])
+print(data)
+
+# Output:
+# A    3.5
+# B    7.2
+# C    1.8
+```
 
 ### DataFrame
 
-A two-dimensional data structure that can hold data of different types in rows and columns, similar to a spreadsheet or SQL table. A simpler version of how python would represent a column-oriented data structure similar to pandas dataFrame is like below:
+A **DataFrame** is a two-dimensional, size-mutable data structure that stores data in rows and columns, much like a spreadsheet or an SQL table. It can hold multiple data types (e.g., integers, floats, strings) across its columns (One Datatype per column). Each column in a DataFrame is a Series, and the rows and columns are labeled using indices.
+
+Below is a conceptual representation of how Python handles column-oriented data similar to a pandas DataFrame:
 
 ```python
- df = {
-   'index':[0,1,2],
+# Conceptual representation
+df = {
+    'index': [0, 1, 2],
     'cols': [
-      { 'name':'growth',
-      'data':[.5, .7, 1.2] },
-      . . . .
-      . . . .
+      # Columns (Series)
+        {'name': 'growth', 'data': [0.5, 0.7, 1.2]},
+        {'name': 'revenue', 'data': [100, 150, 200]}
+    ]
+}
 ```
+
+And in pandas we can do the following:
+
+```python
+# Creating a DataFrame using a dictionary
+data = {
+    'growth': [0.5, 0.7, 1.2],
+    'revenue': [100, 150, 200]
+}
+df = pd.DataFrame(data)
+print(df)
+# Output:
+#    growth  revenue
+# 0     0.5      100
+# 1     0.7      150
+# 2     1.2      200
+```
+
+### Comparing Pandas Series, DataFrames, Spreadsheets, and SQL Tables
+
+<div align="center">
+
+![Comparing series and dataFrame with other things](./img/series_df__compare.png)
+
+</div>
 
 ### Axes in Pandas
 
-In Pandas, data is organized along two axes:
+In Pandas, data is organized along two primary axes:
 
-**Axis 0 -> | Axis1 -> columns$**
+- **Axis 0 (Index) -> Represents the rows of the data**
 
-The following image illustrates how data is organized along these axes in a DataFrame:
+- **Axis 1 (Columns) -> Represent the columns of the data**
 
-![Axes](./img/Axes.png)
+![Axes](./img/Join_data_along_axis.png)
+
+> During concatenation, if we specify `axis=1`, it will stack columns next to each other. If we specify `axis=0`, it will stack rows on top of each other.
+
+This concept is important when performing various operations, such as aggregation, filtering, or applying functions along a specific axis.
+
+```python
+import pandas as pd
+
+# Creating a DataFrame
+data = {
+    'A': [1.5, 2.4, 0.9],
+    'B': [3.2, 7.1, 5.0],
+    'C': [4.8, 6.3, 8.7]
+}
+df = pd.DataFrame(data)
+
+# Summing along Axis 0 (column-wise)
+print("Column-wise sum (axis=0):")
+print(df.sum(axis=0))
+
+# Summing along Axis 1 (row-wise)
+print("\nRow-wise sum (axis=1):")
+print(df.sum(axis=1))
+```
+
+```python
+Column-wise sum (axis=0):
+A     4.8
+B    15.3
+C    19.8
+dtype: float64
+
+Row-wise sum (axis=1):
+0     9.5
+1    15.8
+2    14.6
+dtype: float64
+```
+
+<!-- Edited till here : Add index confusion clearing section above -->
+
 
 ### Indexing and Slicing in Pandas
 
@@ -160,7 +245,7 @@ df = pd.DataFrame(data)
   - **`df.tail(n=5)`**: Returns the last `n` rows of the DataFrame (default is 5).
 - **`df.shape`**: Returns a tuple representing the dimensionality of the DataFrame (number of rows and columns).
 - **`df.info()`**: Prints a concise summary of the DataFrame, including the index dtype, column dtypes, non-null values, and memory usage.
-- **`df.describe()`**: Generates descriptive statistics of numeric columns, such as count, mean, std, min, and percentiles.
+- **`df.describe()`**: Shows a quick statistic summary of data; such as count, mean, std, min, and percentiles.
   - *Note*: While `df.describe()` is useful, it may not always provide a complete or accurate summary, especially for non-numeric data or when outliers are present.
 
 #### Accessing DataFrame Components
@@ -184,6 +269,7 @@ df = pd.DataFrame(data)
 - **`df.rename(mapper, axis=0/1, inplace=False)`**: Renames the labels of the DataFrame's index or columns. 
   - Example: `df.rename({'old_name': 'new_name'}, axis=1, inplace=True)` changes a column name.
 - **`df.sort_values(by, axis=0, ascending=True)`**: Sorts the DataFrame by the values along the specified axis.
+<!-- Add sort by axis DF.sort_index() -->
 - **`df.groupby(by)`**: Groups the DataFrame using a mapper or a series of columns, allowing for grouped operations like aggregation.
 - **`df.concat(objs, axis=0/1)`**: Concatenates pandas objects along a particular axis with optional set logic along the other axes.
 
@@ -196,3 +282,28 @@ df = pd.DataFrame(data)
 ### SQL-like Operations
 
 One of the strengths of Pandas is its ability to perform SQL-like operations, making it a powerful tool for data manipulation and analysis. Functions like `groupby`, `merge`, `concat`, and `join` enable complex data operations that would typically require SQL.
+
+
+
+# Note
+
+- While standard Python / NumPy expressions for selecting and setting are intuitive and come in handy for interactive work, for production code, we recommend the optimized pandas data access methods, `DataFrame.at()`, `DataFrame.iat()`, `DataFrame.loc()` and `DataFrame.iloc()`.
+
+- When working with large datasets, it is important to be mindful of memory usage. For example, when reading a CSV file, you can specify the data types of the columns to reduce memory usage.
+
+- When working with time series data, it is important to set the index of the DataFrame to a `DatetimeIndex` to leverage the time series functionalities in pandas.
+
+- For a dataFrame passing a single label selects a column and yields a series, equivalent to df.A:
+
+`df["A"]`
+
+- For a dataFrame passing a slice selects matching rows:
+`df[0:5]`
+
+- Adding a column to a DataFrame is relatively fast. However, adding a row requires a copy, and may be expensive. We recommend passing a pre-built list of records to the DataFrame constructor instead of building a DataFrame by iteratively appending records to it.
+
+- pandas supports non-unique index values. 
+
+- `df.info(memory_usage="deep")` will give you a more accurate memory usage of the DataFrame.
+
+- df.memory_usage() will give you the memory usage of each column in bytes.
