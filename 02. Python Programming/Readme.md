@@ -1,10 +1,16 @@
 <h1 align="center" > Python Programming </h1>
 
-Python is a `open source`, `high-level`, `interpreted`, and `general-purpose` programming language. Python is both `dynamically-typed` (Type determined at runtime). It is also a `garbage-collected` language. Python supports multiple programming paradigms, which includes `procedural`, `object-oriented` and `functional`.
+Python is an **open-source**, **high-level**, **interpreted**, and **general-purpose** programming language. It is `dynamically-typed` (Type determined at runtime) and `garbage-collected`. Python supports multiple programming paradigms, including **procedural**, **object-oriented** and **functional**.
 
 ## Variables in Python
 
-Every variables in python is a reference ($\color{FEC260} \tt \text{ like a  pointer}$) to an object. if we write $\color{FEC260}n = 300$ we are creating an integer object with value 300 and bind the variable $\color{FEC260}n $ to this object. Each object created would have unique id’s {$\color{FEC260} \tt \text{ the memory address }$}, which we can see using the $\tt\color{FEC260}id()$ function. Everything in python is  an object { variables, functions, modules }.
+In Python, variables are references (similar to pointers) to objects. For example:
+
+```python
+n = 300
+```
+
+Here An integer object with the value `300` is created. The variable **n** is a reference (or binding) to this object. Every object in Python has a unique identifier (its memory address), which can be checked using the `id()` function. Finally everything is an object in python - variables, functions, classes, and even modules.
 
 <p align="center"><img src="./img/memory_ref.png" alt="Logo" height=150></p>
 
@@ -12,7 +18,7 @@ Every variables in python is a reference ($\color{FEC260} \tt \text{ like a  poi
 
 > Dynamic memory allocation in the heap
 
-Usually if we have two or more objects containing same value, what python does is that it would bind all those variables to the same object; in order to save memory, it won’t create multiple objects. Now if we do something like $\color{FEC260}n \;= \;``foo"$ , python would create a string object $\color{FEC260} foo$ and bind $\color{FEC260}n$ with it. Now the integer object $\color{FEC260}300$ is orphan and garbage collector would remove it. 
+Usually if we have two or more objects containing same value, what python does is that it would bind all those variables to the same object; in order to save memory, it won’t create multiple objects. Now if we do something like $\color{FEC260}n \;= \;``foo"$ , python would create a string object $\color{FEC260} foo$ and bind $\color{FEC260}n$ with it. Now the integer object $\color{FEC260}300$ is orphan and garbage collector would remove it.
 
 In python an object is eligible for garbage collection if the number of reference to that object is $\color{FEC260}0$. We can use $\tt\color{FEC260}del$ keyword to delete an object. (_`del` keyword actually decrement the number of reference to the object by one and garbage collector would ultimately remove it_).
 
