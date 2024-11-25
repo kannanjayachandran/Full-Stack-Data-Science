@@ -1,15 +1,13 @@
 <!-- 
     Author : Kannan Jayachandran
     File : Calculus.md
+    Section : Mathematics for data science and machine learning
  -->
 
-<h1 align="center" style="color: orange"> Calculus </h1>
+<h1 align="center"> Calculus </h1>
 
----
+Calculus is a branch of mathematics that studies continuous change,  using tools like derivatives and integrals.
 
-$\color{orange}``$**_Calculus is a branch of mathematics that studies continuous change,  using tools like derivatives and integrals._**$\color{orange}"$
-
----
 
 ## Functions
 
