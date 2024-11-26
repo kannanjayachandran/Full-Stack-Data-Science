@@ -25,5 +25,6 @@ venv.bak/
 # Data folders
 *.csv
 
-# ToDO
+# TEMP/WORK IN PROGRESS
 TODO.md
+Temp/
