@@ -4,7 +4,7 @@
     <a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Logo" height=420></a>
 </p>
 
-#### This repository contains code samples (Jupyter notebooks & Python scripts), datasets, and notes compiled during my _Full Stack Data Science_ learning journey.
+#### Jupyter notebooks, Python scripts, datasets, and notes compiled during my learning journey.
 
 ## Contents
 
