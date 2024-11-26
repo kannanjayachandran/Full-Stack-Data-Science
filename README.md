@@ -22,9 +22,9 @@
 |  10   | Deep Learning | [Here](./10.%20Deep%20Learning/Readme.md)                                               |
 |  11   | Computer Vision | [Here](./11.%20Computer%20Vision/Readme.md)                                           |
 |  12   | Natural Language Processing | [Here](./12.%20Natural%20Language%20Processing/Readme.md)                 |
-|  13   | Machine Learning Operations (MLOps) | [Here](./13.%20Machine%20Learning%20Operations/Readme.md)         |
-|  14   | System Designing & Distributed Systems | [Here](./14.%20System%20Designing%20and%20Distributed%20Systems/Readme.md) |
-|  15   | Data Engineering and Big Data | [Here](./15.%20Data%20Engineering/Readme.md)                             |
+|  13   | Machine Learning Operations | [Here](13.%20Machine%20Learning%20Operations/Readme.md)         |
+|  14   | System Designing | [Here](14.%20System%20Designing/Readme.md) |
+|  15   | Data Engineering| [Here](15.%20Data%20Engineering/Readme.md)                             |
 |  16   | Case Studies | [Here](./16.%20Case%20Studies/Readme.md)                                                  |
 
 ---
