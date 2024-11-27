@@ -1,8 +1,30 @@
 <h1 align="center"> Arrays </h1>
 
-Arrays, as a fundamental data structure, consist of elements of the same type and stored in contiguous memory locations. The first element corresponds to the lowest address, and the last element to the highest address. [Cache locality](https://www.geeksforgeeks.org/locality-of-reference-and-cache-operation-in-cache-memory/) is a significant advantage of arrays, as it allows for faster access to elements due to less [cache misses](https://stackoverflow.com/questions/18559342/what-is-a-cache-hit-and-a-cache-miss-why-would-context-switching-cause-cache-mi). However, arrays have a fixed size, and inserting or deleting elements can be expensive due to shifting elements.
+Linear data structure consisting elements of the same type and stored in contiguous memory locations. The first element corresponds to the lowest address, and the last element to the highest address. [Cache locality](https://www.geeksforgeeks.org/locality-of-reference-and-cache-operation-in-cache-memory/) is a significant advantage of arrays, as it allows for faster access to elements due to less [cache misses](https://stackoverflow.com/questions/18559342/what-is-a-cache-hit-and-a-cache-miss-why-would-context-switching-cause-cache-mi). However, arrays have a fixed size, and inserting or deleting elements can be expensive due to shifting elements.
 
-In _python_ we have **Lists** that are superset of arrays. Lists can contain elements of different and are mutable. 
+![Main Img](./img/main.png)
+
+In python we have something known as a **list** which is a _dynamic array_ and _heterogenous_ in nature. It is a built-in data structure in Python that can grow and shrink in size as needed. Lists are defined by enclosing elements in square brackets `[]` separated by commas.
+
+```python
+# Creating a list
+nums = [1, 2, 3, 4, 5]
+
+# Accessing elements
+print(nums[0])  # 1
+
+# Modifying elements
+nums[0] = 10
+print(nums)  # [10, 2, 3, 4, 5]
+```
+
+This is how a list is instantiated in the memory.
+
+![Array instance in memory](./img/Array_instance.png)
+
+Internally, a list is represented as an array of pointers to the elements. The elements themselves are stored in a separate memory location. This allows for the list to store elements of different types and sizes.
+
+![Internal representation of list](./img/internal.png)
 
 ## Time complexity of operations on Lists
 
@@ -21,15 +43,13 @@ In _python_ we have **Lists** that are superset of arrays. Lists can contain ele
 | Del Slice | O(n) |
 | Set Slice | O(n+k) |
 
-## Problem Solving Techniques for Arrays
-
-<!-- Two pointer, Sliding window, binary search, sorting -->
+---
 
 ## Strings
 
-A string is a sequence of characters. In Python, strings are immutable, which means that once a string is created, it cannot be changed. There is no `char` data type in Python, and a character is represented as a string of length 1. 
+A string is a sequence of characters. In Python, strings are **immutable**, which means that once a string is created, it cannot be changed. Since there is no _char_ datatype in python, a character is represented as a string of length 1. 
 
-The operations that can be performed on strings include:
+We can perform the following operations on strings:
 
 1. **Concatenation**: Combining two or more strings to create a new string.
 2. **Indexing**: Accessing individual characters in a string using their position.
@@ -52,6 +72,36 @@ The operations that can be performed on strings include:
 | Repetition | O(n) |
 | Comparison | O(n) |
 | Traversal | O(n) |
+
+---
+
+## Problem Solving Techniques for Arrays
+
+1. **Two Pointer Approach**: The two-pointer approach is a useful strategy for optimizing time and space complexity in problems involving searching on arrays and linked lists. It uses pairs of indices or pointers to simultaneously iterate over two different input parts, which allows us to perform fewer operations. There are 3 variations of this approach:
+
+- Pointers are moving in the same direction with the same pace.
+
+<div align="center">
+
+![Two pointer 1](./img/two_pointer_1.png)
+
+</div>
+
+- Pointers are moving in the same direction at a different pace (Fast and slow pointers)
+
+<div align="center">
+
+![Two pointer 2](./img/Two_pointer_2.png)
+
+</div>
+
+- Pointers are moving in the opposite direction
+
+<div align="center">
+
+![Two pointer 3](./img/Two_pointer_3.png)
+
+</div>
 
 ## Problem set
 
