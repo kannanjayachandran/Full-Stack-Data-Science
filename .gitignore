@@ -24,7 +24,3 @@ venv.bak/
 
 # Data folders
 *.csv
-
-# TEMP/WORK IN PROGRESS
-TODO.md
-Temp/
