@@ -37,19 +37,3 @@ Cryptography involves techniques for secure communication and data protection, d
 ### Graph theory 
 
 Graph theory examines the properties and applications of graphs, which model pairwise relationships between objects. It is used in modeling networks, social relationships, and optimization problems.
-
-## Information Representation in Computers
-
-**Binary Data** : Information in computers is represented as binary data, a sequence of 0s and 1s known as bits. 
-
-- 8 bits -> 1 byte
-
-A byte can have `256` different combinations, allowing it to represent numbers, characters, and other data types.
-
-A typical computer system features a hierarchy of memory levels, each with different speed, capacity, and cost characteristics. This hierarchy helps balance the trade-offs between fast, small, and expensive memory (like CPU cache) and slow, large, and cheaper memory (like secondary storage).
-
-<p align="center"><img src="./img/Memory_hierarchy.png" alt="Machine Cycle" height=390></p>
-
-Computer memory is divided into small units called cells, typically each holding a **byte**. Although there's no physical orientation, memory cells are often visualized linearly, with the high-order end on the left and the low-order end on the right. The high-order bit (most significant bit) is the leftmost bit, and the low-order bit (least significant bit) is the rightmost bit.
-
-![Computer Memory](./img/computer_memory_diagram.png)
