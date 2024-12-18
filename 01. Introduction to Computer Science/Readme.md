@@ -10,20 +10,20 @@ Computers were built to solve arithmetic problems, but they have since evolved t
 
 - **[Computer science](https://en.wikipedia.org/wiki/Computer_science)** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_. 
 
-- **[Computer scientists](https://en.wikipedia.org/wiki/Computer_scientist)** use various mathematical algorithms, coding procedures, and their expert programming skills to study computer processes and develop new software and systems.
+- **[Data Science](https://en.wikipedia.org/wiki/Data_science)** is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.
 
 ## [Computer Architecture](https://en.wikipedia.org/wiki/Computer_architecture)
 
-A typical computer system is made up of several key components, each playing an essential role in how the system functions:
+Let us first look at the basic components of a computer system and how they work together to process data and execute instructions. A typical computer system is made up of several key components, each playing an essential role in how the system functions:
 
-- **Central Processing Unit (CPU)**: Responsible for executing instructions and performing calculations to process data.
+1. **Central Processing Unit (CPU)**: Responsible for executing instructions and performing calculations to process data.
 
-- **Memory**: How we store data.
+2. **Memory**: How we store data.
     - **Primary storage** (RAM): Stores data and instructions that the CPU needs immediately, ensuring fast access.
 
     - **Secondary storage**: Includes devices like hard drives (HDDs) and solid-state drives (SSDs) for long-term data storage.
 
-- **Input/Output (I/O) devices**: These devices connect the computer to the outside world, enabling interaction. Examples include keyboards, mice, monitors, and network cards.
+3. **Input/Output (I/O) devices**: These devices connect the computer to the outside world, enabling interaction. Examples include keyboards, mice, monitors, and network cards.
 
 <div align="center">
 
@@ -78,6 +78,25 @@ The following is a labelled die shot of `13-th gen Intel Core i9 processor` (Rap
 
 - > Inside every CPU core we can find a layout of around 44,000 transistors physically executing 32-bit instructions, with a grand total of around 26 Million! transistors in the entire processor.
 
+### The Machine Cycle
+
+The CPU operates through repeated machine cycles, which consist of:
+
+- **Fetch**: Retrieving instructions or data.
+
+- **Decode**: Translating instructions into executable operations.
+
+- **Execute**: Performing the required operation.
+
+- **Store**: Writing results back to memory.
+
+<div align="center">
+
+![Machine Cycle](./img/machine_cycle.png)
+
+</div>
+
+
 ### Memory
 
 > How we store data.
@@ -110,11 +129,9 @@ For example, in a byte represented as `10110011`:
 
 - Low-Order Bit: 1 (rightmost).
 
-### Information Representation in Computers
+**Information Representation in Computers**
 
-**Binary Data**
-
-Computers represent all information as binary data, a sequence of **0s** and **1s** called **bits**.
+Computers represent all information as `binary data`, a sequence of **0s** and **1s** called **bits**.
 
 - **1 bit**: The smallest unit of data in a computer, representing two possible states (0 or 1).
 
@@ -124,56 +141,33 @@ A single byte can represent up to **256 combinations** ($2^8$), making it capabl
 
 ---
 
-### The Machine Cycle
-
-The CPU operates through repeated machine cycles, which consist of:
-
-- **Fetch**: Retrieving instructions or data.
-
-- **Decode**: Translating instructions into executable operations.
-
-- **Execute**: Performing the required operation.
-
-- **Store**: Writing results back to memory.
-
-<div align="center">
-
-![Machine Cycle](./img/machine_cycle.png)
-
-</div>
-
----
-
 ### Simple Python Program Execution
 
-We will explore Python language in detail in upcoming sections, but for now, let's see a simple python program gets executed in a computer.
+We will explore [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) language in detail in upcoming sections, but for now, let's see how a simple python program gets executed in a computer.
 
-Consider the following python code that adds two numbers:
+*Consider the following python code that adds two numbers*:
 
 ```python
 a = 5
 b = 10
 
 c = a + b
-
 print(c)
+
+# 5 + 10 = 15
 ```
 
 When we run this code, the following steps occur:
 
-- **Source Code**: The code is written in a high-level language (Python), probably using a text editor or an Integrated Development Environment (IDE).
+- **Source Code**: The code is written in a high-level language (Python), probably using a text editor or an [Integrated Development Environment](https://en.wikipedia.org/wiki/Integrated_development_environment) (IDE).
 
-- **Python source code execution**: We can execute the code using the Python interpreter, which converts the high-level code into machine code. In the terminal or command prompt, we can run the code using the command 
+- **Python source code execution**: We can execute the code using the Python interpreter, which converts the high-level code into machine code. In the terminal or command prompt, we can run the code using the following command `python filename.py`
 
-```bash
-python filename.py
-```
+- **Compilation**: Python is an [interpreted](https://en.wikipedia.org/wiki/Interpreter_(computing)) language, meaning it is executed line by line. The Python interpreter reads the code, converts it into machine code, and executes it.
 
-- **Compilation**: Python is an interpreted language, meaning it is executed line by line. The Python interpreter reads the code, converts it into machine code, and executes it.
+    - **[Lexical Analysis](https://en.wikipedia.org/wiki/Lexical_analysis) (Tokenization)**: The Python interpreter reads the source code and breaks it into tokens (keywords, operators, and identifiers).
 
-    - **Lexical Analysis (Tokenization)**: The Python interpreter reads the source code and breaks it into tokens (keywords, operators, and identifiers).
-
-    - **Parsing & AST Generation**: The interpreter checks the syntax of the code to ensure it follows the rules of the Python language. It is done by parsing the tokens to generate the _Abstract Syntax Tree (AST)_, a tree-like representation of the code structure.
+    - **[Parsing](https://en.wikipedia.org/wiki/Parsing) & [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) Generation**: The interpreter checks the syntax of the code to ensure it follows the rules of the Python language. It is done by parsing the tokens to generate the _Abstract Syntax Tree (AST)_, a tree-like representation of the code structure.
 
     - **Bytecode Compilation**: The AST is compiled into Python bytecode, a platform-independent intermediate representation.
 
