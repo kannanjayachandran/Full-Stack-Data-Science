@@ -1,75 +1,183 @@
 <h1 align="center" > Python Programming </h1>
 
-Python is an **open-source**, **high-level**, **interpreted**, and **general-purpose** programming language. It is `dynamically-typed` (Type determined at runtime) and `garbage-collected`. Python supports multiple programming paradigms, including **procedural**, **object-oriented** and **functional**.
+**[Python](https://en.wikipedia.org/wiki/Python_(programming_language))** is an **[open-source](https://en.wikipedia.org/wiki/Open_source)**, **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** and **[general-purpose](https://en.wikipedia.org/wiki/General-purpose_programming_language)** programming language. It is `dynamically type-checked` (type safety of a program is verified at runtime) and `garbage-collected`. 
+
+> Note: These notes use Python 3 for all examples and explanations.
+
+## Table of Contents
+
+- [Python Syntax](#Python-Syntax)
+- [Variables in python](#variables-in-python)	
+
+
+## Python Syntax
+
+After installing Python, you can start coding by writing code in a text editor and saving it with a .py extension. The saved file can be executed using the Python interpreter. Python emphasizes code readability and relies on indentation to define code blocks instead of using braces `{}` like many other programming languages.
+
+```python
+print("Hello, World!")
+
+if 5 > 2:
+    print("Five is greater than two!")
+```
+
+We can write a single line comment using `#` and multi-line comments using triple quotes `'''` or `"""`.
+
+```python
+# This is a comment
+
+'''
+This is a multi-line comment
+'''
+
+"""
+This is also a multi-line comment
+"""
+```
 
 ## Variables in Python
 
-In Python, variables are references (similar to pointers) to objects. For example:
+Variables are containers for storing data values. Python is dynamically typed, meaning you don’t need to declare a variable’s type; it is determined automatically based on the value assigned.
+
+```python
+x = 5
+y = "Hello, World!"
+```
+
+In Python, variables serve as references (or bindings) to [objects](https://en.wikipedia.org/wiki/Object-oriented_programming). For example:
 
 ```python
 n = 300
 ```
 
-Here An integer object with the value `300` is created. The variable **n** is a reference (or binding) to this object. Every object in Python has a unique identifier (its memory address), which can be checked using the `id()` function. Finally everything is an object in python - variables, functions, classes, and even modules.
+Here, an integer object with the value `300` is created, and the variable `n` is a reference to this object (means `n` is storing the memory address). Every object in Python has a unique identifier (typically its memory address), which can be checked using the id() function.
 
-<p align="center"><img src="./img/memory_ref.png" alt="Logo" height=150></p>
+> In Python, everything is an object; this includes variables, functions, classes, and even modules. Objects are instances of classes, and each class has its own attributes and methods.
 
-<p align="center"><img src="./img/memory_ref2.png" alt="Logo" height=380></p>
+Consider the following code:
 
-> Dynamic memory allocation in the heap
+```python
+n = 300
+n = "foo"
+```
 
-Usually if we have two or more objects containing same value, what python does is that it would bind all those variables to the same object; in order to save memory, it won’t create multiple objects. Now if we do something like $\color{FEC260}n \;= \;``foo"$ , python would create a string object $\color{FEC260} foo$ and bind $\color{FEC260}n$ with it. Now the integer object $\color{FEC260}300$ is orphan and garbage collector would remove it.
+We can visualize the memory allocation as follows
 
-In python an object is eligible for garbage collection if the number of reference to that object is $\color{FEC260}0$. We can use $\tt\color{FEC260}del$ keyword to delete an object. (_`del` keyword actually decrement the number of reference to the object by one and garbage collector would ultimately remove it_).
+<p align="center"><img src="./img/Pointer_animation.gif" alt="Logo"></p>
 
-## Memory Management in Python
+Once we reassign the variable `n` to a new value, the reference is updated to point to the new object.
 
-Most programming languages share objects or data by the following two methods:
+### Memory Optimization
 
-- **Pass by value** → A copy of the actual argument is passed.
+Python is a high-level language and it manages memory automatically. Python optimizes memory usage by binding multiple variables with the same value to a single object instead of creating duplicate objects. For example:
 
-- **Pass by reference** → The argument itself (its memory address) is passed. 
+```python
+a = 10
+b = 10
+```
 
-Python uses something different, which is called **Pass by object reference**.
+In this case, `a` and `b` both refer to the same object in memory. If you reassign one of these variables, say `a = "foo"`, Python creates a new string object `"foo"` and binds `a` to it. The integer object `10` remains bound to `b`.
 
-- **Pass by object reference / Pass by assignment** → Every thing is an object in python including primitives and other complex data structures (i.e. both mutable and immutable). When you pass an argument to a function, Python passes the reference (**a kind of pointer to the memory address where the object is stored**) to the object, not the actual object itself. The effect of this depends on whether the object is mutable or immutable. If you pass an immutable object to a function and try to change it, Python creates a new object instead of modifying the existing one. If you pass a mutable object to a function and change it, the object is modified in place.
+If no variables are referencing an object, it becomes orphaned and eligible for garbage collection. An object is eligible for garbage collection if the number of references to it becomes zero. We can manually reduce the reference count of an object using the `del` keyword.
 
-The fact that everything is an object also means that there is a lot of  $\color{FEC260}\texttt{unboxing}$ and  $\color{FEC260}\texttt{boxing}$ involved when Python performs operations with variables. For example while adding two integers;
+### Pass by What?
+
+Programming languages typically share objects or data between functions using one of two approaches:
+
+- **Pass by value**: A copy of the actual argument is passed to the function. Modifications inside the function do not affect the original object.
+
+- **Pass by reference**: The actual argument (its memory address) is passed, allowing modifications inside the function to directly affect the original object.
+
+Python, however, uses a different mechanism known as **Pass by Object Reference** (or **Pass by Assignment**). In Python, everything is an object, including primitive types (e.g., integers, floats, and strings) and complex data structures (e.g., lists, dictionaries). When passing arguments to functions, Python passes a reference to the object (essentially a pointer to its memory address), not the actual object.
+
+The behavior depends on whether the object is **mutable** or **immutable**:
+
+- **Immutable Objects** (e.g., integers, strings, tuples):
+When an immutable object is passed to a function and modified, Python creates a new object rather than altering the existing one.
+
+```python
+def modify_value(x):
+    x += 10
+    print("Inside function:", x)
+
+a = 5
+modify_value(a)
+# Output: Inside function: 15
+print("Outside function:", a)
+# Output: Outside function: 5
+```
+
+- **Mutable Objects **(e.g., lists, dictionaries, sets):
+When a mutable object is passed to a function and modified, the changes affect the original object.
+
+```python
+def modify_list(lst):
+    lst.append(10)
+    print("Inside function:", lst)
+
+my_list = [1, 2, 3]
+modify_list(my_list)
+# Output: Inside function: [1, 2, 3, 10]
+print("Outside function:", my_list)
+# Output: Outside function: [1, 2, 3, 10]
+```
+
+### Boxing and Unboxing
+
+Since everything in Python is an object, operations on variables involve processes called **boxing** and **unboxing**.
+
+- **Boxing**: Wrapping primitive values (e.g., integers, floats) into Python objects so they can be managed as objects.
+
+- **Unboxing**: Extracting the actual value from an object to perform operations.
+
+For example, consider the addition of two integers:
 
 ```python
 a = 10
 b = 20
-
 c = a + b
 ```
 
-**Behind the scene python performs several steps;**
+Behind the scenes, Python performs the following steps:
 
-- **Check the types of both operands**
+- Check the types of both operands (`a` and `b`).
 
-- **Check whether they both support the $\color{gold}+$ operation**
+- Verify support for the `+` operation for these types.
 
-- **Extract the function that performs the $\color{gold}+$ operation**
+- Extract the function responsible for performing the `+` operation.
 
-- **Extract the actual values of the objects**
+- Unbox the values from the objects (`10` and `20`).
 
-- **Perform the $\color{gold}+$ operation**
+- Perform the addition (`10 + 20`).
 
-- **Construct a new integer object for the result**
+- Box the result into a new integer object (`30`).
 
-![Addition](./img/adding.png)
+These steps ensure Python’s flexibility but can introduce overhead in performance.
 
-Unless we do some sort of optimization or _`Cythonize`_ our python code; every time two variables are added python needs to perform all the above steps.
+### A peak into CPython Optimization
+
+For performance-critical tasks, tools like **Cython** can optimize Python code by reducing the overhead of boxing and unboxing. Here’s an example of a Cython function for adding two integers:
 
 ```python
-# cython code for adding two integers
-cpdef def add (int x, int y):
- cdef int result
- result = x + y
- return result
- ```
+cpdef int add(int x, int y):
+    cdef int result
+    result = x + y
+    return result
+```
 
-- Python's memory allocation and de-allocation method is automatic. The Python memory manager internally ensures the management of the Python heap.
+By specifying types (`int`), this code bypasses Python's usual boxing and unboxing processes, significantly improving performance.
+
+### Automatic Memory Management
+
+Python handles memory allocation and deallocation automatically through its memory manager, which manages the **Python heap**. The memory manager:
+
+1. Allocates memory for objects when needed.
+
+1. Tracks references to objects.
+
+1. Deallocates memory when objects are no longer referenced (via garbage collection).
+
+1. This ensures efficient memory usage without requiring explicit memory management from the programmer.
 
 ## Data Types
 
