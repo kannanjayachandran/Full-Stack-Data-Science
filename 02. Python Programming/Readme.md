@@ -1,6 +1,6 @@
 <h1 align="center" > Python Programming </h1>
 
-**[Python](https://en.wikipedia.org/wiki/Python_(programming_language))** is an **[open-source](https://en.wikipedia.org/wiki/Open_source)**, **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** and **[general-purpose](https://en.wikipedia.org/wiki/General-purpose_programming_language)** programming language. It is `dynamically type-checked` (type safety of a program is verified at runtime) and `garbage-collected`. 
+**[Python](https://en.wikipedia.org/wiki/Python_(programming_language))** is an **[open-source](https://en.wikipedia.org/wiki/Open_source)**, **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** and **[general-purpose](https://en.wikipedia.org/wiki/General-purpose_programming_language)** programming language. It is **dynamically type-checked** (type safety of a program is verified at runtime) and **garbage-collected**. 
 
 > Note: These notes use Python 3 for all examples and explanations.
 
@@ -12,7 +12,7 @@
 
 ## Python Syntax
 
-After installing Python, you can start coding by writing code in a text editor and saving it with a .py extension. The saved file can be executed using the Python interpreter. Python emphasizes code readability and relies on indentation to define code blocks instead of using braces `{}` like many other programming languages.
+After installing Python, we can execute python source code using the Python interpreter (`python name.py` Or `python3 name.py`). Python emphasizes code readability and relies on indentation to define code blocks instead of using braces `{}` like many other programming languages.
 
 ```python
 print("Hello, World!")
@@ -44,6 +44,8 @@ x = 5
 y = "Hello, World!"
 ```
 
+> In Python, everything is an object; this includes variables, functions, classes, and even modules. Objects are instances of classes, and each class has its own attributes and methods.
+
 In Python, variables serve as references (or bindings) to [objects](https://en.wikipedia.org/wiki/Object-oriented_programming). For example:
 
 ```python
@@ -51,8 +53,6 @@ n = 300
 ```
 
 Here, an integer object with the value `300` is created, and the variable `n` is a reference to this object (means `n` is storing the memory address). Every object in Python has a unique identifier (typically its memory address), which can be checked using the id() function.
-
-> In Python, everything is an object; this includes variables, functions, classes, and even modules. Objects are instances of classes, and each class has its own attributes and methods.
 
 Consider the following code:
 
@@ -69,14 +69,16 @@ Once we reassign the variable `n` to a new value, the reference is updated to po
 
 ### Memory Optimization
 
-Python is a high-level language and it manages memory automatically. Python optimizes memory usage by binding multiple variables with the same value to a single object instead of creating duplicate objects. For example:
+Python is a high-level language and it manages memory automatically. Memory usage is optimized by binding multiple variables with the same value to a single object instead of creating duplicate objects. For example:
 
 ```python
 a = 10
 b = 10
 ```
 
-In this case, `a` and `b` both refer to the same object in memory. If you reassign one of these variables, say `a = "foo"`, Python creates a new string object `"foo"` and binds `a` to it. The integer object `10` remains bound to `b`.
+In this case, `a` and `b` both refer to the same object in memory. 
+
+<p align="center"><img src="./img/Pointer_animation_2.gif" alt="Logo"></p>
 
 If no variables are referencing an object, it becomes orphaned and eligible for garbage collection. An object is eligible for garbage collection if the number of references to it becomes zero. We can manually reduce the reference count of an object using the `del` keyword.
 
@@ -88,9 +90,7 @@ Programming languages typically share objects or data between functions using on
 
 - **Pass by reference**: The actual argument (its memory address) is passed, allowing modifications inside the function to directly affect the original object.
 
-Python, however, uses a different mechanism known as **Pass by Object Reference** (or **Pass by Assignment**). In Python, everything is an object, including primitive types (e.g., integers, floats, and strings) and complex data structures (e.g., lists, dictionaries). When passing arguments to functions, Python passes a reference to the object (essentially a pointer to its memory address), not the actual object.
-
-The behavior depends on whether the object is **mutable** or **immutable**:
+Python, however, uses a different mechanism known as **Pass by Object Reference** (or **Pass by Assignment**). In Python, everything is an object, including primitive types (e.g., integers, floats, and strings) and complex data structures (e.g., lists, dictionaries). When passing arguments to functions, Python passes a reference to the object (essentially a pointer to its memory address), not the actual object. Depending on the object type (**mutable** or **immutable**), the behavior can resemble pass by value or pass by reference.
 
 - **Immutable Objects** (e.g., integers, strings, tuples):
 When an immutable object is passed to a function and modified, Python creates a new object rather than altering the existing one.
@@ -107,7 +107,7 @@ print("Outside function:", a)
 # Output: Outside function: 5
 ```
 
-- **Mutable Objects **(e.g., lists, dictionaries, sets):
+- **Mutable Objects**(e.g., lists, dictionaries, sets):
 When a mutable object is passed to a function and modified, the changes affect the original object.
 
 ```python
@@ -154,9 +154,9 @@ Behind the scenes, Python performs the following steps:
 
 These steps ensure Python’s flexibility but can introduce overhead in performance.
 
-### A peak into CPython Optimization
+### A peak into Cython Optimization
 
-For performance-critical tasks, tools like **Cython** can optimize Python code by reducing the overhead of boxing and unboxing. Here’s an example of a Cython function for adding two integers:
+For performance-critical tasks, extensions like **Cython** can compile Python code into C code, which can then be compiled into machine code. Here’s an example of a function for adding two integers:
 
 ```python
 cpdef int add(int x, int y):
@@ -175,46 +175,199 @@ Python handles memory allocation and deallocation automatically through its memo
 
 1. Tracks references to objects.
 
-1. Deallocates memory when objects are no longer referenced (via garbage collection).
+1. De-allocates memory when objects are no longer referenced (via garbage collection).
 
 1. This ensures efficient memory usage without requiring explicit memory management from the programmer.
 
 ## Data Types
 
-Python has the following data types built-in by default, in these categories:
+Python provides a variety of built-in data types, categorized as follows:
 
-- **Text Type**: `str`
-- **Numeric Types**: `int`, `float`, `complex`
-- **Sequence Types**: `list`, `tuple`, `range`
-- **Mapping Type**: `dict`
-- **Set Types**: `set`, `frozenset`
-- **Boolean Type**: `bool`
-- **Binary Types**: `bytes`, `bytearray`, `memoryview`
+- **Text Type**: 
+    - `str`
 
-- For purposes of optimization, the interpreter creates objects for the integers in the range $\color{FEC260}[-5, \;256]$ at startup, and then reuses them during program execution. Thus, when you assign separate variables to an integer value in this range, they will actually reference the same object created earlier. (The numbers from -5 to 256 are found to be used the most). 
+- **Numeric Types**: 
+    - `int`
+    - `float`
+    - `complex`
 
-We generally won't face integer overflow in python as it can handle arbitrarily large numbers. Python internally uses a data structure called `long` to store large numbers.
+- **Sequence Types**: 
+    - `list`  (mutable sequence of items) 
+    - `tuple` (immutable sequence of items)
+    - `range` (sequence of numbers generated on demand)
+
+- **Mapping Type**: 
+    - `dict` (key-value pairs)
+
+- **Set Types**: 
+    - `set` (unordered collection of unique items)
+    - `frozenset` (immutable version of `set`)
+
+- **Boolean Type**: 
+    - `bool` (represents `True` or `False`)
+
+- **Binary Types**: 
+    - `bytes`  (immutable sequence of bytes)
+    - `bytearray` (mutable sequence of bytes)
+    - `memoryview` (views over memory buffers)
+
+- **None Type**:
+    - `None` (represents the absence of a value)
+
+### Type Conversion or Type Casting
+
+Python allows us to convert between different data types using built-in functions like `int()`, `float()`, `str()`, etc.
+
+```python
+x = 5
+y = float(x)
+z = str(x)
+```
+
+### Type Checking
+
+Python provides the `type()` function to check the type of an object.
+
+```python
+x = 5
+print(type(x))
+# Output: <class 'int'>
+```
+
+### Integer Optimization
+
+For performance optimization, Python preallocates and caches integer objects in the range $\color{FEC260}[-5, \;256]$ at interpreter startup. This means:
+
+- Integers in this range are reused rather than creating new objects each time they are assigned to variables.
+
+- When two variables are assigned the same integer value within this range, they point to the same object in memory.
+
+```python
+a = 100
+b = 100
+print(a is b)  # Output: True
+
+x = 1000
+y = 1000
+print(x is y)  # Output: False
+```
+
+This optimization is based on the observation that integers in this range are frequently used, improving performance and reducing memory overhead.
+
+### Handling Large Integers (Integer Overflow)
+
+Python's int type is **arbitrary-precision**, meaning it can handle numbers of any size, limited only by the available memory. Unlike many other programming languages, Python does not have fixed-size integer types that can **overflow**. Internally, Python uses a data structure called `long` (from earlier versions) to manage large integers efficiently.
+
+```python
+large_number = 10**100  # This is a 101-digit number!
+print(large_number)
+```
+
+Python automatically handles operations involving such large numbers without requiring any special libraries or configurations.
 
 ## Operators
 
-Python language supports the following types of operators.
+Python provides a wide range of operators to perform various operations. These are categorized as follows:
 
-- **Arithmetic Operators**
+### Arithmetic Operators
 
-- **Comparison (Relational) Operators**: `==`, `!=`, `>`, `<`, `>=`, `<=`
+Used to perform basic mathematical operations.
 
-- **Assignment Operators**: `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `//=`, `**=`
+| Operator | Description | Example | Output |
+| --- | --- | --- | --- |
+| `+` | Addition | `5 + 3` | `8` |
+| `-` | Subtraction | `5 - 3` | `2` |
+| `*` | Multiplication | `5 * 3` | `15` |
+| `/` | Division | `10 / 2` | `5` |
+| `%` | Modulus | `10 % 3` | `1` |
+| `//` | Floor Division | `10 // 3` | `3` |
+| `**` | Exponentiation | `5 ** 3` | `125` |
 
-- **Logical Operators**: `and`, `or`, `not`
+### Comparison (Relational) Operators
 
-- **Bitwise Operators**: `&`, `|`, `^`, `~`, `<<`, `>>`
+Used to compare values and return a Boolean (`True` or `False`).
 
-- **Membership Operators**: `in`, `not in`
+| Operator | Description | Example | Output |
+| --- | --- | --- | --- |
+| `==` | Equal to | `5 == 3` | `False` |
+| `!=` | Not Equal to | `5 != 3` | `True` |
+| `>` | Greater Than | `5 > 3` | `True` |
+| `<` | Less Than | `5 < 3` | `False` |
+| `>=` | Greater Than or Equal To | `5 >= 3` | `True` |
+| `<=` | Less Than or Equal To | `5 <= 3` | `False` |
 
-- **Identity Operators**: `is`, `is not`
+### Assignment Operators
 
-- **Ternary Operator**: `a if condition else b`
-> Not really ternary operator, but a small hack to achieve the same.
+Used to assign values to variables and perform shorthand operations.
+
+| Operator | Description | Example | Equivalent |
+| --- | --- | --- | --- |
+| `=` | Assign | `x = 5` | `x = 5` |
+| `+=` | Add and Assign | `x += 3` | `x = x + 3` |
+| `-=` | Subtract and Assign | `x -= 3` | `x = x - 3` |
+| `*=` | Multiply and Assign | `x *= 3` | `x = x * 3` |
+| `/=` | Divide and Assign | `x /= 3` | `x = x / 3` |
+| `%=` | Modulus and Assign | `x %= 3` | `x = x % 3` |
+| `//=` | Floor Division and Assign | `x //= 3` | `x = x // 3` |
+| `**=` | Exponentiation and Assign | `x **= 3` | `x = x ** 3` |
+
+### Logical Operators
+
+Used to combine conditional statements.
+
+| Operator | Description | Example | Output |
+| --- | --- | --- | --- |
+| `and` | Logical AND | `True and False` | `False` |
+| `or` | Logical OR | `True or False` | `True` |
+| `not` | Logical NOT | `not True` | `False` |
+
+### Bitwise Operators
+
+Operate on binary representations of integers.
+
+| Operator | Description | Example | Output |
+| --- | --- | --- | --- |
+| `&` | Bitwise AND | `5 & 3` | `1` |
+| `|` | Bitwise OR | `5 \| 3` | `7` |
+| `^` | Bitwise XOR | `5 ^ 3` | `6` |
+| `~` | Bitwise NOT | `~5` | `-6` |
+| `<<` | Left Shift | `5 << 1` | `10` |
+| `>>` | Right Shift | `5 >> 1` | `2` |
+
+### Membership Operators
+
+Used to check if a value is part of a sequence (e.g., string, list, tuple, etc.).
+
+| Operator | Description | Example | Output |
+| --- | --- | --- | --- |
+| `in` | Present in | `5 in [1, 2, 3, 4, 5]` | `True` |
+| `not in` | Not Present in | `5 not in [1, 2, 3, 4, 5]` | `False` |
+
+### Identity Operators
+
+Used to compare the memory locations of two objects.
+
+| Operator | Description | Example | Output |
+| --- | --- | --- | --- |
+| `is` | Same Object | `x is y` | `True` |
+| `is not` | Different Object | `x is not y` | `False` |
+
+### Ternary Operator
+
+Python doesn’t have a dedicated ternary operator but uses a concise syntax to achieve similar functionality:
+
+```python
+result = a if condition else b
+```
+
+> If condition is True, the value of `a` is assigned to result. Otherwise, the value of `b` is assigned.
+
+```python
+x = 10
+y = 20
+max_value = x if x > y else y
+print(max_value)  # Output: 20
+```
 
 ## Python Keywords
 
@@ -222,44 +375,213 @@ Python language supports the following types of operators.
 
 ## Conditional Statements
 
-Python supports the usual logical conditions:
+Conditional statements in Python are used to execute specific blocks of code based on logical conditions. Python supports the following conditional statements:
 
-- **if** statement
+### `if` statement
 
-- **elif** statement
+Executes a block of code if the condition evaluates to `True`.
 
-- **else** statement
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+# Output: x is greater than 5
+```
 
-- **Nested if** statement
+### `elif` Statement
+
+Allows checking multiple conditions. It is short for "else if."
+
+```python
+x = 10
+if x > 15:
+    print("x is greater than 15")
+elif x > 5:
+    print("x is greater than 5 but less than or equal to 15")
+# Output: x is greater than 5 but less than or equal to 15
+```
+
+### `else` Statement
+
+Executes a block of code if none of the preceding conditions are `True`.
+
+```python
+x = 2
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is 5 or less")
+# Output: x is 5 or less
+```
+
+### Nested `if` Statement
+
+Allows placing an if statement inside another if statement to check multiple conditions hierarchically.
+
+```python
+x = 10
+if x > 5:
+    if x % 2 == 0:
+        print("x is greater than 5 and even")
+    else:
+        print("x is greater than 5 and odd")
+# Output: x is greater than 5 and even
+```
 
 ## Loops
 
-Python has two primitive loop commands:
+Loops in Python are used to execute a block of code repeatedly as long as a condition is met or for each item in a sequence. Python supports the following loop constructs:
 
-- **while** loops
+### while loops
 
-- **for** loops
+A while loop runs as long as its condition evaluates to True.
+
+````python
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+# Output: 
+# 1
+# 2
+# 3
+# 4
+# 5
+````
+
+### for loops
+
+A `for` loop iterates over a sequence (like a list, tuple, string, or range).
+
+````python
+for i in range(1, 6):
+    print(i)
+# Output: 
+# 1
+# 2
+# 3
+# 4
+# 5
+````
 
 We can use the `break` statement to stop the loop before it has looped through all the items, and the `continue` statement to stop the current iteration of the loop, and continue with the next.
 
-Python loops also have something like $\color{FEC260}for→else$ and $\color{FEC260}while→else$ which is executed when the loop is finished without a `break` statement.
+Python loops also have something like $for → else$ and $while → else$ which is executed when the loop is finished without a `break` statement.
+
+````python
+# for else
+for i in range(1, 6):
+    if i == 7:
+        break
+else:
+    print("Loop completed without a break")
+# Output: Loop completed without a break
+
+# while else
+i = 1
+while i <= 5:
+    if i == 7:
+        break
+    i += 1
+else:
+    print("Loop completed without a break")
+# Output: Loop completed without a break
+````
 
 ## Functions
 
-Like other programming languages, Python also supports functions. A function is a block of code that only runs when it is called. We use the `def` keyword to define functions in Python.
+A function is a reusable block of code designed to perform a specific task. Functions allow modularity, code reuse, and better organization of programs. In Python, functions are defined using the `def` keyword.
 
-- In python all the function calls resides inside the stack memory. For storing all the objects, we have the heap memory. Heap is larger in size than the stack. The actual data is stored inside heap while stack stores the references. 
+````python
+def function_name(parameters):
+    # Function body
+    return value
+````
 
-- Python functions can return multiple values. It is done by returning a tuple.
+### Properties of Functions in python
 
-- A `parameter` is a variable in a method definition. When a method is called, the `arguments` are the data you pass into the method's parameters.
+1. **Stack and Heap Memory**:
 
-**[Functions Notebook](./Notebooks/8_Functions.ipynb)**
+- Function calls reside in **stack memory** (LIFO structure), which stores execution contexts and local variables.
+
+- **Heap memory** is used to store objects and data. While the stack contains references, the actual objects are stored in the heap.
+
+2. **Return Multiple Values**:
+
+Python functions can return multiple values using a tuple.
+
+````python
+def calculate(a, b):
+    return a + b, a - b
+
+sum_result, diff_result = calculate(10, 5)
+print(sum_result)  # Output: 15
+print(diff_result) # Output: 5
+````
+
+3. **Parameters and Arguments**:
+
+- **Parameter**: A variable defined in the function declaration.
+
+- **Argument**: The actual value passed to the function when it is called.
+
+```python
+def add(a, b):  # 'a' and 'b' are parameters
+    return a + b
+
+print(add(5, 10))  # '5' and '10' are arguments
+```
+
+4. **Default Parameters**:
+
+Functions can have default values for parameters.
+
+```python
+def greet(name="Guest"):
+    return f"Hello, {name}!"
+
+print(greet())          # Output: Hello, Guest!
+print(greet("Alice"))   # Output: Hello, Alice!
+```
+
+5. **Variable-length Arguments**:
+
+- ***args**: Allows passing a variable number of positional arguments.
+
+- ****kwargs**: Allows passing a variable number of keyword arguments.
+
+```python
+def sum_numbers(*args):
+    return sum(args)
+
+print(sum_numbers(1, 2, 3, 4))  # Output: 10
+
+def display_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+display_info(name="Alice", age=25)
+# Output:
+# name: Alice
+# age: 25
+```
+
+**For further exploration, refer to the [_Function Notebook_](./Notebooks/8_Functions.ipynb)**
 
 ### Lambda Functions
 
-Lambda functions are small anonymous functions. They can have any number of arguments but only one expression. The expression is evaluated and returned. Lambda functions can be used wherever function objects are required.
+Lambda functions are small, anonymous functions defined using the `lambda` keyword. They are limited to a single expression and are often used for short-term tasks.
 
+```python
+lambda arguments: expression
+```
+Lambda functions are particularly useful with higher-order functions like `map()`, `filter()`, and `reduce()`.
+
+```python
+nums = [1, 2, 3, 4]
+squared = list(map(lambda x: x ** 2, nums))
+print(squared)  # Output: [1, 4, 9, 16]
+```
 ## String
 
 Strings in Python are immutable sequences of Unicode code-points/ arrays or bytes representing unicode characters. Strings are ordered, indexed, and can contain duplicate elements. They are also iterable. We can slice and use the membership operator in strings.
