@@ -2,11 +2,7 @@
 
 <p align="center">
     <a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Logo" height=420></a>
-</p>
 
-#### Jupyter notebooks, Python scripts, datasets, and notes compiled during my learning journey.
-
-## Contents
 
 | sl.no | Topics                              |                               Link                                |
 | :---: | :---------------------------------- | :---------------------------------------------------------------: |
@@ -27,8 +23,10 @@
 |  15   | Data Engineering| [Here](15.%20Data%20Engineering/Readme.md)                             |
 |  16   | Case Studies | [Here](./16.%20Case%20Studies/Readme.md)                                                  |
 
+</p>
+
 ---
 
-#### _Given GitHub's limitations in rendering LaTeX mathematical equations, the best way to view the content is by accessing the Markdown files locally on your machine._
+#### _Given GitHub's limitations in rendering certain mathematical equations (LaTeX), the best way to view the content is by previewing it in VS Code._
 
-**[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project Style guide](Style_Guide.md)**
+**[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project style guide](Style_Guide.md)**
