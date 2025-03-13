@@ -19,8 +19,8 @@
 |  11   | [Computer Vision](./11.%20Computer%20Vision/Readme.md)                                           |
 |  12   | [Natural Language Processing](./12.%20Natural%20Language%20Processing/Readme.md)                 |
 |  13   | [Machine Learning Operations](13.%20Machine%20Learning%20Operations/Readme.md)                   |
-|  14   | [Data Engineering](15.%20Data%20Engineering/Readme.md)                                           |
-|  15   | [System Designing](14.%20System%20Designing/Readme.md)                                           |
+|  14   | [Data Engineering](14.%20Data%20Engineering/Readme.md)                                           |
+|  15   | [System Designing](15.%20System%20Designing/Readme.md)                                           |
 |  16   | [Case Studies & Projects](./16.%20Case%20Studies/Readme.md)                                      |
 
 
