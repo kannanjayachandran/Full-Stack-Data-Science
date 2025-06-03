@@ -1,29 +1,33 @@
-<h1 align="center" > Computer Science Fundamentals for Data Science </h1>
+<h1 align="center"> Computer Science Fundamentals </h1>
 
-<div align="center">
+Computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating `0`s and `1`s.
 
-![Cover image](./img/Cover.png)
+**[Computer science](https://en.wikipedia.org/wiki/Computer_science)** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_.
 
-</div>
+## [Boolean Logic](https://en.wikipedia.org/wiki/Boolean_algebra)
 
-Computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating 0s and 1s. Before going into the details of how computers do all these feats, let's clear up some basic terms.
+Boolean logic is a form of algebra in which all values are either `true` or `false`. It is the basis for computer logic and programming. The fundamental operations in boolean logic are:
 
-- **[Computer science](https://en.wikipedia.org/wiki/Computer_science)** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_. 
+- **AND**: True if both operands are true.
+- **OR**: True if at least one operand is true.
+- **NOT**: Inverts the value of the operand (true becomes false, and vice versa).
+- **XOR**: True if exactly one operand is true.
+- **NAND**: True if at least one operand is false (NOT AND).
+- **NOR**: True if both operands are false (NOT OR).
+- **XNOR**: True if both operands are the same (NOT XOR).
 
-- **[Data Science](https://en.wikipedia.org/wiki/Data_science)** is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.
+## [The Computer Architecture](https://en.wikipedia.org/wiki/Computer_architecture)
 
-## [Computer Architecture](https://en.wikipedia.org/wiki/Computer_architecture)
+The basic components of a computer are the `CPU`, `memory`, and `I/O devices`.
 
-Let us first look at the basic components of a computer system and how they work together to process data and execute instructions. A typical computer system is made up of several key components, each playing an essential role in how the system functions:
+1. **Central Processing Unit (CPU)**: Execute instructions and performing calculations.
 
-1. **Central Processing Unit (CPU)**: Responsible for executing instructions and performing calculations to process data.
-
-2. **Memory**: How we store data.
+2. **Memory**: Stores data.
     - **Primary storage** (RAM): Stores data and instructions that the CPU needs immediately, ensuring fast access.
 
     - **Secondary storage**: Includes devices like hard drives (HDDs) and solid-state drives (SSDs) for long-term data storage.
 
-3. **Input/Output (I/O) devices**: These devices connect the computer to the outside world, enabling interaction. Examples include keyboards, mice, monitors, and network cards.
+3. **Input/Output (I/O) devices**: Allow the computer to interact with the outside world, enabling input and output operations. Examples include keyboards, mice, monitors, and network cards.
 
 <div align="center">
 
@@ -33,7 +37,19 @@ Let us first look at the basic components of a computer system and how they work
 
 ### [CPU (Central Processing Unit)](https://en.wikipedia.org/wiki/Central_processing_unit)
 
-CPU is a complex [integrated circuit](https://en.wikipedia.org/wiki/Integrated_circuit) (IC) or die that contains multiple components working together to execute instructions and process data. These components include _processor cores_, a _memory controller_, a _graphics processor_, _arithmetic logic units_ (ALUs), f_loating-point units_ (FPUs), _cache memory_, and several other critical subsystems.
+CPU is a complex [integrated circuit](https://en.wikipedia.org/wiki/Integrated_circuit) (IC) or die that contains multiple components working together to execute instructions and process data. The CPU contains 3 important components:
+
+1. **Control Unit (CU)**: Directs the operation of the processor and coordinates the activities of all other components.
+
+2. **Arithmetic Logic Unit (ALU)**: Performs arithmetic and logical operations on data.
+
+    - **Arithmetic Operations**: Addition, subtraction, multiplication, and division.
+
+    - **Logical Operations**: AND, OR, NOT, XOR, etc.
+
+3. **Memory Unit or Registers**: Temporary storage locations within the CPU that hold data and instructions during processing.
+
+CPU also contains a _graphics processor_, _floating-point units_ (FPUs), _cache memory_, and several other critical subsystems.
 
 **[CPU Cores](https://en.wikipedia.org/wiki/Central_processing_unit)**: Modern CPUs consist of multiple cores, each capable of independently executing instructions. This parallelism enables higher performance in multitasking and computational workloads. Additionally, many CPUs support simultaneous multithreading (SMT) or hyper-threading (Intel-specific), allowing each core to handle multiple threads concurrently. 
 
@@ -139,9 +155,9 @@ Computers represent all information as `binary data`, a sequence of **0s** and *
 
 A single byte can represent up to **256 combinations** ($2^8$), making it capable of storing numbers, characters, and other basic data types.
 
----
+<details><summary>
 
-### Simple Python Program Execution
+### Python Program Execution</summary>
 
 We will explore [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) language in detail in upcoming sections, but for now, let's see how a simple python program gets executed in a computer.
 
@@ -208,7 +224,7 @@ Instructions are retired in the correct program order to maintain logical flow.
 1. **Output to Console**:
 The result (8) is sent to the console via system calls, which interact with the operating system to display the output.
 
----
+</details>
 
 Other Core CS Concepts are covered in the following sections:
 
