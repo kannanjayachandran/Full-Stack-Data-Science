@@ -1,6 +1,6 @@
 <h1 align="center">Full Stack Data Science</h1>
 
-<p align="center"><a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Main Logo" height=410></a>
+<p align="center"><a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Main Logo" height=310></a>
 
 
 
@@ -26,8 +26,8 @@
 
 </p>
 
----
+> #### _Given GitHub's limitations in rendering certain mathematical equations (LaTeX), the best way to view the content is by previewing it in any IDE with markdown preview functionality._
 
-#### _Given GitHub's limitations in rendering certain mathematical equations (LaTeX), the best way to view the content is by previewing it in VS Code._
+---
 
 **[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project style guide](Style_Guide.md)**
