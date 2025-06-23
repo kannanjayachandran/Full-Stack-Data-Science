@@ -25,7 +25,7 @@ The basic components of a computer are the `CPU`, `memory`, and `I/O devices`.
 2. **Memory**: Stores data.
     - **Primary storage** (RAM): Stores data and instructions that the CPU needs immediately, ensuring fast access.
 
-    - **Secondary storage**: Includes devices like hard drives (HDDs) and solid-state drives (SSDs) for long-term data storage.
+    - **Secondary storage**: Includes devices like hard drives (HDDs) and solid-state drives (SSDs) for persistent data storage.
 
 3. **Input/Output (I/O) devices**: Allow the computer to interact with the outside world, enabling input and output operations. Examples include keyboards, mice, monitors, and network cards.
 
@@ -92,30 +92,19 @@ The following is a labelled die shot of `13-th gen Intel Core i9 processor` (Rap
 
 - > The above `13-th gen Intel i9` CPU has 24 cores and 48 threads.
 
-- > Inside every CPU core we can find a layout of around 44,000 transistors physically executing 32-bit instructions, with a grand total of around 26 Million! transistors in the entire processor.
-
-### The Machine Cycle
-
-The CPU operates through repeated machine cycles, which consist of:
-
-- **Fetch**: Retrieving instructions or data.
-
-- **Decode**: Translating instructions into executable operations.
-
-- **Execute**: Performing the required operation.
-
-- **Store**: Writing results back to memory.
-
-<div align="center">
-
-![Machine Cycle](./img/machine_cycle.png)
-
-</div>
-
+- > Inside this CPU core we can find a layout of around 44,000 transistors physically executing 32-bit instructions, with a grand total of around 26 Million! transistors in the entire processor.
 
 ### Memory
 
 > How we store data.
+
+Computers represent all information as `binary data`, a sequence of **0s** and **1s** called **bits**.
+
+- **1 bit**: The smallest unit of data in a computer, representing two possible states (0 or 1).
+
+- **8 bits**: Equal to _1 byte_, the fundamental unit of storage in most computer systems.
+
+- A single byte can represent up to **256** unique binary patterns or states ($2^8$), making it capable of storing numbers, characters, and other basic data types.
 
 To efficiently manage data access and processing, computer systems employ a hierarchy of memory. Each level of the hierarchy balances **speed**, **capacity**, and **cost**:
 
@@ -139,94 +128,33 @@ Computer memory is divided into cells, with each cell typically holding 1 byte o
 
 - **Low-Order End**: The rightmost side, containing the least significant bit (`LSB`).
 
-For example, in a byte represented as `10110011`:
+For example, in a byte represented as `10110010`:
 
 - High-Order Bit: 1 (leftmost).
 
-- Low-Order Bit: 1 (rightmost).
+- Low-Order Bit: 0 (rightmost).
 
-**Information Representation in Computers**
+### The Machine Cycle
 
-Computers represent all information as `binary data`, a sequence of **0s** and **1s** called **bits**.
+The CPU operates through repeated machine cycles, which consist of:
 
-- **1 bit**: The smallest unit of data in a computer, representing two possible states (0 or 1).
+- **Fetch**: Retrieving instructions or data.
 
-- **8 bits**: Equal to _1 byte_, the fundamental unit of storage in most computer systems.
+- **Decode**: Translating instructions into executable operations.
 
-A single byte can represent up to **256 combinations** ($2^8$), making it capable of storing numbers, characters, and other basic data types.
+- **Execute**: Performing the required operation.
 
-<details><summary>
+- **Store**: Writing results back to memory.
 
-### Python Program Execution</summary>
+<div align="center">
 
-We will explore [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) language in detail in upcoming sections, but for now, let's see how a simple python program gets executed in a computer.
+![Machine Cycle](./img/machine_cycle.png)
 
-*Consider the following python code that adds two numbers*:
+</div>
 
-```python
-a = 5
-b = 10
+---
 
-c = a + b
-print(c)
-
-# 5 + 10 = 15
-```
-
-When we run this code, the following steps occur:
-
-- **Source Code**: The code is written in a high-level language (Python), probably using a text editor or an [Integrated Development Environment](https://en.wikipedia.org/wiki/Integrated_development_environment) (IDE).
-
-- **Python source code execution**: We can execute the code using the Python interpreter, which converts the high-level code into machine code. In the terminal or command prompt, we can run the code using the following command `python filename.py`
-
-- **Compilation**: Python is an [interpreted](https://en.wikipedia.org/wiki/Interpreter_(computing)) language, meaning it is executed line by line. The Python interpreter reads the code, converts it into machine code, and executes it.
-
-    - **[Lexical Analysis](https://en.wikipedia.org/wiki/Lexical_analysis) (Tokenization)**: The Python interpreter reads the source code and breaks it into tokens (keywords, operators, and identifiers).
-
-    - **[Parsing](https://en.wikipedia.org/wiki/Parsing) & [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) Generation**: The interpreter checks the syntax of the code to ensure it follows the rules of the Python language. It is done by parsing the tokens to generate the _Abstract Syntax Tree (AST)_, a tree-like representation of the code structure.
-
-    - **Bytecode Compilation**: The AST is compiled into Python bytecode, a platform-independent intermediate representation.
-
-    - **Execution by Python Virtual Machine (PVM):** The PVM executes the bytecode instruction by instruction. Each bytecode instruction follows a fetch-decode-execute cycle:
-
-        - **Fetch**: Retrieves the next instruction.
-
-        - **Decode**: Translates the instruction into an operation.
-
-        - **Execute**: Performs the operation using a stack-based virtual machine.
-
-- **CPU Execution**:
-
-1. **Instruction Fetch**:
-The CPU fetches the bytecode instructions from memory.
-
-1. **Instruction Decode**:
-The decode unit translates the bytecode into micro-operations (`μOps`), which the CPU can execute.
-
-1. **Out-of-Order Execution**:
-The CPU executes instructions as resources become available, rather than strictly following their order in the program.
-
-1. **Loading Data into Registers**:
-The integer values (a = 5 and b = 3) are loaded into CPU registers for fast access.
-
-1. **Performing the Addition**:
-The Integer Execution Unit performs the addition (a + b) using the loaded values.
-
-1. **Cache Access**:
-The CPU may access L1/L2 caches to fetch operands or store results, reducing latency compared to accessing main memory.
-
-1. **Storing the Result**:
-The result (c = 8) is written back to memory.
-
-1. **Instruction Retirement**:
-Instructions are retired in the correct program order to maintain logical flow.
-
-1. **Output to Console**:
-The result (8) is sent to the console via system calls, which interact with the operating system to display the output.
-
-</details>
-
-Other Core CS Concepts are covered in the following sections:
+### Other Core CS Concepts
 
 - [Theoretical Computer Science](./Theoretical_Computer_Science.md)
 
