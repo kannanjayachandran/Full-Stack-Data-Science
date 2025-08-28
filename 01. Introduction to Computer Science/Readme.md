@@ -1,33 +1,45 @@
 <h1 align="center"> Computer Science Fundamentals </h1>
 
-Computers were built to solve arithmetic problems, but they have since evolved to run the internet, play video games, create artificial brains, and simulate the universe. At the core, all computations boil down to manipulating `0`s and `1`s.
+Computers were originally built to solve arithmetic problems. Over time, they have evolved to power the internet, create artificial intelligence, run video games, and even simulate the universe. At their core, however, all computations reduce to manipulating **0s and 1s**.
 
-**[Computer science](https://en.wikipedia.org/wiki/Computer_science)** is the study of computers and computational systems. It is a broad field which includes everything from the _algorithms_ that make up _software_ to how software interacts with _hardware_.
+**[Computer science](https://en.wikipedia.org/wiki/Computer_science)** is the study of computers and computational systems. It is a broad discipline covering everything from the _algorithms_ that form _software_ to the ways in which software interacts with _hardware_.
+
+---
 
 ## [Boolean Logic](https://en.wikipedia.org/wiki/Boolean_algebra)
 
-Boolean logic is a form of algebra in which all values are either `true` or `false`. It is the basis for computer logic and programming. The fundamental operations in boolean logic are:
+Boolean logic is a form of algebra where values are either `true` or `false`. It is the foundation of digital circuits, programming, and computer reasoning. The main operations are:
 
-- **AND**: True if both operands are true.
-- **OR**: True if at least one operand is true.
-- **NOT**: Inverts the value of the operand (true becomes false, and vice versa).
-- **XOR**: True if exactly one operand is true.
-- **NAND**: True if at least one operand is false (NOT AND).
-- **NOR**: True if both operands are false (NOT OR).
-- **XNOR**: True if both operands are the same (NOT XOR).
+- **AND**: True only if both inputs are true.
+ 
+- **OR**: True if at least one input is true.
+ 
+- **NOT**: Inverts the input (true becomes false, and vice versa).
+ 
+- **XOR (Exclusive OR)**: True if exactly one input is true.
+ 
+- **NAND (NOT AND)**: True unless both inputs are true.
+ 
+- **NOR (NOT OR)**: True only if both inputs are false.
 
-## [The Computer Architecture](https://en.wikipedia.org/wiki/Computer_architecture)
+- **XNOR (Equivalence)**: True if both inputs are the same.
 
-The basic components of a computer are the `CPU`, `memory`, and `I/O devices`.
+> Boolean logic forms the basis of all digital circuits and programming decisions.
 
-1. **Central Processing Unit (CPU)**: Execute instructions and performing calculations.
+---
 
-2. **Memory**: Stores data.
-    - **Primary storage** (RAM): Stores data and instructions that the CPU needs immediately, ensuring fast access.
+## [Computer Architecture](https://en.wikipedia.org/wiki/Computer_architecture)
 
-    - **Secondary storage**: Includes devices like hard drives (HDDs) and solid-state drives (SSDs) for persistent data storage.
+A computer consists of three fundamental parts:
 
-3. **Input/Output (I/O) devices**: Allow the computer to interact with the outside world, enabling input and output operations. Examples include keyboards, mice, monitors, and network cards.
+1. **Central Processing Unit (CPU)** – Executes instructions and performs calculations.
+
+2. **Memory** – Stores instructions and data.  
+   - **Primary memory (RAM)**: Fast, volatile storage for data needed immediately.
+
+   - **Secondary storage**: Persistent storage such as SSDs or HDDs.
+    
+3. **Input/Output (I/O) Devices** – Allow interaction with the outside world (e.g., keyboards, monitors, network cards). 
 
 <div align="center">
 
@@ -35,116 +47,117 @@ The basic components of a computer are the `CPU`, `memory`, and `I/O devices`.
 
 </div>
 
+---
+
 ### [CPU (Central Processing Unit)](https://en.wikipedia.org/wiki/Central_processing_unit)
 
-CPU is a complex [integrated circuit](https://en.wikipedia.org/wiki/Integrated_circuit) (IC) or die that contains multiple components working together to execute instructions and process data. The CPU contains 3 important components:
+The CPU is an [integrated circuit](https://en.wikipedia.org/wiki/Integrated_circuit) that contains multiple subsystems for executing instructions. Its three key components are:
 
-1. **Control Unit (CU)**: Directs the operation of the processor and coordinates the activities of all other components.
+1. **Control Unit (CU)** – Directs and coordinates the activities of the processor.
 
-2. **Arithmetic Logic Unit (ALU)**: Performs arithmetic and logical operations on data.
+2. **Arithmetic Logic Unit (ALU)** – Performs arithmetic (add, subtract, multiply, divide) and logical operations (AND, OR, NOT, etc.).
 
-    - **Arithmetic Operations**: Addition, subtraction, multiplication, and division.
+3. **Registers** – Very small, fast storage locations that temporarily hold data and instructions.  
 
-    - **Logical Operations**: AND, OR, NOT, XOR, etc.
+Modern CPUs also include specialized subsystems such as floating-point units (FPUs), cache memory, and integrated graphics.
 
-3. **Memory Unit or Registers**: Temporary storage locations within the CPU that hold data and instructions during processing.
+#### CPU Cores
 
-CPU also contains a _graphics processor_, _floating-point units_ (FPUs), _cache memory_, and several other critical subsystems.
+Modern CPUs are made of multiple **cores**, each capable of independently executing instructions. This enables **parallelism**, improving multitasking and performance. Many CPUs also support **simultaneous multithreading (SMT)** or **hyper-threading (Intel-specific)**, allowing each core to handle multiple threads.
 
-**[CPU Cores](https://en.wikipedia.org/wiki/Central_processing_unit)**: Modern CPUs consist of multiple cores, each capable of independently executing instructions. This parallelism enables higher performance in multitasking and computational workloads. Additionally, many CPUs support simultaneous multithreading (SMT) or hyper-threading (Intel-specific), allowing each core to handle multiple threads concurrently. 
+Key parts of a CPU core include:
 
-- **Key Components of a CPU Core**
+- **Floating Point Unit (FPU)** – Handles floating-point arithmetic for scientific and graphical workloads.
 
-    - **Floating Point Unit** (FPU): Handles floating-point arithmetic, essential for scientific calculations, graphics processing, and other computationally intensive tasks.
+- **Integer Execution Units** – Perform arithmetic and logical operations on integers.
 
-    - **Integer Execution Units**: Perform basic arithmetic and logical operations on integers, crucial for general-purpose computing.
-    
-    - **Out of order scheduler and Retirement unit**: This scheduler allows instructions to execute out of their program order, maximizing resource utilization.
-    Once the instruction are executed out of order; the retirement unit ensures instructions are completed in the correct order to maintain program integrity.
-    
-    - **Decode Unit**: Converts high-level instructions fetched from memory into low-level micro-operations that can be executed by the CPU.
+- **Decode Unit** – Translates high-level instructions into lower-level micro-operations.
 
-    - **Registers**: Small, fast storage locations within the CPU used to store data temporarily during execution. 
-        - **Integer Registers**: Store integer data and memory addresses.
-        - **Floating Point** Registers: Store floating-point data for arithmetic operations.
+- **Out-of-Order Execution & Retirement Units** – Allow instructions to execute out of order to maximize performance, but ensure results are committed in the correct order.
 
-    - **Cache Memory**: Multi-level cache systems are used to speed up data access for the CPU.
+- **Registers** – Fast storage for integers, addresses, and floating-point data.  
 
-        - **L1 Cache**: Smallest and fastest, located directly on the core.
+- **Cache Memory** – Multi-level system to speed up data access:  
+  - **L1 Cache**: Smallest, fastest, located within the core. 
 
-        - **L2 Cache**: Larger and slightly slower, shared among a subset of cores.
+  - **L2 Cache**: Larger, slower, often shared by a few cores.  
 
-        - **L3 Cache**: Largest and slowest, shared across all cores in the CPU. 
+  - **L3 Cache**: Largest, slower, shared across the CPU.  
 
-**Additional Subsystems in a CPU**
+Other subsystems include:
 
-- **Memory Controller**: Manages data flow between the CPU and RAM, ensuring efficient access to memory.
+- **Memory Controller** – Manages communication with RAM.
 
-- **Graphics Processor**: Integrated graphics processors (iGPUs) handle basic graphical tasks, reducing the need for a dedicated GPU in some systems.
+- **Integrated Graphics (iGPU)** – Handles basic graphics tasks. 
+ 
+- **Interconnects** – Enable communication between cores, caches, and memory.
 
-- **Interconnects**: Facilitate communication between cores, cache, memory, and other components.
-
-The following is a labelled die shot of `13-th gen Intel Core i9 processor` (Raptor Lake) with 24 cores.
+<div align="center">
 
 ![Die shot of a chip](./img/die_shot.png)
 
-> Image Courtesy : [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/a/a4/Intel_Core_i9-13900K_Labelled_Die_Shot.jpg)
+</div>
 
-- > The above `13-th gen Intel i9` CPU has 24 cores and 48 threads.
 
-- > Inside this CPU core we can find a layout of around 44,000 transistors physically executing 32-bit instructions, with a grand total of around 26 Million! transistors in the entire processor.
+> *Above: A labeled die shot of Intel’s 13th Gen Core i9 (Raptor Lake) processor with 24 cores and 32 threads.* 
+
+- Modern CPUs contain **tens of billions of transistors**, each helping execute 64-bit instructions at incredible speeds.
+
+---
 
 ### Memory
 
-> How we store data.
+All computer data is represented as **binary** (0s and 1s), called **bits**.  
 
-Computers represent all information as `binary data`, a sequence of **0s** and **1s** called **bits**.
+- **1 bit** → smallest unit of data (0 or 1).
 
-- **1 bit**: The smallest unit of data in a computer, representing two possible states (0 or 1).
+- **8 bits = 1 byte** → stores one character or up to 256 unique values ($2^8$ or 256 unique binary patterns).
 
-- **8 bits**: Equal to _1 byte_, the fundamental unit of storage in most computer systems.
+#### Memory Hierarchy
 
-- A single byte can represent up to **256** unique binary patterns or states ($2^8$), making it capable of storing numbers, characters, and other basic data types.
+Memory is organized into a hierarchy balancing **speed, size, and cost**:
 
-To efficiently manage data access and processing, computer systems employ a hierarchy of memory. Each level of the hierarchy balances **speed**, **capacity**, and **cost**:
+<div align="center">
 
-<p align="center"><img src="./img/Memory_hierarchy.png" alt="Machine Cycle" height=390></p>
+![Machine Cycle](./img/Memory_hierarchy.png)
 
-- **Registers**: The fastest and smallest memory units, located within the CPU. Registers store data temporarily
+</div>
 
-- **CPU Cache**: Extremely fast but small and expensive memory located close to the CPU.
+- **Registers** → Fastest, smallest (inside CPU).
 
-- **RAM** (Main Memory): Moderately fast and larger than cache, but more affordable.
+- **CPU Cache** → Extremely fast, but small and expensive.
 
-- **Secondary Storage**: Large-capacity, slower memory such as Hard Disk Drives (HDDs) and Solid-State Drives (SSDs).
+- **RAM (Main Memory)** → Larger and moderately fast, but volatile.
 
-**Memory Organization**
+- **Secondary Storage** → Massive, persistent, but much slower (SSD/HDD).
 
-Computer memory is divided into cells, with each cell typically holding 1 byte of data. While memory has no physical orientation, it is often visualized linearly for clarity:
+#### Memory Organization
+
+Computer memory is divided into **cells**, usually 1 byte each. Memory is often visualized linearly:
 
 ![Computer Memory](./img/computer_memory_diagram.png)
 
-- **High-Order End**: The leftmost side, containing the most significant bit (`MSB`).
+- **High-Order End (MSB)**: Leftmost, most significant bit.
+  
+- **Low-Order End (LSB)**: Rightmost, least significant bit.  
 
-- **Low-Order End**: The rightmost side, containing the least significant bit (`LSB`).
+Example: `10110010`  
+- MSB = `1`  
+- LSB = `0`  
 
-For example, in a byte represented as `10110010`:
-
-- High-Order Bit: 1 (leftmost).
-
-- Low-Order Bit: 0 (rightmost).
+---
 
 ### The Machine Cycle
 
-The CPU operates through repeated machine cycles, which consist of:
+The CPU processes instructions in a continuous **machine cycle**:
 
-- **Fetch**: Retrieving instructions or data.
+1. **Fetch** – Retrieve an instruction from memory.  
 
-- **Decode**: Translating instructions into executable operations.
+2. **Decode** – Translate it into operations the CPU can understand.
 
-- **Execute**: Performing the required operation.
-
-- **Store**: Writing results back to memory.
+3. **Execute** – Perform the required calculation or action.
+  
+4. **Store** – Write the result back to memory or a register.  
 
 <div align="center">
 
@@ -154,7 +167,7 @@ The CPU operates through repeated machine cycles, which consist of:
 
 ---
 
-### Other Core CS Concepts
+### Related Topics
 
 - [Theoretical Computer Science](./Theoretical_Computer_Science.md)
 
@@ -167,3 +180,5 @@ The CPU operates through repeated machine cycles, which consist of:
 - [Data structures and algorithms](../03.%20Data%20Structures%20and%20Algorithms/Readme.md)
 
 - [Databases](../04.%20Database%20Systems/Readme.md)
+
+---
