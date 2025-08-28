@@ -1,8 +1,11 @@
-<h1 align="center">Full Stack Data Science</h1>
+<div align="center">
 
-<p align="center"><a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Main Logo" height=310></a>
+# Full Stack Data Science
 
+<a href="https://github.com/kannanjayachandran/Full-Stack-Data-Science"><img src="Logo.png" alt="Main Logo" height=310>
+</a>
 
+</div>
 
 | #     | Topics                                                                                           |
 | :---: | :------------------------------------------------------------------------------------------------| 
@@ -23,11 +26,10 @@
 |  15   | [System Designing](15.%20System%20Designing/Readme.md)                                           |
 |  16   | [Case Studies & Projects](./16.%20Case%20Studies/Readme.md)                                      |
 
-
 </p>
 
 > #### _Given GitHub's limitations in rendering certain mathematical equations (LaTeX), the best way to view the content is by previewing it in any IDE with markdown preview functionality._
 
 ---
 
-**[License](LICENSE) | [Resources](Resources.md) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |[Project style guide](Style_Guide.md)**
+**[License](LICENSE) | [Code of conduct](CODE_OF_CONDUCT.md) | [Contribution guidelines](CONTRIBUTING.md) |**
