@@ -121,7 +121,7 @@ A **program** is code on disk. A **process** is an **active program in execution
 
 - **Heap** - dynamically allocated memory
 
-![Process](./img/process_img.png)
+![Process](./img/Process_img.png)
 
 - **Program Counter (PC/IP)**: address of next instruction. 
 
