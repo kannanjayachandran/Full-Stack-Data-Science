@@ -141,7 +141,7 @@ A **program** is code on disk. A **process** is an **active program in execution
 
 > Suspended processes are swapped to secondary storage (Linux: **swap space**; Windows: **pagefile**).
 
-![7 - State model image](./img/7_state_model.png)
+![7 - State model image](./img/Seven_state_model.png)
 
 ### Process Control Block (PCB)
 
@@ -169,18 +169,36 @@ PCB is stored in protected kernel memory; essential for scheduling and context s
 
 ## Threads
 
-A **thread** is the smallest schedulable unit of execution within a process. Threads share the **process address space** but have their own **program counter**, **registers**, and **stack space**.  
+A **thread** is the smallest schedulable unit of execution within a process. Threads within a process share:
 
-- Benefits of threads are concurrency, responsiveness, and resource sharing
+- **process address space** (_code_, _data_, _heap_), file descriptors and signal handlers
 
-- Context switching between threads are faster than processes
+Each thread has its own:
+- **program counter**, **register set**, and **stack**
 
-- There is no memory isolation between threads, so we need to do synchronize them
+### Benefits of Threading
+
+- **Responsiveness:** UI remains interactive while background tasks run
+
+- **Resource Sharing:** Threads share memory, reducing overhead
+
+- **Parallelism:** True concurrency on multi-core systems
+
+- **Fast Context Switching:** No address space switching needed
 
 ### Types of Threads
 
-- **User-level threads (ULTs)**: managed in user space (fast create/switch; a blocking `syscall` may block entire process). 
+- **User-level threads (ULTs)**: managed in user space by user-space thread library. They are faster to create/switch but, a blocking `syscall` may block entire process. 
 
-- **Kernel-level threads (KLTs)**: managed by kernel (true parallelism on multi-core; slightly heavier). 
+- **Kernel-level threads (KLTs)**: managed by the OS kernel (true parallelism on multi-core), but slower due to kernel overhead. 
 
-- **M:N models**: map many ULTs onto fewer KLTs.
+- **Hybrid models**: 
+  - many-to-one: map many ULTs onto one KLT.
+ 
+  - many-to-many: Multiple ULTs mapped to multiple KLTs.
+
+  - One-to-One: Each ULT mapped to one KLT
+
+  ## CPU Scheduling
+
+  CPU scheduling is the process by which the operating system decides which process or thread gets to use the CPU at any given time. The goal of CPU scheduling is to maximize CPU utilization, ensure fairness among processes, and provide a responsive user experience.
