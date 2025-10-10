@@ -1,174 +1,312 @@
-<h1 align="center" > Computer Network </h1>
+<h1 align="center">Computer Networking</h1>
 
-<div align=center>
+A **computer network** is a system of interconnected devices (computers, servers, IoT devices, etc.) that communicate and share resources such as *files*, *printers*, *storage*, and *internet connections*. Devices can be connected using **wired** (Ethernet, fiber) or **wireless** (Wi-Fi, Bluetooth, cellular) communication channels.
 
-![Computer Network Cover photo](./img/cn_cover.png)
+Networking involves **hardware**, **software**, and **protocols** that define how data is transmitted, routed, and received between devices.
 
-</div>
-
-Computer network consists of two or more computers that are linked together in order to share resources (Printers, CD's, Exchange files, electronic communication). The computers on a network may be linked through cables, telephone lines, radio waves, satellites, or infrared light beams. Computer networking includes the physical devices, software, and protocols that allow the devices to communicate with each other. 
+---
 
 ## Types of Networks
 
-- **LAN (Local Area Network)**: Covers a small geographic area, like a home or office.
+- **LAN (Local Area Network)**: Small area network, such as a home, school, or office. Typically offers high-speed connections and is owned by a single organization.
 
-- **WAN (Wide Area Network)**: Covers a large geographic area, such as a country or continent. The internet is the largest WAN.
+- **WAN (Wide Area Network)**: Covers large geographical areas. The **Internet** is the largest WAN. Organizations often lease WAN connections from service providers.
 
-- **MAN (Metropolitan Area Network)**: Covers a city or a large campus.
+- **MAN (Metropolitan Area Network)**: Connects multiple LANs within a city or large campus.
 
-- **PAN (Personal Area Network)**: Covers a very small area, typically around an 
-individual (e.g., Bluetooth connections).
+- **PAN (Personal Area Network)**: Very small network around a single person (e.g., Bluetooth, hotspot).
+
+---
 
 ## Network Topologies
 
-Topologies refer to the physical and logical arrangement of devices in a network. 
-
-<div align=center>
+Topology defines the **layout** or **structure** of how devices (nodes) are connected (physical and logical arrangement of devices in a network).
 
 ![Network Topologies](./img/Network_topologies.png)
 
-</div>
+- **Bus Topology**: All devices share a single communication line (backbone). Cheap & simple but prone to data collisions. If the main cable fails, the entire network goes down.
 
-- **Bus Topology**: All devices share a single communication line. It’s simple but can lead to collisions.
+- **Star Topology**: Each device connects to a central hub/switch. Easy to troubleshoot and add devices, reliable, but the hub is a single point of failure.
 
-- **Star Topology**: Devices are connected to a central hub. If the hub fails, the entire network goes down.
+- **Ring Topology**: Devices connected in a loop; data travels in one direction (or both in dual-ring). Failure of a single device can disrupt the entire network.
 
-- **Ring Topology**: Devices are connected in a circular fashion. Data travels in one direction.
+- **Mesh Topology**: Every device connects to every other device. High redundancy, expensive to scale and complex.
 
-- **Mesh Topology**: Every device is connected to every other device. It provides high redundancy.
+- **Hybrid Topology**: Combination of two or more topologies (common in modern networks).
 
-- **Hybrid Topology**: A combination of two or more topologies.
+---
 
-## Network Protocols
+## 🌐 Network Protocols
 
-- **TCP/IP (Transmission Control Protocol/Internet Protocol)**: The foundational, connection-oriented protocol suite for the internet.  It is used for applications where data integrity is critical, like web browsing and email.
-    - **TCP**: Ensures reliable, ordered delivery of data.
-   
-    - **IP**: Handles addressing and routing of packets.
+Protocols are **rules and standards** that define how data is transmitted and received.
 
-- **UDP (User Datagram Protocol)**: A connection-less protocol that allows data to be sent without establishing a connection. It is used for applications where speed is more important than reliability, like streaming and gaming.
+| Protocol | Description | Use Case |
+|-----------|--------------|----------|
+| **TCP/IP** | Foundational protocol suite for the internet | General communication |
+| **TCP (Transmission Control Protocol)** | Reliable, connection-oriented, ordered delivery | Web browsing, email |
+| **UDP (User Datagram Protocol)** | Fast, connectionless, unreliable | Gaming, streaming |
+| **HTTP/HTTPS** | Transfers web content (HTTPS uses TLS for encryption) | Web communication |
+| **FTP/SFTP** | File transfer between client and server | File sharing |
+| **SMTP, POP3, IMAP** | Email sending and retrieval protocols | Email systems |
+| **DNS** | Converts domain names to IP addresses | Website access |
+| **DHCP** | Dynamically assigns IP addresses | Network configuration |
+| **ICMP/ARP** | Diagnostics and address resolution | `ping`, `traceroute` |
 
-- **HTTP/HTTPS (Hypertext Transfer Protocol/Secure)**: Used for transmitting web pages over the internet.
+### Core Transport Protocols
 
-- **FTP (File Transfer Protocol)**: Used for transferring files between a client and server.
+- **TCP (Transmission Control Protocol)**:
+  - Connection-oriented protocol ensuring reliable, ordered delivery of data
+  - Establishes a connection before data transfer (three-way handshake)
+  - Includes error checking and retransmission of lost packets
+  - Used when data integrity is critical: web browsing, email, file transfers
+  - Slower due to overhead but guarantees delivery
 
-- **DNS (Domain Name System)**: Translates domain names into IP addresses.
+- **TCP**: Ensures reliable, ordered delivery of data.
+- **IP**: Handles addressing and routing of packets.
 
-### OSI Model (Open Systems Interconnection Model)
+- **UDP (User Datagram Protocol)**: 
+  - Connection-less protocol that sends data without establishing a connection
+  - No guarantee of delivery, order, or error checking
+  - Faster and has lower latency than TCP
+  - Used when speed is more important than reliability: video streaming, online gaming, VoIP, DNS queries
+  - Lower overhead makes it suitable for real-time applications
 
-A conceptual framework used to understand network interactions in seven layers:
+### Application Layer Protocols
 
-1. **Physical Layer**: Deals with the physical connection between devices (e.g., cables, switches).
+- **HTTP (Hypertext Transfer Protocol)**: 
+  - Protocol for transmitting web pages and data over the internet
+  - Stateless protocol (each request is independent)
+  - Uses port 80 by default
+  - Methods include GET, POST, PUT, DELETE, PATCH
 
-2. **Data Link Layer**: Manages node-to-node data transfer and error detection (e.g., Ethernet, MAC addresses).
+- **HTTPS (HTTP Secure)**: 
+  - HTTP with encryption using SSL/TLS
+  - Encrypts data in transit to prevent eavesdropping
+  - Uses port 443 by default
+  - Essential for secure communication (login pages, payment transactions)
 
-3. **Network Layer**: Handles routing and forwarding of data (e.g., IP addresses, routers).
+- **FTP (File Transfer Protocol)**: 
+  - Used for transferring files between client and server
+  - Supports authentication with username/password
+  - Uses two channels: control (port 21) and data (port 20)
+  - SFTP and FTPS are secure variants
 
-4. **Transport Layer**: Ensures reliable data transfer (e.g., TCP, UDP).
+- **DNS (Domain Name System)**: 
+  - Translates human-readable domain names (www.example.com) into IP addresses (192.0.2.1)
+  - Distributed hierarchical database
+  - Uses UDP for queries (port 53) due to speed requirements
+  - Critical for internet functionality
 
-5. **Session Layer**: Manages sessions or connections between applications.
+- **SMTP (Simple Mail Transfer Protocol)**: 
+  - Protocol for sending emails between servers
+  - Uses port 25 (or 587 for submission)
+  - Push protocol (sends mail to server)
 
-6. **Presentation Layer**: Translates data between the application layer and the network (e.g., encryption, compression).
+- **POP3/IMAP (Post Office Protocol/Internet Message Access Protocol)**:
+  - POP3: Downloads emails from server to local device and typically deletes from server
+  - IMAP: Syncs emails across multiple devices, keeps messages on server
+  - IMAP is more common in modern applications
 
-7. **Application Layer**: Interfaces with the application software (e.g., HTTP, FTP).
+- **DHCP (Dynamic Host Configuration Protocol)**:
+  - Automatically assigns IP addresses to devices on a network
+  - Also provides subnet mask, default gateway, and DNS server information
+  - Simplifies network administration
 
-### TCP/IP Model
+---
 
-A simplified model thats widely used in practice, with four layers:
+## 🧱 OSI Model (Open Systems Interconnection)
+
+<!-- TODO : Add OSI model image -->
+
+A **7-layer conceptual model** for understanding how networking systems communicate. Helps in troubleshooting and understanding how different protocols interact.
+
+| Layer | Function | Examples |
+|--------|-----------|-----------|
+| 7. Application | Interfaces with applications | HTTP, FTP, SMTP |
+| 6. Presentation | Data translation, encryption, compression | SSL/TLS |
+| 5. Session | Manages sessions and connections | APIs, sockets |
+| 4. Transport | Reliable data transfer | TCP, UDP |
+| 3. Network | Routing and addressing | IP, ICMP |
+| 2. Data Link | Node-to-node transfer | Ethernet, MAC |
+| 1. Physical | Transmission media and hardware | Cables, hubs |
+
+1. **Physical Layer**: 
+   - Handles the physical connection between devices
+   - Deals with transmission of raw bits over cables, fiber optics, or wireless signals
+   - Examples: Ethernet cables, USB, Wi-Fi radio frequencies
+
+2. **Data Link Layer**: 
+   - Manages node-to-node data transfer and error detection/correction
+   - Handles MAC (Media Access Control) addresses
+   - Divided into two sublayers: LLC (Logical Link Control) and MAC
+   - Examples: Ethernet, Wi-Fi (802.11), switches, bridges
+
+3. **Network Layer**: 
+   - Handles routing and forwarding of data packets across networks
+   - Manages logical addressing (IP addresses)
+   - Determines the best path for data transmission
+   - Examples: IP, routers, ICMP
+
+4. **Transport Layer**: 
+   - Ensures reliable data transfer between end systems
+   - Handles segmentation, flow control, and error recovery
+   - Examples: TCP, UDP
+
+5. **Session Layer**: 
+   - Manages sessions or connections between applications
+   - Establishes, maintains, and terminates connections
+   - Handles synchronization and dialog control
+
+6. **Presentation Layer**: 
+   - Translates data between application and network formats
+   - Handles data encryption, decryption, compression, and encoding
+   - Ensures data is in a usable format for the application layer
+   - Examples: SSL/TLS, JPEG, ASCII
+
+7. **Application Layer**: 
+   - Interfaces directly with application software
+   - Provides network services to end-user applications
+   - Examples: HTTP, FTP, SMTP, DNS
+
+---
+
+## 🧭 TCP/IP Model
 
 ![TCP/IP model](./img/TCP_IP.png)
 
-#### Link Layer
+A **practical 4-layer model** used on the Internet:
 
-Responsible for sending data over a physical medium, such as a cable or a wireless connection.
+| Layer | Function | Example Protocols |
+|--------|-----------|------------------|
+| **Link Layer** | Physical connection and MAC addressing | Ethernet, Wi-Fi |
+| **Internet Layer** | Routing and IP addressing | IP, ICMP, ARP |
+| **Transport Layer** | End-to-end communication | TCP, UDP |
+| **Application Layer** | User-level communication | HTTP, DNS, FTP, SMTP |
 
-Some examples of Link layer protocols are Ethernet, Wi-Fi, and Bluetooth.
+### 1. Link Layer (Network Interface Layer)
 
-#### Internet Layer
+- Responsible for physical transmission of data over network hardware
+- Handles communication with the physical medium (cable or wireless)
+- Combines OSI's Physical and Data Link layers
+- Examples: Ethernet, Wi-Fi, PPP, Bluetooth
 
-Responsible for routing data across different networks to get it to the right destination.
+### 2. Internet Layer
 
-Fundamental protocol in this layer is the IP (Internet Protocol). It also has other protocols like ICMP(Internet Control Message Protocol) used by programs like `ping` to test connectivity and ARP(Address Resolution Protocol) to map IP addresses to MAC addresses.
+- Responsible for routing packets across networks to reach the destination
+- Handles logical addressing and path determination
+- **Key Protocols**:
+  - **IP (Internet Protocol)**: Core protocol for addressing and routing
+  - **ICMP (Internet Control Message Protocol)**: Used for diagnostics and error reporting (`ping`, `traceroute`)
+  - **ARP (Address Resolution Protocol)**: Maps IP addresses to MAC addresses
+  - **IGMP (Internet Group Management Protocol)**: Manages multicast group memberships
 
-#### Transport Layer 
+### 3. Transport Layer
 
-Responsible for providing reliable data transfer between two devices. It does this by breaking data into packets, sending them, and then reassembling them at the destination.
+- Provides end-to-end communication and data transfer reliability
+- Breaks data into packets, sends them, and reassembles at destination
+- **Key Protocols**:
+  - **TCP**: Reliable, connection-oriented
+  - **UDP**: Fast, connection-less
+  - **SCTP (Stream Control Transmission Protocol)**: Message-oriented, reliable, used in telephony
+  - **RTP (Real-time Transport Protocol)**: For audio/video streaming
 
-Most commonly used transport layer protocols are TCP(Transmission Control Protocol) and UDP(User Datagram Protocol). 
+### 4. Application Layer
 
-Other protocols like SCTP(Stream Control Transmission Protocol), RUDP(Real-time Transport Protocol) are also used.
+- Top layer where user applications operate
+- Combines OSI's Session, Presentation, and Application layers
+- **Major Protocols**: HTTP/HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SSH, Telnet, SNMP
 
-#### Application Layer
+![OSI - TCP IP](./img/OSI_TCP_IP.png)
 
-It is the top most layer where most of the applications that we use live. It relies protocols from the lower layers to send and receive data.
+---
 
-Major application layer protocols are HTTP, FTP, SMTP, POP3, IMAP, DNS, DHCP, etc.
+## 💡 IP Addressing
 
-<img src="./img/OSI_TCP_IP.png" height=700 width=700/>
+An **IP address** uniquely identifies each device on a network.
 
-### IP Addressing
+- **IPv4**: 32-bit address (4 bytes). Provides approximately 4.3 billion unique addresses. Most commonly used but address space is exhausted. (e.g., `192.168.1.1`; Four octets separated by dots)  
 
-An IP (Internet Protocol) address is a unique identifier assigned to each device on a network. It allows devices to locate and communicate with each other. There are two types of IP addresses: IPv4 (e.g.,`192.168.1.1`); 32-bit address scheme  and IPv6; 28-bit address scheme (e.g., `2001:0db8:85a3:0000:0000:8a2e:0370:7334`).
+- **IPv6**: 128-bit address (16 bytes). Designed to replace IPv4 and includes built-in security features. (e.g., `2001:0db8:85a3::8a2e:0370:7334`; Eight groups of four hexadecimal digits)
 
-- **Public vs. Private IPs**: Public IPs are used on the internet, while private IPs are used within private networks.
+### Types of IP
 
-- **Subnetting/subnet masking**: Divides an IP network into smaller sub-networks. It helps determine which portion of an IP address is the network address and which part is the host address.
+- **Public IP** – Globally unique, used on the Internet. Assigned by Internet Service Providers (ISPs) and routable on the internet. Required for servers and services accessible from anywhere.
 
-### Routing
-- **Definition**: The process of selecting paths in a network to send data packets.
+- **Private IP** – Used within local networks. Not routable on the internet. Multiple devices can use the same private IP in different networks. It also has reserved ranges
 
-- **Types of Routing**:
-    - **Static Routing**: Manual configuration of routing paths.
-    
-    - **Dynamic Routing**: Automatic adjustment of paths based on current network conditions (e.g., OSPF, BGP).
+- **Static IP** – Manually assigned, doesn’t change.
 
-### Switching
-   - **Circuit Switching**: A dedicated communication path between two devices (e.g., traditional telephone networks).
-   
-   - **Packet Switching**: Data is broken into packets and each packet may take a different path to the destination (e.g., the internet).
+- **Dynamic IP** – Assigned automatically by DHCP.
 
-### Network Security
+**IP Classes (IPv4)**:
+| Class | Range | Use |
+|--------|--------|-----|
+| A | 1.0.0.0 – 126.255.255.255 | Large networks |
+| B | 128.0.0.0 – 191.255.255.255 | Medium networks |
+| C | 192.0.0.0 – 223.255.255.255 | Small networks |
+| D | 224.0.0.0 – 239.255.255.255 | Multicasting |
+| E | 240.0.0.0 – 255.255.255.255 | Experimental |
 
-   - **Firewalls**: Devices or software that monitor and control incoming and outgoing network traffic based on predefined security rules.
-   
-   - **VPN (Virtual Private Network)**: Extends a private network across a public network, enabling secure remote access.
-   
-   - **Encryption**: The process of encoding data to prevent unauthorized access (e.g., SSL/TLS).
-   
-   - **Authentication**: Verifying the identity of users or devices (e.g., passwords, biometrics).
+### NAT (Network Address Translation)
 
-### Wireless Networking
-   
-   - **Wi-Fi**: A technology for wireless local area networking.
-   
-   - **Bluetooth**: A standard for short-range wireless communication.
-   
-   - **Mobile Networks**: Cellular networks like 4G, 5G for wide-area wireless communication.
+- Translates private IP addresses to public IP addresses
+- Allows multiple devices on a private network to share a single public IP
+- Provides an additional layer of security by hiding internal IP addresses
+- Common in home routers and corporate networks
 
-### Network Devices
-   
-   - **Router**: Routes data between different networks.
-   
-   - **Switch**: Connects devices within the same network and uses MAC addresses to forward data.
-   
-   - **Hub**: A basic device that connects multiple devices in a network but broadcasts data to all connected devices.
-   
-   - **Access Point**: Allows wireless devices to connect to a wired network.
-   
-   - **Modem**: Modulates and demodulates signals for communication over telephone lines or cable.
+### Subnetting and Subnet Masking
 
-### Network Troubleshooting
-   
-   - **Ping**: A command to test the reachability of a device on a network.
-   
-   - **Traceroute**: A command to trace the path that packets take from the source to the destination.
-   
-   - **Network Analyzers**: Tools that capture and analyze network traffic (e.g., Wireshark).
+Subnetting divides a large IP network into smaller sub-networks for efficient routing and management.
 
-### Emerging Trends
+- **Subnet Mask**: Determines which portion of an IP address is the network portion and which is the host portion
 
-   - **SDN (Software-Defined Networking)**: An approach to networking that uses software-based controllers to manage hardware.
+- **Example**: `255.255.255.0` (or `/24` in CIDR notation) means first 24 bits are network, last 8 bits are host
 
-   - **NFV (Network Functions Virtualization)**: Decouples network functions from hardware to improve scalability.
+- **Benefits**: Improves security, reduces network congestion, optimizes performance
 
-#### [Read more](https://github.com/kannanjayachandran/Full-Stack-Development/blob/main/1_Fundamentals/Introduction.md)
+- **CIDR (Classless Inter-Domain Routing)**: Modern method for allocating IP addresses and routing
+
+---
+
+## 🛣️ Routing
+
+The process of selecting the best path for data packets to travel from source to destination across networks.
+
+### Types of Routing
+
+- **Static Routing**: 
+  - Routes are manually configured by network administrators
+  - Routes don't change unless manually updated
+  - Simple, uses minimal resources, but not scalable
+  - Suitable for small, stable networks
+
+- **Dynamic Routing**: 
+  - Routes are automatically adjusted based on current network conditions
+  - Routers share information and adapt to topology changes
+  - More complex but scalable and resilient
+  - **Common Dynamic Routing Protocols**:
+    - **RIP (Routing Information Protocol)**: Distance-vector protocol, simple but limited
+    - **OSPF (Open Shortest Path First)**: Link-state protocol, efficient for large networks
+    - **BGP (Border Gateway Protocol)**: Path-vector protocol, used for routing between autonomous systems on the internet
+    - **EIGRP (Enhanced Interior Gateway Routing Protocol)**: Cisco proprietary, hybrid protocol
+
+**Default Gateway**: The router that connects a local network to the internet.
+
+### Routing Tables
+
+- Database maintained by routers containing information about network paths
+- Includes destination networks, next hop, and metrics
+- Used to make forwarding decisions for incoming packets
+
+---
+
+## 🔄 Switching
+
+Switching determines how data is forwarded within a network.
+
+- **Circuit Switching**: Dedicated path between devices for the duration of communication. Predictable performance but inefficient resource use. (e.g., phone calls).
+
+- **Packet Switching**: Data split into packets; each may take different routes and arrive out of order. Efficient resource utilization, more resilient to failures. Types (**Datagram**: Each packet routed independently (IP networks); **Virtual Circuit**: Path established before transmission (MPLS)). (used in the Internet)
+- **Message Switching**: Entire message sent as one unit, stored-and-forwarded.
+
+---
