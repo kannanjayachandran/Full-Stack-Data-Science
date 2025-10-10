@@ -24,8 +24,6 @@ Boolean logic is a form of algebra where values are either `true` or `false`. It
 
 - **XNOR (Equivalence)**: True if both inputs are the same.
 
-> Boolean logic forms the basis of all digital circuits and programming decisions.
-
 ---
 
 ## [Computer Architecture](https://en.wikipedia.org/wiki/Computer_architecture)
