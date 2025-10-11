@@ -4,7 +4,7 @@ An Operating System (OS) is system software that manages computer hardware and s
 
 <div align="center">
 
-![Overview of OS](./img/OS_overview.png)
+![Overview of OS](./img/os_overview.png)
 
 </div>
 
