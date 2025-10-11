@@ -299,9 +299,3 @@ Graph theory connects deeply with complexity theory, as many NP-complete problem
 - [Computer Networks](./Computer_Networks.md)
 
 - [Linux & Git](./Linux_GIT.md)
-
-- [Data structures and algorithms](../03.%20Data%20Structures%20and%20Algorithms/Readme.md)
-
-- [Databases](../04.%20Database%20Systems/Readme.md)
-
----
