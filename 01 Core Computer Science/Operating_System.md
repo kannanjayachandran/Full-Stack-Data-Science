@@ -825,3 +825,228 @@ File allocation methods are ways an operating system manages disk blocks to stor
 - **Checksums:** Detect data corruption
 
 ---
+
+## I/O Systems & Storage
+
+The operating system manages Input/Output (I/O) and storage to enable communication between the CPU and peripheral devices, as well as to persistently manage data.
+
+- **I/O management** is the OS function that controls and coordinates the use of hardware devices (like keyboards, monitors, disks, and network cards). Since I/O devices are significantly slower than the CPU, the OS uses specialized techniques to ensure efficiency and non-interference.
+
+### Hardware Components
+
+- **I/O Devices:** Input/output hardware
+- **Device Controllers:** Hardware interface between device and system
+- **Device Drivers:** Software interface to device controllers
+
+### I/O Methods
+
+**Methods of I/O communication** includes; **Polling**, **Interrupts**, **Direct Memory Access(DMA)**.
+
+#### Programmed I/O (Polling)
+
+- CPU continuously checks device status
+- Simple but wastes CPU time
+
+#### Interrupt-Driven I/O
+
+- Device sends interrupt when ready
+- More efficient than polling
+
+#### Direct Memory Access (DMA)
+
+- Uses specialized hardware called **DMA controller**
+- Device transfers data directly to/from memory
+- CPU only involved at beginning and end
+- Most efficient for large transfers
+
+### I/O Software Layers
+
+1. **Interrupt Handlers:** Handle device interrupts
+2. **Device Drivers:** Device-specific code
+3. **Device-Independent I/O:** Common interface
+4. **User-Space I/O:** System calls and libraries
+
+### Disk Scheduling
+
+Minimizes seek time on traditional hard drives (HDD):
+
+- **FCFS:** Process requests in order
+- **SSTF:** Shortest Seek Time First
+- **SCAN (Elevator):** Move in one direction, then reverse  
+- **C-SCAN:** Circular scan in one direction
+- **LOOK/C-LOOK:** Like SCAN/C-SCAN but reverse at last request
+
+> **SSDs** have near-uniform access; scheduling cares more about queue depth, wear leveling, TRIM.
+
+### RAID (Redundant Array of Independent Disks)
+- **RAID 0:** Striping (performance, no redundancy)
+- **RAID 1:** Mirroring (100% redundancy)
+- **RAID 5:** Distributed parity (efficiency + redundancy)
+- **RAID 6:** Dual parity (tolerates two disk failures)
+- **RAID 10:** Mirrored stripes (combines RAID 1 + 0)
+
+---
+
+## System Calls and OS Structure
+
+The System Call is the fundamental mechanism by which a user-level computer program requests a service from the operating system's kernel. Because the kernel runs in a highly privileged state (kernel mode) and has direct access to hardware and protected resources, user programs (which run in user mode) must use system calls to perform actions like file management, process control, or device I/O.
+
+### System Calls
+
+Interface between user programs and kernel services.
+
+#### Categories
+
+- **Process Control:** fork(), exec(), wait(), exit()
+- **File Management:** open(), read(), write(), close()
+- **Device Management:** ioctl(), read(), write()
+- **Information:** getpid(), alarm(), sleep()
+- **Communication:** pipe(), socket(), shmget()
+
+#### When a system call is made:
+
+- The user program executes a special instruction (often a software interrupt or "trap").
+
+- The CPU switches from user mode to kernel mode.
+
+- The operating system's kernel identifies the requested service and kernel validates parameters.
+
+- The kernel executes the service on behalf of the user program.
+
+- The CPU switches back to user mode, and the program continues execution.
+
+![System calls](./img/sys_call.png)
+
+### Kernel Space vs User Space
+
+- **User Space**: applications, libraries; isolated from kernel.  
+- **Kernel Space**: privileged; manages hardware and resources.
+
+![Components of Operating system](./img/components_of_os.png)
+
+### Kernel Architectures
+
+#### Monolithic Kernel
+
+- All OS services in single address space
+- **Pros:** Fast, efficient communication
+- **Cons:** Large, complex, less reliable
+- **Examples:** Linux, UNIX
+
+#### Micro-kernel
+
+- Minimal kernel with basic services only
+- Other services run as user-space processes
+- **Pros:** Modular, reliable, secure
+- **Cons:** Performance overhead from IPC
+- **Examples:** Minix, QNX
+
+#### Hybrid Kernel
+
+- Combines monolithic and microkernel approaches
+- **Examples:** Windows NT, macOS
+
+### Boot Overview
+
+- **Firmware (BIOS/UEFI)** → **Bootloader** (e.g., GRUB) → **Kernel** → **init/systemd** → user services.
+
+---
+
+## Inter-Process Communication (IPC)
+
+### Shared Memory
+
+- Processes share memory region
+- **Pros:** Fast communication
+- **Cons:** Requires synchronization
+
+### Message Passing
+
+- Processes communicate through messages
+- **Direct:** Explicitly name sender/receiver
+- **Indirect:** Use mailboxes or ports
+- **Synchronous:** Blocking send/receive
+- **Asynchronous:** Non-blocking operations
+
+### Pipes
+
+- **Ordinary Pipes:** Parent-child communication
+- **Named Pipes (FIFOs):** Unrelated processes can communicate
+
+### Sockets
+
+- Communication endpoint
+- **Network Sockets:** TCP/UDP communication
+- **Unix Domain Sockets:** Local inter-process communication
+
+### Others
+
+- **Signals / Events** – simple notifications; limited payload.  
+- **Futexes** (Linux) – fast user-space locking with kernel assist.
+
+### When to choose what
+
+- Same machine, high throughput → **shared memory + locks**.  
+- Parent–child simple stream → **pipes**.  
+- Across hosts → **sockets**.  
+- Priority messaging → **message queues**.
+
+---
+
+## Virtualization and Containers
+
+### Hypervisor Types
+
+- **Type 1 (Bare-metal):** Runs directly on hardware
+  - Examples: VMware ESXi, Microsoft Hyper-V
+
+- **Type 2 (Hosted):** Runs on host operating system
+  - Examples: VMware Workstation, VirtualBox
+
+### Virtualization Techniques
+
+- **Full Virtualization:** Complete hardware abstraction
+- **Para-virtualization:** Guest OS modified for efficiency
+- **Hardware-assisted:** CPU support (Intel VT-x, AMD-V)
+
+### Containers
+
+- **OS-level virtualization:** Share host kernel
+- Isolation via **namespaces** and **cgroups**
+- **Benefits:** Lightweight, fast startup, efficient resource use
+- **Examples:** Docker, LXC, Kubernetes
+
+- **VMs vs Containers**: VMs isolate entire OS; containers are lighter, faster startup, but share kernel.
+
+---
+
+## Security & Protection
+
+- **User/Kernel Mode**, **Privilege rings**.  
+- **Discretionary Access Control (DAC)**, **Mandatory Access Control (MAC)**, **Role-Based Access Control (RBAC)**.  
+- **ACLs vs Capabilities**.  
+- Sandboxing (seccomp), **SELinux/AppArmor** policies.  
+- **Signals** (UNIX): `SIGINT`, `SIGTERM`, `SIGKILL` (cannot be caught), `SIGHUP`, `SIGSEGV`.
+
+---
+
+## Performance Monitoring and Troubleshooting
+
+### Common Performance Metrics
+- **CPU Usage:** Percentage of time CPU is busy
+- **Memory Usage:** Physical and virtual memory consumption
+- **Disk I/O:** Read/write operations per second
+- **Network I/O:** Data transfer rates
+
+### Linux Tools
+- **Process Monitoring:** ps, top, htop, pstree
+- **Memory Analysis:** free, vmstat, pmap
+- **I/O Analysis:** iostat, iotop
+- **Network Analysis:** netstat, ss, tcpdump
+- **System Calls:** strace, ltrace
+
+### Performance Tuning
+- **CPU:** Process priorities, CPU affinity
+- **Memory:** Swappiness, huge pages
+- **I/O:** I/O schedulers, file system options
+- **Network:** Buffer sizes, congestion control
