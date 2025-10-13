@@ -6,7 +6,7 @@ Networking involves **hardware**, **software**, and **protocols** that define ho
 
 ---
 
-## Types of Networks
+## 🧩 Types of Networks
 
 - **LAN (Local Area Network)**: Small area network, such as a home, school, or office. Typically offers high-speed connections and is owned by a single organization.
 
@@ -18,7 +18,7 @@ Networking involves **hardware**, **software**, and **protocols** that define ho
 
 ---
 
-## Network Topologies
+## 🔗 Network Topologies
 
 Topology defines the **layout** or **structure** of how devices (nodes) are connected (physical and logical arrangement of devices in a network).
 
@@ -52,7 +52,7 @@ Protocols are **rules and standards** that define how data is transmitted and re
 | **DHCP** | Dynamically assigns IP addresses | Network configuration |
 | **ICMP/ARP** | Diagnostics and address resolution | `ping`, `traceroute` |
 
-### Core Transport Protocols
+### 🚄 Core Transport Protocols
 
 - **TCP (Transmission Control Protocol)**:
   - Connection-oriented protocol ensuring reliable, ordered delivery of data
@@ -307,6 +307,336 @@ Switching determines how data is forwarded within a network.
 - **Circuit Switching**: Dedicated path between devices for the duration of communication. Predictable performance but inefficient resource use. (e.g., phone calls).
 
 - **Packet Switching**: Data split into packets; each may take different routes and arrive out of order. Efficient resource utilization, more resilient to failures. Types (**Datagram**: Each packet routed independently (IP networks); **Virtual Circuit**: Path established before transmission (MPLS)). (used in the Internet)
+
 - **Message Switching**: Entire message sent as one unit, stored-and-forwarded.
 
 ---
+
+##  Ports and Sockets
+
+### Ports
+
+- Logical endpoints for communication on a device
+- 16-bit numbers ranging from 0 to 65535
+- **Well-Known Ports** (0-1023): Reserved for standard services
+  - HTTP: 80, HTTPS: 443, FTP: 21, SSH: 22, SMTP: 25, DNS: 53
+- **Registered Ports** (1024-49151): Used by applications
+- **Dynamic/Private Ports** (49152-65535): Temporary ports for client connections
+
+### Sockets
+- Combination of the **transport protocol** (like TCP or UDP), the **IP address** of the host, and the **port number**. Endpoint for sending and receiving data in network communication. (e.g., `192.168.1.1:8080`)
+- Enable **Inter-Process Communication** (IPC), allowing programs on the same machine or different machines across a network to exchange information.
+- TCP uses sockets to establish connections
+
+## Network Performance Metrics
+
+### Bandwidth
+- Maximum rate of data transfer across a network path
+- Measured in bits per second (`bps`, `Mbps`, `Gbps`)
+- Represents the capacity of the network
+
+### Latency
+- Time delay for data to travel from source to destination
+- Measured in milliseconds (`ms`)
+- Affected by distance, routing, and processing time
+- Critical for real-time applications like gaming and video calls
+
+### Throughput
+- Actual rate of successful data transfer
+- Always less than or equal to bandwidth
+- Affected by network congestion, errors, and protocol overhead
+
+### Jitter
+- Variation in packet arrival time
+- Important for streaming and VoIP
+- High jitter causes choppy audio/video
+
+### Packet Loss
+- Percentage of packets that fail to reach their destination
+- Caused by network congestion, errors, or hardware failures
+- TCP handles packet loss through retransmission
+
+- **SSID**: Network name identifier.
+
+## 🔒 Network Security
+
+Security protects the integrity, confidentiality, and availability of network data.
+
+| Concept | Description |
+|----------|--------------|
+| **Firewall** | Filters traffic based on security rules |
+| **VPN (Virtual Private Network)** | Secure encrypted tunnel over public network |
+| **Encryption** | Protects data in transit (e.g., SSL/TLS, AES) |
+| **Authentication** | Verifies identity (passwords, tokens, biometrics) |
+| **IDS/IPS** | Intrusion detection and prevention systems |
+| **Proxy Servers** | Hide client identity, control access |
+
+**Common Threats**: DDoS attacks, Man-in-the-Middle (MITM), phishing, spoofing, malware.
+
+### Firewalls
+- Hardware or software that monitors and controls network traffic
+- Uses predefined security rules to allow or block traffic
+- Types:
+  - **Packet-filtering**: Examines packet headers
+  - **Stateful**: Tracks connection state
+  - **Application-level**: Inspects application data
+  - **Next-generation**: Combines multiple techniques with deep packet inspection
+
+### VPN (Virtual Private Network)
+- Creates an encrypted tunnel over a public network (usually the internet)
+- Enables secure remote access to private networks
+- Masks user's IP address and location
+- Common protocols: OpenVPN, IPSec, WireGuard, L2TP
+- Used for remote work, accessing geo-restricted content, privacy
+
+### Encryption
+- Process of encoding data to prevent unauthorized access
+- **Symmetric Encryption**: Same key for encryption and decryption (AES)
+- **Asymmetric Encryption**: Public-private key pair (RSA)
+- **SSL/TLS**: Protocols for securing internet communications (HTTPS)
+- **End-to-End Encryption**: Only sender and recipient can decrypt messages
+
+### Authentication and Authorization
+- **Authentication**: Verifying identity of users or devices
+  - *Methods*: Passwords, biometrics, two-factor authentication (2FA), certificates
+- **Authorization**: Determining what authenticated users can access
+- **AAA Model**: Authentication, Authorization, Accounting
+
+### Common Security Threats
+- **DDoS (Distributed Denial of Service)**: Overwhelming a system with traffic
+- **Man-in-the-Middle**: Intercepting communication between two parties
+- **Phishing**: Fraudulent attempts to obtain sensitive information
+- **Malware**: Viruses, worms, trojans, ransomware
+- **Zero-Day Exploits**: Attacks on previously unknown vulnerabilities
+
+---
+
+## 📡 Wireless Networking
+
+### Wi-Fi
+- Technology for wireless local area networking based on `IEEE 802.11` standards
+- **Common Standards**:
+  - **802.11ac (Wi-Fi 5)**: Up to 3.5 Gbps, 5 GHz
+  - **802.11ax (Wi-Fi 6/6E)**: Up to 9.6 Gbps, 2.4/5/6 GHz, better efficiency
+- **Frequency Bands**:
+  - 2.4 GHz: Longer range, more interference
+  - 5 GHz: Shorter range, less interference, higher speeds
+  - 6 GHz: Newest, least interference, highest speeds
+
+### Bluetooth
+- Standard for short-range wireless communication (typically 10-100 meters)
+- Low power consumption and used for connecting peripherals: headphones, keyboards, IoT devices
+
+### Cellular Networks
+- **4G/LTE**: Fourth generation, speeds up to `100 Mbps`
+- **5G**: Fifth generation, speeds up to `10 Gbps`, ultra-low latency
+  - Uses higher frequencies (mmWave) for faster speeds but shorter range
+
+---
+
+## 🧰 Common Network Devices
+
+| Device | Function |
+|--------|-----------|
+| **Router** | Connects different networks, routes packets |
+| **Switch** | Connects devices within same LAN using MAC addresses |
+| **Hub** | Broadcasts data to all ports (inefficient) |
+| **Access Point** | Provides Wi-Fi access |
+| **Modem** | Converts digital to analog (and vice versa) signals for ISP |
+| **Gateway** | Acts as an entry/exit point to another network |
+| **Repeater** | Regenerates weak signals to extend range |
+
+### Router
+- Routes data packets between different networks
+- Makes decisions based on IP addresses
+- Connects your local network to the internet
+- Operates at **Network Layer** (Layer 3)
+
+### Switch
+- Connects devices within the same network
+- Forwards data based on **MAC addresses**
+- Creates separate collision domains for each port
+- More intelligent than hubs
+- Operates at Data Link Layer (Layer 2)
+
+### Hub
+- Basic device that connects multiple devices in a network
+- Broadcasts data to all connected devices (inefficient)
+- Creates a single collision domain
+- Largely obsolete, replaced by switches
+- Operates at Physical Layer (Layer 1)
+
+### Access Point
+- Allows wireless devices to connect to a wired network
+- Extends wireless coverage
+- Can support multiple devices simultaneously
+
+### Modem
+- Modulates and demodulates signals for communication
+- Converts digital signals to analog (and vice versa) for transmission
+- Types: DSL, cable, fiber optic modems
+- Often combined with router functionality in home networks
+
+### Gateway
+- Connects networks using different protocols
+- Translates between different network architectures
+- Often refers to router connecting LAN to internet
+
+### Bridge
+- Connects two or more network segments
+- Filters traffic based on MAC addresses
+- Reduces network congestion by dividing collision domains
+
+---
+
+## 🧪 Network Troubleshooting
+
+| Tool | Purpose |
+|-------|----------|
+| `ping` | Tests network connectivity (Measures round-trip time for packets; `ping google.com`) |
+| `traceroute` / `tracert` | Shows the path packets take, Helps identify where network failures occur (`traceroute google.com`) |
+| `ipconfig` / `ifconfig` | Shows IP and network configurations |
+| `netstat` | Displays network connections and listening ports (`netstat -an`) |
+| **Wireshark** | Packet analysis tool |
+| **nslookup / dig** | DNS lookup tools (Look up IP addresses for domain names, `nslookup google.com`) |
+| **Curl/Wget** | Command-line tools for transferring data with URLs (Test API endpoints and download files) |
+
+**Common Issues**:
+- IP conflict
+- DNS resolution failure
+- Packet loss
+- High latency or jitter
+
+---
+
+## API's and Web services
+
+### REST (Representational State Transfer)
+
+- Architectural style for building web services
+- Uses standard **HTTP methods** (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`)
+- **HTTP Methods**:
+  - `GET`: Retrieve data  
+  - `POST`: Send data 
+  - `PUT/PATCH`: Update data  
+  - `DELETE`: Remove data  
+- **HTTP Status Codes**:  
+  `200 OK`, `201 Created`, `400 Bad Request`, `404 Not Found`, `500 Server Error`
+- **Stateless**: Each request contains all necessary information
+- Resources identified by **URLs**
+- Responses typically in `JSON` or `XML` format
+
+### API Authentication
+- **API Keys**: Simple token-based authentication
+- **OAuth**: Industry-standard protocol for authorization
+- **JWT (JSON Web Tokens)**: Self-contained tokens for secure transmission
+- **Basic Auth**: Username/password in request headers (less secure)
+
+### Web sockets
+
+WebSockets are a protocol (**RFC 6455**) that provides full-duplex (bi-directional), persistent communication channels over a single TCP connection. It is designed specifically for web applications to enable real-time and low latency data transfer. (streaming predictions)
+
+- Starts with standard `HTTP` handshake (**Upgrade** request) and then upgrade TCP connection to webSocket protocol.
+
+> **Sockets** are used in real-time ML applications (e.g., chatbot, live predictions).
+
+### CORS (Cross-Origin Resource Sharing)
+
+- Determines if a browser can access API responses from another domain
+- Provides a controlled way to relax the browser's default **Same-Origin Policy** (SOP)
+
+### Load balancing
+
+- Distributes network traffic across multiple servers
+- Improves availability, scalability, and reliability
+
+- **Algorithms**:
+  - `Round Robin`: Requests distributed sequentially
+  - `Least Connections`: Routes to server with fewest active connections
+  - `IP Hash`: Routes based on client IP address
+  - `Weighted`: Distributes based on server capacity
+
+- **Types**:
+  - `Hardware load balancers`: Dedicated physical devices
+  - `Software load balancers`: Applications (`Nginx`, `HAProxy`)
+  - `Cloud load balancers`: Managed services (`AWS ELB`, `Azure Load Balancer`)
+
+### Content Delivery Networks (CDN)
+
+- Distributed network of servers that deliver content to users
+- Caches content at edge locations close to users
+- Reduces latency, improves load times, reduces server load
+- Examples: Cloudflare, Akamai, AWS CloudFront
+- Critical for serving large files, videos, and global applications
+
+### Latency Optimization
+
+- The process of minimizing latency across a network or system
+- Latency is often broken down into various components like;
+  - **Propagation Delay**: The time data takes to travel the physical distance.
+  - **Transmission Delay**: The time required to push the data's bits onto the link.
+  - **Processing Delay**: The time a device (like a router or server) takes to process the packet header.
+  - **Queuing Delay**: The time a data packet spends waiting to be processed at any network point due to congestion.
+- Optimization techniques are typically applied across three main layers;
+  - **Network and Infrastructure Optimization** : Using CDN and load balancers, edge computing, upgrading network protocols
+  - **Server and Backend Optimization** : Techniques like Caching, Data compression, DB indexing and efficient querying, Async processing
+  - **Client and Frontend Optimization** : DNS prefetching and preconnection, Lazy loading, optimizing images and other media
+
+### Virtual Private Cloud (VPC)
+
+- Isolated virtual network in cloud environments
+- Control over IP address range, subnets, routing tables
+- Examples: AWS VPC, Google Cloud VPC, Azure Virtual Network
+
+### Security Groups and Network ACLs
+
+- **Security Groups**: Virtual firewalls for cloud instances
+- **Network ACLs**: Stateless firewall for subnets
+- Control inbound and outbound traffic with rules
+
+### Regions and Availability Zones
+
+- **Regions**: Geographic areas with multiple data centers
+- **Availability Zones**: Isolated data centers within regions
+- Important for high availability and disaster recovery
+
+### Data Transfer Considerations
+
+- **Ingress**: Data transferred into cloud (often free)
+- **Egress**: Data transferred out of cloud (usually charged)
+- Important when training models or serving predictions at scale
+
+### Inter-Service Communication
+
+- **Service Mesh**: Infrastructure layer for service-to-service communication (Istio, Linkerd)
+- **API Gateways**: Entry point for API requests (Kong, AWS API Gateway)
+- Important in microservices architectures common in ML deployments
+
+---
+
+## 🚀 Emerging Trends
+
+### SDN (Software-Defined Networking)
+
+- Separates network control plane from data plane
+- Centralized control through software controllers
+- Programmable, flexible, and easier to manage
+- Enables dynamic network configuration
+
+### NFV (Network Functions Virtualization)
+
+- Virtualizes network services traditionally run on dedicated hardware
+- Runs on standard servers using VMs or containers
+- Reduces costs and improves scalability
+- Examples: Virtual routers, firewalls, load balancers
+
+### Edge Computing
+- Processing data closer to source rather than in centralized cloud
+- Reduces latency and bandwidth usage
+- Important for IoT, autonomous vehicles, real-time ML inference
+
+### Network Automation
+
+- Using scripts and tools to automate network configuration and management
+- Infrastructure as Code (IaC): Terraform, Ansible
+- Reduces human error and improves consistency
