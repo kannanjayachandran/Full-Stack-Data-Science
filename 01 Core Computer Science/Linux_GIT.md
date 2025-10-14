@@ -1,49 +1,91 @@
-<h1 align="center" >Linux - GIT</h1>
+<h1 align="center">Linux & Git - Quick Reference</h1>
+
+---
+
+## 🌿 Introduction
+
+As a **data scientist or ML engineer**, you’ll frequently use **Linux** for development and deployment, and **Git** for version control and collaboration.
+
+---
+
+## 🐧 Linux Essentials
 
 - **[Linux command line for beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)**
 
-- **[Top 50 essential linux commands](https://www.digitalocean.com/community/tutorials/linux-commands)**
+- **[Top 50 essential Linux commands](https://www.digitalocean.com/community/tutorials/linux-commands)**
 
-## GIT
+### Commonly Used Linux Commands
 
-Git is a popular version control system. Version control systems are software tools that allows multiple people to work on the same project simultaneously and helps them track changes in the code. Git along with a central repository like GitHub, GitLab, or Bitbucket, allows multiple developers to work on the same project at the same time.
+| Category | Command | Description |
+|-----------|----------|-------------|
+| Navigation | `pwd`, `cd`, `ls -la` | Show current dir, change dir, list contents |
+| File Ops | `cp`, `mv`, `rm`, `mkdir`, `rmdir`, `touch` | Copy, move, delete, create files/folders |
+| Viewing | `cat`, `head`, `tail`, `less`, `more` | Display file contents |
+| Search | `grep`, `find`, `locate` | Search text or files |
+| System Info | `uname -a`, `top`, `htop`, `df -h`, `du -sh *` | View system/process info |
+| Permissions | `chmod`, `chown` | Change file permissions or ownership |
+| Networking | `ping`, `curl`, `wget`, `ifconfig`, `netstat -tulnp` | Test network connections |
+| Package Management | `apt`, `yum`, `dnf`, `pip` | Install/update packages |
+| Disk/Processes | `kill`, `ps aux`, `free -h` | Manage processes and memory |
 
-### Basic Terminology
+**Tip:**  
+Always chain commands efficiently using pipes `|` and redirections `>` or `>>`. 
 
-- **Repository/Repo** : A folder that contains all the project files and the version history.
+Example:
+```bash
+ps aux | grep python > process_list.txt
+```
 
-- **Branch** : A separate version of the project. The original version is usually called main or master.
+Excellent — your base note is already structured and accurate. However, it can be improved for **clarity**, **interview relevance**, and **completeness** (especially for **data science and ML roles**, where Git and Linux are used for collaboration, MLOps, and deployment).
 
-- **Commit** : A snapshot of changes made in the repository with a message describing what was changed at the given time.
+Below is a **refined and complete version** of your Markdown note.
+I’ve improved the **language**, **added missing concepts (merge conflicts, stash, rebase, GitHub workflow, SSH, Linux essentials, etc.)**, and **highlighted best practices** and **interview tips**.
 
-- **Staging area** : The staging area is where files ready to be committed go before they are committed to the Git repository. It helps to review the changes made and create meaningful commits.
+---
 
-- **Check out** : This means switching to a different branch or commit in a project and making it available in the working directory.
+## 🧭 Git Overview
+
+Git is a **distributed version control system (VCS)** used to track changes in source code and collaborate efficiently.
+
+With platforms like **GitHub**, **GitLab**, or **Bitbucket**, multiple developers can manage projects, track models, and maintain reproducibility.
+
+---
+
+## 🔹 Basic Terminology
+
+| Term                       | Meaning                                                                       |
+| -------------------------- | ----------------------------------------------------------------------------- |
+| **Repository (Repo)**      | A folder containing your project files and full version history.              |
+| **Branch**                 | A separate version of your code to work independently without affecting main. |
+| **Commit**                 | A saved snapshot of your changes with a descriptive message.                  |
+| **Staging Area**           | Intermediate space before committing changes.                                 |
+| **Checkout**               | Switching between branches or commits.                                        |
+| **Commit Hash**            | Unique ID for every  commit.                                                   |
+| **Tag**                    | Named snapshot, often used for releases (e.g., `v1.0`).                       |
+| **HEAD**                   | Pointer to the current branch’s latest commit.                                |
+| **Reflog**                 | History of HEAD and branch movements.                                         |
+| **Remote Tracking Branch** | Local copy of a branch from a remote repository.                              |
 
 ![Git basic workflow](./img/Git_workflow.png)
 
-**Commit hash** : It is a unique ID (a long string of letters and numbers) that Git generates for each commit made to the project.
+---
 
-**Reference** : Also known as a ref, it is a label that Git uses to keep track of important points in your project’s history.
+## ⚙️ Git Setup
 
-**Tag** : It is a reference that cannot be changed later to point elsewhere. It’s commonly used to denote releases, versions, or significant milestones in a project’s development.
+Install Git on your OS and configure user details:
 
-**HEAD** : It is a reference that points to the latest change (commit) in the branch being worked on.
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+git config --global core.editor "code --wait"  # optional
+```
 
-**Reference logs** : They track all updates to branches and pointers (like HEAD), including lost commits, merges, resets, and other changes.
-
-**Logs** : They only track the history of commits in a branch.
-
-**Remote** -tracking branches: They are branch references in the local Git repository that track the currently known state of branches in a remote repository. They keep the local repository in sync with the remote repository.
-
-## Setting up Git
-
-Install git for your OS and get an account on GitHub. The following are my git configs. Open the `.gitconfig` file in your home directory and add the following lines:
+Optionally edit `~/.gitconfig`:
 
 ```bash
 [user]
-    name = {Your Name}
-    email = {Your Email}
+    name = Your Name
+    email = your_email@example.com
 
 [credential]
     helper = cache --timeout=3600
@@ -53,118 +95,235 @@ Install git for your OS and get an account on GitHub. The following are my git c
     ci = commit
     st = status
     br = branch
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 
 [color]
-    diff = auto
-    interactive = auto
-    status = auto
-
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+    ui = auto
 ```
 
-## Creating a Repository
+---
+
+## 📦 Creating and Cloning Repositories
 
 ```bash
-mkdir {repo-name}
-cd {repo-name}
+# Create new repo
+mkdir project
+cd project
 git init
+
+# Clone from remote
+git clone <repo-url>
 ```
 
-## Cloning a Repository
+---
+
+## ✍️ Adding and Committing Changes
 
 ```bash
-git clone {repo-url}
+git add <file>         # stage specific file
+git add .              # stage all modified files
+git commit -m "Add initial project setup"
 ```
 
-## Adding Files
+**Modify last commit (carefully):**
 
 ```bash
-git add {file-name}
+git commit --amend
 ```
 
-## Committing Changes
+---
+
+## 🚀 Pushing and Pulling Changes
 
 ```bash
-git commit -m "{commit-message}"
+git push origin main
+git pull origin main
 ```
 
-**We can use `git commit --amend` to change the last commit, without creating a new one.**
-
-## Pushing Changes
+**Set upstream once:**
 
 ```bash
-git push
+git push -u origin main
 ```
 
-- **We can use `git push -u origin {branch-name}` to set the default remote branch.**
-
-- **We can use `git push --force` to force push.(Be careful with this one and you don't want to use this most of the time)**
-
-- **We can use `git push --force-with-lease` to force push, but only if the remote branch is the same as the local branch. Use this when we rebase or amend commits.**
-
-## Pulling Changes
+**Force push (use with caution):**
 
 ```bash
-git pull
+git push --force-with-lease
 ```
 
-## Branching
+---
+
+## 🌿 Branching and Merging
 
 ```bash
-git branch {branch-name}
-git checkout {branch-name}
+git branch <branch-name>       # create branch
+git checkout <branch-name>     # switch branch
+git merge <branch-name>        # merge into current branch
+git branch -d <branch-name>    # delete branch
 ```
 
-## Merging Branches
+**View all branches:**
 
 ```bash
-git checkout {branch-name}
-git merge {branch-name}
+git branch -a
 ```
-## Viewing History
+
+**Resolve merge conflicts:**
+
+When Git detects changes to the same lines in both branches, it inserts conflict markers (`<<<<`, `====`, `>>>>`).
+Fix manually, then:
 
 ```bash
-git log
+git add <file>
+git commit
 ```
 
-## Viewing Changes
+---
+
+## 🔄 Rebasing (Advanced)
+
+Rebase moves or “replays” your commits on top of another branch, keeping history linear.
 
 ```bash
-git diff
+git checkout feature
+git rebase main
 ```
 
-## Viewing Status
+If conflicts occur, resolve them and continue:
 
 ```bash
-git status
+git rebase --continue
 ```
 
-## Viewing Branches
+**Difference between merge and rebase:**
+
+* **Merge** → Preserves full history (creates merge commits).
+* **Rebase** → Creates a cleaner, linear history (but rewrites commit history).
+
+---
+
+## 💾 Stashing Temporary Changes
+
+When you want to switch branches but keep current modifications:
 
 ```bash
-git branch
+git stash            # save changes
+git stash list       # view stashes
+git stash apply      # reapply last stash
+git stash drop       # remove last stash
 ```
 
-## Deleting Branches
+---
+
+## 🔍 Viewing Info
 
 ```bash
-git branch -d {branch-name}
+git status           # show current changes
+git diff             # show unstaged changes
+git log --oneline    # concise commit history
+git show <hash>      # show details of a commit
+git remote -v        # view remotes
+git config --list    # show configs
 ```
 
-## Viewing Remotes
+**Visual log:**
 
 ```bash
-git remote -v
+git log --graph --decorate --oneline --all
 ```
 
-## Viewing Configs
+---
+
+## 🧠 GitHub Workflow (for Collaboration)
+
+1. **Fork** the repository (if not yours).
+2. **Clone** your fork locally.
+3. **Create a new branch** for your feature:
+
+   ```bash
+   git checkout -b feature/data-cleaning
+   ```
+4. **Commit** your work:
+
+   ```bash
+   git add .
+   git commit -m "Add data cleaning script"
+   ```
+5. **Push** your branch:
+
+   ```bash
+   git push origin feature/data-cleaning
+   ```
+6. **Open a Pull Request (PR)** on GitHub.
+7. **Review → Merge → Sync** your local repo.
+
+---
+
+## 🔐 SSH Authentication with GitHub
+
+Faster and secure alternative to HTTPS authentication.
 
 ```bash
-git config --list
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+cat ~/.ssh/id_rsa.pub
 ```
 
-## [GIT Online Documentation](https://git-scm.com/book/en/v2)
+Copy the public key to **GitHub → Settings → SSH and GPG keys → New SSH key**
+
+Then test:
+
+```bash
+ssh -T git@github.com
+```
+
+---
+
+## 🧩 Common Git Interview Questions
+
+| Question                                            | Key Point                                           |
+| --------------------------------------------------- | --------------------------------------------------- |
+| Difference between Git and GitHub                   | Git = tool; GitHub = hosting platform               |
+| What is a commit hash?                              | Unique SHA-1 identifier for a commit                |
+| What does `git pull` do?                            | `git fetch` + `git merge`                           |
+| What’s the difference between `merge` and `rebase`? | Merge keeps history; rebase rewrites it             |
+| What is the staging area?                           | A buffer to review and group changes before commit  |
+| How do you undo the last commit?                    | `git reset --soft HEAD~1`                           |
+| How to remove untracked files?                      | `git clean -f`                                      |
+| What is `.gitignore` used for?                      | Exclude files/folders from version control          |
+| How to revert a commit safely?                      | `git revert <commit-hash>`                          |
+| What’s a detached HEAD state?                       | When HEAD points to a specific commit, not a branch |
+
+---
+
+## 🧰 Useful Git Patterns for Data Science Projects
+
+* Track large data files with **Git LFS (Large File Storage)**:
+
+  ```bash
+  git lfs install
+  git lfs track "*.csv"
+  ```
+* Use **.gitignore** to skip generated files, datasets, or model outputs:
+
+  ```bash
+  __pycache__/
+  *.pkl
+  *.csv
+  *.h5
+  models/
+  notebooks/.ipynb_checkpoints/
+  ```
+* Always write **meaningful commit messages**:
+
+  * ✅ `Add preprocessing for missing values`
+  * ❌ `fix stuff`
+
+---
+
+## 📚 References
+
+* [Pro Git Book (Free)](https://git-scm.com/book/en/v2)
+* [Git Cheatsheet (GitHub)](https://education.github.com/git-cheat-sheet-education.pdf)
+* [Git LFS Docs](https://git-lfs.github.com/)
+* [Linux Command Line Tutorial](https://ubuntu.com/tutorials/command-line-for-beginners)
