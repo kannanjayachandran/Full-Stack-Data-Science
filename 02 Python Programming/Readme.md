@@ -1,8 +1,8 @@
 <h1 align="center" > Python Programming </h1>
 
-**[Python](https://en.wikipedia.org/wiki/Python_(programming_language))** is an **[open-source](https://en.wikipedia.org/wiki/Open_source)**, **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** and **[general-purpose](https://en.wikipedia.org/wiki/General-purpose_programming_language)** programming language. It is **dynamically type-checked** (type safety of a program is verified at runtime) and **garbage-collected**.
+**Python** is an **open-source**, **high-level** and **general-purpose** programming language. It is **dynamically type-checked** (type safety of a program is verified at runtime) and **garbage-collected**.
 
-> Note: These notes use Python 3 for all examples and explanations.
+> Note: We are using Python 3
 
 ## Table of Contents
 
@@ -53,16 +53,23 @@
     - [Exception Handling in File Operations](#exception-handling-in-file-operations)
 
 6. **Error Handling**
-
-* Exceptions (`try`, `except`, `finally`, `else`)
-* Custom exceptions
-* Common exception types (`ValueError`, `TypeError`, `KeyError`, etc.)
+    - [Error vs Exception](#errors-vs-exceptions)
+    - [Types of Errors](#types-of-errors)
+    -[Exception Handling](#basic-exception-handling-try-except-else-finally)
+    -[Handling multiple exceptions](#handling-multiple-exceptions)
+    -[Built-in exceptions](#common-built-in-exceptions)
+    - [Nested and re-raised exceptions](#nested-and-re-raised-exceptions)
+    - [Custom exceptions](#custom-exceptions)
+    - [Exception chaining](#exception-chaining-from-keyword)
+    - [Exception logging](#logging-exceptions)
 
 7. **Modules and Packages**
-
-* `import`, `from ... import ...`, `as`
-* `sys.path`, `__init__.py`, module creation
-* Exploring the standard library (e.g., `os`, `math`, `random`, `datetime`)
+    - [Modules](#modules)
+    - [Importing modules](#importing-modules)
+    - [Module search path](#module-search-path-syspath)
+    - [Packages](#packages)
+    - [Importing from packages](#importing-from-packages)
+    - [Standard Library](#standard-library)
 
 8. Object-Oriented Programming (OOP)
 
@@ -1785,15 +1792,40 @@ except (ValueError, TypeError) as e:
 
 | Exception           | Description                                                                          |
 | ------------------- | ------------------------------------------------------------------------------------ |
-| `ValueError`        | Raised when an operation receives an argument of right type but inappropriate value. |
-| `TypeError`         | Raised when an operation or function is applied to an object of inappropriate type.  |
-| `KeyError`          | Raised when a dictionary key is not found.                                           |
-| `IndexError`        | Raised when accessing an invalid list or tuple index.                                |
-| `ZeroDivisionError` | Raised when dividing by zero.                                                        |
-| `FileNotFoundError` | Raised when a file or directory is missing.                                          |
-| `AttributeError`    | Raised when an invalid attribute reference occurs.                                   |
-| `ImportError`       | Raised when an import fails.                                                         |
-| `RuntimeError`      | Raised for generic runtime errors.                                                   |
+| **ValueError**        | Raised when an operation receives an argument of right type but inappropriate value. |
+| **TypeError**         | Raised when an operation or function is applied to an object of inappropriate type.  |
+| **KeyError**          | Raised when a dictionary key is not found.                                           |
+| **IndexError**        | Raised when accessing an invalid list or tuple index.                                |
+| **ZeroDivisionError** | Raised when dividing by zero.                                                        |
+| **FileNotFoundError** | Raised when a file or directory is missing.                                          |
+| **AttributeError**    | Raised when an invalid attribute reference occurs.                                   |
+| **ImportError**       | Raised when an import fails.                                                         |
+| **RuntimeError**      | Raised for generic runtime errors.                                                   |
+| **ArithmeticError** | Raised when an error occurs in numeric calculations |
+| **AssertionError** | Raised when an `assert` statement fails |
+| **Exception** | Base class for all exceptions |
+| **EOFError** | Raised when the `input()` method hits an "end of file" condition (EOF) |
+| **FloatingPointError** | Raised when a floating-point calculation fails |
+| **GeneratorExit** | Raised when a generator is closed (with the `close()` method) |
+| **IndentationError** | Raised when indentation is not correct |
+| **KeyboardInterrupt** | Raised when the user presses Ctrl+c, Ctrl+z or Delete |
+| **LookupError** | Raised when errors raised can't be found |
+| **MemoryError** | Raised when a program runs out of memory |
+| **NameError** | Raised when a variable does not exist |
+| **NotImplementedError** | Raised when an abstract method requires an inherited class to override the method |
+| **OSError** | Raised when a system related operation causes an error |
+| **OverflowError** | Raised when the result of a numeric calculation is too large |
+| **ReferenceError** | Raised when a weak reference object does not exist |
+| **StopIteration** | Raised when the `next()` method of an iterator has no further values |
+| **SyntaxError** | Raised when a syntax error occurs |
+| **TabError** | Raised when indentation consists of tabs or spaces |
+| **SystemError** | Raised when a system error occurs |
+| **SystemExit** | Raised when the `sys.exit()` function is called |
+| **UnboundLocalError** | Raised when a local variable is referenced before assignment |
+| **UnicodeError** | Raised when a unicode problem occurs |
+| **UnicodeEncodeError** | Raised when a unicode encoding problem occurs |
+| **UnicodeDecodeError** | Raised when a unicode decoding problem occurs |
+| **UnicodeTranslateError** | Raised when a unicode translation problem occurs |
 
 ### Nested and Re-raised Exceptions
 
