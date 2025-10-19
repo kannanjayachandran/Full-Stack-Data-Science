@@ -1,0 +1,3 @@
+INFO - Synchronous version downloaded 80 sites in 7.94 seconds
+INFO - Multi-threading with concurrent.futures downloaded 80 sites in 0.43 seconds
+INFO - Asyncio version downloaded 80 sites in 1.23 seconds
