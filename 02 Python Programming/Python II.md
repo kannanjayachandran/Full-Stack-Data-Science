@@ -1877,7 +1877,7 @@ print(db1 is db2)  # True
 - Metaclasses are "magic" and hard to understand and Metaclass conflicts can be complex
 - Frameworks like **Django** **ORM** and **SQLAlchemy** use metaclasses to auto-register models and manage fields dynamically.
 
-[OOPS Notebook](./Notebooks/9_Object_Oriented_Programming.ipynb)
+[OOPS Notebook](./Notebooks/Object_Oriented_Programming.ipynb)
 
 ---
 
