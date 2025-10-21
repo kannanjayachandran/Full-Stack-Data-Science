@@ -1595,6 +1595,10 @@ print(f"Beta mean: {beta.mean():.2f} (expected: {2/(2+5):.2f})")
 
 ### Views vs Copies
 
+Numpy saves memory whenever possible by directly using a `View` instead of passing copies. It does this by accessing the internal data buffer. A `View` can be created using `ndarray.view()` or by slicing an array. Although this enures good performance, it can become a problem if we accidentally modify the original array. Also this put limitations on performing operations on the array. For example, we cannot reshape a view.
+
+`np.base` returns the base object of the array. If the array is a view then it will return the original array, if it is a copy then it will return `None`.
+
 ```python
 # View: references same memory
 arr = np.arange(10)
