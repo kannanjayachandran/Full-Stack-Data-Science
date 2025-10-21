@@ -993,32 +993,6 @@ print(f"Regular average: {regular_avg:.2f}")
 
 **Use Case**: Weighted voting in ensemble models, feature importance, portfolio returns
 
-### Correlation and Covariance
-
-```python
-# Sample data: features vs target
-feature1 = np.array([1, 2, 3, 4, 5])
-feature2 = np.array([2, 4, 5, 4, 5])
-target = np.array([3, 6, 7, 8, 10])
-
-# Covariance matrix
-data_matrix = np.vstack([feature1, feature2, target])
-cov_matrix = np.cov(data_matrix)
-print(f"Covariance matrix:\n{cov_matrix}\n")
-
-# Correlation matrix (normalized covariance)
-corr_matrix = np.corrcoef(data_matrix)
-print(f"Correlation matrix:\n{corr_matrix}\n")
-
-# Individual correlation
-corr_f1_target = np.corrcoef(feature1, target)[0, 1]
-corr_f2_target = np.corrcoef(feature2, target)[0, 1]
-print(f"Correlation (feature1, target): {corr_f1_target:.4f}")
-print(f"Correlation (feature2, target): {corr_f2_target:.4f}")
-```
-
-**Use Case**: Feature selection, multicollinearity detection, understanding feature relationships
-
 ### Boolean Aggregations
 
 ```python
@@ -1439,61 +1413,6 @@ trace = np.trace(A)
 print(f"Trace: {trace}")
 ```
 
-### Solving Linear Systems
-
-```python
-# Solve Ax = b
-A = np.array([[3, 1], [1, 2]])
-b = np.array([9, 8])
-
-x = np.linalg.solve(A, b)
-print(f"Solution: {x}")
-print(f"Verification (A @ x): {A @ x}")
-
-# Least squares solution (overdetermined system)
-A_over = np.array([[1, 1], [1, 2], [1, 3]])
-b_over = np.array([1, 2, 2])
-
-x_ls, residuals, rank, s = np.linalg.lstsq(A_over, b_over, rcond=None)
-print(f"\nLeast squares solution: {x_ls}")
-print(f"Residuals: {residuals}")
-```
-
-### Singular Value Decomposition (SVD)
-
-```python
-# SVD: A = U @ S @ V^T
-A = np.array([[1, 2, 3], [4, 5, 6]])
-
-U, s, VT = np.linalg.svd(A)
-print(f"U shape: {U.shape}")
-print(f"Singular values: {s}")
-print(f"VT shape: {VT.shape}")
-
-# Reconstruct matrix
-S = np.zeros_like(A, dtype=float)
-S[:len(s), :len(s)] = np.diag(s)
-A_reconstructed = U @ S @ VT
-print(f"\nReconstructed:\n{A_reconstructed}")
-```
-
-**Use Case**: PCA, dimensionality reduction, matrix factorization, recommender systems
-
-### Norms and Distances
-
-```python
-# Vector norms
-v = np.array([3, 4])
-
-print(f"L1 norm: {np.linalg.norm(v, ord=1)}")      # Manhattan
-print(f"L2 norm: {np.linalg.norm(v)}")             # Euclidean
-print(f"L-infinity norm: {np.linalg.norm(v, ord=np.inf)}")
-
-# Matrix norms
-A = np.array([[1, 2], [3, 4]])
-print(f"\nFrobenius norm: {np.linalg.norm(A, 'fro')}")
-```
-
 ---
 
 ## Random Module
@@ -1564,29 +1483,6 @@ matrix = np.arange(12).reshape(3, 4)
 print(f"\nOriginal matrix:\n{matrix}")
 np.random.shuffle(matrix)
 print(f"Shuffled rows:\n{matrix}")
-```
-
-### Distributions for ML
-
-```python
-# Common distributions in ML
-np.random.seed(42)
-
-# Binomial (e.g., coin flips)
-binomial = np.random.binomial(n=10, p=0.5, size=1000)
-print(f"Binomial mean: {binomial.mean():.2f} (expected: 5.0)")
-
-# Poisson (e.g., event counts)
-poisson = np.random.poisson(lam=5, size=1000)
-print(f"Poisson mean: {poisson.mean():.2f} (expected: 5.0)")
-
-# Exponential (e.g., time between events)
-exponential = np.random.exponential(scale=2, size=1000)
-print(f"Exponential mean: {exponential.mean():.2f} (expected: 2.0)")
-
-# Beta distribution (useful for Bayesian methods)
-beta = np.random.beta(a=2, b=5, size=1000)
-print(f"Beta mean: {beta.mean():.2f} (expected: {2/(2+5):.2f})")
 ```
 
 ---
