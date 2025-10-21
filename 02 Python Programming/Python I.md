@@ -450,6 +450,8 @@ else:
 # Loop completed without a break
 ````
 
+- [Pattern Printing notebook](./Notebooks/Pattern_printing.ipynb)
+
 ---
 
 ## Functions
@@ -566,8 +568,6 @@ squared = list(map(lambda x: x ** 2, nums))
 print(squared)  # Output: [1, 4, 9, 16]
 ```
 
-> Refer **[_Function Notebook_](./Notebooks/8_Functions.ipynb)** for additional content
-
 ### Scope and Namespace
 
 Namespace and scope are fundamental concepts in every programming languages. In python they govern how variables and names are organized and accessed within a program.
@@ -623,6 +623,8 @@ def outer():
 outer()
 print("Final x:", x)
 ```
+
+[Function Notebook](./Notebooks/Functions.ipynb)
 
 ---
 
@@ -953,7 +955,7 @@ b = "Strings in Python are powerful and versatile."
 print(a is b)  # False
 ```
 
-**[String Notebook](./Notebooks/7_String.ipynb)**
+- **[String Notebook](./Notebooks/String.ipynb)**
 
 ---
 
@@ -1084,7 +1086,7 @@ Lists are implemented as dynamic arrays in CPython. Common time complexities are
 
 - For large numeric arrays, prefer `array.array` or `numpy.ndarray` for efficiency.
 
-**[List Notebook](./Notebooks/3_List.ipynb)**
+- **[List Notebook](./Notebooks/List.ipynb)**
 
 ---
 
@@ -1204,7 +1206,7 @@ print(f"First element by index: {p[0]}")
 
 - **Tuple Interning** : Small immutable tuples may be cached by python, similar to *string interning*
 
-**[Tuple Notebook](./Notebooks/4_Tuple.ipynb)**
+- **[Tuple Notebook](./Notebooks/Tuple.ipynb)**
 
 ---
 
@@ -1321,7 +1323,7 @@ print(b.issuperset(a))  # True
 
 - We use sets for tracking visited nodes in graph algorithms.
 
-**[Set Notebook](./Notebooks/6_Set.ipynb)**
+- **[Set Notebook](./Notebooks/Set.ipynb)**
 
 ---
 
@@ -1454,7 +1456,7 @@ print(grades)  # defaultdict(<class 'list'>, {'Alice': [90], 'Bob': [85]})
 
 - Dictionaries are implemented using hash tables, average complexity is $O(1)$ for lookup, insertion and deletion and $O(n)$ for iteration.
 
-**[Dictionary Notebook](./Notebooks/5_Dictionary.ipynb)**
+- **[Dictionary Notebook](./Notebooks/Dictionary.ipynb)**
 
 ---
 
@@ -1661,6 +1663,8 @@ except Exception as e:
     print(f"Unexpected error: {e}")
 ```
 
+- **[File Handling Notebook](./Notebooks/File_Handling_in_Python.ipynb)**
+
 ---
 
 ## Error Handling
@@ -1679,8 +1683,6 @@ Error handling in Python allows developers to gracefully detect, respond to, and
 |------|--------------|----------|
 | **Syntax Errors** | Detected during parsing (before execution). | `if True print("Hi")` |
 | **Runtime Errors (Exceptions)** | Detected during execution; can be caught and handled. | `1 / 0` (ZeroDivisionError) |
-
-
 
 ### Basic Exception Handling (`try`, `except`, `else`, `finally`)
 
@@ -1863,6 +1865,9 @@ from contextlib import suppress
 with suppress(FileNotFoundError):
     os.remove("nonexistent.txt")
 ```
+
+- **[Error Handling Notebook]()**
+<!-- TODO: Update error handling notebook -->
 
 ---
 
