@@ -1514,6 +1514,8 @@ print(f"Original after copy modification: {arr}")
 
 ### Structured Arrays
 
+Structured arrays are nd-arrays whose datatype is a composition of simpler data types organized as a sequence of named fields. They are designed to mimic `structs` in C. They are useful for reading binary files with fixed length records.
+
 ```python
 # Define structured dtype
 dt = np.dtype([('name', 'U10'), ('age', 'i4'), ('score', 'f4')])
@@ -1534,6 +1536,8 @@ print(f"\nSorted by score:\n{sorted_data}")
 ```
 
 ### Masked Arrays
+
+Masked arrays are nd-arrays that have a `mask` property. The mask property is a boolean array that determines whether the corresponding element in the array is valid or not. The mask property can be used to filter out invalid values.
 
 ```python
 # Handle invalid/missing data
