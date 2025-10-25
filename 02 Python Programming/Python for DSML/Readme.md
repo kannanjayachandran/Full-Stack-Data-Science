@@ -1,5 +1,5 @@
-<h1 align="center" > Python for Data Science and Machine Learning </h1>
+# Python for Data Science and Machine Learning
 
-- **[Numpy](./1.%20Numpy/Readme.md)**
-- **[Pandas](./2.%20Pandas/Readme.md)**
-- **[Matplotlib & Seaborn](./3.%20Matplotlib_Seaborn/Readme.md)**
+- **[Numpy](./Numpy/Readme.md)**
+- **[Pandas](./Pandas/Readme.md)**
+- **[Matplotlib & Seaborn](./Matplotlib%20&%20Seaborn/Readme.md)**
