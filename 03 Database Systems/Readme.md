@@ -14,7 +14,6 @@
 8. [Normalization and Denormalization](#normalization-and-denormalization)
 9. [Data Warehousing Concepts](#data-warehousing)
 10. [Database Selection for DS/ML Projects](#database-selection-for-dsml-projects)
-11. [Best Practices and Common Pitfalls](#best-practices-and-common-pitfalls)
 
 ---
 
