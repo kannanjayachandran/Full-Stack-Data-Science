@@ -1,9 +1,34 @@
 <!-- 
     Author : Kannan Jayachandran
-    File : Readme.md (Numpy documentation)
+    File : Readme.md (Numpy)
+    Section : Python for DSML
  -->
 
 <h1 align="center"> Numpy </h1>
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Why `Numpy`](#why-numpy-)
+- [`ndarray` Object](#ndarray-object)
+- [Axes and Rank](#axes-and-rank)
+- [Array Creation](#array-creation)
+- [Data Types](#data-types)
+- [Array Manipulation](#array-manipulation)
+- [Broadcasting](#broadcasting)
+- [Universal Functions](#universal-functions-ufuncs)
+- [Aggregation and Statistical Operations](#aggregation-and-statistical-operations)
+- [Boolean Indexing and Masking](#boolean-indexing-and-masking)
+- [Sorting and Partitioning](#sorting-and-partitioning)
+- [Linear Algebra Operations](#linear-algebra-operations)
+- [Random Module](#random-module)
+- [Advanced Topics](#advanced-topics)
+    - [Views vs Copies](#views-vs-copies)
+    - [Structured Arrays](#structured-arrays)
+    - [Masked Arrays](#masked-arrays)
+    - [Memory-Efficient Operations](#memory-efficient-operations)
+
+## Introduction
 
 NumPy (**Numerical Python**) is the foundational library for scientific computing in Python. It provides:
 
