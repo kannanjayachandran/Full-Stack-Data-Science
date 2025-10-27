@@ -1,3 +1,9 @@
+<!-- 
+    Author : Kannan Jayachandran
+    File : Readme.md (Matplotlib & Seaborn)
+    Section : Python for DSML
+ -->
+
 <h1 align="center"> Data Visualization in Python (Matplotlib + Seaborn) </h1>
 
 > Learn to tell stories with your data — not just show numbers.
