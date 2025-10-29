@@ -1,25 +1,35 @@
-# Scikit-Learn: Comprehensive Guide for Data Science and Machine Learning
+<!-- 
+    Author : Kannan Jayachandran
+    File : Readme.md (Scikit-learn (sklearn))
+    Section : Python for DSML
+ -->
 
-## Introduction to Scikit-Learn
+<h1 align="center"> Scikit-learn (sklearn) </h1>
 
-Scikit-learn (sklearn) is Python's most widely adopted machine learning library, providing a unified interface for supervised and unsupervised learning algorithms, preprocessing utilities, model evaluation tools, and pipeline construction. Built on NumPy, SciPy, and matplotlib, it emphasizes ease of use, performance, and accessibility, making it the de facto standard for classical machine learning in production environments. Its consistent API design—where estimators implement `fit()`, `predict()`, and `transform()` methods—enables rapid prototyping, model comparison, and deployment of ML solutions across regression, classification, clustering, and dimensionality reduction tasks.
+## Introduction
+
+Scikit-learn (sklearn) is Python's most widely adopted machine learning library, providing a unified interface for **supervised** and **unsupervised** learning algorithms, **preprocessing** utilities, **model evaluation tools**, and **pipeline construction**. 
+
+Built on NumPy, SciPy, and matplotlib, it emphasizes ease of use, performance, and accessibility, making it the de facto standard for classical machine learning in production environments. 
+
+Its consistent API design—where estimators implement `fit()`, `predict()`, and `transform()` methods—enables rapid prototyping, model comparison, and deployment of ML solutions across regression, classification, clustering, and dimensionality reduction tasks.
 
 ---
 
 ## 1. Classification
 
-### Definition and Fundamentals
-
-Classification is a supervised learning task that assigns discrete labels to input samples based on learned patterns from labeled training data. Scikit-learn provides implementations of decision boundaries through various algorithms including linear models (Logistic Regression, SVM), tree-based methods (Decision Trees, Random Forests, Gradient Boosting), probabilistic models (Naive Bayes), and instance-based learners (KNN). The library handles binary, multiclass, and multilabel classification scenarios with consistent interfaces.
+Classification is a supervised learning task that assigns discrete labels to input samples based on learned patterns from labeled training data. Scikit-learn provides various algorithms including **linear models** (*Logistic Regression*, *SVM*), **tree-based methods** (*Decision Trees*, *Random Forests*, *Gradient Boosting*), **probabilistic models** (*Naive Bayes*), and **instance-based learners** (*KNN*). The library handles binary, multi-class, and multi-label classification scenarios with consistent interfaces.
 
 ### 1.1 Logistic Regression
 
-Logistic Regression models the probability of class membership using the logistic (sigmoid) function, making it interpretable and efficient for linearly separable data. Despite its name, it's a classification algorithm that estimates P(y=1|X) through maximum likelihood estimation.
+Logistic Regression models the probability of class membership using the **logistic (sigmoid) function**, making it interpretable and efficient for linearly separable data. Despite its name, it's a **classification algorithm** that estimates `P(y=1|X)` through **maximum likelihood estimation**.
 
 **Mathematical Foundation:**
-- Sigmoid function: σ(z) = 1/(1 + e^(-z))
-- Decision boundary: w^T·x + b = 0
+- Sigmoid function: $\sigma(z)=\frac{1}{1 + e^{(-z)}}$
+- Decision boundary: $w^T \cdot x + b = 0$
 - Loss function: Binary cross-entropy
+
+![alt text](image.png)
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -61,7 +71,7 @@ print(classification_report(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 ```
 
-**Multiclass Classification Strategies:**
+**Multi-class Classification Strategies:**
 
 ```python
 # One-vs-Rest (OvR) - default for most solvers
