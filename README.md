@@ -18,7 +18,7 @@
 
 ---
 
-> #### _Given GitHub's limitations in rendering certain mathematical equations (LaTeX), the best way to view the content is by previewing it in any IDE with markdown preview functionality._
+#### Given GitHub's limitations in rendering certain mathematical equations (LaTeX), the best way to view the content is by previewing it in any IDE with markdown preview functionality.
 
 ---
 
