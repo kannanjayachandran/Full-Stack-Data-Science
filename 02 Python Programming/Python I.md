@@ -967,6 +967,8 @@ Python lists are **ordered, mutable collections** of objects. They can store het
 
 - Defined using square brackets `[]` or the `list()` constructor.
 
+![Array instance in memory](./img/Array_instance.png)
+
 ```python
 nums = [1, 2, 3, 4]
 mixed = [1, "hello", 3.14, [5, 6]]
@@ -975,6 +977,10 @@ print(nums[0])     # 1
 print(nums[-1])    # 4
 print(nums[1:3])   # [2, 3]
 ```
+
+**Array Internal Representation**
+
+![Internal representation of list](./img/internal.png)
 
 #### List Operations
 
