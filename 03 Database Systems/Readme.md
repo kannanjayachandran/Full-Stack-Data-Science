@@ -769,4 +769,10 @@ customer_id | current_city | previous_city
 
 ---
 
+- **[SQL Primer](./SQL-Primer.md)** $\rightarrow$ **[SQL Deep Dive](./SQL-deep-dive.md)**
+
+- **[Mongo DB](./Mongo_DB.md) & [Redis DB](./Redis_DB.md)**
+
+---
+
 <h1 align='center'> END </h1>
