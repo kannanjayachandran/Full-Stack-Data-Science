@@ -1,6 +1,7 @@
 <!-- 
     Author : Kannan Jayachandran
-    File : Probability.md     
+    File : Probability.md
+    Section : Applied Mathematics for Data Science     
  -->
 
 <h1 align="center"> PROBABILITY </h1>
@@ -37,45 +38,395 @@
 
 ---
 
+**Probability is the mathematical framework for quantifying uncertainty and making predictions about data. It forms the theoretical foundation for statistical inference, machine learning algorithms, and data-driven decision making.**
+
 ## Experiment 
 
-An **experiment** is a process that generates a specific outcome.
+An **experiment** is any process or procedure that produces a well-defined outcome. In data science, experiments can be deterministic (always produce the same result) or stochastic (produce random outcomes).
 
-- For instance, flipping a coin is an experiment as it produces a result, either heads or tails.
+Think of an experiment as *any action or observation that generates data*. In machine learning contexts, this could be:
+- A single prediction by a model
+- Drawing a sample from a population
+- A user interaction with a system
+- A measurement or sensor reading
+
+---
 
 ## Outcome 
 
-An **outcome** is the specific result of a single trial of an experiment.
+An **outcome** is a single possible result of an experiment. It represents one specific realization from the set of all possibilities.
 
-- For example, if we toss a coin, the possible outcomes are heads or tails.
+> An outcome is what actually happens when you perform an experiment once.
 
-## Sample Space (Ω or S) 
+**Mathematical Notation**: We typically denote outcomes as $\omega \in \Omega$, where $\Omega$ is the sample space.
 
-The **sample space** is the set of all possible outcomes for a random experiment. 
+**Examples**:
+- Rolling a die: outcome could be 3
+- Email classification: outcome is "spam" or "not spam"
+- Stock price tomorrow: outcome is a specific price value
 
-- For example, in a coin toss, the sample space is {heads, tails}. For a roll of a six-sided die, the sample space is {1, 2, 3, 4, 5, 6}.
+---
+
+## Sample Space ($\Omega$ or S) 
+
+The **sample space** is the set of all possible outcomes of an experiment. It represents the complete universe of what could happen.
+
+**Mathematical Definition**:
+$$\Omega = \{\omega_1, \omega_2, \omega_3, \ldots\}$$
+
+where each $\omega_i$ is a possible outcome.
+
+- For example, in a coin toss, the sample space is {head, tail}. For a roll of a six-sided die, the sample space is {1, 2, 3, 4, 5, 6}.
+
+### Types of Sample Spaces
+
+| Type | Description | Example |
+|:----:|:------------|:--------|
+| **Finite** | Countable number of outcomes | Die roll: $\{1, 2, 3, 4, 5, 6\}$ |
+| **Countably Infinite** | Infinite but enumerable | Number of emails until spam: $\{1, 2, 3, \ldots\}$ |
+| **Uncountably Infinite** | Continuous range | Time until system failure: $[0, \infty)$ |
+
+### Best Practices
+- Always clearly define your sample space before calculating probabilities
+- Ensure outcomes are mutually exclusive (no overlap)
+- Verify sample space is collectively exhaustive (covers all possibilities)
+
+---
 
 ## Event (A)
 
-An event is a subset of the sample space. In other words, an event is a specific outcome or a collection of outcomes within the sample space, to which a probability is assigned.
+An **event** is a subset of the sample space to which we assign a probability. Events represent outcomes or combinations of outcomes we're interested in measuring.
 
-- For example, in a coin toss, the event of getting a head is a subset of the sample space, represented as $\{head\}\subset \{head, tail\}$. We use the intersection ($\cap$) when two events occur simultaneously and the $(\cup)$ when at least one of the events occurs.
+**Mathematical Definition**:
+$$A \subseteq \Omega$$
 
-## Event space (F) 
+- For example, in a coin toss, the event of getting a head is a subset of the sample space
 
-The event space (also called $\sigma$-algebra) is the collection of all possible events (including the empty set and the full sample space) for an experiment. It consists of specific outcomes or combinations of outcomes.
+### Set Operations on Events
 
-- For example, for a coin toss, the event space is {∅, {head}, {tail}, {head, tail}}.
+| Operation | Notation | Meaning | Data Science Example |
+|:---------:|:--------:|:--------|:---------------------|
+| **Union** | $A \cup B$ | Either A or B occurs | Model predicts positive OR ground truth is positive |
+| **Intersection** | $A \cap B$ | Both A and B occur | True positive: prediction AND truth are positive |
+| **Complement** | $A^c$ or $\bar{A}$ | A does not occur | False negative: NOT predicted positive |
+| **Difference** | $A \setminus B$ | A occurs but not B | False positive cases |
+
+**Visual Representation**:
+
+![Ven diagram representation of probability](./img/ven.png)
+
+### Common Pitfalls
+- Confusing $P(A \cup B)$ with $P(A) + P(B)$ (only true if events are mutually exclusive)
+- Forgetting that $A \cap A^c = \emptyset$ (empty set)
+- Not checking if events are independent before multiplying probabilities
+
+---
+
+## Event space ($\mathcal{F}$)
+
+The **event space** (also called $\sigma$-algebra or $\sigma$-field) is the collection of all events to which we can assign probabilities. It's a formal mathematical structure that ensures probability is well-defined.
+
+**Mathematical Definition**: A σ-algebra $\mathcal{F}$ on sample space $\Omega$ must satisfy:
+
+1. **Contains the sample space**: $\Omega \in \mathcal{F}$
+2. **Closed under complementation**: If $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$
+3. **Closed under countable unions**: If $A_1, A_2, \ldots \in \mathcal{F}$, then $\bigcup_{i=1}^{\infty} A_i \in \mathcal{F}$
+
+**Intuition**: The event space is the "*legal*" collection of sets we're allowed to ask probability questions about. Not every subset of $\Omega$ needs to be measurable.
+
+**Example**:
+For a coin toss with $\Omega = \{H, T\}$:
+$$\mathcal{F} = \{\emptyset, \{H\}, \{T\}, \{H, T\}\}$$
+
+This contains:
+- The impossible event: $\emptyset$
+- Individual outcomes: $\{H\}$ and $\{T\}$
+- The certain event: $\{H, T\}$
+
+**Practical Note**: In most data science applications with finite sample spaces, the event space is simply the power set (all possible subsets) of $\Omega$. The σ-algebra formalism becomes critical in measure theory and continuous probability spaces.
+
+---
 
 ## Probability (P)
 
-Probability quantifies the likelihood that an event will occur. It is a value between 0 and 1, where 0 indicates an impossible event and 1 indicates a certain event.
+**Probability** quantifies the likelihood of an event occurring, expressed as a real number between 0 and 1.
 
-- For example, the probability of getting a head when tossing a fair coin is 0.5 (50%) or the probability of getting an even number when rolling a fair six-sided die is 0.5 (50%).
+A **probability function** $P: \mathcal{F} \rightarrow [0, 1]$ assigns to each event $A \in \mathcal{F}$ a number $P(A)$ representing its likelihood.
 
-## Probability function (P)
+### Classical (Frequentist) Definition
+$$P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}$$
 
-The function used to assign a probability to an event.
+**Interpretation Scale**:
+- $P(A) = 0$: Event $A$ is **impossible**
+- $P(A) = 0.5$: Event $A$ is **equally likely** to occur or not
+- $P(A) = 1$: Event $A$ is **certain**
+
+> *Probability is fundamentally a measure of the relative size of a set.*
+>
+> When we write $P(A)$, we're measuring how "large" event $A$ is relative to the sample space $\Omega$.
+
+**Example Calculation**:
+Consider rolling a fair six-sided die. What is the probability of rolling an even number?
+
+- **Sample space**: $\Omega = \{1, 2, 3, 4, 5, 6\}$, $|\Omega| = 6$
+- **Event**: $A = \{2, 4, 6\}$, $|A| = 3$
+- **Probability**: 
+$$P(A) = \frac{|A|}{|\Omega|} = \frac{3}{6} = 0.5$$
+
+### Complement Rule
+
+The probability of an event not occurring is:
+
+$$P(A^c) = 1 - P(A)$$
+
+This is extremely useful in practice. Often it's easier to calculate the probability of something NOT happening. For example, When calculating prediction errors:
+
+$$P(\text{error}) = 1 - P(\text{correct}) = 1 - \text{accuracy}$$
+
+### Best Practices
+
+- Always verify probabilities sum to 1 across exhaustive, mutually exclusive events
+- Use simulation to validate analytical probability calculations
+- For rare events, consider using complement: $P(A) = 1 - P(A^c)$ if $P(A^c)$ is easier to compute
+- In classification, ensure class probabilities sum to 1: $\sum_{i=1}^{k} P(y = c_i) = 1$
+
+### Common Pitfalls
+
+- Applying classical definition to non-uniform sample spaces (e.g., loaded dice)
+- Confusing empirical frequency with true probability (especially with small samples)
+- Forgetting that probability is a model assumption, not always ground truth
+- Misapplying frequentist probability to one-time events
+
+---
+
+## Axioms of Probability
+
+The **axioms of probability** (Kolmogorov's axioms) provide the mathematical foundation for all probability theory. These three simple rules ensure probability behaves consistently and meaningfully.
+
+### Kolmogorov's Three Axioms
+
+For a probability function $P$ defined on event space $\mathcal{F}$:
+
+**Axiom 1: Non-negativity**
+$$P(A) \geq 0 \quad \forall A \in \mathcal{F}$$
+
+Probabilities cannot be negative. The likelihood of any event is at minimum zero.
+
+**Axiom 2: Normalization (Unitarity)**
+$$P(\Omega) = 1$$
+
+The probability of the entire sample space (something must happen) is 1.
+
+**Axiom 3: Countable Additivity (σ-Additivity)**
+
+For any countable collection of mutually exclusive events $A_1, A_2, A_3, \ldots$ where $A_i \cap A_j = \emptyset$ for $i \neq j$:
+
+$$P\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} P(A_i)$$
+
+If events cannot occur simultaneously, the probability of any one occurring is the sum of their individual probabilities.
+
+### Derived Properties
+
+From these three axioms, we can derive all other probability rules:
+
+**1. Probability of Empty Set**:
+$$P(\emptyset) = 0$$
+
+**Proof**: Let $A_1 = \Omega$ and $A_i = \emptyset$ for $i > 1$. These are mutually exclusive.
+$$P(\Omega) = P\left(\bigcup_{i=1}^{\infty} A_i\right) = P(\Omega) + \sum_{i=2}^{\infty} P(\emptyset)$$
+$$1 = 1 + \sum_{i=2}^{\infty} P(\emptyset)$$
+Therefore $P(\emptyset) = 0$.
+
+**2. Complement Rule**:
+$$P(A^c) = 1 - P(A)$$
+
+**Proof**: $\Omega = A \cup A^c$ and $A \cap A^c = \emptyset$
+$$1 = P(\Omega) = P(A \cup A^c) = P(A) + P(A^c)$$
+
+**3. Monotonicity**:
+If $A \subseteq B$, then $P(A) \leq P(B)$
+
+**4. Finite Additivity**:
+For mutually exclusive events $A_1, \ldots, A_n$:
+$$P(A_1 \cup \cdots \cup A_n) = P(A_1) + \cdots + P(A_n)$$
+
+### Best Practices
+
+- Always normalize model outputs (e.g., using `softmax` for multi-class)
+- Verify probability distributions before using them in decision systems
+- Use log-probabilities for numerical stability in deep learning
+- Remember that probabilities are a model of uncertainty, not absolute truth
+
+### Common Pitfalls
+
+- Using unnormalized scores as probabilities (e.g., raw SVM outputs)
+- Forgetting to handle numerical precision in probability sums
+- Assuming independence without checking (violates proper probability calculations)
+- Mixing probability with odds or log-odds without conversion
+
+---
+
+## Rules of Probability
+
+Building on the axioms, we derive fundamental rules for calculating probabilities of complex events.
+
+### Addition Rule
+
+The **addition rule** (or sum rule) calculates the probability that at least one of two events occurs.
+
+**General Addition Rule** (for any two events):
+$$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
+
+![Addition rule](./img/PB-addition-rule.png)
+
+**Intuition**: We add individual probabilities but subtract the overlap (intersection) because it's counted twice.
+
+**Special Case** (mutually exclusive events): If $A \cap B = \emptyset$:
+$$P(A \cup B) = P(A) + P(B)$$
+
+**Extended Form** (three events):
+$$P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$$
+
+This follows the inclusion-exclusion principle.
+
+**Example**: In binary classification confusion matrix:
+- Event A: Model predicts positive
+- Event B: True label is positive
+- $P(A \cup B)$: Probability model predicts positive OR true label is positive
+
+$$P(\text{predicted positive OR true positive}) = P(\text{pred+}) + P(\text{true+}) - P(\text{TP})$$
+
+### Multiplication Rule
+
+The **multiplication rule** (or product rule) calculates the probability that two events both occur.
+
+**General Multiplication Rule**:
+$$P(A \cap B) = P(A) \cdot P(B|A) = P(B) \cdot P(A|B)$$
+
+where $P(B|A)$ is the conditional probability of B given A.
+
+**Special Case** (independent events): If A and B are independent:
+$$P(A \cap B) = P(A) \cdot P(B)$$
+
+**Extended Form** (chain rule):
+$$P(A_1 \cap A_2 \cap \cdots \cap A_n) = P(A_1) \cdot P(A_2|A_1) \cdot P(A_3|A_1 \cap A_2) \cdots P(A_n|A_1 \cap \cdots \cap A_{n-1})$$
+
+**ML Application**: In naive Bayes classifier:
+$$P(y, x_1, x_2, \ldots, x_n) = P(y) \prod_{i=1}^{n} P(x_i|y)$$
+
+assuming conditional independence of features given the class.
+
+### Summary Table
+
+| Rule | Formula | When to Use |
+|:-----|:--------|:------------|
+| **Addition** | $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ | Finding "at least one" probabilities |
+| **Addition (Mutually Exclusive)** | $P(A \cup B) = P(A) + P(B)$ | Events can't occur together |
+| **Multiplication** | $P(A \cap B) = P(A) \cdot P(B\|A)$ | Finding "both occur" probabilities |
+| **Multiplication (Independent)** | $P(A \cap B) = P(A) \cdot P(B)$ | Events don't affect each other |
+| **Complement** | $P(A^c) = 1 - P(A)$ | "Not A" is easier to calculate |
+
+### Best Practices
+
+- Always check if events are mutually exclusive before using simplified addition rule
+- Verify independence assumption before using simplified multiplication rule (very common mistake in ML)
+- Use complement rule when direct calculation is difficult
+- In ML, log-space calculations prevent numerical underflow: $\log P(A \cap B) = \log P(A) + \log P(B|A)$
+
+---
+
+## Conditional Probability and Independence
+
+**Conditional probability** measures the likelihood of an event occurring given that another event has already occurred. It's fundamental to causal reasoning, Bayesian inference, and nearly all ML algorithms.
+
+**Definition**:
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}, \quad P(B) > 0$$
+
+Read as "probability of A given B."
+
+**Intuition**: When we know B has occurred, we're restricting our sample space to only those outcomes in B. We then measure what fraction of B also contains A.
+
+**Geometric Interpretation**: 
+- Original sample space: $\Omega$
+- New "reduced" sample space: $B$
+- We want the proportion of $B$ that overlaps with $A$
+
+### Independence
+
+Two events A and B are **independent** if knowing one occurred doesn't change the probability of the other.
+
+**Definition** (equivalent forms):
+
+1. $P(A \cap B) = P(A) \cdot P(B)$
+2. $P(A|B) = P(A)$
+3. $P(B|A) = P(B)$
+
+**Intuition**: Information about B gives us no information about A. They don't influence each other.
+
+**Important Distinction**:
+- **Independence** ≠ **Mutual Exclusivity**
+- Mutually exclusive events are usually *dependent*!
+- If $A \cap B = \emptyset$ and both have positive probability, then $P(A|B) = 0 \neq P(A)$
+
+**Conditional Independence**: Events A and B are conditionally independent given C if:
+$$P(A \cap B | C) = P(A|C) \cdot P(B|C)$$
+
+This is crucial for naive Bayes and graphical models.
+
+**Naive Bayes Assumption**:
+
+In naive Bayes classification, we assume features are conditionally independent given the class:
+
+$$P(x_1, x_2, \ldots, x_n | y) = \prod_{i=1}^{n} P(x_i | y)$$
+
+This is usually **violated in practice**, but the classifier often works well anyway!
+
+### Law of Total Probability
+
+If $B_1, B_2, \ldots, B_n$ partition the sample space (mutually exclusive and exhaustive), then:
+
+$$P(A) = \sum_{i=1}^{n} P(A | B_i) \cdot P(B_i)$$
+
+**Intuition**: We can calculate the probability of A by considering all possible "scenarios" $B_i$ that could lead to A.
+
+**Continuous Version**: If B is continuous with PDF $f_B(b)$:
+$$P(A) = \int P(A|B=b) \cdot f_B(b) \, db$$
+
+### Best Practices
+
+- Always verify independence assumption before using $P(A \cap B) = P(A) \cdot P(B)$
+- Use chi-square test or mutual information to test independence empirically
+- Be cautious with naive Bayes: conditional independence is rarely true but often "good enough"
+- When calculating marginal probabilities, use law of total probability to sum over all scenarios
+
+### Common Pitfalls
+
+- Assuming independence without justification (extremely common!)
+- Confusing independence with correlation: uncorrelated ≠ independent (except for Gaussian)
+- Ignoring conditional dependencies in causal reasoning
+- Forgetting that pairwise independence doesn't imply mutual independence
+
+---
+
+
+<!-- Edited -->
+
+# Break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Random Variable (X) 
 
@@ -88,50 +439,8 @@ A random variable is a variable that can assume various values, and the specific
 |       Countable set      |       Uncountable set      |
 |       Finite set         |         Infinite set       |
 
-## Ven diagram of probability representation
-
-![Ven diagram representation of probability](./img/ven.png)
-
-## Calculating Probability
-
-Generally we would calculate probability by using the following idea;
-
-$$P(E) = \frac{\texttt {Number of favorable outcomes}}{\texttt{Total number of possible outcomes}}$$
-
-And probability would always turns out to be a number between 0 and 1. Where 0 indicates impossibility and 1 indicates certainty.
-
-<details>
-
-<summary> <b> Example </b> </summary>
-
-_Now consider the following experiment of throwing a fair-six-faced die. {1, 2, 3, 4, 5, 6}. Compute the probability that you get a number that is; less than 5 and an even number._
-
-- `Sample space` : {1, 2, 3, 4, 5, 6}
-
-- `Events` : $\color{#F99417}E_1$ = {1, 2, 3, 4} and $\color{#F99417}E_2$ = {2, 4, 6}
-
-- `Event space` : $\color{#F99417}F$ = {$\color{#F99417}E_1$, $\color{#F99417}E_2$} $\rightarrow$ $\color{#F99417} E_1 \cap E_2$  = {2, 4}
-
-$$P(E) = \frac{2}{6} = \frac{1}{3}$$
-
-</details>
-
-The above equation of P(E) essentially tells us what probability is; **Probability is a measure of the size of a set**. If you understand this, you're sort of done with probability. This is what I would call the essence of probability.
-
-We have a sample space $\color{#F99417}S$ and an event space $\color{#F99417}F$, all probability does is represent the event space relative to the sample space as a ratio. So in turn we are measuring the size of the event space relative to the sample space.
 
 
-Hence we can define probability as `a measure of the size of a set`
-
-![Probability : How probability works](./img/Probability_process.png)
-
----
-
-## Compliment of Probability
-
-The complement of an event is the set of all outcomes in the sample space that are not in the event. It is denoted as $\color{#F99417}A^c$ or $\color{#F99417}A'$. The probability of the complement of an event is given by;
-
-$$P(A^c) = 1 - P(A)$$
 
 ## Probability Distribution
 
@@ -620,7 +929,7 @@ Selecting the optimal value of $\color{#F99417}\lambda$ is important. We may use
 
 - Selecting an optimal $\color{#F99417}\lambda$ and interpreting the transformed values can be challenging.
 
-<!-- If required add distributions here -->
+---
 
 ## Law of Large Numbers
 

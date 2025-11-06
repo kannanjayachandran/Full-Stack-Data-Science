@@ -1,6 +1,7 @@
 <!-- 
     Author : Kannan Jayachandran
     File : Discrete_mathematics.md
+    Section : Applied Mathematics for Data Science
  -->
 
 <h1 align="center" style="color: orange"> Discrete Mathematics</h1>
