@@ -437,7 +437,7 @@ SQL is divided into several sub-languages:
 
 Understanding database internals helps you write efficient queries and diagnose performance issues.
 
-![Query execution overview](./img/SQL-Execution.svg)
+![Query execution overview](./img/Execution.png)
 
 ### Key Components
 
