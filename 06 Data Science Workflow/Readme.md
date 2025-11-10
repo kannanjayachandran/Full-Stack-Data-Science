@@ -1,31 +1,20 @@
-<h1 align="center"> Data Science - I </h1>
+<h1 align="center"> Data Science </h1>
 
 ## Table of contents
 
 - [Introduction to Data Science](#introduction-to-data-science)
-
 - [Application of data science](#application-of-data-science)
-
 - [The Data Science Process](#the-data-science-process)
     - [Data](#data)
-
 - [Artificial Intelligence](#artificial-intelligence)
-
 - [Machine learning](#machine-learning)
-
 - [Deep learning](#deep-learning)
-
 - [Generative AI](#generative-ai)
-
-- [Mathematics for data science and machine learning](#mathematics-for-data-science-and-machine-learning)
-    
-- [Data visualization](#data-visualization)
+- [Data Science Workflow](./Data-Science-Workflow.md)
 
 ---
 
 ## Introduction to Data Science
-
-We live in a world drowning in data. Websites, social media platforms, IOT devices,  smartphones, smart cars, smart cooker (yes it exists) and what not, generates an incomprehensible amount of data every day. This enormous amount of data although seems like a ever growing problem, is a gold mine for businesses and organizations as they contains answers to questions that can help them make better decisions, understand their customers better, and improve their products and services.
 
 Data science is the field that deals with extracting insights from data and using it to make informed decisions. It is an interdisciplinary field that combines domain knowledge, statistical and mathematical expertise along with programming skills, to extract insights from data.
 
@@ -77,7 +66,7 @@ The data science process refers to the steps involved in extracting insights fro
 
 ### Data
 
-![Definition of data](./img/data_def.png)
+A set of quantitative or qualitative values
 
 ## Artificial Intelligence
 
@@ -100,3 +89,7 @@ Deep learning is a subset of machine learning that uses _artificial neural netwo
 ## Generative AI
 
 Generative AI is a subset of deep learning that uses deep learning to generate new data. It can be used for creating text, images, videos, music, etc. Generative AI contributes to the recent resurgence of AI and is used in a wide variety of applications such as image generation, text generation, music generation, etc. LLMs (Large Language Models) are a type of generative AI that can generate human-like text based on the input they receive. They are trained on large datasets and can understand and generate text in a way that is similar to how humans do.
+
+---
+
+**[Data Science Workflow](./Data-Science-Workflow.md)**
