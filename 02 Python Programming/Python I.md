@@ -630,8 +630,6 @@ print("Final x:", x)
 
 ## Python Memory Model and Variable Behavior
 
-Before diving into **Object-Oriented Programming (OOP)** in Python, it's essential to grasp how the language manages **variables**, **references**, **objects**, and **memory**. Understanding these fundamental concepts is also crucial for discussing **complex data structures** or **performance optimization**. This knowledge will clarify some of Python's unique or "*quirky*" behaviors.
-
 In Python, everything is an **object** — from integers and strings to lists and functions. Variables act as **references** (**bindings**) to these objects, not as direct storage locations for data.
 
 ### Variables and Object References
@@ -646,7 +644,7 @@ Here:
 
 - An **integer object** with value **300** is created.
 
-- The variable `n` references this object (it holds the memory address, not the value itself).
+- The variable `n` references this object
 
 Every Python object has a unique identifier, typically its memory address, which can be checked using `id()`.
 
@@ -828,7 +826,7 @@ Internally, Python dynamically allocates additional memory to store large number
 
 ### Cython: Bypassing Python’s Overhead
 
-For performance-critical sections, tools like **Cython** allow compiling Python code to **C** for near-native speed.
+**Cython** is an *optimizing static compiler* that allows users to write `C` extensions for Python. It is a superset of the Python language, meaning it includes all Python functionality and adds the ability to integrate C-level features.
 
 ```py
 cpdef int add(int x, int y):
