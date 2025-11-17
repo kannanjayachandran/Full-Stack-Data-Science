@@ -1,43 +1,50 @@
 <h1 align="center"> Computer Science Fundamentals </h1>
 
-Computers were originally built to solve arithmetic problems. Over time, they have evolved to power the internet, create artificial intelligence, run video games, and even simulate the universe. At their core, however, all computations reduce to manipulating **0s and 1s**.
+**Computer Science** is the study of computers and computational systems. It is a broad discipline covering everything from the _algorithms_ that form _software_ to the ways in which software interacts with _hardware_.
 
-**[Computer science](https://en.wikipedia.org/wiki/Computer_science)** is the study of computers and computational systems. It is a broad discipline covering everything from the _algorithms_ that form _software_ to the ways in which software interacts with _hardware_.
+At the deepest level, every computer is built on a simple idea: **electricity can represent information**.
 
----
+- If current flows, we treat it as **1**.
 
-## [Boolean Logic](https://en.wikipedia.org/wiki/Boolean_algebra)
+- If it does not, we treat it as **0**.
 
-Boolean logic is a form of algebra where values are either `true` or `false`. It is the foundation of digital circuits, programming, and computer reasoning. The main operations are:
+To control these **1s** and **0s**, we rely on **semiconductors**, which allow us to build **transistors**—tiny electrical switches that turn signals on or off. When transistors are combined in specific patterns, they form **logic gates** such as `AND`, `OR`, and `NOT`. These gates implement rules of Boolean algebra, the mathematics of true/false operations.
 
-- **AND**: True only if both inputs are true.
- 
-- **OR**: True if at least one input is true.
- 
-- **NOT**: Inverts the input (true becomes false, and vice versa).
- 
-- **XOR (Exclusive OR)**: True if exactly one input is true.
- 
-- **NAND (NOT AND)**: True unless both inputs are true.
- 
-- **NOR (NOT OR)**: True only if both inputs are false.
+By combining gates, we build larger digital components:
 
-- **XNOR (Equivalence)**: True if both inputs are the same.
+- **Adders** (arithmetic)
 
----
+- **Multiplexers** (signal routing)
 
-## [Computer Architecture](https://en.wikipedia.org/wiki/Computer_architecture)
+- **Flip-flops** and **registers** (temporary storage)
 
-A computer consists of three fundamental parts:
+- **ALUs** (arithmetic and logic operations)
 
-1. **Central Processing Unit (CPU)** – Executes instructions and performs calculations.
+- **Control** units (coordination and sequencing)
 
-2. **Memory** – Stores instructions and data.  
-   - **Primary memory (RAM)**: Fast, volatile storage for data needed immediately.
+Billions of these components fit onto a single microprocessor. This is the basis on which higher-level computing is built—automation, logic, programming, software, and ultimately the complex systems we use today.
 
-   - **Secondary storage**: Persistent storage such as SSDs or HDDs.
-    
-3. **Input/Output (I/O) Devices** – Allow interaction with the outside world (e.g., keyboards, monitors, network cards). 
+## Boolean Logic
+
+Boolean logic deals with values that are either true or false, implemented as **1** and **0** in hardware. The core operations are:
+
+**AND** – True only if both inputs are true
+
+**OR** – True if at least one input is true
+
+**NOT** – Inverts the input
+
+**XOR** – True if inputs differ
+
+**NAND** – True unless both inputs are true
+
+**NOR** – True only if both inputs are false
+
+**XNOR** – True if inputs are the same
+
+These operations form the foundation of digital circuits and computation.
+
+## Computer Architecture
 
 <div align="center">
 
@@ -45,50 +52,53 @@ A computer consists of three fundamental parts:
 
 </div>
 
----
+A computer system is organized around three major subsystems:
 
-### [CPU (Central Processing Unit)](https://en.wikipedia.org/wiki/Central_processing_unit)
+- **CPU (Central Processing Unit)**
 
-The CPU is an [integrated circuit](https://en.wikipedia.org/wiki/Integrated_circuit) that contains multiple subsystems for executing instructions. Its three key components are:
+Executes instructions, performs calculations, and controls the flow of data.
 
-1. **Control Unit (CU)** – Directs and coordinates the activities of the processor.
+- **Memory**
 
-2. **Arithmetic Logic Unit (ALU)** – Performs arithmetic (add, subtract, multiply, divide) and logical operations (AND, OR, NOT, etc.).
+Stores instructions and data.
 
-3. **Registers** – Very small, fast storage locations that temporarily hold data and instructions.  
+- **RAM** (primary memory) 
 
-Modern CPUs also include specialized subsystems such as floating-point units (FPUs), cache memory, and integrated graphics.
+Fast, volatile working storage
 
-#### CPU Cores
+**Secondary storage**
 
-Modern CPUs are made of multiple **cores**, each capable of independently executing instructions. This enables **parallelism**, improving multitasking and performance. Many CPUs also support **simultaneous multithreading (SMT)** or **hyper-threading (Intel-specific)**, allowing each core to handle multiple threads.
+Persistent but slower (SSD/HDD)
 
-Key parts of a CPU core include:
+- **Input/Output (I/O)**
 
-- **Floating Point Unit (FPU)** – Handles floating-point arithmetic for scientific and graphical workloads.
+Interfaces for communication with the outside world—keyboards, displays, storage devices, and networks.
 
-- **Integer Execution Units** – Perform arithmetic and logical operations on integers.
+### CPU (Central Processing Unit)
 
-- **Decode Unit** – Translates high-level instructions into lower-level micro-operations.
+A CPU is an integrated circuit containing several tightly coordinated units:
 
-- **Out-of-Order Execution & Retirement Units** – Allow instructions to execute out of order to maximize performance, but ensure results are committed in the correct order.
+- Control Unit (CU) – Directs the execution of instructions
 
-- **Registers** – Fast storage for integers, addresses, and floating-point data.  
+- Arithmetic Logic Unit (ALU) – Performs arithmetic and logical operations
 
-- **Cache Memory** – Multi-level system to speed up data access:  
-  - **L1 Cache**: Smallest, fastest, located within the core. 
+- Registers – Extremely fast storage used during execution
 
-  - **L2 Cache**: Larger, slower, often shared by a few cores.  
+Modern CPUs extend this with specialized units:
 
-  - **L3 Cache**: Largest, slower, shared across the CPU.  
+- Floating-Point Unit (FPU)
 
-Other subsystems include:
+- Instruction decoder and micro-op schedulers
 
-- **Memory Controller** – Manages communication with RAM.
+- Out-of-order execution engines
 
-- **Integrated Graphics (iGPU)** – Handles basic graphics tasks. 
- 
-- **Interconnects** – Enable communication between cores, caches, and memory.
+- Branch predictors
+
+- Cache memory (L1, L2, L3)
+
+- Memory controller
+
+- Integrated graphics (in some processors)
 
 <div align="center">
 
@@ -96,66 +106,76 @@ Other subsystems include:
 
 </div>
 
+> *A labeled die shot of Intel’s 13th Gen Core i9 (Raptor Lake) processor with 24 cores and 32 threads.* 
 
-> *Above: A labeled die shot of Intel’s 13th Gen Core i9 (Raptor Lake) processor with 24 cores and 32 threads.* 
+#### CPU Cores
 
-- Modern CPUs contain **tens of billions of transistors**, each helping execute 64-bit instructions at incredible speeds.
+Modern chips contain multiple cores, each capable of executing instructions independently. This provides parallelism. Many cores also support multithreading (e.g., Hyper-Threading) to keep execution units active even when one thread is waiting.
 
----
+Each core includes:
+
+- Execution units (integer, floating-point)
+
+- Register files
+
+- Instruction decoders
+
+- Level-1 caches
+
+- Pipelines for scheduling, speculation, and retirement
+
+At scale, these cores and caches operate through high-speed interconnects, forming the processor’s internal communication fabric.
 
 ### Memory
 
-All computer data is represented as **binary** (0s and 1s), called **bits**.  
+All digital information is represented in bits (0 or 1).
 
-- **1 bit** → smallest unit of data (0 or 1).
-
-- **8 bits = 1 byte** → stores one character or up to 256 unique values ($2^8$ or 256 unique binary patterns).
+8 bits = 1 byte, representing numbers from 0–255 or one text character.
 
 #### Memory Hierarchy
 
-Memory is organized into a hierarchy balancing **speed, size, and cost**:
+Different levels of memory balance speed, size, and cost:
+
+- Registers – Fastest, inside the CPU
+
+- Cache (L1 / L2 / L3) – Very fast but small
+
+- RAM – Larger, moderately fast
+
+- Storage (SSD/HDD) – Very large, much slower
 
 <div align="center">
 
-![Machine Cycle](./img/Memory_hierarchy.png)
+![Memory Hierarchy](./img/Memory_hierarchy.png)
 
 </div>
 
-- **Registers** → Fastest, smallest (inside CPU).
-
-- **CPU Cache** → Extremely fast, but small and expensive.
-
-- **RAM (Main Memory)** → Larger and moderately fast, but volatile.
-
-- **Secondary Storage** → Massive, persistent, but much slower (SSD/HDD).
-
 #### Memory Organization
 
-Computer memory is divided into **cells**, usually 1 byte each. Memory is often visualized linearly:
+Memory is arranged as a long sequence of addressable cells, typically one byte each. Binary values have:
+
+- MSB (Most Significant Bit) – Leftmost, highest weight
+
+- LSB (Least Significant Bit) – Rightmost, lowest weight
+
+Example:
+10110010 → MSB = 1, LSB = 0
 
 ![Computer Memory](./img/computer_memory_diagram.png)
 
-- **High-Order End (MSB)**: Leftmost, most significant bit.
-  
-- **Low-Order End (LSB)**: Rightmost, least significant bit.  
-
-Example: `10110010`  
-- MSB = `1`  
-- LSB = `0`  
-
----
-
 ### The Machine Cycle
 
-The CPU processes instructions in a continuous **machine cycle**:
+Every CPU instruction goes through these steps:
 
-1. **Fetch** – Retrieve an instruction from memory.  
+- **Fetch** – Get the instruction from memory
 
-2. **Decode** – Translate it into operations the CPU can understand.
+- **Decode** – Convert it into micro-operations
 
-3. **Execute** – Perform the required calculation or action.
-  
-4. **Store** – Write the result back to memory or a register.  
+- **Execute** – Perform the operation
+
+- **Store** – Write the results to a register or memory
+
+This cycle repeats billions of times per second.
 
 <div align="center">
 
@@ -167,128 +187,133 @@ The CPU processes instructions in a continuous **machine cycle**:
 
 ## Theoretical Computer Science
 
-Theoretical computer science studies the **fundamental principles of computation**—what can be computed, how efficiently, and under what constraints. It provides the mathematical foundations for computer science, influencing everything from programming languages and algorithms to cryptography and artificial intelligence.
+Theoretical computer science explores the limits and principles of computation. It tells us what computers can do, what they cannot do, and how efficiently tasks can be performed.
 
-Alan Turing, often considered the father of computer science, formalized the concept of a **Turing machine**. A Turing machine is a simplified model of a general-purpose computer. It consists of:
+### Turing Machines
 
-- An **infinitely long tape** divided into cells, each storing a symbol.
+Alan Turing introduced a simple abstract machine with:
 
-- A **head** that can read, write, and move left or right across the tape.
+- An infinite tape storing symbols
 
-- A **state register** storing the machine’s current state.
+- A head that reads/writes and moves
 
-- A **finite set of instructions** that determine the machine’s behavior.  
+- A state register
 
-This model allows us to reason about the limits of computation.
+- A finite set of rules
 
----
+Despite its simplicity, it captures the essence of computation. Anything that can be computed by a real machine can be expressed with a Turing machine.
 
 ### Computability Theory
 
-Computability theory explores what problems can or cannot be solved by an algorithm.  
+Computability theory studies which problems are solvable at all:
 
-- **Decidability**: A problem is *decidable* if there exists an algorithm that always produces a "yes" or "no" answer for every valid input. Example: determining if a number is prime.
+- **Decidable problems**: Always produce a yes/no answer
 
-- **Undecidability**: Some problems, like the *Halting Problem* (deciding if a program will halt or run forever), are provably unsolvable by any algorithm.
+- **Undecidable problems**: No algorithm exists to solve all cases
 
-- **Computability**: Studies whether a problem can be solved in a finite number of steps using any computational model.
+Example: Halting Problem
 
-- **Turing Completeness**: A system of data manipulation is *Turing complete* if it can simulate a Turing machine (i.e., express any computation). Most modern programming languages are Turing complete.  
+**Turing completeness**: A system can express any computation a Turing machine can perform
 
----
+Most modern programming languages are Turing complete.
 
-### Automata Theory and Formal Language Theory
+### Automata Theory & Formal Languages
 
-Automata theory studies **abstract machines** (mathematical models of computation) and the problems they can solve. Examples include:
+Automata theory models computation using different types of abstract machines:
 
-- **Finite Automata**: Recognize regular languages.
+- **Finite Automata** – Recognize regular languages
 
-- **Pushdown Automata**: Recognize context-free languages (e.g., used in parsing).
+- **Pushdown Automata** – Recognize context-free languages
 
-- **Turing Machines**: Recognize recursively enumerable languages.  
+- **Linear Bounded Automata** – Recognize context-sensitive languages
 
-Formal language theory focuses on the structure of languages and their classifications via the **Chomsky hierarchy**: 
+- **Turing Machines** – Recognize recursively enumerable languages
 
-1. **Regular Languages** – Recognized by finite automata.
-
-2. **Context-Free Languages** – Recognized by pushdown automata.
-
-3. **Context-Sensitive Languages** – Recognized by linear bounded automata.
-  
-4. **Recursively Enumerable Languages** – Recognized by Turing machines. 
+These map onto the **Chomsky hierarchy**, which classifies languages and grammars by expressive power. Automata form the basis of compilers, parsers, protocol analyzers, and many verification tools.
 
 ![Automata](./img/Automata_theory.png)
 
----
+## Computational Complexity Theory
 
-### Computational complexity theory
+Complexity theory asks how much time or memory is required to solve a problem.
 
-While computability asks *what can be solved*, complexity theory asks *how efficiently* problems can be solved. It studies resource usage like **time** and **space**.
+**Asymptotic notation** describes growth:
 
-- **Asymptotic complexity**: Uses notations like  
-  - `O(n)` → upper bound (worst case).  
-  - `Ω(n)` → lower bound (best case).  
-  - `Θ(n)` → tight bound (average/typical growth).  
+- O(n) – worst-case upper bound
 
-- **Complexity Classes**:  
-  - **P** – Problems solvable in polynomial time.
+- Θ(n) – tight bound
 
-  - **NP** – Problems whose solutions can be verified in polynomial time.
+- Ω(n) – lower bound
 
-  - **NP-complete** – The hardest problems in NP; if one can be solved in polynomial time, then all NP problems can. Examples: SAT, TSP, Vertex Cover. 
-   
-  - **NP-hard** – At least as hard as NP-complete problems, but not necessarily in NP (solutions may not be verifiable efficiently).  
+### Key complexity classes:
 
-The famous **P vs NP problem** asks whether every problem whose solution can be quickly verified (NP) can also be quickly solved (P). This remains one of the greatest unsolved problems in mathematics and computer science.
+- **P** – Solvable in polynomial time
 
----
+- **NP** – Verifiable in polynomial time
 
-### Information theory
+- **NP-complete** – Hardest problems in NP
 
-Information theory, founded by Claude Shannon, studies how information is measured, transmitted, and compressed.  
+- **NP-hard** – At least as hard as NP-complete
 
-Key ideas include:  
-- **Entropy** – A measure of uncertainty or information content.
+The P vs NP problem asks whether every efficiently verifiable problem can also be efficiently solved. It remains unsolved.
 
-- **Data compression** – Reducing redundancy (e.g., Huffman coding, ZIP). 
+## Information Theory
 
-- **Channel capacity** – The maximum rate of reliable information transfer over a communication channel. 
+Information theory, founded by Claude Shannon, studies how to measure, compress, and transmit information.
+
+### Key concepts
+
+- **Entropy** – Amount of uncertainty or information
+
+- **Lossless compression** – Removing redundancy (e.g., Huffman coding)
+
+- **Channel capacity** – Maximum transmission rate with low error
+
+These principles underpin modern communication systems, coding theory, and data compression.
 
 ![Information theory](./img/information_theory.png)
 
----
+## Cryptography
 
-### Cryptography 
+Cryptography ensures secure communication in the presence of adversaries.
 
-Cryptography focuses on **secure communication** and protecting data from adversaries. It involves designing and analyzing algorithms that ensure:  
+**Core goals**
 
-- **Confidentiality** – Only intended parties can read the data.
+- **Confidentiality** – Only intended parties can read the data
 
-- **Integrity** – Data is not tampered with.
+- **Integrity** – Data cannot be modified undetected
 
-- **Authentication** – Verifying identities.
+- **Authentication** – Verifying identity
 
-- **Non-repudiation** – Preventing denial of an action (e.g., digital signatures).
+- **Non-repudiation** – Actions cannot be denied later
 
-Cryptography is built on theoretical concepts such as **number theory**, **complexity theory**, and **information theory**. Modern systems include public-key cryptography (RSA, ECC) and symmetric-key algorithms (AES). 
+Modern cryptography draws on number theory, complexity theory, and information theory. Important methods include:
+
+- Symmetric-key algorithms (AES)
+
+- Public-key cryptography (RSA, ECC)
+
+- Hash functions
+
+- Digital signatures
 
 ![Cryptography](./img/cryptography.png)
 
----
+## Graph Theory
 
-### Graph theory 
+Graph theory studies networks of nodes (vertices) and connections (edges). Graphs model relationships and constraints in many domains:
 
-Graph theory studies **graphs**—structures made of nodes (vertices) and connections (edges). Graphs model relationships in computer science and real-world problems such as:  
+- Computer networks
 
-- **Computer networks** – Routers and links.
+- Social networks
 
-- **Social networks** – People and their relationships.
+- Shortest routes and pathfinding
 
-- **Optimization** – Shortest path (Dijkstra’s), spanning trees, network flows.
-  
-- **Scheduling and matching problems**.  
+- Scheduling, matching, and optimization problems
 
-Graph theory connects deeply with complexity theory, as many NP-complete problems are graph-based.
+- Numerous NP-complete problems (e.g., Vertex Cover, Graph Coloring)
+
+Graphs offer a universal way to model structured information in computing.
 
 ---
 
