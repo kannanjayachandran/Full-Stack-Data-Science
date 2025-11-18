@@ -10,7 +10,7 @@
 
 Scikit-learn (sklearn) is Python's most widely adopted machine learning library, providing a unified interface for **supervised** and **unsupervised** learning algorithms, **preprocessing** utilities, **model evaluation tools**, and **pipeline construction**. 
 
-Built on NumPy, SciPy, and matplotlib, it emphasizes ease of use, performance, and accessibility, making it the de facto standard for classical machine learning in production environments. 
+Built on `NumPy`, `SciPy`, and `matplotlib`, it emphasizes ease of use, performance, and accessibility, making it the de facto standard for classical machine learning in production environments. 
 
 Its consistent API design—where estimators implement `fit()`, `predict()`, and `transform()` methods—enables rapid prototyping, model comparison, and deployment of ML solutions across regression, classification, clustering, and dimensionality reduction tasks.
 
