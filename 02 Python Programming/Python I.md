@@ -1538,7 +1538,7 @@ with open("photo_copy.jpg", "wb") as dest:
 
 Using `with` ensures that files are automatically closed after the code block is executed, even if an exception occurs.
 
-> **Context managers** in Python are objects that define a runtime context for use with the `with` statement. They provide a mechanism for **automatically managing resources**, ensuring that setup and cleanup operations are performed correctly, even if errors occur within the code block. Once we cover OOP, we will come back to Context managers in depth.
+> **Context managers** in Python are objects that define a runtime context for use with the `with` statement. They provide a mechanism for **automatically managing resources**, ensuring that setup and cleanup operations are performed correctly, even if errors occur within the code block.
 
 
 ### Working with File Paths
@@ -1575,19 +1575,29 @@ folder.mkdir(exist_ok=True)
 
 ### File Iteration and Buffering
 
-When working with large files, reading the entire content into memory (`read()`) is inefficient.
+Reading the entire content of a large file into memory using the file object's `read()` method can be highly **inefficient** and potentially cause your program to **crash** due to an `OutOfMemoryError` or `MemoryError`.
 
 - **Line-by-line Iteration**
 
 ```py
 with open("bigfile.txt", "r") as f:
-    for line in f:
-        print(line.strip())
+    for line in f:  # file object 'f' is an iterator
+        # process the 'line' here
 ```
 
 - This approach reads one line at a time, conserving memory.
 
-- **Buffered Reading (Binary Data)**
+> When a file object (`f`) is used directly in a for **loop**, it acts as an **iterator**.
+
+- **Fixed size data chunks**
+
+Another common approach for non-text or structured files is to read data in fixed-size **chunks**.
+
+```py
+with open("bigfile.bin", "rb") as f:
+    while chunk := f.read(4096) # Read 4096 bytes (4KB) at a time'
+    process(chunk)
+```
 
 ```py
 with open("video.mp4", "rb") as f:
@@ -1667,7 +1677,7 @@ except Exception as e:
     print(f"Unexpected error: {e}")
 ```
 
-- **[File Handling Notebook](./Notebooks/File_Handling_in_Python.ipynb)**
+- **[File Handling Notebook](./Notebooks/File_Handling.ipynb)**
 
 ---
 
