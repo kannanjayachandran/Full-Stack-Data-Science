@@ -1696,7 +1696,7 @@ Error handling in Python allows developers to gracefully detect, respond to, and
 | Type | Description | Example |
 |------|--------------|----------|
 | **Syntax Errors** | Detected during parsing (before execution). | `if True print("Hi")` |
-| **Runtime Errors (Exceptions)** | Detected during execution; can be caught and handled. | `1 / 0` (ZeroDivisionError) |
+| **Runtime Errors (Exceptions)** | Detected during execution; can be caught and handled. | `1 / 0` (`ZeroDivisionError`) |
 
 ### Basic Exception Handling (`try`, `except`, `else`, `finally`)
 
@@ -1717,7 +1717,7 @@ finally:
 ```
 
 - `try` : code that might raise an exception
-- `exception` : Code that runs if an exception occurs
+- `except` : Code that runs if an exception occurs
 - `else` : Code that runs only if no exception occurs
 - `finally` : Code that always runs (cleanup, closing files, releasing resources)
 
@@ -1775,7 +1775,6 @@ except (ValueError, TypeError) as e:
 
 You can handle exceptions at multiple levels or re-raise them for higher-level handling.
 
-
 ```py
 def divide(a, b):
     try:
@@ -1810,7 +1809,7 @@ except NegativeValueError as e:
     print(f"Custom Exception: {e}")
 ```
 
-- Always inherit from `Exception`, not from `BaseException`, to avoid interfering with system-level exceptions like `KeyboardInterrupt`.
+- Always inherit from `Exception`, not from `BaseException`, to avoid interfering with system-level exceptions like `KeyboardInterrupt`. Further, it's better to inherit from specific exception like `ValueError` or whatever appropriate. 
 
 ### Exception Chaining (from Keyword)
 
@@ -1871,7 +1870,7 @@ except ZeroDivisionError as e:
 
 - Use `try` blocks only around risky code segments, not entire functions.
 - When debugging, inspect the exception object with `repr(e)` or `traceback` module.
-- Use contextlib.suppress to ignore specific exceptions intentionally:
+- Use `contextlib.suppress` to ignore specific exceptions intentionally:
 
 ```py
 from contextlib import suppress
@@ -1881,7 +1880,6 @@ with suppress(FileNotFoundError):
 ```
 
 - **[Error Handling Notebook]()**
-<!-- TODO: Update error handling notebook -->
 
 ---
 
@@ -2018,7 +2016,9 @@ from mypackage.subpackage.module import function
 Or import the entire package and access modules hierarchically.
 
 ```py
-import mypackage.subpackage.module
+import mypackage
+
+
 mypackage.subpackage.module.function()
 ```
 
@@ -2085,7 +2085,7 @@ Python comes with a rich **standard library** covering file handling, math, syst
 ### Performance and Design Notes
 
 - Python caches imported modules in `sys.modules`. Re-importing uses the cache for performance (import caching).
-- For heavy modules, consider on-demand imports to optimize **startup time** (Lazy loading).
+- For heavy modules, consider on-demand imports to optimize **startup time** (Lazy loading). There is even a PEP proposal for dedicated module lazy loading. 
 - Circular import occur when two modules depend on each other; can be fixed by restructuring or local imports.
 
 ---
