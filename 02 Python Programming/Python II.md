@@ -38,13 +38,13 @@
 
 ## Object-Oriented Programming (OOP) in Python
 
-Object-Oriented Programming (OOP) is a programming paradigm based on the concept of *objects*, which encapsulate data (attributes) and behavior (methods).
+**Object-Oriented Programming** (OOP) is a programming paradigm based on the concept of **objects**, which encapsulate **data** (attributes) and **behavior** (methods).
 
 In Python, **everything is an object** — this includes integers, strings, functions, classes, and even modules. Each object is an instance of a class and has:
 
 - **Identity**: Unique ID (obtained via `id()`)
-- Type: The class it belongs to (obtained via `type()`)
-- Value: The data it holds
+- **Type**: The class it belongs to (obtained via `type()`)
+- **Value**: The data it holds
 
 ```py
 x = 42
@@ -85,7 +85,7 @@ class Dog:
     species = "Canis familiaris"
     
     def __init__(self, name, age):
-        """Instance initializer (constructor)"""
+        """Instance initializer"""
         # Instance attributes (unique to each instance)
         self.name = name
         self.age = age
@@ -93,17 +93,12 @@ class Dog:
     def bark(self):
         """Instance method"""
         return f"{self.name} says Woof!"
+```
 
+```py
 # Creating objects (instances)
 dog1 = Dog("Buddy", 3)
 dog2 = Dog("Lucy", 5)
-
-print(dog1.name)          # Buddy
-print(dog1.species)       # Canis familiaris
-print(dog1.bark())        # Buddy says Woof!
-
-# Class attributes are shared
-print(dog1.species is dog2.species)  # True (same object in memory)
 ```
 
 #### Instance vs Class Attributes
@@ -115,20 +110,21 @@ print(dog1.species is dog2.species)  # True (same object in memory)
 
 Functions defined inside a class are known as **methods**. 
 
-- *classes* in Python are **callable objects** that return instances.
+> **classes** in Python are **callable objects** that return instances.
 
 ### Methods
 
 Methods are Functions defined inside a class. They can access and modify the data associated with the object.
 
-#### Types of Methods in Python OOP
+#### Types of Methods
 
-- **Instance Methods**
+- **Instance Method**
 
 Operate on instance data and have access to instance data (`self`).
 
 ```py
 class BankAccount:
+    total_money = 100
     def __init__(self, owner, balance=0):
         self.owner = owner
         self.balance = balance
@@ -137,6 +133,7 @@ class BankAccount:
         """Instance method - modifies instance state"""
         if amount > 0:
             self.balance += amount
+            BankAccount.total_money += amount
             return f"Deposited ${amount}. New balance: ${self.balance}"
         return "Invalid amount"
     
@@ -144,6 +141,7 @@ class BankAccount:
         """Instance method with validation"""
         if 0 < amount <= self.balance:
             self.balance -= amount
+            BankAccount.total_money -= amount
             return f"Withdrew ${amount}. New balance: ${self.balance}"
         return "Insufficient funds or invalid amount"
 
@@ -152,7 +150,7 @@ print(account.deposit(500))   # Deposited $500. New balance: $1500
 print(account.withdraw(200))  # Withdrew $200. New balance: $1300
 ```
 
-- Instance method can acutally access class data via `self.__class__`
+- Instance method can also access class data via `self.__class__.total_money`. But the preferred way is by using the class name `BankAccount.total_money`
 
 - **Class Methods**
 
@@ -237,7 +235,7 @@ print(math.add(2, 3))                  # 5
 
 ### Magic Methods or Special Methods
 
-Magic Methods or Special Methods or Dunder Methods have predefined meanings and are invoked implicitly by Python in specific situations.
+**Magic Methods** or **Special Methods** or **Dunder Methods** have predefined meanings and are invoked implicitly by Python in specific situations.
 
 - **`__init__`** :  It is called immediately after object creation. It's used to initialize instance attributes
     - `__init__` is not a constructor, it's an initializer
@@ -303,14 +301,14 @@ print(repr(book))         # Book(title='1984', author='George Orwell', year=1949
 
 | Category       | Method                                  | Description                            |
 | -------------- | --------------------------------------- | -------------------------------------- |
-| Initialization | `__init__`, `__new__`                   | Object creation and initialization     |
+| Initialization | `__new__`, `__init__`                   | Object creation and initialization     |
 | Representation | `__str__`, `__repr__`                   | String representations                 |
 | Arithmetic     | `__add__`, `__sub__`, `__mul__`         | Operator overloading                   |
 | Comparison     | `__eq__`, `__lt__`, `__gt__`            | Custom comparisons                     |
 | Container      | `__getitem__`, `__setitem__`, `__len__` | Collection-like behavior               |
 | Callable       | `__call__`                              | Make instances callable like functions |
 
-- Python doesn't support traditional **constructor overloading**, but provides alternatives:
+Python doesn't support traditional **constructor overloading**, but provides alternatives:
 
 ```py
 class Rectangle:
