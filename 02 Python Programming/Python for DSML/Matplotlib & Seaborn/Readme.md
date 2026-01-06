@@ -544,7 +544,7 @@ plt.tight_layout()
 **Q:** When would you use Precision-Recall curve instead of ROC?  
 **A:** For highly imbalanced datasets. ROC can be overly optimistic because TN (true negatives) dominate. PR curves focus on the positive class.
 
-In precision - Recall curve we plot precesion on the y-axis against recall on the x-axis for various probability thresholds. This curve helps to visualize the trade-off between precision and recall and is particularly useful for imbalanced datasets.
+In precision - Recall curve we plot precision on the y-axis against recall on the x-axis for various probability thresholds. This curve helps to visualize the trade-off between precision and recall and is particularly useful for imbalanced datasets.
 
 ```python
 # Precision-Recall Curve for Imbalanced Data
