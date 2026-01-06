@@ -12,12 +12,14 @@
 
 ![Hashing basic image](./img/Hashtable.png)
 
-Collision occurs when two different keys are mapped to the same hash value or index by a hash function.
+Collision occurs when two different keys are mapped to the same hash value or index by a hash function.We can't entirely avoid collisions, but can minimize them by:
 
-**Hash Collision Handling**:
-- **Chaining**: Store collisions in linked lists
-- **Open addressing**: Probe for next available slot
-- **Load factor**: Python dicts resize when **~2/3 full ($\approx 0.67$)** to maintain `O(1)`
+- Choosing a good hash function (Uniform distribution)
+- **Load factor** (ratio of elements to table size) : Python dicts resize when **~2/3 full ($\approx 0.67$)** to maintain `O(1)`
+
+Collision resolution strategies:
+- **Chaining**: Store collisions in linked lists in buckets
+- **Open addressing**: Probe for next available slot (linear (can cause clustering), quadratic, double hashing)
 
 Python uses **open addressing** with random (actually deterministic “perturbation”) probing. When collision occurs, it searches for the next available slot using a pseudo-random sequence.
 
