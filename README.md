@@ -1,7 +1,5 @@
 <h1 align="center"> Full Stack Data Science </h1>
 
----
-
 <div align="center">
 
 | Topics                                                                                           |
